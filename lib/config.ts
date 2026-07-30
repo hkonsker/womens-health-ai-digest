@@ -7,11 +7,14 @@
  * used which definition of the beat.
  */
 
-// v3 (2026-07-30): dropped "time-lapse" from the repro AI terms. It is an
+// v4 (2026-07-30): dropped "predictive model" and "prediction model" from the
+// repro AI terms. A multivariable logistic regression is a prediction model and
+// is not AI; those terms were pulling in classical-statistics papers.
+// v3: dropped "time-lapse" from the repro AI terms. It is an
 // imaging and culture technique, not AI, and it was pulling in incubator
 // hardware studies. Real AI embryo work says deep learning or machine learning.
 // v2: dropped STAT News, everything there is paywalled.
-export const QUERY_VERSION = "v3";
+export const QUERY_VERSION = "v4";
 
 /** How many days back PubMed looks. Matches the weekly cadence. */
 export const DAYS_BACK = 8;
@@ -96,8 +99,7 @@ export const QUERY_REPRO_AI = `(
 "deep learning"[Title/Abstract] OR "large language model"[Title/Abstract] OR LLM[Title/Abstract] OR
 "generative AI"[Title/Abstract] OR GPT[Title/Abstract] OR "foundation model"[Title/Abstract] OR
 "neural network"[Title/Abstract] OR "computer vision"[Title/Abstract] OR
-"natural language processing"[Title/Abstract] OR "predictive model"[Title/Abstract] OR
-"prediction model"[Title/Abstract] OR radiomics[Title/Abstract]
+"natural language processing"[Title/Abstract] OR radiomics[Title/Abstract]
 )
 AND
 (

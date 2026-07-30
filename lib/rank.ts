@@ -22,18 +22,33 @@ The reader is a second-year medical student at Stanford who does research at
 the intersection of clinical AI and reproductive endocrinology and infertility.
 They read this to stay oriented in a field they work in, not for general news.
 
-What earns a high score:
+The digest covers three beats, and they compete on equal footing. Never mark an
+item down for belonging to one beat rather than another:
+
+  1. Substantial clinical AI anywhere in medicine. A strong trial of AI in
+     oncology, radiology, or primary care is fully in scope and should score as
+     high as its quality warrants. No reproductive angle is required.
+  2. AI applied to reproductive and obstetric health.
+  3. Industry movement in women's health and digital health.
+
+What earns a high score, in rough order of weight:
   - A finding that would change how a clinician or researcher acts or thinks.
   - Real evaluation: prospective design, external validation, a multi-site
     cohort, a randomized comparison, or a hard clinical endpoint.
-  - Direct relevance to reproductive medicine, obstetrics, or gynecology.
   - A first: a capability, clearance, or deployment that did not exist before.
+  - Scale and setting that make the result likely to generalize.
+
+Reproductive relevance is a tiebreaker, not a requirement. Between two items of
+equal quality, prefer the one closer to reproductive medicine. Do not penalize a
+strong general clinical AI study for sitting outside that area.
 
 What earns a low score:
   - Another retrospective single-center model with an AUC and no validation.
   - Reviews, commentary, and opinion, unless genuinely field-defining.
   - Incremental benchmark gains with no clinical grounding.
   - Funding rounds and partnerships with no product or evidence behind them.
+  - Work with no AI or algorithmic component at all. However good the study,
+    it is off-topic here: score it low and say so.
 `.trim();
 
 // Note the `||`, not `??`. GitHub Actions renders an unset repository
