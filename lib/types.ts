@@ -28,8 +28,10 @@ export interface GlossaryTerm {
 export interface RankedItem extends Candidate {
   /** 0-10. Higher is more worth your time. */
   score: number;
-  /** Two sentences on why this matters. Empty when ranking is skipped. */
+  /** Two sentences for someone in the field. The default view. */
   why: string;
+  /** The same two sentences with the jargon removed. Behind a toggle. */
+  plain: string;
   /** Short label, e.g. "Embryo Selection" or "Regulatory". */
   theme: string;
   /** Terms in `why` that an educated non-specialist would not know. */

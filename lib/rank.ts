@@ -85,35 +85,37 @@ Score every item from 0 to 10 on how much it deserves the reader's attention
 this week. Be strict. A typical week should produce a handful of 7s and above
 and a long tail of 3s and 4s. Do not inflate scores to be encouraging.
 
-For each item write "why": exactly two sentences, plain and factual.
-The first says what was actually done or found. The second says why it matters
-to this reader, or what its main limitation is.
+For each item write two summaries of the same facts, at two different levels.
 
-Write for a smart college-level reader with no background in medicine,
-statistics, or machine learning. This is the most important instruction here.
-Prefer the plain phrase whenever it is just as accurate: "a type of AI that
-reads images" beats "a vision transformer" unless the specific architecture is
-the point of the paper. Spell out what a number means rather than naming the
+"why": exactly two sentences for a reader who works in this field. Be precise
+and technical where precision earns its keep: name the study design, the metric,
+and the actual numbers. The first sentence says what was done and found. The
+second says why it matters to this reader, or its main limitation.
+
+"plain": the same two sentences rewritten for a smart college-level reader with
+no background in medicine, statistics, or machine learning. Prefer the plain
+phrase: "a type of AI that reads images" beats "a vision transformer" unless the
+architecture is the point. Spell out what a number means rather than naming the
 metric: "identified the right gene 88% of the time" beats "88.5% top-5
-accuracy". Never assume the reader knows an abbreviation.
+accuracy". Never assume an abbreviation is known. Same facts, no jargon, and no
+loss of the actual finding.
 
-Keep a technical term only when it is genuinely load-bearing, and when you keep
-one, put it in the glossary. No hype, no marketing language, and never use an
-em-dash. Use a colon, comma, or period instead.
+Neither version uses hype, marketing language, or an em-dash. Use a colon,
+comma, or period instead.
 
-For "glossary": list every term in your two sentences that an educated reader
-outside this field could not confidently define. Cover medicine, statistics,
-and machine learning alike, for example "external validation", "prospective
-cohort", "vision transformer", "sensitivity", "odds ratio". Each definition is
-one plain sentence that says what the term means and why it matters, using no
-jargon of its own. Define the general concept rather than this study's specific
-use of it, because these definitions are reused across future weeks. When a
-term has both a full name and an abbreviation, use the full name as the term,
-so that "intraclass correlation coefficient" and "ICC" do not become two
-separate entries. Write the term in Title Case, capitalising each important
-word, but leave acronyms and cased names exactly as they are conventionally
-written: AUC, sFlt-1/PlGF, mRNA. Return an
-empty array if your summary genuinely contains no such term.
+For "glossary": list every term in "why", the technical version, that an
+educated reader outside this field could not confidently define. Cover medicine,
+statistics, and machine learning alike, for example "external validation",
+"prospective cohort", "vision transformer", "sensitivity", "odds ratio". Each
+definition is one plain sentence that says what the term means and why it
+matters, using no jargon of its own. Define the general concept rather than this
+study's specific use of it, because these definitions are reused across future
+weeks. When a term has both a full name and an abbreviation, use the full name
+as the term, so that "intraclass correlation coefficient" and "ICC" do not
+become two separate entries. Write the term in Title Case, capitalising each
+important word, but leave acronyms and cased names exactly as they are
+conventionally written: AUC, sFlt-1/PlGF, mRNA. Return an empty array if the
+technical summary genuinely contains no such term.
 
 Also give a short theme label in Title Case, two or three words, describing the
 topic: for example "Embryo Selection", "Ambient Documentation", "FDA Clearance",
@@ -133,7 +135,15 @@ const SCHEMA = {
         properties: {
           id: { type: "string", description: "The candidate id, copied exactly." },
           score: { type: "integer", description: "0 to 10." },
-          why: { type: "string", description: "Exactly two sentences. No em-dashes." },
+          why: {
+            type: "string",
+            description: "Two sentences for someone in the field. Technical. No em-dashes.",
+          },
+          plain: {
+            type: "string",
+            description:
+              "The same two sentences for a college-level reader with no background. No jargon, no em-dashes.",
+          },
           theme: { type: "string", description: "Two or three words, Title Case." },
           glossary: {
             type: "array",
@@ -152,7 +162,7 @@ const SCHEMA = {
             },
           },
         },
-        required: ["id", "score", "why", "theme", "glossary"],
+        required: ["id", "score", "why", "plain", "theme", "glossary"],
         additionalProperties: false,
       },
     },
@@ -177,6 +187,7 @@ interface Verdict {
   id: string;
   score: number;
   why: string;
+  plain: string;
   theme: string;
   glossary?: Array<{ term: string; definition: string }>;
 }
@@ -332,7 +343,7 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
         "    unranked feed with no summaries. Set the key to enable the digest.",
     );
     return {
-      items: candidates.map((c) => ({ ...c, score: 0, why: "", theme: "", glossary: [] })),
+      items: candidates.map((c) => ({ ...c, score: 0, why: "", plain: "", theme: "", glossary: [] })),
       ranked: false,
       refused: 0,
       unscored: candidates.length,
@@ -375,6 +386,7 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
       // unranked rather than silently treated as a genuine zero.
       score: v ? Math.max(0, Math.min(10, v.score)) : -1,
       why: v?.why ?? "",
+      plain: v?.plain ?? "",
       theme: v?.theme ?? "",
       glossary: (v?.glossary ?? []).map((g) => ({
         term: g.term.trim(),

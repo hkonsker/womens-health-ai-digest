@@ -87,6 +87,14 @@ function pageCard(item: RankedItem): string {
         <h2><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h2>
         <p class="meta">${meta}</p>
         ${item.why ? `<p class="why">${esc(item.why)}</p>` : ""}
+        ${
+          item.plain && item.plain !== item.why
+            ? `<details class="plain">
+          <summary>Explain this simply</summary>
+          <p>${esc(item.plain)}</p>
+        </details>`
+            : ""
+        }
         ${termChips(item.glossary ?? [])}
       </article>`;
 }
@@ -199,6 +207,21 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
   .card h2 a:hover { color: var(--cardinal); text-decoration: underline; }
   .meta { margin: 0; font-size: 13px; color: var(--muted); }
   .why { margin: 10px 0 0; font-size: 15px; color: var(--body); }
+
+  .plain { margin-top: 10px; }
+  .plain > summary {
+    list-style: none; cursor: pointer; display: inline-block;
+    font-size: 12px; color: var(--muted);
+    border-bottom: 1px dashed var(--line); padding-bottom: 1px;
+  }
+  .plain > summary::-webkit-details-marker { display: none; }
+  .plain > summary::before { content: "▸"; margin-right: 5px; font-size: 11px; }
+  .plain[open] > summary { color: var(--poppy); border-bottom-color: var(--poppy); }
+  .plain[open] > summary::before { content: "▾"; }
+  .plain p {
+    margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: var(--body);
+    border-left: 2px solid var(--poppy); padding-left: 12px;
+  }
 
   .terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
   .term { min-width: 0; }
@@ -339,6 +362,14 @@ function emailCard(item: RankedItem): string {
   <a href="${esc(item.url)}" style="display:block;font-size:16px;font-weight:600;color:#1c1d1f;text-decoration:none;line-height:1.35;margin-bottom:5px;">${esc(item.title)}</a>
   <div style="font-size:13px;color:${COOL_GREY};">${meta}</div>
   ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${esc(item.why)}</div>` : ""}
+  ${
+    item.plain && item.plain !== item.why
+      ? `<div style="margin-top:10px;padding-left:11px;border-left:2px solid #f0ded0;">
+    <div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:${COOL_GREY};margin-bottom:3px;">In plain terms</div>
+    <div style="font-size:13px;line-height:1.55;color:${COOL_GREY};">${esc(item.plain)}</div>
+  </div>`
+      : ""
+  }
   ${emailTerms(item.glossary ?? [])}
 </div>`;
 }

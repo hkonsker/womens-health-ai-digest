@@ -16,7 +16,7 @@ There is no database, no server, and nothing to keep awake.
 Sunday 13:00 UTC (6am Pacific)
   → PubMed (2 queries) + RSS (6 feeds)
   → dedup against every item ever seen
-  → Claude scores 0-10, writes two plain-language sentences, and defines the jargon
+  → Claude scores 0-10, writes the summary at two levels, and defines the jargon
   → keep the top 10 that score 5 or above
   → docs/index.html + email via Resend
   → commit state back to the repo
@@ -91,10 +91,16 @@ Almost everything you would want to change is in [`lib/config.ts`](lib/config.ts
 | `MIN_SCORE` | The floor. Default 5. Raise it if the digest feels padded. |
 | `QUERY_VERSION` | **Bump this whenever you change a query or the feed list.** |
 
-Summaries are written for a smart college-level reader with no background in medicine,
-statistics, or machine learning. Any jargon that survives that rewrite gets defined:
-each item carries a `glossary` of terms, rendered as tappable chips under the summary on
-the page and spelled out in parentheses in the email.
+Every item is summarised twice from the same facts. `why` is two sentences for someone
+who works in the field, naming the design, the metric, and the numbers. `plain` is the
+same two sentences with the jargon removed, for a college-level reader with no background.
+
+The page shows the technical version and hides the plain one behind an "Explain this
+simply" toggle. Email cannot do toggles, so it prints both, with the plain version
+visually demoted so it is easy to skip.
+
+Jargon in the technical version gets defined: each item carries a `glossary`, rendered as
+tappable chips on the page and as a bolded `TERMS` block in the email.
 
 Definitions accumulate in `data/glossary.json`. The first definition of a term wins and
 is never regenerated, so a term means the same thing in February as in August and is only
