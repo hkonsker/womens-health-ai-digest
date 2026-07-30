@@ -58,13 +58,26 @@ function line(char = "-"): void {
 async function collectPubMed(
   beat: BeatId,
   query: string,
-): Promise<{ candidates: Candidate[]; totalMatches: number; truncated: boolean }> {
+): Promise<{
+  candidates: Candidate[];
+  totalMatches: number;
+  truncated: boolean;
+  staleDropped: number;
+}> {
   const { count, idlist } = await esearch(query, DAYS_BACK, MAX_CANDIDATES_PER_BEAT);
-  const articles = await fetchArticles(idlist);
+  const all = await fetchArticles(idlist);
+
+  // Second net behind PubMed's own date filter. Journals that publish as an
+  // annual volume have a useless issue date, and a paper whose real date lands
+  // outside the window has no business in a weekly digest. An article with no
+  // resolvable date at all is kept: unknown is not the same as old.
+  const cutoff = Date.now() - (DAYS_BACK + 2) * 86_400_000;
+  const articles = all.filter((a) => !a.pubDate || a.pubDate.getTime() >= cutoff);
 
   return {
     totalMatches: count,
     truncated: count > idlist.length,
+    staleDropped: all.length - articles.length,
     candidates: articles.map((a) => ({
       id: `pmid:${a.pmid}`,
       beat,
@@ -118,11 +131,13 @@ async function main(): Promise<void> {
       totalMatches: r.totalMatches,
       retrieved: r.candidates.length,
       truncated: r.truncated,
+      staleDropped: r.staleDropped,
       newAfterDedup: 0,
     });
     console.log(
       `  ${BEATS[beat].label.padEnd(24)} ${String(r.candidates.length).padStart(3)} retrieved of ${r.totalMatches} match(es)` +
-        (r.truncated ? `  [capped, ${r.totalMatches - r.candidates.length} not seen]` : ""),
+        (r.truncated ? `  [capped, ${r.totalMatches - r.candidates.length} not seen]` : "") +
+        (r.staleDropped ? `  [${r.staleDropped} dropped as older than the window]` : ""),
     );
   }
 
@@ -134,6 +149,7 @@ async function main(): Promise<void> {
     totalMatches: feeds.candidates.length,
     retrieved: feeds.candidates.length,
     truncated: false,
+    staleDropped: 0,
     newAfterDedup: 0,
   });
   console.log(
@@ -149,12 +165,19 @@ async function main(): Promise<void> {
   // PubMed re-surfaces it after a date correction.
   const seen = await loadSeen();
   const before = candidates.length;
-  candidates = candidates.filter((c) => !(c.id in seen));
+  // --force means "rebuild this week from scratch", so it has to ignore the
+  // ledger too. Otherwise the previous run already marked everything seen and
+  // the rebuild finds nothing.
+  if (!FORCE) candidates = candidates.filter((c) => !(c.id in seen));
 
   for (const b of perBeat) {
     b.newAfterDedup = candidates.filter((c) => c.beat === b.beat).length;
   }
-  console.log(`Dedup: ${before} candidate(s) in, ${candidates.length} new, ${before - candidates.length} seen before.`);
+  console.log(
+    FORCE
+      ? `Dedup: skipped, --force is rebuilding this week from all ${before} candidate(s).`
+      : `Dedup: ${before} candidate(s) in, ${candidates.length} new, ${before - candidates.length} seen before.`,
+  );
   console.log();
 
   if (candidates.length === 0) {

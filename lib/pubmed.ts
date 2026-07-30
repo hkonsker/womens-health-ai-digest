@@ -111,14 +111,50 @@ const MONTH_MAP: Record<string, string> = {
   jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12",
 };
 
-function parsePubDate(raw: string): Date | null {
+/** Parses PubMed's loose "2026 Jul 24" / "2026 Jul" / "2026" shape. */
+function parseLooseDate(raw: string): Date | null {
   if (!raw) return null;
   const parts = raw.trim().split(/\s+/);
   const year = parts[0];
-  const month = parts[1] ? (MONTH_MAP[parts[1].toLowerCase().slice(0, 3)] ?? "01") : "01";
-  const day = parts[2] ? parts[2].padStart(2, "0") : "01";
-  const d = new Date(`${year}-${month}-${day}T00:00:00Z`);
+  if (!/^\d{4}$/.test(year)) return null;
+  // "Jan-Dec" is an annual-volume designation, not a month. Anything that is
+  // not a real month name means we do not actually know the month.
+  const monthKey = parts[1]?.toLowerCase().slice(0, 3) ?? "";
+  const month = MONTH_MAP[monthKey];
+  if (parts[1] && !month) return null;
+  const day = parts[2] && /^\d{1,2}$/.test(parts[2]) ? parts[2].padStart(2, "0") : "01";
+  const d = new Date(`${year}-${month ?? "01"}-${day}T00:00:00Z`);
   return isNaN(d.getTime()) ? null : d;
+}
+
+/** Parses sortpubdate's "2026/07/24 00:00" shape. */
+function parseSortDate(raw: string): Date | null {
+  if (!raw) return null;
+  const m = raw.match(/^(\d{4})\/(\d{2})\/(\d{2})/);
+  if (!m) return null;
+  const d = new Date(`${m[1]}-${m[2]}-${m[3]}T00:00:00Z`);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+/**
+ * Pick the date that actually means "when did this become available".
+ *
+ * `pubdate` is the journal issue designation and can be useless: an annual
+ * volume reads "2026 Jan-Dec", which naive parsing turns into January 1 for a
+ * paper that appeared in July. `sortpubdate` is PubMed's own normalized field
+ * and is what their relevance and date sorting uses, so prefer it, then the
+ * electronic publication date, then the issue date as a last resort.
+ */
+function resolvePubDate(s: {
+  sortpubdate?: string;
+  epubdate?: string;
+  pubdate?: string;
+}): Date | null {
+  return (
+    parseSortDate(s.sortpubdate ?? "") ??
+    parseLooseDate(s.epubdate ?? "") ??
+    parseLooseDate(s.pubdate ?? "")
+  );
 }
 
 function parseDoi(elocationid?: string): string | null {
@@ -181,6 +217,10 @@ interface ESummaryRaw {
   title: string;
   source: string;
   pubdate: string;
+  /** Normalized "YYYY/MM/DD HH:MM". The one to trust. */
+  sortpubdate?: string;
+  /** Electronic publication date, often the real availability date. */
+  epubdate?: string;
   authors?: Array<{ name: string }>;
   pubtype?: string[];
   elocationid?: string;
@@ -299,7 +339,7 @@ export async function fetchArticles(pmids: string[]): Promise<PubMedArticle[]> {
     pmid: s.uid,
     title: s.title,
     journal: s.source,
-    pubDate: parsePubDate(s.pubdate),
+    pubDate: resolvePubDate(s),
     authors: (s.authors ?? []).map((a) => a.name),
     abstract: abstracts.get(s.uid) ?? null,
     url: `https://pubmed.ncbi.nlm.nih.gov/${s.uid}/`,

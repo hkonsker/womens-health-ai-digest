@@ -48,6 +48,8 @@ export interface RunStats {
     retrieved: number;
     /** True when totalMatches exceeded our cap and we did not see everything. */
     truncated: boolean;
+    /** Dropped because the resolved publication date fell outside the window. */
+    staleDropped: number;
     newAfterDedup: number;
   }>;
   /** Feeds that failed this run, with the reason. Surfaced in the digest. */

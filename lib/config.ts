@@ -7,8 +7,11 @@
  * used which definition of the beat.
  */
 
-// v2 (2026-07-30): dropped STAT News, everything there is paywalled.
-export const QUERY_VERSION = "v2";
+// v3 (2026-07-30): dropped "time-lapse" from the repro AI terms. It is an
+// imaging and culture technique, not AI, and it was pulling in incubator
+// hardware studies. Real AI embryo work says deep learning or machine learning.
+// v2: dropped STAT News, everything there is paywalled.
+export const QUERY_VERSION = "v3";
 
 /** How many days back PubMed looks. Matches the weekly cadence. */
 export const DAYS_BACK = 8;
@@ -94,7 +97,7 @@ export const QUERY_REPRO_AI = `(
 "generative AI"[Title/Abstract] OR GPT[Title/Abstract] OR "foundation model"[Title/Abstract] OR
 "neural network"[Title/Abstract] OR "computer vision"[Title/Abstract] OR
 "natural language processing"[Title/Abstract] OR "predictive model"[Title/Abstract] OR
-"prediction model"[Title/Abstract] OR radiomics[Title/Abstract] OR "time-lapse"[Title/Abstract]
+"prediction model"[Title/Abstract] OR radiomics[Title/Abstract]
 )
 AND
 (

@@ -78,6 +78,8 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
       (b) =>
         `<li><strong>${esc(b.label)}</strong>: ${b.retrieved} of ${b.totalMatches} match(es) retrieved${
           b.truncated ? `, <span class="warn">capped, ${b.totalMatches - b.retrieved} not seen</span>` : ""
+        }${
+          b.staleDropped ? `, ${b.staleDropped} dropped as older than the window` : ""
         }; ${b.newAfterDedup} new after dedup.</li>`,
     )
     .join("\n");
