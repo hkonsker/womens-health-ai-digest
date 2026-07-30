@@ -2,68 +2,14 @@
   "weekLabel": "2026-W31",
   "startDate": "2026-07-27T00:00:00.000Z",
   "endDate": "2026-08-02T23:59:59.999Z",
-  "generatedAt": "2026-07-30T20:42:15.472Z",
-  "queryVersion": "v2",
+  "generatedAt": "2026-07-30T21:20:30.875Z",
+  "queryVersion": "v4",
   "queries": {
     "clinical-ai": "(\nJAMA[jour] OR \"JAMA Netw Open\"[jour] OR \"JAMA Intern Med\"[jour] OR \"JAMA Pediatr\"[jour] OR\n\"JAMA Surg\"[jour] OR \"JAMA Oncol\"[jour] OR \"JAMA Neurol\"[jour] OR \"JAMA Cardiol\"[jour] OR\n\"N Engl J Med\"[jour] OR \"NEJM AI\"[jour] OR Lancet[jour] OR BMJ[jour] OR\n\"Lancet Digit Health\"[jour] OR \"Nat Med\"[jour] OR \"npj Digit Med\"[jour] OR\n\"J Am Med Inform Assoc\"[jour] OR \"Ann Intern Med\"[jour] OR Nature[jour] OR Science[jour]\n)\nAND\n(\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR \"generative AI\"[Title/Abstract] OR\n\"artificial intelligence\"[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR GPT[Title/Abstract] OR\n\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"neural network\"[Title/Abstract]\n)\nAND\n(\nclinical[Title/Abstract] OR patient[Title/Abstract] OR workflow[Title/Abstract] OR\nimplementation[Title/Abstract] OR \"clinical decision support\"[Title/Abstract] OR\ndocumentation[Title/Abstract] OR EHR[Title/Abstract] OR radiology[Title/Abstract] OR\ntriage[Title/Abstract] OR diagnosis[Title/Abstract] OR outcome[Title/Abstract]\n)\nNOT (news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type])",
-    "repro-ai": "(\n\"artificial intelligence\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR\n\"deep learning\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR GPT[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR\n\"neural network\"[Title/Abstract] OR \"computer vision\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"predictive model\"[Title/Abstract] OR\n\"prediction model\"[Title/Abstract] OR radiomics[Title/Abstract] OR \"time-lapse\"[Title/Abstract]\n)\nAND\n(\ninfertility[Title/Abstract] OR \"in vitro fertilization\"[Title/Abstract] OR IVF[Title/Abstract] OR\n\"assisted reproduction\"[Title/Abstract] OR \"assisted reproductive\"[Title/Abstract] OR\nembryo[Title/Abstract] OR blastocyst[Title/Abstract] OR oocyte[Title/Abstract] OR\n\"ovarian reserve\"[Title/Abstract] OR endometriosis[Title/Abstract] OR\n\"polycystic ovary\"[Title/Abstract] OR PCOS[Title/Abstract] OR endometrial[Title/Abstract] OR\npregnancy[Title/Abstract] OR pregnant[Title/Abstract] OR obstetric[Title/Abstract] OR\npreeclampsia[Title/Abstract] OR \"pre-eclampsia\"[Title/Abstract] OR \"preterm birth\"[Title/Abstract] OR\nfetal[Title/Abstract] OR \"maternal health\"[Title/Abstract] OR \"maternal mortality\"[Title/Abstract] OR\npostpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR \"cervical cancer\"[Title/Abstract] OR\nmenopause[Title/Abstract] OR contracepti*[Title/Abstract] OR \"women's health\"[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "repro-ai": "(\n\"artificial intelligence\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR\n\"deep learning\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR GPT[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR\n\"neural network\"[Title/Abstract] OR \"computer vision\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR radiomics[Title/Abstract]\n)\nAND\n(\ninfertility[Title/Abstract] OR \"in vitro fertilization\"[Title/Abstract] OR IVF[Title/Abstract] OR\n\"assisted reproduction\"[Title/Abstract] OR \"assisted reproductive\"[Title/Abstract] OR\nembryo[Title/Abstract] OR blastocyst[Title/Abstract] OR oocyte[Title/Abstract] OR\n\"ovarian reserve\"[Title/Abstract] OR endometriosis[Title/Abstract] OR\n\"polycystic ovary\"[Title/Abstract] OR PCOS[Title/Abstract] OR endometrial[Title/Abstract] OR\npregnancy[Title/Abstract] OR pregnant[Title/Abstract] OR obstetric[Title/Abstract] OR\npreeclampsia[Title/Abstract] OR \"pre-eclampsia\"[Title/Abstract] OR \"preterm birth\"[Title/Abstract] OR\nfetal[Title/Abstract] OR \"maternal health\"[Title/Abstract] OR \"maternal mortality\"[Title/Abstract] OR\npostpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR \"cervical cancer\"[Title/Abstract] OR\nmenopause[Title/Abstract] OR contracepti*[Title/Abstract] OR \"women's health\"[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
     "industry": "RSS: 18 item(s) from configured feeds"
   },
   "items": [
-    {
-      "id": "pmid:42502344",
-      "beat": "repro-ai",
-      "title": "Time-Lapse Culture Improves Development and Pregnancy Outcomes of Sibling Normally Fertilized Oocytes: A Prospective Multicenter Study.",
-      "source": "Reprod Med Biol",
-      "url": "https://doi.org/10.1002/rmb2.70077",
-      "date": "2026-01-01T00:00:00.000Z",
-      "authors": [
-        "Mio Y",
-        "Kuramoto T",
-        "Utsunomiya T",
-        "Jwa SC",
-        "Yumoto K",
-        "Tsounapi P"
-      ],
-      "body": "PURPOSE: To evaluate whether time-lapse monitoring improves embryological outcomes and clinical pregnancy rates compared to conventional culture in a sibling-oocyte study. METHODS: This multicenter-study involved 205 first-time retrieval cycles (&#x2009;=&#x2009;3244 mature oocytes). Sibling-oocytes from patients with &#x2265;&#x2009;4 oocytes were randomized into conventional and time-lapse groups. The primary outcome was the good-quality blastocyst rate. Key secondary outcomes included Day-2 Good Quality Embryo (GQE) rates and clinical pregnancy rates for both fresh and frozen-thawed embryo transfers (FET). RESULTS: The time-lapse group exhibited a significantly higher GQE rate on Day 2 (42.1% vs. 35.3%,&#x2009;<&#x2009;0.01) and a higher good-quality blastocyst rate (44.1% vs. 38.1%,&#x2009;<&#x2009;0.01) compared to the conventional group. While clinical pregnancy rates showed a higher trend in the time-lapse group for both fresh ET (44.4% vs. 15.8%) and FET (45.3% vs. 36.7%), these differences did not reach statistical significance. Time-lapse monitoring successfully identified embryos with early pronuclear disappearance as early as 14&#x2009;h post-insemination. Morphokinetic analysis revealed that abnormal cleavage patterns were associated with significantly lower blastocyst development potential compared to normal cleavage (&#x2009;<&#x2009;0.01). CONCLUSION: Time-lapse culture provides a stable environment that enhances embryo quality. While clinical pregnancy rates showed a positive trend, further large-scale studies are needed to confirm the impact on live birth rates.",
-      "score": 7,
-      "why": "A prospective multicenter sibling-oocyte study randomizing 3244 mature oocytes found higher Day 2 good quality embryo rates and blastocyst rates with time-lapse culture, with pregnancy rate differences not reaching significance. The sibling-oocyte randomization controls for patient factors better than most time-lapse literature, though it tests the culture environment rather than algorithmic selection and is underpowered for live birth.",
-      "theme": "Time-Lapse Culture"
-    },
-    {
-      "id": "url:92d48063b894ad0a",
-      "beat": "industry",
-      "title": "PMOS Linked To Increased Cardiovascular Disease Risk, Study Finds",
-      "source": "FemTech Insider",
-      "url": "https://femtechinsider.com/pmos-linked-to-increased-cardiovascular-disease-risk-study-finds/",
-      "date": "2026-07-30T17:25:24.000Z",
-      "authors": [],
-      "body": "A study published in The Lancet Obstetrics, Gynaecology, & Women’s Health found that women with polyendocrine metabolic ovarian syndrome (PMOS) face a significantly higher risk of atherosclerotic cardiovascular disease (ASCVD), independent of usual risk factors. Led by University of Rochester’s Dr. Snigdha Alur-Gupta, the U.S.-based study analyzed health records from 413,450 women ages 18–50 with PMOS and compared them with more than… The post PMOS Linked To Increased Cardiovascular Disease Risk, Study Finds first appeared on .",
-      "score": 7,
-      "why": "A Lancet Obstetrics, Gynaecology and Women's Health analysis of health records from 413,450 women aged 18 to 50 found elevated atherosclerotic cardiovascular disease risk independent of conventional risk factors. Large-scale evidence relevant to how reproductive endocrinology clinics counsel and screen these patients, though the summary is thin on the comparator and adjustment details.",
-      "theme": "Cardiometabolic Risk"
-    },
-    {
-      "id": "pmid:42497958",
-      "beat": "repro-ai",
-      "title": "Can we optimize selective screening of gestational diabetes mellitus? A multivariable predictive model on population-based data from the French National Perinatal Surveys.",
-      "source": "J Gynecol Obstet Hum Reprod",
-      "url": "https://doi.org/10.1016/j.jogoh.2026.103244",
-      "date": "2026-07-24T00:00:00.000Z",
-      "authors": [
-        "Badra L",
-        "Cohen JF",
-        "Viaud M",
-        "Regnault N",
-        "Lelong N",
-        "Ray CL",
-        "ENP2021 Study Group"
-      ],
-      "body": "OBJECTIVE: Selective screening for gestational diabetes mellitus (GDM) remains a widespread strategy. Variation in criteria identifying at-risk women questions its accuracy, with implications for clinical outcome and resource allocation. Our aim was to develop and externally validate a multivariable prediction model with improved performance compared to the current French pre-screening selection strategy. METHODS: Data was derived from the population-based 2021 (derivation sample) and 2016 (external validation sample) French National Perinatal Survey (ENP). Independent predictors of GDM were identified using a multivariable logistic regression model. Predictive performance was assessed through the area under the receiver operating characteristic curve. Diagnostic performance was assessed through sensitivity, specificity, and accuracy. Sensitivity analyses were conducted: (1) in maternity centers with quasi-universal screening, (2) outcome strictly defined as GDM cases associated with large-for-gestational-age births and (3) implementing doubly robust estimators of sensitivity and specificity. RESULTS: The study population included 10834 women in the derivation sample and 11633 in the validation sample, where the prevalence of GDM was respectively 19.4% and 13.2%. Maternal age, body mass index, obstetric history, family history of diabetes, and maternal country of birth were independent predictors of GDM. The prediction model demonstrated a statistically significant improvement in specificity (0.49 [95% CI: 0.48-0.50] vs. 0.46 [95% CI: 0.45-0.47]) and overall diagnostic accuracy (0.53 [95% CI: 0.52-0.54] vs. 0.50 [95% CI: 0.49-0.51]). CONCLUSION: The prediction model modestly improved performance while maintaining the same screening rate, though it is unlikely to justify additional complexity of implementation, therefore limiting its added-value in clinical practice. These findings suggest that available clinical predictors already capture most of the predictive information relevant for selective screening.",
-      "score": 6,
-      "why": "Using two population-based French National Perinatal Surveys with over 10,000 women each for derivation and external validation, a multivariable model for selective gestational diabetes screening improved specificity only from 0.46 to 0.49 at the same screening rate. The honest negative conclusion, that routine clinical predictors already capture nearly all available signal, is a useful check on enthusiasm for more complex GDM risk models.",
-      "theme": "Gestational Diabetes Screening"
-    },
     {
       "id": "url:08a072984cafc922",
       "beat": "industry",
@@ -73,9 +19,9 @@
       "date": "2026-07-28T18:26:19.000Z",
       "authors": [],
       "body": "Birth control and cycle-tracking app Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered NC° Fertility Algorithm. The company previously secured FDA clearances for its birth control app, integrations with Oura Ring and Apple Watch, and over-the-counter availability. The next-generation algorithm combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points… The post Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm first appeared on .",
-      "score": 6,
-      "why": "Natural Cycles obtained its sixth FDA clearance, this time for a next-generation fertility algorithm combining statistical modeling with machine learning trained on large volumes of real-world cycle data. A regulatory clearance for an AI fertility algorithm is a concrete milestone, but no performance data or comparison to the prior version is given.",
-      "theme": "FDA Clearance"
+      "score": 7,
+      "why": "Natural Cycles secured FDA clearance for a next-generation NC Fertility Algorithm that blends statistical modeling with machine learning trained on tens of millions of real-world cycle data points. This is a regulated AI product directly in reproductive medicine, though the announcement gives no performance figures or comparison against the prior algorithm.",
+      "theme": "Fertility Algorithm Clearance"
     },
     {
       "id": "pmid:42518080",
@@ -93,32 +39,8 @@
       ],
       "body": "Polycystic ovary syndrome (PCOS) is a heterogeneous endocrine disorder associated with reproductive dysfunction and increased cardiometabolic risk. Conventional diagnostic phenotypes may not adequately capture endocrine-metabolic variability, particularly in young women. We aimed to identify data-driven endocrine-metabolic phenotypes in young women with PCOS and assess their associations with selected cardiometabolic risk markers. This cross-sectional study included 1032 women aged 16-25 years with PCOS diagnosed according to the Rotterdam criteria, selected from 1300 consecutive patients evaluated at a tertiary gynecological endocrinology center in Poland between 2018 and 2025. Principal component analysis (PCA) followed by Gaussian mixture model clustering was used to identify latent endocrine-metabolic subgroups. Cardiometabolic outcomes included impaired glucose tolerance (2-hour plasma glucose&#x2009;&#x2265;&#x2009;140&#xa0;mg/dL), elevated triglyceride/high-density lipoprotein cholesterol (TG/HDL) ratio, elevated non-high-density lipoprotein cholesterol (&#x2265;&#x2009;130&#xa0;mg/dL), and a composite endpoint. PCA retained 10 components explaining 81.9% of total variance. The optimal clustering solution identified two subgroups: a predominant mixed endocrine-metabolic subgroup (n&#x2009;=&#x2009;954; 92.4%) and a smaller thyroid/autoimmune-enriched subgroup (n&#x2009;=&#x2009;78; 7.6%) characterized by higher anti-thyroid peroxidase antibody and thyroid-stimulating hormone levels. Cluster assignment certainty within the selected model was high, although sensitivity analyses suggested that the latent structure was partially driven by thyroid/autoimmune-related variables. The thyroid/autoimmune-enriched subgroup showed a higher prevalence of an elevated TG/HDL ratio, whereas differences in glucose tolerance and non-high-density lipoprotein cholesterol were less pronounced. These findings suggest the presence of exploratory endocrine-metabolic subgroup structure in young women with PCOS, including a thyroid/autoimmune-enriched subgroup associated with modest differences in lipid-related cardiometabolic risk markers. The observed heterogeneity extends beyond conventional diagnostic classifications, although external validation and longitudinal studies are required to determine clinical relevance and reproducibility. CLINICAL TRIAL REGISTRATION: This study was not registered as a clinical trial, as it was an observational cross-sectional analysis.",
       "score": 5,
-      "why": "PCA plus Gaussian mixture clustering in 1032 young women with PCOS produced two subgroups, with a small thyroid/autoimmune-enriched cluster showing a higher prevalence of elevated TG/HDL ratio. The finding is honest about being exploratory: the cluster structure was largely driven by thyroid variables, it is single-center and cross-sectional, and it does not yet change management.",
+      "why": "PCA plus Gaussian mixture clustering in 1032 young women with PCOS found only two subgroups, dominated by a small thyroid/autoimmune-enriched cluster with slightly worse TG/HDL. Reasonable size and directly relevant to reproductive endocrinology, but cross-sectional, single-center, and the authors themselves call the latent structure exploratory and unvalidated.",
       "theme": "PCOS Phenotyping"
-    },
-    {
-      "id": "pmid:42503276",
-      "beat": "repro-ai",
-      "title": "Maternal and obstetric factors associated with successful vaginal cerclage treatment: a prospective cohort study.",
-      "source": "Eur J Obstet Gynecol Reprod Biol",
-      "url": "https://doi.org/10.1016/j.ejogrb.2026.115329",
-      "date": "2026-07-23T00:00:00.000Z",
-      "authors": [
-        "Lamens JT",
-        "van Gils AL",
-        "van der Made FW",
-        "Gordijn SJ",
-        "de Boer MA",
-        "Hermsen BBJ",
-        "Kazemier BM",
-        "Oudijk MA",
-        "Pajkrt E",
-        "PC Research Group"
-      ],
-      "body": "OBJECTIVE: To identify maternal and obstetric factors associated with cerclage effectiveness in preventing preterm birth (PTB)&#xa0;<&#xa0;32&#xa0;weeks, in order to subsequently develop a prediction model. METHODS: Patients with prior spontaneous PTB&#xa0;<&#xa0;34&#xa0;weeks and a singleton pregnancy who received a history-based or ultrasound-indicated cerclage were included. Main outcome was PTB&#xa0;<&#xa0;32&#xa0;weeks. Maternal and obstetric factors were included in multivariate logistic regression to compose weighted prediction models for PTB&#xa0;<&#xa0;32&#xa0;weeks, separately for both indications. Individual risk scores were calculated using the composed prediction models using the regression coefficients. Optimal cut-off values between high-, medium- and low-risk were determined using receiver operating characteristic curves. RESULTS: 222 patients received cerclage treatment. PTB&#xa0;<&#xa0;32&#xa0;weeks occurred in 43/222 (19.4%), of which in 13/85 (15.3%) in the history-based and 30/137 (21.9%) in the ultrasound-indicated group. Multivariate logistic regression was deemed unreliable in the history-based group. Following multivariate logistic regression in the ultrasound-indicated group, the prediction model included maternal age (p&#xa0;=&#xa0;0.009), smoking (p&#xa0;=&#xa0;0.004), gestational age at placement (p&#xa0;=&#xa0;0.001) and cervical length (p&#xa0;=&#xa0;0.004). We divided patients in high-, medium- and low-risk groups. PTB&#xa0;<&#xa0;32 occurred in 12/15 (80.0%) in the high-risk, 11/50 (22.0%) in the medium-risk and 5/68 (7.4%) in the low-risk group. CONCLUSIONS: Longer cervical length, higher maternal age, higher gestational age at placement and smoking status are associated with increased cerclage effectiveness. The prediction model effectively stratified included patients and can be a valuable tool in patient counselling. Future investigations should aim to include more variables and to externally validate the prediction model.",
-      "score": 5,
-      "why": "In a prospective cohort of 222 patients with prior spontaneous preterm birth who received cerclage, maternal age, smoking, gestational age at placement, and cervical length predicted preterm birth before 32 weeks, stratifying risk from 7% to 80%. Prospective and clinically actionable for counselling, but the history-based group model was unreliable, the high-risk group had only 15 patients, and there is no external validation.",
-      "theme": "Cerclage Outcomes"
     },
     {
       "id": "pmid:42500874",
@@ -137,7 +59,7 @@
       ],
       "body": "INTRODUCTION: Telehealth is a strategic component of primary health care and has advanced in Brazil through the National Telehealth Program. Its benefits can be enhanced by artificial intelligence (AI), which has emerged as a promising tool. This study aims to compare the performance of real human and AI-generated responses to queries submitted to the teleconsultation services of the Telehealth Center of the UFMG Faculty of Medicine (NUTEL FM-UFMG), a member of the Telehealth Brazil Program. METHODS: This is a comparative cross-sectional study of 180 real human and AI-generated responses, evaluated in a blinded manner according to quality criteria (medical adequacy, conciseness, coherence, and comprehensibility), risk potential, authorship identification accuracy, and inquiry resolution. Data from NUTEL FM-UFMG (January 2020 to May 2024) were utilized, covering cardiology, endocrinology, and obstetrics/gynecology (OB-GYN). Statistical analysis included the Shapiro-Wilk test, Kruskal-Wallis test, Nemenyi multiple comparison test, chi-square test, and Fisher's exact test. RESULTS: Across all specialties, a significant difference was observed in comprehensibility, with AI mean scores surpassing those of humans. For the remaining quality criteria, as well as for risk potential and inquiry resolution, no significant differences were found, despite AI scoring higher than humans. Within specific specialties, significant differences was observed in endocrinology (except conciseness) and cardiology (in conciseness); AI showed superior means. Across all specialties, as well as individually within endocrinology and OB-GYN, the accuracy of authorship identification (human vs. AI) was statistically significant. CONCLUSION: Despite existing limitations, AI demonstrates substantial potential as a support tool for teleconsultation services.",
       "score": 5,
-      "why": "Blinded raters compared 180 human and LLM-generated responses to real primary care teleconsultation queries in cardiology, endocrinology, and OB-GYN, finding AI equal or better on quality criteria and better on comprehensibility. A real-world query set is a strength, but it is a retrospective rating study with no patient outcomes and raters could often identify authorship.",
+      "why": "Blinded raters compared 180 real teleconsultation answers from a Brazilian primary care telehealth service against LLM-generated responses across cardiology, endocrinology, and OB/GYN, finding AI equal or better on quality and comprehensibility with no difference in risk. A useful real-query benchmark, though it is a retrospective rating study with no patient outcomes and raters could often tell which answers were AI.",
       "theme": "LLM Teleconsultation"
     },
     {
@@ -154,21 +76,21 @@
       ],
       "body": "PURPOSE OF REVIEW: Artificial intelligence (AI) is emerging as a promising tool for sperm detection in men with azoospermia and cryptozoospermia, conditions in which rare spermatozoa can be difficult and time-consuming to identify. This review summarizes recent advances in AI-assisted sperm detection and their potential clinical applications. RECENT FINDINGS: Recent studies demonstrate that deep learning-based systems can improve the speed and sensitivity of sperm detection in both testicular tissue and ejaculate samples. AI-assisted image analysis has reduced search times and improved detection rates compared with conventional manual evaluation. Emerging technologies include augmented reality platforms that support embryologists during sperm searches and AI-integrated microfluidic systems capable of sperm detection and isolation. Early clinical data suggest these approaches may enable sperm recovery in patients previously considered sperm-negative by conventional methods. SUMMARY: AI-assisted sperm detection has the potential to improve efficiency, reproducibility, and access to fertility treatment for men with severe male factor infertility. Although further validation is required, ongoing advances in AI, imaging, and microfluidics may transform the diagnosis and management of azoospermia and cryptozoospermia.",
       "score": 5,
-      "why": "Narrative review summarizing deep learning, augmented reality, and microfluidic approaches to finding rare sperm in azoospermia and cryptozoospermia, with early reports of recovery in samples previously called sperm-negative. Directly on this reader's beat and a useful orientation, but it is a review with no new data and the authors note validation is still lacking.",
-      "theme": "Sperm Detection"
+      "why": "A focused review of AI-assisted sperm detection in azoospermia and cryptozoospermia, covering deep learning search tools, augmented reality aids for embryologists, and AI-microfluidic isolation, with early reports of sperm recovery in previously sperm-negative samples. Well aligned with the reader's field and a good orientation to a fast-moving niche, but it is a review with no new or externally validated data.",
+      "theme": "Sperm Detection AI"
     },
     {
-      "id": "url:eba7979e1d10acaa",
+      "id": "url:22b5c520b3a61f1a",
       "beat": "industry",
-      "title": "Kompass Diagnostics Scales Rapid Finger-Prick Hormone Testing",
-      "source": "FemTech Insider",
-      "url": "https://femtechinsider.com/kompass-diagnostics-scales-rapid-finger-prick-hormone-testing/",
-      "date": "2026-07-29T22:00:36.000Z",
+      "title": "The FDA was all in on AI. Will that change?",
+      "source": "MedTech Dive",
+      "url": "https://www.medtechdive.com/news/AI-guidance-in-question-FDA/826420/",
+      "date": "2026-07-29T13:49:00.000Z",
       "authors": [],
-      "body": "Kompass has entered an exclusive licensing agreement with the University of Chicago to commercialize its rapid finger-prick hormone testing platform for fertility care. An alternative to traditional lab testing, Kompass’ platform uses high-sensitivity silicon biosensors to analyze blood-based biomarkers and deliver results in ~10 minutes. The company currently offers four testing panels–designed for IVF and egg freezing protocols–measuring key hormones, including estradiol,… The post Kompass Diagnostics Scales Rapid Finger-Prick Hormone Testing first appeared on .",
+      "body": "High-level turnover has introduced uncertainty about how quickly the FDA’s agency-wide AI strategy will move forward.",
       "score": 5,
-      "why": "Kompass licensed a University of Chicago silicon biosensor platform that returns estradiol and other hormone results from a finger prick in about ten minutes, with panels built for IVF and egg freezing monitoring. Point-of-care estradiol could change cycle monitoring logistics, but no accuracy data against standard immunoassay is presented here.",
-      "theme": "Point-Of-Care Hormones"
+      "why": "MedTech Dive reports that senior leadership turnover at the FDA has cast doubt on the pace of the agency's AI strategy. Regulatory direction matters for anyone planning an AI submission, though the item is thin and offers signals rather than concrete policy changes.",
+      "theme": "FDA AI Policy"
     }
   ],
   "stats": {
@@ -179,15 +101,17 @@
         "totalMatches": 9,
         "retrieved": 9,
         "truncated": false,
+        "staleDropped": 0,
         "newAfterDedup": 9
       },
       {
         "beat": "repro-ai",
         "label": "AI in Ob/Gyn and REI",
-        "totalMatches": 38,
-        "retrieved": 38,
+        "totalMatches": 30,
+        "retrieved": 29,
         "truncated": false,
-        "newAfterDedup": 38
+        "staleDropped": 1,
+        "newAfterDedup": 29
       },
       {
         "beat": "industry",
@@ -195,6 +119,7 @@
         "totalMatches": 18,
         "retrieved": 18,
         "truncated": false,
+        "staleDropped": 0,
         "newAfterDedup": 18
       }
     ],
