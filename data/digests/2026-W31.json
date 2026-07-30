@@ -62,12 +62,12 @@
       "theme": "AI Decision Support",
       "glossary": [
         {
-          "term": "randomized controlled trial",
+          "term": "Randomized Controlled Trial",
           "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
           "isNew": true
         },
         {
-          "term": "external validation",
+          "term": "External Validation",
           "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
           "isNew": true
         },
@@ -105,22 +105,22 @@
       "theme": "Speech Biomarker Validation",
       "glossary": [
         {
-          "term": "external validation",
+          "term": "External Validation",
           "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
           "isNew": true
         },
         {
-          "term": "intraclass correlation coefficient",
+          "term": "Intraclass Correlation Coefficient",
           "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
           "isNew": true
         },
         {
-          "term": "contrastive learning",
+          "term": "Contrastive Learning",
           "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
           "isNew": true
         },
         {
-          "term": "longitudinal study",
+          "term": "Longitudinal Study",
           "definition": "A study that follows the same people over time to see how something changes.",
           "isNew": true
         }
@@ -156,17 +156,17 @@
       "theme": "Psychosis Risk Screening",
       "glossary": [
         {
-          "term": "large language models",
+          "term": "Large Language Models",
           "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
           "isNew": true
         },
         {
-          "term": "sensitivity",
+          "term": "Sensitivity",
           "definition": "The percentage of true positive cases that a test or model correctly identifies.",
           "isNew": true
         },
         {
-          "term": "specificity",
+          "term": "Specificity",
           "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
           "isNew": true
         },
@@ -200,7 +200,7 @@
       "theme": "Cervical Screening Efficiency",
       "glossary": [
         {
-          "term": "decision-tree model",
+          "term": "Decision-Tree Model",
           "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
           "isNew": true
         }
@@ -229,7 +229,7 @@
       "theme": "Cervical Cytology AI",
       "glossary": [
         {
-          "term": "sensitivity",
+          "term": "Sensitivity",
           "definition": "The percentage of true positive cases that a test or model correctly identifies.",
           "isNew": true
         },
@@ -239,7 +239,7 @@
           "isNew": true
         },
         {
-          "term": "retrospective",
+          "term": "Retrospective",
           "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
           "isNew": true
         }
@@ -263,7 +263,7 @@
       "theme": "Preeclampsia Prediction",
       "glossary": [
         {
-          "term": "External validation",
+          "term": "External Validation",
           "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
           "isNew": true
         },
@@ -273,12 +273,12 @@
           "isNew": true
         },
         {
-          "term": "Brier score",
+          "term": "Brier Score",
           "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
           "isNew": true
         },
         {
-          "term": "sFlt-1/PlGF ratio",
+          "term": "sFlt-1/PlGF Ratio",
           "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
           "isNew": true
         }
@@ -317,7 +317,7 @@
       "theme": "Cervical Cancer Imaging",
       "glossary": [
         {
-          "term": "external validation",
+          "term": "External Validation",
           "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
           "isNew": true
         },
@@ -327,7 +327,7 @@
           "isNew": true
         },
         {
-          "term": "radiomics",
+          "term": "Radiomics",
           "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
           "isNew": true
         }
@@ -360,7 +360,7 @@
           "isNew": true
         },
         {
-          "term": "follicular fluid",
+          "term": "Follicular Fluid",
           "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
           "isNew": true
         }
@@ -400,7 +400,7 @@
       "isNew": true
     },
     {
-      "term": "Brier score",
+      "term": "Brier Score",
       "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
       "isNew": true
     },
@@ -410,22 +410,22 @@
       "isNew": true
     },
     {
-      "term": "contrastive learning",
+      "term": "Contrastive Learning",
       "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
       "isNew": true
     },
     {
-      "term": "decision-tree model",
+      "term": "Decision-Tree Model",
       "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
       "isNew": true
     },
     {
-      "term": "external validation",
+      "term": "External Validation",
       "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
       "isNew": true
     },
     {
-      "term": "follicular fluid",
+      "term": "Follicular Fluid",
       "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
       "isNew": true
     },
@@ -435,42 +435,42 @@
       "isNew": true
     },
     {
-      "term": "intraclass correlation coefficient",
+      "term": "Intraclass Correlation Coefficient",
       "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
       "isNew": true
     },
     {
-      "term": "large language models",
+      "term": "Large Language Models",
       "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
       "isNew": true
     },
     {
-      "term": "longitudinal study",
+      "term": "Longitudinal Study",
       "definition": "A study that follows the same people over time to see how something changes.",
       "isNew": true
     },
     {
-      "term": "radiomics",
+      "term": "Radiomics",
       "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
       "isNew": true
     },
     {
-      "term": "randomized controlled trial",
+      "term": "Randomized Controlled Trial",
       "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
       "isNew": true
     },
     {
-      "term": "retrospective",
+      "term": "Retrospective",
       "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
       "isNew": true
     },
     {
-      "term": "sensitivity",
+      "term": "Sensitivity",
       "definition": "The percentage of true positive cases that a test or model correctly identifies.",
       "isNew": true
     },
     {
-      "term": "sFlt-1/PlGF ratio",
+      "term": "sFlt-1/PlGF Ratio",
       "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
       "isNew": true
     },
@@ -480,7 +480,7 @@
       "isNew": true
     },
     {
-      "term": "specificity",
+      "term": "Specificity",
       "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
       "isNew": true
     },

@@ -110,7 +110,9 @@ jargon of its own. Define the general concept rather than this study's specific
 use of it, because these definitions are reused across future weeks. When a
 term has both a full name and an abbreviation, use the full name as the term,
 so that "intraclass correlation coefficient" and "ICC" do not become two
-separate entries. Return an
+separate entries. Write the term in Title Case, capitalising each important
+word, but leave acronyms and cased names exactly as they are conventionally
+written: AUC, sFlt-1/PlGF, mRNA. Return an
 empty array if your summary genuinely contains no such term.
 
 Also give a short theme label in Title Case, two or three words, describing the

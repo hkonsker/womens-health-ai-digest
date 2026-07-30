@@ -47,6 +47,7 @@ import {
   loadGlossary,
   saveGlossary,
   glossaryToList,
+  titleCaseTerm,
 } from "../lib/store.js";
 import type { Candidate, DigestRun, RunStats } from "../lib/types.js";
 
@@ -257,7 +258,11 @@ async function main(): Promise<void> {
       const key = g.term.toLowerCase().trim();
       if (!key || !g.definition) continue;
       if (!glossary[key]) {
-        glossary[key] = { term: g.term, definition: g.definition, firstSeen: weekLabel };
+        glossary[key] = {
+          term: titleCaseTerm(g.term),
+          definition: g.definition,
+          firstSeen: weekLabel,
+        };
       }
       // Always show the stored wording, not this week's regeneration. That
       // covers the label too, or the same term drifts between "external

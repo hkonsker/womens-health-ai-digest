@@ -65,6 +65,37 @@ export type GlossaryStore = Record<
   { term: string; definition: string; firstSeen: string }
 >;
 
+/**
+ * Small words stay lowercase unless they open or close the term.
+ * Matches the house style: Title Case for anything that is not a sentence.
+ */
+const SMALL_WORDS = new Set([
+  "a", "an", "the", "and", "or", "but", "nor",
+  "of", "to", "by", "in", "on", "at", "as", "for", "per", "vs",
+]);
+
+/**
+ * Title Case a glossary label.
+ *
+ * Any word that already contains a capital is left exactly alone. That is the
+ * load-bearing rule: acronyms (AUC, AMH, SHAP) and cased biomarkers such as
+ * sFlt-1/PlGF are meaningful as written, and blindly capitalising them would
+ * produce Sflt-1/Plgf, which is not a real thing.
+ */
+export function titleCaseTerm(raw: string): string {
+  const words = raw.trim().split(/\s+/);
+  return words
+    .map((word, i) => {
+      if (/[A-Z]/.test(word)) return word;
+      const bare = word.replace(/[^a-z]/g, "");
+      const isEdge = i === 0 || i === words.length - 1;
+      if (!isEdge && SMALL_WORDS.has(bare)) return word;
+      // Capitalise after a hyphen or slash too: decision-tree -> Decision-Tree
+      return word.replace(/(^|[-/])([a-z])/g, (_, sep, ch) => sep + ch.toUpperCase());
+    })
+    .join(" ");
+}
+
 export async function loadGlossary(): Promise<GlossaryStore> {
   return readJson<GlossaryStore>(GLOSSARY_PATH, {});
 }
