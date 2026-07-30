@@ -64,6 +64,35 @@
   .meta { margin: 0; font-size: 13px; color: var(--muted); }
   .why { margin: 10px 0 0; font-size: 15px; color: var(--body); }
 
+  .terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .term { min-width: 0; }
+  .term > summary {
+    list-style: none; cursor: pointer; font-size: 12px; white-space: nowrap;
+    border: 1px dashed var(--line); border-radius: 999px; padding: 2px 10px;
+    color: var(--muted); transition: border-color .15s, color .15s;
+  }
+  .term > summary::-webkit-details-marker { display: none; }
+  .term > summary:hover { border-color: var(--poppy); color: var(--poppy); }
+  .term[open] { flex-basis: 100%; }
+  .term[open] > summary {
+    border-style: solid; border-color: var(--poppy); color: var(--poppy);
+    display: inline-block; margin-bottom: 6px;
+  }
+  .term p {
+    margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: var(--body);
+    border-left: 2px solid var(--line); padding-left: 10px;
+  }
+  .new {
+    font-size: 9px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--poppy); margin-left: 5px; vertical-align: 1px;
+  }
+
+  .glossary { margin-bottom: 16px; }
+  .glossary > summary { cursor: pointer; color: var(--body); }
+  .glossary dl { margin: 10px 0 0; }
+  .glossary dt { font-weight: 650; color: var(--ink); margin-top: 10px; font-size: 13px; }
+  .glossary dd { margin: 2px 0 0; padding-left: 0; }
+
   .empty { color: var(--muted); font-style: italic; padding: 24px 0; }
 
   footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
@@ -94,123 +123,251 @@
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#4B535A">Clinical AI</span>
-          <span class="theme">Genotype Prediction Trial</span>
+          <span class="theme">AI Decision Support</span>
           <span class="score" title="Editor score out of 10">9</span>
         </div>
         <h2><a href="https://doi.org/10.1038/s41591-026-04545-w" target="_blank" rel="noopener noreferrer">AI-based clinician decision support system for diagnosis of inherited retinal diseases: a multicenter, randomized trial.</a></h2>
         <p class="meta">Nat Med &middot; Jia H et al. &middot; Jul 24, 2026</p>
-        <p class="why">Retina4IRD, a vision transformer trained on multimodal imaging from 1,843 genetically confirmed patients across three countries, predicts 17 IRD genotype categories and was tested in a 295-patient randomized trial where AI-assisted specialists reached 88.5% top-5 genetic accuracy versus 67.3% for specialists alone. This is a rare combination of external validation and a randomized clinical endpoint with downstream management effects, a template for how diagnostic AI should be evaluated even outside ophthalmology.</p>
+        <p class="why">In a randomized trial across multiple countries, an AI tool that reads retina images to predict likely genetic causes of inherited eye diseases nearly doubled doctors' accuracy in guessing the right gene category compared to doctors working alone, and also improved their treatment decisions. This is a rare case of a clinical AI tool being tested with a real randomized comparison and a hard clinical outcome rather than just retrospective accuracy, making it a strong model for how AI decision support should be evaluated in any specialty, including reproductive genetics.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>randomized controlled trial<span class="new">new</span></summary>
+            <p>A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.</p>
+          </details>
+          <details class="term is-new">
+            <summary>external validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Vision Transformer<span class="new">new</span></summary>
+            <p>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</p>
+          </details>
+        </div>
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#4B535A">Clinical AI</span>
-          <span class="theme">Speech Biomarkers</span>
-          <span class="score" title="Editor score out of 10">7</span>
+          <span class="theme">Speech Biomarker Validation</span>
+          <span class="score" title="Editor score out of 10">8</span>
         </div>
         <h2><a href="https://doi.org/10.1016/j.landig.2026.101025" target="_blank" rel="noopener noreferrer">A deep learning model for speech-based prediction of clinical scores in people with Huntington's disease: a longitudinal study with cross-sectional replication.</a></h2>
         <p class="meta">Lancet Digit Health &middot; Le Moine Veillon C et al. &middot; Jul 23, 2026</p>
-        <p class="why">A deep learning model on speech recordings predicted UHDRS clinical scores in Huntington's disease across four prospective cohorts, with 10-fold cross-validation, external replication in 110 patients, and agreement comparable to clinician ratings plus correspondence with striatal atrophy on MRI. Useful as a template for validating passive digital biomarkers longitudinally, though cohorts are modest in size and the endpoint is a rating scale rather than a hard clinical outcome.</p>
+        <p class="why">Researchers built and tested an AI model that estimates Huntington's disease severity scores directly from voice recordings, validating it across multiple longitudinal cohorts and an independent replication group, and found it tracked disease progression nearly as well as clinician ratings and brain scans. This is a strong example of a rigorously validated AI biomarker with real prospective and external validation, showing how speech analysis could offer a cheap, noninvasive way to monitor neurodegenerative disease, a template relevant to tracking any chronic condition remotely.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>external validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>intraclass correlation coefficient<span class="new">new</span></summary>
+            <p>A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.</p>
+          </details>
+          <details class="term is-new">
+            <summary>contrastive learning<span class="new">new</span></summary>
+            <p>A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.</p>
+          </details>
+          <details class="term is-new">
+            <summary>longitudinal study<span class="new">new</span></summary>
+            <p>A study that follows the same people over time to see how something changes.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#4B535A">Clinical AI</span>
+          <span class="theme">Psychosis Risk Screening</span>
+          <span class="score" title="Editor score out of 10">6</span>
+        </div>
+        <h2><a href="https://doi.org/10.1038/s41746-026-02928-4" target="_blank" rel="noopener noreferrer">Evaluating large language models for assessment of psychosis risk.</a></h2>
+        <p class="meta">NPJ Digit Med &middot; Zhu T et al. &middot; Jul 23, 2026</p>
+        <p class="why">Researchers tested several AI language models on real interview transcripts to see if they could identify people at high risk for psychosis and rate their symptoms, finding that larger models matched human raters reasonably well and rarely made things up. The study used a sizable multi-site sample and checked for fairness across demographic groups, which is a more rigorous test than typical single-site AI studies, though it still falls short of a clinical trial showing real-world impact.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>large language models<span class="new">new</span></summary>
+            <p>AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.</p>
+          </details>
+          <details class="term is-new">
+            <summary>sensitivity<span class="new">new</span></summary>
+            <p>The percentage of true positive cases that a test or model correctly identifies.</p>
+          </details>
+          <details class="term is-new">
+            <summary>specificity<span class="new">new</span></summary>
+            <p>The percentage of true negative cases that a test or model correctly identifies as negative.</p>
+          </details>
+          <details class="term is-new">
+            <summary>ICC<span class="new">new</span></summary>
+            <p>A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
+          <span class="theme">Cervical Screening Efficiency</span>
+          <span class="score" title="Editor score out of 10">6</span>
+        </div>
+        <h2><a href="https://doi.org/10.1136/bmjopen-2025-113298" target="_blank" rel="noopener noreferrer">Improving laboratory workforce efficiency using AI-assisted digital cytology within an HPV-based cervical screening programme: A model-based evaluation for the NHS Cervical Screening Programmes.</a></h2>
+        <p class="meta">BMJ Open &middot; Wilson A et al. &middot; Jul 28, 2026</p>
+        <p class="why">A decision-tree modeling study estimated that AI-assisted digital cytology could cut the time needed to review cervical cancer screening slides from about 13 minutes to 4 minutes per slide across the NHS system, roughly a 69% gain in staff productivity. It is a policy-relevant, large-scale workforce analysis rather than a clinical trial, but it speaks directly to real deployment feasibility in a national screening program.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>decision-tree model<span class="new">new</span></summary>
+            <p>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
+          <span class="theme">Cervical Cytology AI</span>
+          <span class="score" title="Editor score out of 10">6</span>
+        </div>
+        <h2><a href="https://doi.org/10.1080/17843286.2026.2711062" target="_blank" rel="noopener noreferrer">An explainable machine learning approach for cervical cancer screening: decoding morphological diagnostic drivers.</a></h2>
+        <p class="meta">Acta Clin Belg &middot; Chang H et al. &middot; Jul 29, 2026</p>
+        <p class="why">An interpretable machine learning tool for reading cervical cancer screening slides was tested against senior pathologists on 5,000 archived samples from a Chinese healthcare network, detecting high-grade lesions with 92.5% sensitivity versus 84.2% for manual review, while cutting review time by 63%. The performance held up across subgroups like menopausal or infected tissue, and the model's reasoning was traced to specific cell features, though it remains a single-network retrospective study without independent external validation.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>sensitivity<span class="new">new</span></summary>
+            <p>The percentage of true positive cases that a test or model correctly identifies.</p>
+          </details>
+          <details class="term is-new">
+            <summary>SHAP<span class="new">new</span></summary>
+            <p>A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.</p>
+          </details>
+          <details class="term is-new">
+            <summary>retrospective<span class="new">new</span></summary>
+            <p>A study design that looks back at existing past data rather than collecting new data as events happen.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
+          <span class="theme">Preeclampsia Prediction</span>
+          <span class="score" title="Editor score out of 10">6</span>
+        </div>
+        <h2><a href="https://doi.org/10.1016/j.preghy.2026.101501" target="_blank" rel="noopener noreferrer">Reply to the letter to the editor: &quot;Machine learning model for predicting preeclampsia-related adverse outcomes&quot;.</a></h2>
+        <p class="meta">Pregnancy Hypertens &middot; Hackelöer M et al. &middot; Jul 22, 2026</p>
+        <p class="why">This is a reply to critics of a previously published machine learning model that predicts preeclampsia-related complications, clarifying that the model performed consistently well across a German and a North American patient group and adding it offers more information than the existing sFlt-1/PlGF blood test ratio alone. The response strengthens confidence in a model that has already undergone real cross-cohort validation, though a formal head-to-head comparison against the standard test is still pending.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>External validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Calibration<span class="new">new</span></summary>
+            <p>How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Brier score<span class="new">new</span></summary>
+            <p>A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.</p>
+          </details>
+          <details class="term is-new">
+            <summary>sFlt-1/PlGF ratio<span class="new">new</span></summary>
+            <p>A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.</p>
+          </details>
+        </div>
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#175E54">Femtech and Digital Health</span>
-          <span class="theme">Fertility Algorithm Clearance</span>
-          <span class="score" title="Editor score out of 10">7</span>
+          <span class="theme">FDA Clearance</span>
+          <span class="score" title="Editor score out of 10">6</span>
         </div>
         <h2><a href="https://femtechinsider.com/natural-cycles-receives-sixth-fda-clearance-for-ai-powered-fertility-algorithm/" target="_blank" rel="noopener noreferrer">Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm</a></h2>
         <p class="meta">FemTech Insider &middot; Jul 28, 2026</p>
-        <p class="why">Natural Cycles secured its sixth FDA clearance, this time for a next-generation fertility algorithm combining statistical modeling with machine learning trained on tens of millions of real-world cycle data points. This is a regulatory milestone for a cleared algorithmic contraceptive tool that sits squarely in reproductive AI, though the announcement gives no performance data or comparison against the prior algorithm.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#4B535A">Clinical AI</span>
-          <span class="theme">Psychosis Risk LLMs</span>
-          <span class="score" title="Editor score out of 10">6</span>
-        </div>
-        <h2><a href="https://doi.org/10.1038/s41746-026-02928-4" target="_blank" rel="noopener noreferrer">Evaluating large language models for assessment of psychosis risk.</a></h2>
-        <p class="meta">NPJ Digit Med &middot; Zhu T et al. &middot; Jul 23, 2026</p>
-        <p class="why">Eleven open-weight LLMs were benchmarked on 678 clinical high risk for psychosis interview transcripts from 373 participants, with the best model reaching 0.80 accuracy, 0.93 sensitivity, 0.58 specificity, and symptom score ICCs around 0.75 against researcher ratings. Careful evaluation including confabulation rates and site variation, but it is retrospective transcript scoring in a heavily enriched sample, so specificity and real workflow value remain unproven.</p>
+        <p class="why">Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world data points. This is a concrete regulatory milestone for a widely used reproductive health AI tool, though the text gives no performance data from this specific update.</p>
+        
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
-          <span class="theme">Cervical Cytology Workflow</span>
-          <span class="score" title="Editor score out of 10">6</span>
-        </div>
-        <h2><a href="https://doi.org/10.1136/bmjopen-2025-113298" target="_blank" rel="noopener noreferrer">Improving laboratory workforce efficiency using AI-assisted digital cytology within an HPV-based cervical screening programme: A model-based evaluation for the NHS Cervical Screening Programmes.</a></h2>
-        <p class="meta">BMJ Open &middot; Wilson A et al. &middot; Jul 28, 2026</p>
-        <p class="why">A decision-tree model parameterised from published data and expert input estimated that AI-assisted digital cytology (Genius) would cut cervical cytology review from 12.9 to 4.0 minutes per slide across the NHS screening programme, a 69% productivity gain. Relevant to anyone thinking about deploying AI in cervical screening at national scale, but it is a workflow model rather than a prospective evaluation, and it reports no accuracy or clinical outcome data.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
-          <span class="theme">Cervical Screening AI</span>
-          <span class="score" title="Editor score out of 10">6</span>
-        </div>
-        <h2><a href="https://doi.org/10.1080/17843286.2026.2711062" target="_blank" rel="noopener noreferrer">An explainable machine learning approach for cervical cancer screening: decoding morphological diagnostic drivers.</a></h2>
-        <p class="meta">Acta Clin Belg &middot; Chang H et al. &middot; Jul 29, 2026</p>
-        <p class="why">A retrospective audit of 5,000 archived liquid-based cytology slides in a Chinese network found the LBC-NET pipeline detected HSIL+ with 92.5% sensitivity versus 84.2% for a blinded senior cytopathologist panel, with stable performance in menopausal and infected subgroups and 63% faster review. The head-to-head comparison against expert readers and subgroup robustness are strengths, but it is retrospective, single-network, and lacks external validation or prospective deployment.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#4B535A">Clinical AI</span>
-          <span class="theme">AI Communication Stress</span>
+          <span class="theme">Cervical Cancer Imaging</span>
           <span class="score" title="Editor score out of 10">5</span>
         </div>
-        <h2><a href="https://doi.org/10.1038/s41746-026-03022-5" target="_blank" rel="noopener noreferrer">Perceptions of simulated artificial intelligence in medical consultations: associations with stress, memory, and perceived credibility.</a></h2>
-        <p class="meta">NPJ Digit Med &middot; Mayer CJ et al. &middot; Jul 29, 2026</p>
-        <p class="why">In a Wizard of Oz experiment with 163 healthy volunteers receiving simulated bad news, purportedly AI consultations produced lower stress and cortisol than human clinicians, while the chatbot format yielded the worst memory retrieval. An unusual look at how patients respond to AI-delivered communication, though the simulated interaction, healthy participants, and fake AI limit clinical transfer.</p>
+        <h2><a href="https://doi.org/10.1016/j.acra.2026.07.022" target="_blank" rel="noopener noreferrer">Multi-modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.</a></h2>
+        <p class="meta">Acad Radiol &middot; Yang H et al. &middot; Jul 29, 2026</p>
+        <p class="why">Researchers built a multi-step machine learning model that combines MRI image patterns and clinical data to predict whether cervical cancer has spread to lymph nodes, testing it on separate patient groups including an external one, with best accuracy scores around 0.87 to 0.92 on a 0 to 1 scale. It shows solid validation practice for a retrospective imaging study, but it stays in the incremental radiomics genre common to this type of work and offers no reproductive angle.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>external validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>AUC<span class="new">new</span></summary>
+            <p>A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.</p>
+          </details>
+          <details class="term is-new">
+            <summary>radiomics<span class="new">new</span></summary>
+            <p>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</p>
+          </details>
+        </div>
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
-          <span class="theme">Oocyte Scoring</span>
+          <span class="theme">Oocyte Quality Biomarkers</span>
           <span class="score" title="Editor score out of 10">5</span>
         </div>
         <h2><a href="https://doi.org/10.1093/reprod/xaag092" target="_blank" rel="noopener noreferrer">AI-derived oocyte morphology and follicular fluid biomarkers in donors.</a></h2>
         <p class="meta">Reproduction &middot; Herrero Y et al. &middot; Jul 29, 2026</p>
-        <p class="why">In 49 young oocyte donors, AI-derived oocyte morphology scores correlated with follicular fluid glucose, cholesterol, HDL, AMH, and HSPG2 but not with triglycerides, LDL, LH, or FSH. It offers a biological interpretation of what AI oocyte scores may capture, which is directly relevant to REI, but the sample is tiny, biomarkers were pooled per woman, and no link to live birth is shown.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
-          <span class="theme">PCOS Phenotyping</span>
-          <span class="score" title="Editor score out of 10">5</span>
+        <p class="why">In 49 young egg donors, researchers found that AI-generated scores of egg quality correlated with certain metabolic and structural molecules measured in the fluid surrounding the egg, such as glucose, cholesterol, and a hormone called AMH. The study is small and exploratory, but it is a genuine attempt to ground an AI scoring tool in underlying biology rather than just image pattern matching, which is relevant to embryo and oocyte selection research.</p>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>AMH<span class="new">new</span></summary>
+            <p>A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.</p>
+          </details>
+          <details class="term is-new">
+            <summary>follicular fluid<span class="new">new</span></summary>
+            <p>The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.</p>
+          </details>
         </div>
-        <h2><a href="https://doi.org/10.1007/s40618-026-02998-x" target="_blank" rel="noopener noreferrer">Data-driven endocrine-metabolic phenotypes in young women with polycystic ovary syndrome and associations with cardiometabolic risk markers.</a></h2>
-        <p class="meta">J Endocrinol Invest &middot; Piórkowska N et al. &middot; Jul 28, 2026</p>
-        <p class="why">PCA plus Gaussian mixture clustering in 1032 young women with PCOS produced two subgroups, with a small thyroid/autoimmune-enriched cluster showing modestly higher TG/HDL ratios. The cohort is a decent size and directly relevant to reproductive endocrinology, but the structure is cross-sectional, unvalidated externally, and the authors themselves call it exploratory.</p>
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#8C1515">AI in Ob/Gyn and REI</span>
-          <span class="theme">LLM Teleconsultation</span>
+          <span class="theme">AI Chatbot Triage</span>
           <span class="score" title="Editor score out of 10">5</span>
         </div>
         <h2><a href="https://doi.org/10.1177/15305627261471706" target="_blank" rel="noopener noreferrer">Performance of Large Language Model-Based Chatbots in Primary Health Care Teleconsultations: A Comparison Between Human and Artificial Intelligence-Generated Responses.</a></h2>
         <p class="meta">Telemed J E Health &middot; Barros GDM et al. &middot; Jul 25, 2026</p>
-        <p class="why">Blinded raters compared 180 real teleconsultation answers from Brazilian primary care specialists, including obstetrics and gynecology, against LLM-generated responses and found AI equal or better on most quality criteria and superior on comprehensibility. It is a useful signal for LLM decision support in teleconsultation, but the design is a retrospective text comparison with no patient outcomes and raters could often identify authorship.</p>
+        <p class="why">This study compared AI chatbot responses to real doctors' responses for over 900 patient telehealth questions in Brazil, finding AI responses were rated as easier to understand and performed comparably or better on most other quality measures across specialties including obstetrics and gynecology. It is a real head-to-head evaluation with a reasonably large sample, though it measures response quality rather than actual clinical outcomes.</p>
+        
       </article>
 
   <footer>
     <h3>Past Weeks</h3>
     <ul class="archive"><li><a href="#" class="current">2026-W31</a> <span>10</span></li></ul>
 
+    <h3>Glossary (20 terms)</h3>
+    <details class="glossary">
+      <summary>Every term the digest has explained so far</summary>
+      <dl><dt>AMH<span class="new">new</span></dt><dd>A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.</dd><dt>AUC<span class="new">new</span></dt><dd>A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.</dd><dt>Brier score<span class="new">new</span></dt><dd>A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.</dd><dt>Calibration<span class="new">new</span></dt><dd>How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.</dd><dt>contrastive learning<span class="new">new</span></dt><dd>A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.</dd><dt>decision-tree model<span class="new">new</span></dt><dd>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</dd><dt>external validation<span class="new">new</span></dt><dd>Testing a model on data from a different location or population than it was built with, to see if it still works.</dd><dt>follicular fluid<span class="new">new</span></dt><dd>The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.</dd><dt>ICC<span class="new">new</span></dt><dd>A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.</dd><dt>intraclass correlation coefficient<span class="new">new</span></dt><dd>A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.</dd><dt>large language models<span class="new">new</span></dt><dd>AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.</dd><dt>longitudinal study<span class="new">new</span></dt><dd>A study that follows the same people over time to see how something changes.</dd><dt>radiomics<span class="new">new</span></dt><dd>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</dd><dt>randomized controlled trial<span class="new">new</span></dt><dd>A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.</dd><dt>retrospective<span class="new">new</span></dt><dd>A study design that looks back at existing past data rather than collecting new data as events happen.</dd><dt>sensitivity<span class="new">new</span></dt><dd>The percentage of true positive cases that a test or model correctly identifies.</dd><dt>sFlt-1/PlGF ratio<span class="new">new</span></dt><dd>A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.</dd><dt>SHAP<span class="new">new</span></dt><dd>A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.</dd><dt>specificity<span class="new">new</span></dt><dd>The percentage of true negative cases that a test or model correctly identifies as negative.</dd><dt>Vision Transformer<span class="new">new</span></dt><dd>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</dd></dl>
+    </details>
+
     <h3>Coverage</h3>
     <ul><li><strong>Clinical AI</strong>: 9 of 9 match(es) retrieved; 9 new after dedup.</li>
-<li><strong>AI in Ob/Gyn and REI</strong>: 29 of 30 match(es) retrieved, 1 dropped as older than the window; 29 new after dedup.</li>
+<li><strong>AI in Ob/Gyn and REI</strong>: 30 of 31 match(es) retrieved, 1 dropped as older than the window; 30 new after dedup.</li>
 <li><strong>Femtech and Digital Health</strong>: 18 of 18 match(es) retrieved; 18 new after dedup.</li></ul>
-    <p class="warn">2 item(s) cleared the score floor but were cut to keep the digest short.</p>
-    <p class="warn">1 item(s) were refused by a safety classifier and 0 could not be scored. They are missing from this digest, not ranked low.</p>
+    
+    <p class="warn">1 item(s) were refused by a safety classifier and 1 could not be scored. They are missing from this digest, not ranked low.</p>
     
 
     <p>Query version v4 &middot; generated Jul 30, 2026 &middot; sources: PubMed and public RSS feeds.</p>

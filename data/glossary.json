@@ -1,0 +1,102 @@
+{
+  "randomized controlled trial": {
+    "term": "randomized controlled trial",
+    "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+    "firstSeen": "2026-W31"
+  },
+  "external validation": {
+    "term": "external validation",
+    "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+    "firstSeen": "2026-W31"
+  },
+  "vision transformer": {
+    "term": "Vision Transformer",
+    "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+    "firstSeen": "2026-W31"
+  },
+  "intraclass correlation coefficient": {
+    "term": "intraclass correlation coefficient",
+    "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+    "firstSeen": "2026-W31"
+  },
+  "contrastive learning": {
+    "term": "contrastive learning",
+    "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
+    "firstSeen": "2026-W31"
+  },
+  "longitudinal study": {
+    "term": "longitudinal study",
+    "definition": "A study that follows the same people over time to see how something changes.",
+    "firstSeen": "2026-W31"
+  },
+  "large language models": {
+    "term": "large language models",
+    "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+    "firstSeen": "2026-W31"
+  },
+  "sensitivity": {
+    "term": "sensitivity",
+    "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+    "firstSeen": "2026-W31"
+  },
+  "specificity": {
+    "term": "specificity",
+    "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+    "firstSeen": "2026-W31"
+  },
+  "icc": {
+    "term": "ICC",
+    "definition": "A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.",
+    "firstSeen": "2026-W31"
+  },
+  "decision-tree model": {
+    "term": "decision-tree model",
+    "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+    "firstSeen": "2026-W31"
+  },
+  "shap": {
+    "term": "SHAP",
+    "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+    "firstSeen": "2026-W31"
+  },
+  "retrospective": {
+    "term": "retrospective",
+    "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
+    "firstSeen": "2026-W31"
+  },
+  "calibration": {
+    "term": "Calibration",
+    "definition": "How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.",
+    "firstSeen": "2026-W31"
+  },
+  "brier score": {
+    "term": "Brier score",
+    "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
+    "firstSeen": "2026-W31"
+  },
+  "sflt-1/plgf ratio": {
+    "term": "sFlt-1/PlGF ratio",
+    "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
+    "firstSeen": "2026-W31"
+  },
+  "auc": {
+    "term": "AUC",
+    "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+    "firstSeen": "2026-W31"
+  },
+  "radiomics": {
+    "term": "radiomics",
+    "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+    "firstSeen": "2026-W31"
+  },
+  "amh": {
+    "term": "AMH",
+    "definition": "A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.",
+    "firstSeen": "2026-W31"
+  },
+  "follicular fluid": {
+    "term": "follicular fluid",
+    "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+    "firstSeen": "2026-W31"
+  }
+}
