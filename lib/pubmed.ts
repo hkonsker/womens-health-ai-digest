@@ -6,10 +6,14 @@
  *   ESummary → metadata (title, journal, authors, pub type)
  *   EFetch   → full records including abstracts (XML)
  *
- * Adapted from perezcodex/clinical_ai_weekly_digest, with two additions:
- * PMID batching (NCBI rejects very long id lists) and polite rate limiting.
+ * Adapted from perezcodex/clinical_ai_weekly_digest, with three additions:
+ * PMID batching (NCBI rejects very long id lists), outbound rate limiting, and
+ * retry with backoff when NCBI rate-limits us back.
  *
- * Set NCBI_API_KEY in .env to raise the rate limit from 3 to 10 req/s.
+ * Set NCBI_API_KEY. It is free, and it matters more than it looks: without one
+ * the 3 req/s limit is shared across everyone on your IP, and CI runners have
+ * busy shared IPs. A run from a laptop is fine without a key; a run from GitHub
+ * Actions will eventually hit 429 without one.
  * Free key: https://www.ncbi.nlm.nih.gov/account/
  */
 
@@ -24,12 +28,58 @@ const MIN_INTERVAL_MS = API_KEY ? 110 : 350;
 /** ESummary and EFetch take id lists; keep each request comfortably small. */
 const ID_BATCH_SIZE = 100;
 
+/** Retries on 429 and 5xx. NCBI limits by IP, and CI runners share saturated IPs. */
+const MAX_ATTEMPTS = 5;
+
 let lastRequestAt = 0;
 
 async function throttle(): Promise<void> {
   const wait = lastRequestAt + MIN_INTERVAL_MS - Date.now();
   if (wait > 0) await new Promise((r) => setTimeout(r, wait));
   lastRequestAt = Date.now();
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+/**
+ * Throttled fetch with backoff on 429 and 5xx.
+ *
+ * Without an NCBI_API_KEY the rate limit is 3 req/s shared across everyone on
+ * the same IP, which on a CI runner means someone else's traffic can spend our
+ * budget. Retrying with backoff is what makes the run survive that.
+ */
+async function ncbiFetch(url: string, label: string): Promise<Response> {
+  let lastStatus = 0;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    await throttle();
+    const res = await fetch(url);
+    if (res.ok) return res;
+
+    lastStatus = res.status;
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt === MAX_ATTEMPTS) break;
+
+    // Honor Retry-After when NCBI sends it, otherwise exponential with jitter.
+    const header = Number(res.headers.get("retry-after"));
+    const backoff = Number.isFinite(header) && header > 0
+      ? header * 1000
+      : 1000 * 2 ** (attempt - 1) + Math.random() * 500;
+
+    console.warn(
+      `  ! ${label} got ${res.status}, retrying in ${Math.round(backoff / 1000)}s ` +
+        `(attempt ${attempt} of ${MAX_ATTEMPTS - 1})`,
+    );
+    await sleep(backoff);
+  }
+
+  const hint =
+    lastStatus === 429 && !API_KEY
+      ? " Set NCBI_API_KEY to get your own rate-limit bucket instead of sharing the IP's."
+      : "";
+  throw new Error(`${label} failed after ${MAX_ATTEMPTS} attempt(s): ${lastStatus}.${hint}`);
 }
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -101,8 +151,6 @@ export async function esearch(
   daysBack: number,
   limit: number,
 ): Promise<ESearchResult> {
-  await throttle();
-
   const url = buildUrl("esearch.fcgi", {
     term: query,
     retmax: String(limit),
@@ -112,8 +160,7 @@ export async function esearch(
     reldate: String(daysBack),
   });
 
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`ESearch failed: ${res.status} ${res.statusText}`);
+  const res = await ncbiFetch(url, "ESearch");
 
   const data = (await res.json()) as {
     esearchresult: { count: string; idlist: string[]; querytranslation: string };
@@ -140,10 +187,8 @@ interface ESummaryRaw {
 }
 
 async function esummaryBatch(pmids: string[]): Promise<ESummaryRaw[]> {
-  await throttle();
   const url = buildUrl("esummary.fcgi", { id: pmids.join(","), retmode: "json" });
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`ESummary failed: ${res.status} ${res.statusText}`);
+  const res = await ncbiFetch(url, "ESummary");
 
   const data = (await res.json()) as {
     result: { uids: string[]; [pmid: string]: ESummaryRaw | string[] };
@@ -165,7 +210,6 @@ export async function esummary(pmids: string[]): Promise<ESummaryRaw[]> {
 
 async function efetchBatch(pmids: string[]): Promise<Map<string, string>> {
   const abstracts = new Map<string, string>();
-  await throttle();
 
   const url = buildUrl("efetch.fcgi", {
     id: pmids.join(","),
@@ -173,8 +217,7 @@ async function efetchBatch(pmids: string[]): Promise<Map<string, string>> {
     rettype: "abstract",
   });
 
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`EFetch failed: ${res.status} ${res.statusText}`);
+  const res = await ncbiFetch(url, "EFetch");
 
   const xml = await res.text();
 

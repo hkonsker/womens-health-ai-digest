@@ -39,10 +39,16 @@ gh repo create womens-health-ai-digest --private --source=. --push
 | `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) → API keys | Scoring and summaries |
 | `RESEND_API_KEY` | [resend.com](https://resend.com) → API Keys | Sending the email |
 | `DIGEST_TO_EMAILS` | Your address, comma-separated for more than one | Sending the email |
-| `NCBI_API_KEY` | [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) (free, optional) | Faster PubMed calls |
+| `NCBI_API_KEY` | [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) (free) | PubMed, see note below |
 
 Under the **Variables** tab (not Secrets), optionally add `DIGEST_SITE_URL` so the email
 links to your archive.
+
+`NCBI_API_KEY` reads as optional and is not. NCBI rate-limits by IP at 3 requests per
+second, and GitHub's runners are shared IPs already carrying other people's traffic, so a
+keyless run competes for a budget it does not control and eventually gets a 429. The key
+is free and gives you a private 10 req/s bucket. Runs from your laptop are fine without
+one, which is exactly why this is easy to miss.
 
 **3. Turn on the archive page.** Settings → Pages → Source: *Deploy from a branch*,
 branch `main`, folder `/docs`. GitHub Pages on a private repo needs a paid plan;
@@ -120,6 +126,10 @@ ranked. To cut it: lower `MAX_CANDIDATES_PER_BEAT`, set the `DIGEST_EFFORT` vari
 **Dedup is global, not per week.** An item is remembered in `data/seen.json` the first
 time it is *considered*, not the first time it is published. A paper never appears in two
 digests, and a low scorer does not get re-ranked every week.
+
+**External calls retry.** PubMed requests back off and retry on 429 and 5xx, honoring
+`Retry-After` when NCBI sends it. Feed failures never kill a run; they get reported in the
+digest footer instead.
 
 **Nothing is capped silently.** If PubMed reports 200 matches and the run only pulls 80,
 the digest says so. Same for feeds that failed and items cut by the length limit. A
