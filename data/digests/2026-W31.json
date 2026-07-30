@@ -2,7 +2,7 @@
   "weekLabel": "2026-W31",
   "startDate": "2026-07-27T00:00:00.000Z",
   "endDate": "2026-08-02T23:59:59.999Z",
-  "generatedAt": "2026-07-30T23:09:48.804Z",
+  "generatedAt": "2026-07-30T23:42:55.896Z",
   "queryVersion": "v4",
   "queries": {
     "clinical-ai": "(\nJAMA[jour] OR \"JAMA Netw Open\"[jour] OR \"JAMA Intern Med\"[jour] OR \"JAMA Pediatr\"[jour] OR\n\"JAMA Surg\"[jour] OR \"JAMA Oncol\"[jour] OR \"JAMA Neurol\"[jour] OR \"JAMA Cardiol\"[jour] OR\n\"N Engl J Med\"[jour] OR \"NEJM AI\"[jour] OR Lancet[jour] OR BMJ[jour] OR\n\"Lancet Digit Health\"[jour] OR \"Nat Med\"[jour] OR \"npj Digit Med\"[jour] OR\n\"J Am Med Inform Assoc\"[jour] OR \"Ann Intern Med\"[jour] OR Nature[jour] OR Science[jour]\n)\nAND\n(\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR \"generative AI\"[Title/Abstract] OR\n\"artificial intelligence\"[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR GPT[Title/Abstract] OR\n\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"neural network\"[Title/Abstract]\n)\nAND\n(\nclinical[Title/Abstract] OR patient[Title/Abstract] OR workflow[Title/Abstract] OR\nimplementation[Title/Abstract] OR \"clinical decision support\"[Title/Abstract] OR\ndocumentation[Title/Abstract] OR EHR[Title/Abstract] OR radiology[Title/Abstract] OR\ntriage[Title/Abstract] OR diagnosis[Title/Abstract] OR outcome[Title/Abstract]\n)\nNOT (news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type])",
@@ -58,12 +58,23 @@
       ],
       "body": "The accurate and timely diagnosis of inherited retinal diseases (IRDs) represents an unmet clinical need in ophthalmology, as the current pathways rely on resource-intensive phenotyping, multidisciplinary expertise and genetic testing. Here we developed Retina4IRD, an artificial intelligence (AI)-based clinician decision support system (CDSS) that predicts 17 genotype categories from retina images. Retina4IRD uses a Vision Transformer model pretrained with RETFound. We then trained and validated Retina4IRD using multimodal data with color fundus photographs and optical coherence tomography scans from 1,843 genetically confirmed patients (3,376 eyes) across China, South Korea and Poland. The top-5 prediction accuracy was 0.904 (95% confidence interval (CI): 0.896-0.912) and 0.856 (95% CI: 0.850-0.863) for internal and external validation, respectively. We conducted a randomized controlled trial with 300 participants with suspected IRD randomized 1:1 to either Retina4IRD-assisted specialist arm or specialist-only arm. Of these, 295 participants (median age 33&#x2009;years, 114 (38.6%) females) with available next-generation sequencing reports were included in the final analysis. The primary outcome was met: top-5 genetic accuracy was significantly higher in the Retina4IRD-assisted specialist arm versus the specialist-only arm (88.5% versus 67.3%, P&#x2009;<&#x2009;0.001). For secondary endpoints, top-1 to top-4 accuracies all favored the Retina4IRD-assisted specialist arm, with top-1 accuracy of 37.8% versus 22.4% and top-4 accuracy of 81.8% versus 53.1%, respectively. Post hoc analyses demonstrated that, with Retina4IRD assistance, clinicians made better management decisions, and the composite downstream management score indicated significantly higher scores relative to the control group (37.7 versus 28.5, P&#x2009;<&#x2009;0.001). Our study shows that Retina4IRD is a CDSS tool prior to genetic testing and aligns with clinical workflow for patients with suspected IRDs. ClinicalTrials.gov identifier: NCT06839170 .",
       "score": 9,
-      "why": "In a randomized trial across multiple countries, an AI tool that reads retina images to predict likely genetic causes of inherited eye diseases nearly doubled doctors' accuracy in guessing the right gene category compared to doctors working alone, and also improved their treatment decisions. This is a rare case of a clinical AI tool being tested with a real randomized comparison and a hard clinical outcome rather than just retrospective accuracy, making it a strong model for how AI decision support should be evaluated in any specialty, including reproductive genetics.",
-      "theme": "AI Decision Support",
+      "why": "In a multicenter randomized controlled trial (n=295 with confirmed genotypes), a Vision Transformer-based clinician decision support system (Retina4IRD) pretrained with RETFound significantly improved top-5 genotype prediction accuracy for inherited retinal diseases (88.5% vs 67.3%, P<0.001) and improved downstream management scores when used alongside specialists versus specialists alone. This is a rare RCT with a hard clinical endpoint and external validation across three countries, representing a genuine first in AI-assisted genetic diagnosis workflow and a strong template for evaluating AI decision support broadly.",
+      "plain": "Scientists built an AI tool that looks at eye scans and predicts which of 17 genetic eye diseases a patient likely has, then tested it in a real randomized trial with 295 patients. When doctors used the AI's suggestions, they correctly narrowed down the genetic diagnosis far more often (88.5% versus 67.3% of the time) and made better treatment decisions, which is a strong, well-tested example of AI actually improving patient care rather than just performing well on a computer test.",
+      "theme": "AI Genetic Diagnosis",
       "glossary": [
         {
-          "term": "Randomized Controlled Trial",
-          "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+          "term": "Vision Transformer",
+          "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+          "isNew": true
+        },
+        {
+          "term": "RETFound",
+          "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+          "isNew": true
+        },
+        {
+          "term": "Top-5 Accuracy",
+          "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
           "isNew": true
         },
         {
@@ -72,8 +83,18 @@
           "isNew": true
         },
         {
-          "term": "Vision Transformer",
-          "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+          "term": "Randomized Controlled Trial",
+          "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+          "isNew": true
+        },
+        {
+          "term": "Confidence Interval",
+          "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+          "isNew": true
+        },
+        {
+          "term": "Inherited Retinal Diseases",
+          "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
           "isNew": true
         }
       ]
@@ -101,17 +122,13 @@
       ],
       "body": "BACKGROUND: Sensitive monitoring tools are needed to track progression in neurodegenerative diseases and assess interventions before overt brain damage occurs. We propose speech as a non-invasive, easily collected biomarker to capture disease-related variation over time. We developed and validated Neurodegenerative Disease Speech Network (NDSNet), an automated deep learning model that generates individual speech-derived estimates of contemporaneous clinical scores at each visit in people with Huntington's disease, from presymptomatic stages (Huntington's Disease Integrated Staging System [HD-ISS] stages 0-1) to symptomatic stages (HD-ISS stages 2-3). METHODS: We included data from people with Huntington's disease and healthy controls from three prospective longitudinal studies (Bio-HD, REPAIR-HD, and MIG-HD) with speech recordings and Unified Huntington's Disease Rating Scale (UHDRS) scores. NDSNet combines a pre-trained wav2vec 2.0 model and a recurrent attentive network in a contrastive learning framework for processing audio waveforms of speech. We trained and cross-validated (10-fold) NDSNet to predict the observed UHDRS scores in people with Huntington's disease across visits, with external validation in a replication cohort (the TPMH study). We then compared NDSNet predictions with striatal atrophy on MRI, the best-established marker of Huntington's disease progression. FINDINGS: Our developmental cohort included 191 people with Huntington's disease and 58 healthy controls, with speech data collected between 2001 and 2025 (MIG-HD data collected in 2001-13 and REPAIR-HD and Bio-HD data collected in 2018-25). The replication cohort included 110 people with Huntington's disease, of whom 78 were not included in the developmental cohort, with speech data collected between Oct 10, 2022, and Feb 5, 2024. In the developmental cohort, we analysed speech recordings obtained from 146 people with Huntington's disease (62 with brain MRI). Relative error between NDSNet predictions and observed clinical scores was 11&#xb7;4% (95% CI 9&#xb7;7-12&#xb7;5) overall. The intraclass correlation coefficient (ICC) between NDSNet-predicted and observed motor scores (ICC 0&#xb7;87 [95% CI 0&#xb7;83-0&#xb7;91]) was similar to that for clinician ratings (ICC 0&#xb7;847). Predictions showed strong temporal association and responsiveness to observed clinical change at the individual level. Performance remained consistent in 67 people with Huntington's disease in the replication cohort (after excluding 32 participants already included in the developmental cohort; relative error 15&#xb7;0% [13&#xb7;0-19&#xb7;0]; ICC 0&#xb7;67 [0&#xb7;38-0&#xb7;71]). Predicted scores showed MRI associations similar to those of observed clinical scores across symptomatic stages, and stronger associations with striatal atrophy at HD-ISS stages 0-1. INTERPRETATION: NDSNet predictions captured clinically relevant progression from speech in people with Huntington's disease, showed neuroanatomical grounding across disease symptomatic stages, and estimated the subclinical state at HD-ISS stages 0-1. These findings support the use of NDSNet as a scalable tool to complement standard assessments for longitudinal monitoring in Huntington's disease. FUNDING: Neuratris and Centre de R&#xe9;f&#xe9;rence Maladies Rares-Maladie de Huntington.",
       "score": 8,
-      "why": "Researchers built and tested an AI model that estimates Huntington's disease severity scores directly from voice recordings, validating it across multiple longitudinal cohorts and an independent replication group, and found it tracked disease progression nearly as well as clinician ratings and brain scans. This is a strong example of a rigorously validated AI biomarker with real prospective and external validation, showing how speech analysis could offer a cheap, noninvasive way to monitor neurodegenerative disease, a template relevant to tracking any chronic condition remotely.",
+      "why": "NDSNet, a deep learning model combining wav2vec 2.0 embeddings with a recurrent attentive network in a contrastive learning framework, predicted Unified Huntington's Disease Rating Scale motor scores from speech across three prospective cohorts (191 patients, 58 controls) with an intraclass correlation coefficient of 0.87, comparable to clinician ratings, and this held up in an independent external replication cohort of 110 patients. This is a rare example of a speech biomarker validated longitudinally and externally against a hard clinical rating scale and MRI-based atrophy, making it a credible progression-tracking tool rather than another single-cohort proof of concept.",
+      "plain": "Researchers built an AI system that listens to speech recordings and estimates how far a person's Huntington's disease, a genetic brain disorder, has progressed, matching the accuracy of a doctor's own clinical rating in three separate patient groups followed over time and a fourth independent group used to double check the results. This matters because it shows speech alone, something easy and cheap to collect, can reliably track disease severity, offering a much less invasive way to monitor progression than brain scans or in-person exams.",
       "theme": "Speech Biomarker Validation",
       "glossary": [
         {
-          "term": "External Validation",
-          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
-          "isNew": true
-        },
-        {
-          "term": "Intraclass Correlation Coefficient",
-          "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+          "term": "Wav2vec 2.0",
+          "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
           "isNew": true
         },
         {
@@ -120,8 +137,248 @@
           "isNew": true
         },
         {
-          "term": "Longitudinal Study",
-          "definition": "A study that follows the same people over time to see how something changes.",
+          "term": "Intraclass Correlation Coefficient",
+          "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+          "isNew": true
+        },
+        {
+          "term": "Unified Huntington's Disease Rating Scale",
+          "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+          "isNew": true
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": true
+        },
+        {
+          "term": "Cross-Sectional Replication",
+          "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42527228",
+      "beat": "repro-ai",
+      "title": "Multi-modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.",
+      "source": "Acad Radiol",
+      "url": "https://doi.org/10.1016/j.acra.2026.07.022",
+      "date": "2026-07-29T00:00:00.000Z",
+      "authors": [
+        "Yang H",
+        "Yang W",
+        "Tian H",
+        "Chang Y"
+      ],
+      "body": "RATIONALE AND OBJECTIVES: To develop and validate a multi-modal stacking machine learning model integrating intratumoral and peritumoral habitat radiomics from multiparametric Magnetic resonance imaging (MRI) with clinicopathological variables for noninvasive preoperative prediction of lymph node metastasis (LNM) in early- stage cervical cancer (ECC). MATERIALS AND METHODS: This retrospective study with prospective validation analyzed 623 ECC patients divided into training (n = 311), internal validation (n = 187), and external validation (n = 125) cohorts. Preoperative T2-weighted imaging (T2WI), diffusion-weighted imaging (DWI), and contrast-enhanced T1-weighted imaging (CE-T1WI) were used to cluster tumor voxels into homogeneous habitats via K-means. Habitat radiomic features were extracted from intratumoral and a 3-mm peritumoral expansion. A stacking ensemble framework was built with five base classifiers (logistic regression, extreme gradient boosting&#xa0;(XGBoost), Elastic Net logistic regression, Depthwise Separable Convolutional Attention (DSCA), and support vector machine&#xa0;(SVM) as first-level learners and an XGBoost-based Meta-model as the second-level learner. Performance was assessed by area under the curve (AUC), calibration curves, decision curve analysis, net reclassification improvement (NRI), and integrated discrimination improvement (IDI). RESULTS: Among base learners, the SVM-based ITH_integrated_score model performed best, with AUCs of 0.882, 0.865, and 0.845 in the training, internal validation, and external validation cohorts. The Meta-learner achieved AUCs of 0.915, 0.895, and 0.875, and DeLong test confirmed it significantly outperformed all base learners (all P&#xa0;<&#xa0;0.05). The Meta- model demonstrated excellent calibration and the highest clinical net benefit. NRI and IDI analyses confirmed significant incremental value over each base learner. CONCLUSION: This multimodal stacking ensemble model improves preoperative LNM prediction compared with unimodal approaches and may help guide individualized surgical and surveillance strategies.",
+      "score": 6,
+      "why": "A multimodal stacking ensemble combining intratumoral and peritumoral MRI radiomic habitats with clinicopathological variables predicted lymph node metastasis in early-stage cervical cancer, reaching AUCs of 0.915, 0.895, and 0.875 in training, internal, and external validation cohorts, outperforming all base learners by DeLong test. The design includes external validation and decision curve analysis, which strengthens clinical relevance, though it remains retrospective and radiomics pipelines historically generalize poorly across scanners and institutions.",
+      "plain": "Researchers built a machine learning model that combines MRI image patterns from inside and around cervical tumors with patient clinical data to predict whether cancer has spread to lymph nodes, and it correctly distinguished cases about 85 to 92 percent of the time depending on the patient group tested. The study tested the model on a separate group of patients from a different hospital, which is a meaningful check, but this kind of image analysis often performs worse when used on real-world scanners and populations it hasn't seen before.",
+      "theme": "Cervical Cancer Imaging",
+      "glossary": [
+        {
+          "term": "Stacking Ensemble",
+          "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+          "isNew": true
+        },
+        {
+          "term": "Radiomics",
+          "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+          "isNew": true
+        },
+        {
+          "term": "AUC",
+          "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+          "isNew": true
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": true
+        },
+        {
+          "term": "DeLong Test",
+          "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+          "isNew": true
+        },
+        {
+          "term": "Decision Curve Analysis",
+          "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42526933",
+      "beat": "repro-ai",
+      "title": "Improving laboratory workforce efficiency using AI-assisted digital cytology within an HPV-based cervical screening programme: A model-based evaluation for the NHS Cervical Screening Programmes.",
+      "source": "BMJ Open",
+      "url": "https://doi.org/10.1136/bmjopen-2025-113298",
+      "date": "2026-07-28T00:00:00.000Z",
+      "authors": [
+        "Wilson A",
+        "Cropper A",
+        "Ma Y",
+        "Adams EJ",
+        "Mehew S",
+        "Morgan M",
+        "Villeneuve N",
+        "Mitchell C"
+      ],
+      "body": "OBJECTIVES: We aimed to estimate the time required to review and report cervical cytology slides within a Human Papillomavirus (HPV)-primary cervical cancer screening programme, where cytology is used for triage following a positive HPV test, comparing Artificial Intelligence (AI)-assisted digital cytology (Genius) with manual microscopy. DESIGN: A decision-tree model of the flow of slides through the National Health Service (NHS) England cervical screening cytology laboratory workflow, parameterised using published evidence and expert input. SETTING: Cytology laboratories within the NHS Cervical Screening Programme in England and Scotland. RESULTS: Screening and reporting 479,125 cytology slides annually in England was estimated to require 31,842 staff hours with AI-assisted digital cytology versus 103,151&#x2009;hours with manual microscopy. The mean time per slide review and reporting was 4.0 vs 12.9&#x2009;minutes, respectively, corresponding to a potential 69% increase in overall productivity. CONCLUSIONS: AI-assisted digital cytology can support more resilient cervical screening programmes in the UK and other countries by reducing staff time required for slide review and reporting. These findings may inform policymakers considering strategies to mitigate workforce shortages.",
+      "score": 6,
+      "why": "A decision-tree modeling study estimated that AI-assisted digital cytology could cut mean slide review time from 12.9 to 4.0 minutes in the NHS HPV-triage cervical screening workflow, translating to a projected 69% gain in laboratory productivity across roughly 480,000 annual slides. This is a health-economic simulation using published performance data rather than a prospective trial, so the workforce savings are only as credible as the underlying assumptions, but it is directly relevant to scaling AI-assisted screening in practice.",
+      "plain": "Researchers used a computer model to estimate how much staff time a national cervical screening program in England could save by using AI-assisted digital microscopy instead of manual review, and found it could cut review time per sample from about 13 minutes to 4 minutes, potentially boosting overall lab output by 69 percent. This is not a real-world test but a projection based on existing data, so the real savings could differ, though it's a useful estimate for health system planning given ongoing lab staffing shortages.",
+      "theme": "Cervical Screening Efficiency",
+      "glossary": [
+        {
+          "term": "Decision-Tree Model",
+          "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+          "isNew": true
+        },
+        {
+          "term": "HPV-Primary Screening",
+          "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+          "isNew": true
+        },
+        {
+          "term": "Cytology",
+          "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42523012",
+      "beat": "repro-ai",
+      "title": "An explainable machine learning approach for cervical cancer screening: decoding morphological diagnostic drivers.",
+      "source": "Acta Clin Belg",
+      "url": "https://doi.org/10.1080/17843286.2026.2711062",
+      "date": "2026-07-29T00:00:00.000Z",
+      "authors": [
+        "Chang H",
+        "Liu X",
+        "Qin L",
+        "Wang Y",
+        "Mao L",
+        "Wang D",
+        "Zhang J",
+        "Pang X"
+      ],
+      "body": "BACKGROUND: Cervical cancer screening in primary care is hindered by expert pathologist shortages and heavy diagnostic workloads, leading to fatigue-induced misdiagnoses. This study evaluated the diagnostic capacity, subpopulation robustness, and operational efficiency of an interpretable machine learning (ML) tool within a large Chinese healthcare network. METHODS: A retrospective database of 5,000 women was audited. Archived liquid-based cytology (LBC) digital slides were evaluated via a parallel validation channel: the LBC-NET pipeline versus a double-blind panel of senior cytopathologists. Diagnostic safety was tested by stratifying data across age, vaginal infections, and menopause conditions. Algorithmic transparency was quantified using game-theoretic Shapley Additive exPlanations (SHAP) and morphological feature tracking. Operational efficiency was evaluated via continuous cumulative distribution curves. RESULTS: For detecting high-grade squamous intraepithelial lesions or worse (HSIL+), the ML model achieved a clinical sensitivity of 92.5%, significantly outperforming the manual method at 84.2% (&#x2009;<&#x2009;0.001), with an area under the curve (AUC) of 0.94. Subgroup stratification demonstrated that menopausal tissue atrophy or active vaginal infections caused no significant performance degradation (&#x2009;>&#x2009;0.05). SHAP analytics revealed that the nucleus-to-cytoplasmic ratio and nuclear hyperchromasia intensity were the core predictive metrics. Operationally, the ML system compressed the median slide-review time by 63.0%, escalating the daily screening capacity by 175% and reducing specialist referral consultations by 45.2%. CONCLUSION: The interpretable ML tool provides a reliable and fast clinical choice for massive cervical cancer screening.",
+      "score": 6,
+      "why": "An explainable ML pipeline for liquid-based cytology screening achieved 92.5% sensitivity for detecting high-grade squamous intraepithelial lesions or worse versus 84.2% for manual cytopathologist review in a retrospective double-blind comparison of 5,000 women, with AUC 0.94 and no significant performance drop across menopausal or infection subgroups. The SHAP-based feature analysis adds interpretability and the efficiency gains are substantial, but the study is retrospective and single-network, so prospective multi-site validation is still needed before this changes screening practice broadly.",
+      "plain": "Researchers tested an AI system that reads cervical cancer screening slides against a panel of expert pathologists on 5,000 women's samples, and the AI caught more true cases of serious pre-cancerous changes, 92.5 percent versus 84.2 percent for the human reviewers, while also working equally well regardless of a patient's menopause status or infections. The AI also explained which cell features it used to make its decisions and cut review time significantly, but since this was a retrospective study done at one healthcare network in China, it still needs to be tested prospectively and in other settings before it can be trusted for widespread use.",
+      "theme": "Cervical Screening AI",
+      "glossary": [
+        {
+          "term": "Liquid-Based Cytology",
+          "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
+          "isNew": true
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+          "isNew": true
+        },
+        {
+          "term": "AUC",
+          "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+          "isNew": true
+        },
+        {
+          "term": "SHAP",
+          "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+          "isNew": true
+        },
+        {
+          "term": "Retrospective Database Audit",
+          "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42515922",
+      "beat": "repro-ai",
+      "title": "Non-contrast MRI Radiomics Nomogram for Predicting Recurrence and Progression-Free Survival in Cervical Cancer following Concurrent Chemoradiotherapy.",
+      "source": "Curr Med Imaging",
+      "url": "https://doi.org/10.2174/0115734056449836260717192214",
+      "date": "2026-07-23T00:00:00.000Z",
+      "authors": [
+        "Wang W",
+        "Li X",
+        "Jiang Y",
+        "Lu Y",
+        "Gao M",
+        "Gao Y",
+        "Tian Y",
+        "You J",
+        "Li X",
+        "Cao K",
+        "Zheng H"
+      ],
+      "body": "BACKGROUND: Accurate prognostic stratification following concurrent chemoradiotherapy (CCRT) for cervical cancer remains challenging. Existing approaches often rely on contrast-enhanced magnetic resonance imaging (MRI), which limits applicability in patients with renal dysfunction and in resourcelimited settings. We aimed to develop and validate a non-contrast MRI-based prognosis prediction model combined with clinical predictors to estimate recurrence risk and progression-free survival (PFS). MATERIALS AND METHODS: A total of 145 cervical cancer patients from two centers were retrospectively analyzed. The model-building cohort (n=114) was used to extract radiomics features from pre-treatment MRI, and an extreme gradient boosting classifier was developed. Clinical predictors were identified through univariate Cox and multivariate logistic regression analyses. A nomogram integrating radiomics and clinical variables was then constructed. External validation was performed in an independent cohort (n=31). Model performance was assessed by discrimination, calibration, and its ability to stratify patients into low- and high-risk groups for predicting 5-year PFS. RESULTS: The proposed method categorized patients into well-defined risk groups. Survival results varied greatly among groups. Kaplan-Meier analysis indicated that patients with high risk had a worse 5-year PFS compared to those with low risk. This result was observed in both the construction cohort (P < 0.001) and the external validation cohort (P=0.012). The prognostic performance was comparable to that of contrast-enhanced MRI-based models. A significant point to note is that no gadolinium administration was necessary. DISCUSSION: This study develops a radiomics nomogram that relies on non-contrast MRI. The model offers strong and tailored prognostic information. Imaging features and clinical predictors combined, which improved predictive accuracy. The approach increases accessibility, particularly for patients contraindicated for contrast or in low-resource settings. CONCLUSION: We developed and validated a non-contrast MRI radiomics nomogram that accurately predicts recurrence and 5-year PFS following CCRT in cervical cancer. The model offers a clinically applicable, cost-effective tool for personalized risk stratification.",
+      "score": 6,
+      "why": "A two-center retrospective study built a non-contrast MRI radiomics nomogram using an XGBoost classifier to predict recurrence and progression-free survival after chemoradiotherapy for cervical cancer, with significant risk stratification in both the 114-patient construction cohort (P<0.001) and 31-patient external validation cohort (P=0.012), performing comparably to contrast-enhanced models. The external validation and avoidance of gadolinium contrast are genuine strengths, though the validation cohort is small and single-institution pairs limit generalizability.",
+      "plain": "Researchers built an AI tool that reads standard MRI scans, without needing an injected contrast dye, to predict which cervical cancer patients are likely to have their cancer come back after treatment. The tool worked about as well as more complex contrast-based scans and was tested on a separate small group of patients, which is a meaningful step, though the test group was still quite small.",
+      "theme": "Cervical Cancer Prognosis",
+      "glossary": [
+        {
+          "term": "Radiomics",
+          "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+          "isNew": true
+        },
+        {
+          "term": "Nomogram",
+          "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+          "isNew": true
+        },
+        {
+          "term": "Progression-free Survival",
+          "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+          "isNew": true
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": true
+        },
+        {
+          "term": "Extreme Gradient Boosting Classifier",
+          "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+          "isNew": true
+        },
+        {
+          "term": "Kaplan-Meier Analysis",
+          "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "url:08a072984cafc922",
+      "beat": "industry",
+      "title": "Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm",
+      "source": "FemTech Insider",
+      "url": "https://femtechinsider.com/natural-cycles-receives-sixth-fda-clearance-for-ai-powered-fertility-algorithm/",
+      "date": "2026-07-28T18:26:19.000Z",
+      "authors": [],
+      "body": "Birth control and cycle-tracking app Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered NC° Fertility Algorithm. The company previously secured FDA clearances for its birth control app, integrations with Oura Ring and Apple Watch, and over-the-counter availability. The next-generation algorithm combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points… The post Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm first appeared on .",
+      "score": 6,
+      "why": "Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points. This is a concrete regulatory milestone for a widely used fertility and contraception app, though the announcement gives no performance data or validation details for the updated algorithm.",
+      "plain": "Natural Cycles, a fertility and birth control tracking app, got its sixth approval from US regulators for an updated version of its prediction software, which uses both statistics and machine learning trained on huge amounts of real fertility data. This is a real regulatory milestone for a fertility app used by many people, but the announcement does not say how much better the update actually performs.",
+      "theme": "Fertility App Clearance",
+      "glossary": [
+        {
+          "term": "FDA",
+          "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
+          "isNew": true
+        },
+        {
+          "term": "Machine Learning",
+          "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
           "isNew": true
         }
       ]
@@ -151,13 +408,19 @@
         "Oliver D"
       ],
       "body": "Psychosis prevention relies on early detection of individuals at clinical high risk for psychosis (CHR-P). The effectiveness of the CHR-P state is constrained, in part, due to clinical assessments requiring specialist interpretation of narrative interviews, limiting scalability. Here, we evaluate whether large language models (LLMs; deep learning models trained on large text corpora to process and generate language) can extract clinically meaningful information from such interviews to support psychosis risk assessment. We assessed 11 open-weight LLMs on 678 partial PSYCHS interview transcripts from 373 participants (77.7% CHR-P). Models inferred CHR-P status and estimated severity and frequency across 15 symptom domains, benchmarked against researcher-rated scores. Larger models achieved the strongest classification performance (Llama-3.3-70B: accuracy = 0.80, sensitivity = 0.93, specificity = 0.58). LLM-generated symptom scores showed good correlations with researcher-rated scores (ICC= 0.74, ICC= 0.75). Performance disparities were minimal across most demographic groups but varied across sites. Generated summaries were largely faithful to source transcripts, with low rates of clinically relevant confabulation (3%). Errors primarily reflected over-pathologisation of non-clinical experiences. While accuracy scaled with model size, smaller models achieved competitive performance with substantially lower computational cost. These findings demonstrate that open-weight LLMs have the potential to assess psychosis risk from psychometric interview transcripts, supporting scalable, human-in-the-loop approaches to early detection.",
-      "score": 6,
-      "why": "Researchers tested several AI language models on real interview transcripts to see if they could identify people at high risk for psychosis and rate their symptoms, finding that larger models matched human raters reasonably well and rarely made things up. The study used a sizable multi-site sample and checked for fairness across demographic groups, which is a more rigorous test than typical single-site AI studies, though it still falls short of a clinical trial showing real-world impact.",
-      "theme": "Psychosis Risk Screening",
+      "score": 5,
+      "why": "Eleven open-weight large language models were evaluated on 678 partial psychiatric interview transcripts from 373 participants to infer clinical high-risk psychosis status, with the best model (Llama-3.3-70B) reaching 0.80 accuracy, 0.93 sensitivity, and 0.58 specificity, and symptom severity scores correlating well with human raters (intraclass correlation coefficient of 0.74-0.75). This is a promising but exploratory benchmarking study without prospective clinical deployment or outcome data, so its value lies mainly in demonstrating feasibility rather than establishing clinical utility.",
+      "plain": "Researchers tested eleven AI language models to see if they could read transcripts of psychiatric interviews and correctly judge whether someone is at high risk for psychosis, and the best one matched trained clinicians fairly well, catching 93% of true risk cases but flagging many false positives too. This shows AI might help scale up early detection of psychosis risk, but the study only tested this in a research setting rather than in actual clinical use.",
+      "theme": "AI Psychosis Screening",
       "glossary": [
         {
           "term": "Large Language Models",
           "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+          "isNew": true
+        },
+        {
+          "term": "Clinical High Risk for Psychosis",
+          "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
           "isNew": true
         },
         {
@@ -171,164 +434,53 @@
           "isNew": true
         },
         {
-          "term": "ICC",
-          "definition": "A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.",
+          "term": "Intraclass Correlation Coefficient",
+          "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+          "isNew": true
+        },
+        {
+          "term": "Confabulation",
+          "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
           "isNew": true
         }
       ]
     },
     {
-      "id": "pmid:42526933",
+      "id": "pmid:42525142",
       "beat": "repro-ai",
-      "title": "Improving laboratory workforce efficiency using AI-assisted digital cytology within an HPV-based cervical screening programme: A model-based evaluation for the NHS Cervical Screening Programmes.",
-      "source": "BMJ Open",
-      "url": "https://doi.org/10.1136/bmjopen-2025-113298",
-      "date": "2026-07-28T00:00:00.000Z",
+      "title": "Predictive modeling with machine learning for low birth weight in the state of São Paulo: a retrospective population-based study.",
+      "source": "Sao Paulo Med J",
+      "url": "https://doi.org/10.1590/1516-3180.2025.3373.04052026",
+      "date": "2026-07-24T00:00:00.000Z",
       "authors": [
-        "Wilson A",
-        "Cropper A",
-        "Ma Y",
-        "Adams EJ",
-        "Mehew S",
-        "Morgan M",
-        "Villeneuve N",
-        "Mitchell C"
+        "Almeida AVA",
+        "Santos AORD",
+        "Nascimento LFC"
       ],
-      "body": "OBJECTIVES: We aimed to estimate the time required to review and report cervical cytology slides within a Human Papillomavirus (HPV)-primary cervical cancer screening programme, where cytology is used for triage following a positive HPV test, comparing Artificial Intelligence (AI)-assisted digital cytology (Genius) with manual microscopy. DESIGN: A decision-tree model of the flow of slides through the National Health Service (NHS) England cervical screening cytology laboratory workflow, parameterised using published evidence and expert input. SETTING: Cytology laboratories within the NHS Cervical Screening Programme in England and Scotland. RESULTS: Screening and reporting 479,125 cytology slides annually in England was estimated to require 31,842 staff hours with AI-assisted digital cytology versus 103,151&#x2009;hours with manual microscopy. The mean time per slide review and reporting was 4.0 vs 12.9&#x2009;minutes, respectively, corresponding to a potential 69% increase in overall productivity. CONCLUSIONS: AI-assisted digital cytology can support more resilient cervical screening programmes in the UK and other countries by reducing staff time required for slide review and reporting. These findings may inform policymakers considering strategies to mitigate workforce shortages.",
-      "score": 6,
-      "why": "A decision-tree modeling study estimated that AI-assisted digital cytology could cut the time needed to review cervical cancer screening slides from about 13 minutes to 4 minutes per slide across the NHS system, roughly a 69% gain in staff productivity. It is a policy-relevant, large-scale workforce analysis rather than a clinical trial, but it speaks directly to real deployment feasibility in a national screening program.",
-      "theme": "Cervical Screening Efficiency",
+      "body": "BACKGROUND: Low birth weight (LBW) is a major public health concern associated with increased neonatal morbidity and mortality. OBJECTIVE: This study was aimed to develop a predictive learning model using machine learning techniques to identify LBW from live birth data. METHODS: A retrospective population-based study was conducted using data from the Brazilian Live Birth Information System (SINASC), which includes all live births registered in the state of S&#xe3;o Paulo between 2019 and 2023. After data curation and exclusion of records with missing or unknown information, a total of 2,548,570 live births were analyzed. Predictors included maternal sociodemographic characteristics, obstetric history, prenatal care indicators, and newborn characteristics. Logistic regression and random forest models were trained using an 80/20 train-test split, with class imbalance addressed through class weighting. Model performance was evaluated using accuracy, precision, recall, F1-score, and area under the receiver operating characteristic curve (AUC-ROC). RESULTS: The analysis showed that the balanced logistic regression model performed best in terms of sensitivity (0.688), F1-score (0.567), and AUC-ROC (0.850). A proportional analysis of the variables between the LBW and normal-weight groups revealed a higher prevalence of LBW among mothers with low education levels, without a partner, of Black or Brown ethnicity, aged &#x2264; 19 years or &#x2265; 35 years, with multiple pregnancies, with a reduced number of prenatal consultations, and with late initiation of prenatal care. CONCLUSIONS: The findings highlight the importance of large-scale data analysis supported by machine learning techniques to inform public policies aimed at preventing LBW and promoting maternal and child health.",
+      "score": 5,
+      "why": "Using 2.5 million live births from Sao Paulo state, this retrospective study trained logistic regression and random forest models to predict low birth weight, with the best model achieving AUC-ROC 0.850 and sensitivity 0.688 on an 80/20 train-test split. The population scale is a strength but the lack of external validation and the use of only a held-out split from the same source limit confidence that this generalizes beyond the study population.",
+      "plain": "Using data from over 2.5 million births in a Brazilian state, researchers built computer models to predict which babies would be born underweight, and the best model correctly flagged about 69 percent of true low-weight cases while achieving a reasonably strong overall accuracy score. The dataset is impressively large, but the model was only tested on a portion of the same dataset it was trained on, not on a fully separate population, so it's unclear how well it would work elsewhere.",
+      "theme": "Birth Weight Prediction",
       "glossary": [
         {
-          "term": "Decision-Tree Model",
-          "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+          "term": "AUC-ROC",
+          "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
           "isNew": true
-        }
-      ]
-    },
-    {
-      "id": "pmid:42523012",
-      "beat": "repro-ai",
-      "title": "An explainable machine learning approach for cervical cancer screening: decoding morphological diagnostic drivers.",
-      "source": "Acta Clin Belg",
-      "url": "https://doi.org/10.1080/17843286.2026.2711062",
-      "date": "2026-07-29T00:00:00.000Z",
-      "authors": [
-        "Chang H",
-        "Liu X",
-        "Qin L",
-        "Wang Y",
-        "Mao L",
-        "Wang D",
-        "Zhang J",
-        "Pang X"
-      ],
-      "body": "BACKGROUND: Cervical cancer screening in primary care is hindered by expert pathologist shortages and heavy diagnostic workloads, leading to fatigue-induced misdiagnoses. This study evaluated the diagnostic capacity, subpopulation robustness, and operational efficiency of an interpretable machine learning (ML) tool within a large Chinese healthcare network. METHODS: A retrospective database of 5,000 women was audited. Archived liquid-based cytology (LBC) digital slides were evaluated via a parallel validation channel: the LBC-NET pipeline versus a double-blind panel of senior cytopathologists. Diagnostic safety was tested by stratifying data across age, vaginal infections, and menopause conditions. Algorithmic transparency was quantified using game-theoretic Shapley Additive exPlanations (SHAP) and morphological feature tracking. Operational efficiency was evaluated via continuous cumulative distribution curves. RESULTS: For detecting high-grade squamous intraepithelial lesions or worse (HSIL+), the ML model achieved a clinical sensitivity of 92.5%, significantly outperforming the manual method at 84.2% (&#x2009;<&#x2009;0.001), with an area under the curve (AUC) of 0.94. Subgroup stratification demonstrated that menopausal tissue atrophy or active vaginal infections caused no significant performance degradation (&#x2009;>&#x2009;0.05). SHAP analytics revealed that the nucleus-to-cytoplasmic ratio and nuclear hyperchromasia intensity were the core predictive metrics. Operationally, the ML system compressed the median slide-review time by 63.0%, escalating the daily screening capacity by 175% and reducing specialist referral consultations by 45.2%. CONCLUSION: The interpretable ML tool provides a reliable and fast clinical choice for massive cervical cancer screening.",
-      "score": 6,
-      "why": "An interpretable machine learning tool for reading cervical cancer screening slides was tested against senior pathologists on 5,000 archived samples from a Chinese healthcare network, detecting high-grade lesions with 92.5% sensitivity versus 84.2% for manual review, while cutting review time by 63%. The performance held up across subgroups like menopausal or infected tissue, and the model's reasoning was traced to specific cell features, though it remains a single-network retrospective study without independent external validation.",
-      "theme": "Cervical Cytology AI",
-      "glossary": [
+        },
         {
           "term": "Sensitivity",
           "definition": "The percentage of true positive cases that a test or model correctly identifies.",
           "isNew": true
         },
         {
-          "term": "SHAP",
-          "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+          "term": "Random Forest",
+          "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
           "isNew": true
         },
         {
-          "term": "Retrospective",
-          "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
-          "isNew": true
-        }
-      ]
-    },
-    {
-      "id": "pmid:42485817",
-      "beat": "repro-ai",
-      "title": "Reply to the letter to the editor: \"Machine learning model for predicting preeclampsia-related adverse outcomes\".",
-      "source": "Pregnancy Hypertens",
-      "url": "https://doi.org/10.1016/j.preghy.2026.101501",
-      "date": "2026-07-22T00:00:00.000Z",
-      "authors": [
-        "Hackelöer M",
-        "Rana S",
-        "Verlohren S"
-      ],
-      "body": "We thank Liu et al. for their constructive comments on our article reporting the internal and external validation of a reduced-feature machine learning model for the prediction of preeclampsia-related adverse outcomes. The letter raises four points, which we address in turn. Regarding calibration and clinical utility, we generated calibration curves for the gradient-boosted tree model in both cohorts. Neither cohort shows a systematic, clinically concerning miscalibration pattern; deviations are concentrated at the extremes of the risk distribution, where observations are fewest. Brier scores were 0.010 (German cohort) and 0.068 (North American cohort), indicating good overall probabilistic accuracy. We agree that a formal clinical utility analysis, such as net benefit across threshold probabilities, represents an important next step. Regarding incremental value over the sFlt-1/PlGF ratio, we note that while the ratio offers strong short-term rule-out performance, its positive predictive value for ruling in preeclampsia related adverse outcomes remains limited. Our model, which incorporates the sFlt 1/PlGF ratio alongside ten additional routine clinical features, achieved AUCs of 92% and 87% in the German and North American cohorts, respectively. A formal head-to head comparison remains an important direction for future work. Regarding dataset heterogeneity, we acknowledge the structural differences between cohorts as a relevant limitation, while noting that discriminative performance remained statistically indistinguishable across cohorts despite significant differences in baseline characteristics. Regarding longer-term outcomes, we agree this is a valuable direction and intend to pursue it as follow-up data become available.",
-      "score": 6,
-      "why": "This is a reply to critics of a previously published machine learning model that predicts preeclampsia-related complications, clarifying that the model performed consistently well across a German and a North American patient group and adding it offers more information than the existing sFlt-1/PlGF blood test ratio alone. The response strengthens confidence in a model that has already undergone real cross-cohort validation, though a formal head-to-head comparison against the standard test is still pending.",
-      "theme": "Preeclampsia Prediction",
-      "glossary": [
-        {
-          "term": "External Validation",
-          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
-          "isNew": true
-        },
-        {
-          "term": "Calibration",
-          "definition": "How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.",
-          "isNew": true
-        },
-        {
-          "term": "Brier Score",
-          "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
-          "isNew": true
-        },
-        {
-          "term": "sFlt-1/PlGF Ratio",
-          "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
-          "isNew": true
-        }
-      ]
-    },
-    {
-      "id": "url:08a072984cafc922",
-      "beat": "industry",
-      "title": "Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm",
-      "source": "FemTech Insider",
-      "url": "https://femtechinsider.com/natural-cycles-receives-sixth-fda-clearance-for-ai-powered-fertility-algorithm/",
-      "date": "2026-07-28T18:26:19.000Z",
-      "authors": [],
-      "body": "Birth control and cycle-tracking app Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered NC° Fertility Algorithm. The company previously secured FDA clearances for its birth control app, integrations with Oura Ring and Apple Watch, and over-the-counter availability. The next-generation algorithm combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points… The post Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm first appeared on .",
-      "score": 6,
-      "why": "Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world data points. This is a concrete regulatory milestone for a widely used reproductive health AI tool, though the text gives no performance data from this specific update.",
-      "theme": "FDA Clearance",
-      "glossary": []
-    },
-    {
-      "id": "pmid:42527228",
-      "beat": "repro-ai",
-      "title": "Multi-modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.",
-      "source": "Acad Radiol",
-      "url": "https://doi.org/10.1016/j.acra.2026.07.022",
-      "date": "2026-07-29T00:00:00.000Z",
-      "authors": [
-        "Yang H",
-        "Yang W",
-        "Tian H",
-        "Chang Y"
-      ],
-      "body": "RATIONALE AND OBJECTIVES: To develop and validate a multi-modal stacking machine learning model integrating intratumoral and peritumoral habitat radiomics from multiparametric Magnetic resonance imaging (MRI) with clinicopathological variables for noninvasive preoperative prediction of lymph node metastasis (LNM) in early- stage cervical cancer (ECC). MATERIALS AND METHODS: This retrospective study with prospective validation analyzed 623 ECC patients divided into training (n = 311), internal validation (n = 187), and external validation (n = 125) cohorts. Preoperative T2-weighted imaging (T2WI), diffusion-weighted imaging (DWI), and contrast-enhanced T1-weighted imaging (CE-T1WI) were used to cluster tumor voxels into homogeneous habitats via K-means. Habitat radiomic features were extracted from intratumoral and a 3-mm peritumoral expansion. A stacking ensemble framework was built with five base classifiers (logistic regression, extreme gradient boosting&#xa0;(XGBoost), Elastic Net logistic regression, Depthwise Separable Convolutional Attention (DSCA), and support vector machine&#xa0;(SVM) as first-level learners and an XGBoost-based Meta-model as the second-level learner. Performance was assessed by area under the curve (AUC), calibration curves, decision curve analysis, net reclassification improvement (NRI), and integrated discrimination improvement (IDI). RESULTS: Among base learners, the SVM-based ITH_integrated_score model performed best, with AUCs of 0.882, 0.865, and 0.845 in the training, internal validation, and external validation cohorts. The Meta-learner achieved AUCs of 0.915, 0.895, and 0.875, and DeLong test confirmed it significantly outperformed all base learners (all P&#xa0;<&#xa0;0.05). The Meta- model demonstrated excellent calibration and the highest clinical net benefit. NRI and IDI analyses confirmed significant incremental value over each base learner. CONCLUSION: This multimodal stacking ensemble model improves preoperative LNM prediction compared with unimodal approaches and may help guide individualized surgical and surveillance strategies.",
-      "score": 5,
-      "why": "Researchers built a multi-step machine learning model that combines MRI image patterns and clinical data to predict whether cervical cancer has spread to lymph nodes, testing it on separate patient groups including an external one, with best accuracy scores around 0.87 to 0.92 on a 0 to 1 scale. It shows solid validation practice for a retrospective imaging study, but it stays in the incremental radiomics genre common to this type of work and offers no reproductive angle.",
-      "theme": "Cervical Cancer Imaging",
-      "glossary": [
-        {
-          "term": "External Validation",
-          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
-          "isNew": true
-        },
-        {
-          "term": "AUC",
-          "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
-          "isNew": true
-        },
-        {
-          "term": "Radiomics",
-          "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+          "term": "Train-Test Split",
+          "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
           "isNew": true
         }
       ]
@@ -351,41 +503,31 @@
       ],
       "body": "Oocyte quality is a key determinant of reproductive success, yet its assessment in assisted reproduction largely relies on subjective morphological criteria. Artificial intelligence (AI)-based image analysis has introduced greater objectivity into oocyte evaluation; however, the biological features captured by AI-derived morphological scores remain incompletely defined. In this study, we integrated AI-based oocyte morphology with molecular profiling of follicular fluid (FF) to identify biological correlates of oocyte competence. Reproductive outcomes were analysed in 49 young oocyte donors (20-33 years), while FF samples pooled per woman from a subset of 25 donors were analysed for metabolic (glucose, total cholesterol, triglycerides, HDL, LDL, APOA1), extracellular matrix-related (HSPG2/Perlecan), signaling-related (Gremlin-1), and fertility-related (AMH, LH, FSH) biomarkers. AI-derived oocyte quality scores were positively associated with specific intrafollicular markers, including glucose, total cholesterol, HDL, AMH, and HSPG2, while no associations were observed with triglycerides, LDL, Gremlin-1, LH, or FSH. APOA1 showed a positive trend with the AI score. These findings provide a biological context for AI-based oocyte morphological assessment by linking digital image-derived scores with metabolic and structural features of the follicular microenvironment. The integration of AI-driven morphology with donor follicular fluid biomarker profiling may contribute to the development of more objective and biologically informed approaches for oocyte quality evaluation in assisted reproduction.",
       "score": 5,
-      "why": "In 49 young egg donors, researchers found that AI-generated scores of egg quality correlated with certain metabolic and structural molecules measured in the fluid surrounding the egg, such as glucose, cholesterol, and a hormone called AMH. The study is small and exploratory, but it is a genuine attempt to ground an AI scoring tool in underlying biology rather than just image pattern matching, which is relevant to embryo and oocyte selection research.",
-      "theme": "Oocyte Quality Biomarkers",
+      "why": "In a small cohort of 49 young oocyte donors, AI-derived oocyte morphology scores correlated with specific follicular fluid biomarkers including glucose, HDL, AMH, and HSPG2, providing a biological basis for what AI image scores may be capturing about oocyte competence. The sample size is modest and the design correlational, so this is exploratory hypothesis-generating work rather than a validated clinical tool, but it directly addresses the interpretability of AI oocyte grading, which matters for REI researchers.",
+      "plain": "Researchers compared AI-generated quality scores for egg cells with chemical markers measured in the fluid surrounding those eggs in 49 young egg donors, and found that higher AI scores were linked to certain markers like cholesterol, a hormone called AMH, and a structural protein, suggesting these AI scores reflect real biological features rather than just visual patterns. The study is small and only shows correlations, not proof that the AI score improves outcomes, but it helps explain what these increasingly used AI grading tools might actually be measuring biologically.",
+      "theme": "Oocyte Quality AI",
       "glossary": [
+        {
+          "term": "Follicular Fluid",
+          "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+          "isNew": true
+        },
         {
           "term": "AMH",
           "definition": "A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.",
           "isNew": true
         },
         {
-          "term": "Follicular Fluid",
-          "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+          "term": "HSPG2",
+          "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+          "isNew": true
+        },
+        {
+          "term": "HDL and LDL",
+          "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
           "isNew": true
         }
       ]
-    },
-    {
-      "id": "pmid:42500874",
-      "beat": "repro-ai",
-      "title": "Performance of Large Language Model-Based Chatbots in Primary Health Care Teleconsultations: A Comparison Between Human and Artificial Intelligence-Generated Responses.",
-      "source": "Telemed J E Health",
-      "url": "https://doi.org/10.1177/15305627261471706",
-      "date": "2026-07-25T00:00:00.000Z",
-      "authors": [
-        "Barros GDM",
-        "Amaral CEM",
-        "Macieira C",
-        "Freitas MAC",
-        "Paula FP",
-        "Santos AFD"
-      ],
-      "body": "INTRODUCTION: Telehealth is a strategic component of primary health care and has advanced in Brazil through the National Telehealth Program. Its benefits can be enhanced by artificial intelligence (AI), which has emerged as a promising tool. This study aims to compare the performance of real human and AI-generated responses to queries submitted to the teleconsultation services of the Telehealth Center of the UFMG Faculty of Medicine (NUTEL FM-UFMG), a member of the Telehealth Brazil Program. METHODS: This is a comparative cross-sectional study of 180 real human and AI-generated responses, evaluated in a blinded manner according to quality criteria (medical adequacy, conciseness, coherence, and comprehensibility), risk potential, authorship identification accuracy, and inquiry resolution. Data from NUTEL FM-UFMG (January 2020 to May 2024) were utilized, covering cardiology, endocrinology, and obstetrics/gynecology (OB-GYN). Statistical analysis included the Shapiro-Wilk test, Kruskal-Wallis test, Nemenyi multiple comparison test, chi-square test, and Fisher's exact test. RESULTS: Across all specialties, a significant difference was observed in comprehensibility, with AI mean scores surpassing those of humans. For the remaining quality criteria, as well as for risk potential and inquiry resolution, no significant differences were found, despite AI scoring higher than humans. Within specific specialties, significant differences was observed in endocrinology (except conciseness) and cardiology (in conciseness); AI showed superior means. Across all specialties, as well as individually within endocrinology and OB-GYN, the accuracy of authorship identification (human vs. AI) was statistically significant. CONCLUSION: Despite existing limitations, AI demonstrates substantial potential as a support tool for teleconsultation services.",
-      "score": 5,
-      "why": "This study compared AI chatbot responses to real doctors' responses for over 900 patient telehealth questions in Brazil, finding AI responses were rated as easier to understand and performed comparably or better on most other quality measures across specialties including obstetrics and gynecology. It is a real head-to-head evaluation with a reasonably large sample, though it measures response quality rather than actual clinical outcomes.",
-      "theme": "AI Chatbot Triage",
-      "glossary": []
     }
   ],
   "terms": [
@@ -400,6 +542,11 @@
       "isNew": true
     },
     {
+      "term": "AUC-ROC",
+      "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": true
+    },
+    {
       "term": "Brier Score",
       "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
       "isNew": true
@@ -410,8 +557,38 @@
       "isNew": true
     },
     {
+      "term": "Clinical High Risk for Psychosis",
+      "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
+      "isNew": true
+    },
+    {
+      "term": "Confabulation",
+      "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
+      "isNew": true
+    },
+    {
+      "term": "Confidence Interval",
+      "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+      "isNew": true
+    },
+    {
       "term": "Contrastive Learning",
       "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
+      "isNew": true
+    },
+    {
+      "term": "Cross-Sectional Replication",
+      "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+      "isNew": true
+    },
+    {
+      "term": "Cytology",
+      "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+      "isNew": true
+    },
+    {
+      "term": "Decision Curve Analysis",
+      "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
       "isNew": true
     },
     {
@@ -420,8 +597,23 @@
       "isNew": true
     },
     {
+      "term": "DeLong Test",
+      "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+      "isNew": true
+    },
+    {
       "term": "External Validation",
       "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+      "isNew": true
+    },
+    {
+      "term": "Extreme Gradient Boosting Classifier",
+      "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+      "isNew": true
+    },
+    {
+      "term": "FDA",
+      "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
       "isNew": true
     },
     {
@@ -430,8 +622,23 @@
       "isNew": true
     },
     {
-      "term": "ICC",
-      "definition": "A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.",
+      "term": "HDL and LDL",
+      "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
+      "isNew": true
+    },
+    {
+      "term": "HPV-Primary Screening",
+      "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+      "isNew": true
+    },
+    {
+      "term": "HSPG2",
+      "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+      "isNew": true
+    },
+    {
+      "term": "Inherited Retinal Diseases",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
       "isNew": true
     },
     {
@@ -440,8 +647,18 @@
       "isNew": true
     },
     {
+      "term": "Kaplan-Meier Analysis",
+      "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+      "isNew": true
+    },
+    {
       "term": "Large Language Models",
       "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+      "isNew": true
+    },
+    {
+      "term": "Liquid-Based Cytology",
+      "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
       "isNew": true
     },
     {
@@ -450,8 +667,28 @@
       "isNew": true
     },
     {
+      "term": "Machine Learning",
+      "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
+      "isNew": true
+    },
+    {
+      "term": "Nomogram",
+      "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+      "isNew": true
+    },
+    {
+      "term": "Progression-free Survival",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": true
+    },
+    {
       "term": "Radiomics",
       "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+      "isNew": true
+    },
+    {
+      "term": "Random Forest",
+      "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
       "isNew": true
     },
     {
@@ -460,8 +697,18 @@
       "isNew": true
     },
     {
+      "term": "RETFound",
+      "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+      "isNew": true
+    },
+    {
       "term": "Retrospective",
       "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
+      "isNew": true
+    },
+    {
+      "term": "Retrospective Database Audit",
+      "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
       "isNew": true
     },
     {
@@ -485,8 +732,33 @@
       "isNew": true
     },
     {
+      "term": "Stacking Ensemble",
+      "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+      "isNew": true
+    },
+    {
+      "term": "Top-5 Accuracy",
+      "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
+      "isNew": true
+    },
+    {
+      "term": "Train-Test Split",
+      "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
+      "isNew": true
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale",
+      "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+      "isNew": true
+    },
+    {
       "term": "Vision Transformer",
       "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+      "isNew": true
+    },
+    {
+      "term": "Wav2vec 2.0",
+      "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
       "isNew": true
     }
   ],
@@ -497,8 +769,8 @@
       "source": "Nat Med",
       "title": "AI-based clinician decision support system for diagnosis of inherited retinal diseases: a multicenter, randomized trial.",
       "score": 9,
-      "theme": "AI Decision Support",
-      "why": "In a randomized trial across multiple countries, an AI tool that reads retina images to predict likely genetic causes of inherited eye diseases nearly doubled doctors' accuracy in guessing the right gene category compared to doctors working alone, and also improved their treatment decisions. This is a rare case of a clinical AI tool being tested with a real randomized comparison and a hard clinical outcome rather than just retrospective accuracy, making it a strong model for how AI decision support should be evaluated in any specialty, including reproductive genetics."
+      "theme": "AI Genetic Diagnosis",
+      "why": "In a multicenter randomized controlled trial (n=295 with confirmed genotypes), a Vision Transformer-based clinician decision support system (Retina4IRD) pretrained with RETFound significantly improved top-5 genotype prediction accuracy for inherited retinal diseases (88.5% vs 67.3%, P<0.001) and improved downstream management scores when used alongside specialists versus specialists alone. This is a rare RCT with a hard clinical endpoint and external validation across three countries, representing a genuine first in AI-assisted genetic diagnosis workflow and a strong template for evaluating AI decision support broadly."
     },
     {
       "id": "pmid:42493284",
@@ -507,16 +779,16 @@
       "title": "A deep learning model for speech-based prediction of clinical scores in people with Huntington's disease: a longitudinal study with cross-sectional replication.",
       "score": 8,
       "theme": "Speech Biomarker Validation",
-      "why": "Researchers built and tested an AI model that estimates Huntington's disease severity scores directly from voice recordings, validating it across multiple longitudinal cohorts and an independent replication group, and found it tracked disease progression nearly as well as clinician ratings and brain scans. This is a strong example of a rigorously validated AI biomarker with real prospective and external validation, showing how speech analysis could offer a cheap, noninvasive way to monitor neurodegenerative disease, a template relevant to tracking any chronic condition remotely."
+      "why": "NDSNet, a deep learning model combining wav2vec 2.0 embeddings with a recurrent attentive network in a contrastive learning framework, predicted Unified Huntington's Disease Rating Scale motor scores from speech across three prospective cohorts (191 patients, 58 controls) with an intraclass correlation coefficient of 0.87, comparable to clinician ratings, and this held up in an independent external replication cohort of 110 patients. This is a rare example of a speech biomarker validated longitudinally and externally against a hard clinical rating scale and MRI-based atrophy, making it a credible progression-tracking tool rather than another single-cohort proof of concept."
     },
     {
-      "id": "pmid:42493532",
-      "beat": "clinical-ai",
-      "source": "NPJ Digit Med",
-      "title": "Evaluating large language models for assessment of psychosis risk.",
+      "id": "pmid:42527228",
+      "beat": "repro-ai",
+      "source": "Acad Radiol",
+      "title": "Multi-modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.",
       "score": 6,
-      "theme": "Psychosis Risk Screening",
-      "why": "Researchers tested several AI language models on real interview transcripts to see if they could identify people at high risk for psychosis and rate their symptoms, finding that larger models matched human raters reasonably well and rarely made things up. The study used a sizable multi-site sample and checked for fairness across demographic groups, which is a more rigorous test than typical single-site AI studies, though it still falls short of a clinical trial showing real-world impact."
+      "theme": "Cervical Cancer Imaging",
+      "why": "A multimodal stacking ensemble combining intratumoral and peritumoral MRI radiomic habitats with clinicopathological variables predicted lymph node metastasis in early-stage cervical cancer, reaching AUCs of 0.915, 0.895, and 0.875 in training, internal, and external validation cohorts, outperforming all base learners by DeLong test. The design includes external validation and decision curve analysis, which strengthens clinical relevance, though it remains retrospective and radiomics pipelines historically generalize poorly across scanners and institutions."
     },
     {
       "id": "pmid:42526933",
@@ -525,7 +797,7 @@
       "title": "Improving laboratory workforce efficiency using AI-assisted digital cytology within an HPV-based cervical screening programme: A model-based evaluation for the NHS Cervical Screening Programmes.",
       "score": 6,
       "theme": "Cervical Screening Efficiency",
-      "why": "A decision-tree modeling study estimated that AI-assisted digital cytology could cut the time needed to review cervical cancer screening slides from about 13 minutes to 4 minutes per slide across the NHS system, roughly a 69% gain in staff productivity. It is a policy-relevant, large-scale workforce analysis rather than a clinical trial, but it speaks directly to real deployment feasibility in a national screening program."
+      "why": "A decision-tree modeling study estimated that AI-assisted digital cytology could cut mean slide review time from 12.9 to 4.0 minutes in the NHS HPV-triage cervical screening workflow, translating to a projected 69% gain in laboratory productivity across roughly 480,000 annual slides. This is a health-economic simulation using published performance data rather than a prospective trial, so the workforce savings are only as credible as the underlying assumptions, but it is directly relevant to scaling AI-assisted screening in practice."
     },
     {
       "id": "pmid:42523012",
@@ -533,17 +805,17 @@
       "source": "Acta Clin Belg",
       "title": "An explainable machine learning approach for cervical cancer screening: decoding morphological diagnostic drivers.",
       "score": 6,
-      "theme": "Cervical Cytology AI",
-      "why": "An interpretable machine learning tool for reading cervical cancer screening slides was tested against senior pathologists on 5,000 archived samples from a Chinese healthcare network, detecting high-grade lesions with 92.5% sensitivity versus 84.2% for manual review, while cutting review time by 63%. The performance held up across subgroups like menopausal or infected tissue, and the model's reasoning was traced to specific cell features, though it remains a single-network retrospective study without independent external validation."
+      "theme": "Cervical Screening AI",
+      "why": "An explainable ML pipeline for liquid-based cytology screening achieved 92.5% sensitivity for detecting high-grade squamous intraepithelial lesions or worse versus 84.2% for manual cytopathologist review in a retrospective double-blind comparison of 5,000 women, with AUC 0.94 and no significant performance drop across menopausal or infection subgroups. The SHAP-based feature analysis adds interpretability and the efficiency gains are substantial, but the study is retrospective and single-network, so prospective multi-site validation is still needed before this changes screening practice broadly."
     },
     {
-      "id": "pmid:42485817",
+      "id": "pmid:42515922",
       "beat": "repro-ai",
-      "source": "Pregnancy Hypertens",
-      "title": "Reply to the letter to the editor: \"Machine learning model for predicting preeclampsia-related adverse outcomes\".",
+      "source": "Curr Med Imaging",
+      "title": "Non-contrast MRI Radiomics Nomogram for Predicting Recurrence and Progression-Free Survival in Cervical Cancer following Concurrent Chemoradiotherapy.",
       "score": 6,
-      "theme": "Preeclampsia Prediction",
-      "why": "This is a reply to critics of a previously published machine learning model that predicts preeclampsia-related complications, clarifying that the model performed consistently well across a German and a North American patient group and adding it offers more information than the existing sFlt-1/PlGF blood test ratio alone. The response strengthens confidence in a model that has already undergone real cross-cohort validation, though a formal head-to-head comparison against the standard test is still pending."
+      "theme": "Cervical Cancer Prognosis",
+      "why": "A two-center retrospective study built a non-contrast MRI radiomics nomogram using an XGBoost classifier to predict recurrence and progression-free survival after chemoradiotherapy for cervical cancer, with significant risk stratification in both the 114-patient construction cohort (P<0.001) and 31-patient external validation cohort (P=0.012), performing comparably to contrast-enhanced models. The external validation and avoidance of gadolinium contrast are genuine strengths, though the validation cohort is small and single-institution pairs limit generalizability."
     },
     {
       "id": "url:08a072984cafc922",
@@ -551,17 +823,26 @@
       "source": "FemTech Insider",
       "title": "Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm",
       "score": 6,
-      "theme": "FDA Clearance",
-      "why": "Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world data points. This is a concrete regulatory milestone for a widely used reproductive health AI tool, though the text gives no performance data from this specific update."
+      "theme": "Fertility App Clearance",
+      "why": "Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points. This is a concrete regulatory milestone for a widely used fertility and contraception app, though the announcement gives no performance data or validation details for the updated algorithm."
     },
     {
-      "id": "pmid:42527228",
-      "beat": "repro-ai",
-      "source": "Acad Radiol",
-      "title": "Multi-modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.",
+      "id": "pmid:42493532",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Evaluating large language models for assessment of psychosis risk.",
       "score": 5,
-      "theme": "Cervical Cancer Imaging",
-      "why": "Researchers built a multi-step machine learning model that combines MRI image patterns and clinical data to predict whether cervical cancer has spread to lymph nodes, testing it on separate patient groups including an external one, with best accuracy scores around 0.87 to 0.92 on a 0 to 1 scale. It shows solid validation practice for a retrospective imaging study, but it stays in the incremental radiomics genre common to this type of work and offers no reproductive angle."
+      "theme": "AI Psychosis Screening",
+      "why": "Eleven open-weight large language models were evaluated on 678 partial psychiatric interview transcripts from 373 participants to infer clinical high-risk psychosis status, with the best model (Llama-3.3-70B) reaching 0.80 accuracy, 0.93 sensitivity, and 0.58 specificity, and symptom severity scores correlating well with human raters (intraclass correlation coefficient of 0.74-0.75). This is a promising but exploratory benchmarking study without prospective clinical deployment or outcome data, so its value lies mainly in demonstrating feasibility rather than establishing clinical utility."
+    },
+    {
+      "id": "pmid:42525142",
+      "beat": "repro-ai",
+      "source": "Sao Paulo Med J",
+      "title": "Predictive modeling with machine learning for low birth weight in the state of São Paulo: a retrospective population-based study.",
+      "score": 5,
+      "theme": "Birth Weight Prediction",
+      "why": "Using 2.5 million live births from Sao Paulo state, this retrospective study trained logistic regression and random forest models to predict low birth weight, with the best model achieving AUC-ROC 0.850 and sensitivity 0.688 on an 80/20 train-test split. The population scale is a strength but the lack of external validation and the use of only a held-out split from the same source limit confidence that this generalizes beyond the study population."
     },
     {
       "id": "pmid:42523187",
@@ -569,8 +850,8 @@
       "source": "Reproduction",
       "title": "AI-derived oocyte morphology and follicular fluid biomarkers in donors.",
       "score": 5,
-      "theme": "Oocyte Quality Biomarkers",
-      "why": "In 49 young egg donors, researchers found that AI-generated scores of egg quality correlated with certain metabolic and structural molecules measured in the fluid surrounding the egg, such as glucose, cholesterol, and a hormone called AMH. The study is small and exploratory, but it is a genuine attempt to ground an AI scoring tool in underlying biology rather than just image pattern matching, which is relevant to embryo and oocyte selection research."
+      "theme": "Oocyte Quality AI",
+      "why": "In a small cohort of 49 young oocyte donors, AI-derived oocyte morphology scores correlated with specific follicular fluid biomarkers including glucose, HDL, AMH, and HSPG2, providing a biological basis for what AI image scores may be capturing about oocyte competence. The sample size is modest and the design correlational, so this is exploratory hypothesis-generating work rather than a validated clinical tool, but it directly addresses the interpretability of AI oocyte grading, which matters for REI researchers."
     },
     {
       "id": "pmid:42500874",
@@ -578,8 +859,17 @@
       "source": "Telemed J E Health",
       "title": "Performance of Large Language Model-Based Chatbots in Primary Health Care Teleconsultations: A Comparison Between Human and Artificial Intelligence-Generated Responses.",
       "score": 5,
-      "theme": "AI Chatbot Triage",
-      "why": "This study compared AI chatbot responses to real doctors' responses for over 900 patient telehealth questions in Brazil, finding AI responses were rated as easier to understand and performed comparably or better on most other quality measures across specialties including obstetrics and gynecology. It is a real head-to-head evaluation with a reasonably large sample, though it measures response quality rather than actual clinical outcomes."
+      "theme": "AI Teleconsultation",
+      "why": "A cross-sectional study blindly compared 180 human versus AI-generated responses in Brazilian primary care teleconsultations across cardiology, endocrinology, and OB-GYN, finding AI scored higher on comprehensibility and was often distinguishable from human responses by graders. The design includes real blinded comparison and a clinically relevant task, but it evaluates chatbot text quality rather than diagnostic or predictive accuracy, and the setting is fairly narrow."
+    },
+    {
+      "id": "pmid:42527429",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Perceptions of simulated artificial intelligence in medical consultations: associations with stress, memory, and perceived credibility.",
+      "score": 4,
+      "theme": "AI Bedside Manner",
+      "why": "A Wizard-of-Oz simulation study (163 healthy participants) compared human versus AI-styled physician delivery of bad news, finding lower stress and cortisol but also lower memory retrieval with AI-styled consultations. This is a well-controlled human-factors study but has no diagnostic or treatment component and only indirectly informs deployment of conversational AI in sensitive clinical communication."
     },
     {
       "id": "pmid:42496643",
@@ -587,8 +877,17 @@
       "source": "J Am Med Inform Assoc",
       "title": "Characterization and Validation of EHR Computable Phenotypes for Long COVID Using Patient-Reported Symptoms: Insights from the Nationwide RECOVER Program.",
       "score": 4,
-      "theme": "Long COVID Detection",
-      "why": "Researchers built a machine-learning model using medical records and patient-reported symptoms to flag likely cases of long COVID, achieving moderate but imperfect accuracy in a single held-out test group. The approach could help identify patients for research studies, but it lacks external validation and its accuracy is only fair, limiting confidence that it would work well elsewhere."
+      "theme": "Long COVID Phenotyping",
+      "why": "Using EHR data linked to patient-reported symptoms from 1,501 RECOVER-Adult participants, the authors trained a computable phenotyping algorithm for highly symptomatic Long COVID, achieving an AUROC of 0.80 and AUPRC of 0.58 in a held-out test set. The study lacks external validation across other health systems and relies on a single derived cohort, limiting generalizability despite its practical aim of improving trial recruitment and screening."
+    },
+    {
+      "id": "pmid:42486995",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Large language models for interpretation of health checkup results.",
+      "score": 4,
+      "theme": "LLM Lab Interpretation",
+      "why": "Four large language models were tested on interpreting structured Korean health checkup data, with Chain-of-Thought prompting raising average accuracy from 0.69 to 0.95, and item-level analysis showed near-perfect accuracy for biochemical markers but weaker, age- and sex-biased performance on blood pressure interpretation. This is a retrospective benchmarking exercise on structured lab values rather than a clinical deployment study, useful for flagging prompt sensitivity and bias but without patient outcomes or external validation beyond the test set."
     },
     {
       "id": "pmid:42526532",
@@ -597,34 +896,16 @@
       "title": "Elevated Circulating AIF1L as a Cell-Free RNA Biomarker of Preeclampsia Impairs Trophoblast Function via Mitochondrial Dysregulation.",
       "score": 4,
       "theme": "Preeclampsia Biomarker",
-      "why": "Researchers combined gene activity data from placenta and blood with machine learning to build a 10-gene blood test that identifies preeclampsia with high accuracy, and lab experiments suggested one of these genes, AIF1L, disrupts energy production in placental cells when overactive. The diagnostic model shows strong statistical performance and some external testing, but the mechanistic claims rest on a single cell line and the clinical test itself needs prospective validation before it matters for practice."
+      "why": "Using multi-omic data and a machine learning-selected 10-gene nomogram, this study reports a circulating cfRNA signature for preeclampsia diagnosis with AUC 0.989 and external validation, and identifies AIF1L as a novel regulator of trophoblast mitochondrial function via in vitro knockdown and overexpression experiments. The diagnostic AUC is implausibly high for a clinical biomarker panel and the core contribution is mechanistic rather than a validated clinical tool, so the ML component is largely incidental to a biology-driven paper."
     },
     {
-      "id": "pmid:42525142",
+      "id": "pmid:42517497",
       "beat": "repro-ai",
-      "source": "Sao Paulo Med J",
-      "title": "Predictive modeling with machine learning for low birth weight in the state of São Paulo: a retrospective population-based study.",
+      "source": "Int J Health Plann Manage",
+      "title": "Machine Learning Analysis of Maternal Mortality Determinants in Nigeria: An Exploratory Study.",
       "score": 4,
-      "theme": "Birth Weight Prediction",
-      "why": "Using over 2.5 million birth records from São Paulo, researchers trained standard machine learning models to predict low birth weight from maternal and prenatal characteristics, finding known risk factors like young or older maternal age, low education, and late prenatal care. The dataset is large, but the analysis is purely retrospective with no external testing or new clinical tool, so it mainly restates known epidemiology in a predictive-modeling format."
-    },
-    {
-      "id": "pmid:42523880",
-      "beat": "repro-ai",
-      "source": "Digit Health",
-      "title": "Evidence integration: The transformative role of artificial intelligence in maternal health.",
-      "score": 4,
-      "theme": "Maternal Health AI Review",
-      "why": "This is an umbrella review summarizing 34 prior reviews on AI in maternal health, concluding that while AI shows promise for predicting pregnancy complications like preeclampsia and preterm birth, most studies lack external validation, real-world testing, and fairness checks. It is a useful synthesis of a known translation gap but presents no new data or findings."
-    },
-    {
-      "id": "pmid:42515922",
-      "beat": "repro-ai",
-      "source": "Curr Med Imaging",
-      "title": "Non-contrast MRI Radiomics Nomogram for Predicting Recurrence and Progression-Free Survival in Cervical Cancer following Concurrent Chemoradiotherapy.",
-      "score": 4,
-      "theme": "Cervical Cancer Imaging",
-      "why": "Researchers built a model using patterns from routine, non-contrast MRI scans plus clinical information to predict cancer recurrence and survival after chemoradiotherapy in cervical cancer patients, testing it on an independent group of 31 patients at a second hospital. The approach could make prognosis prediction accessible without needing contrast dye, but the validation group is very small, limiting confidence in generalizability."
+      "theme": "Maternal Mortality Determinants",
+      "why": "An exploratory ecological study applied XGBoost and Random Forest models to 1960-2024 Nigerian national data, finding female tertiary education and service-sector employment most strongly associated with lower maternal mortality ratios, validated only via 5-fold cross-validation on aggregate data. The ecological, national-level design cannot establish individual-level causation and the findings, while policy-relevant, do not constitute a clinical or individual-level prediction tool."
     },
     {
       "id": "pmid:42485710",
@@ -633,43 +914,25 @@
       "title": "Performance of artificial intelligence in the collection of patient history in general practice.",
       "score": 4,
       "theme": "AI Documentation Primary Care",
-      "why": "French general practitioners' patient history-taking was compared with AI-generated histories across nearly a thousand cases, and AI scored as more understandable with similar reliability, especially for allergy and family cancer history. The study is a real comparative evaluation in primary care, though it measures documentation quality rather than actual diagnostic or treatment outcomes."
+      "why": "A cross-sectional study compared AI-generated versus physician-collected patient histories from 204 French general practitioners across 942 consultations, finding AI outperformed physicians in comprehensibility, particularly for allergies and family cancer history. The comparison lacks details on the specific AI system used and blinding methodology, and the outcome, comprehensibility of a written history rather than diagnostic accuracy, is a modest measure of clinical value."
     },
     {
-      "id": "pmid:42464782",
+      "id": "pmid:42484891",
       "beat": "repro-ai",
-      "source": "Curr Opin Urol",
-      "title": "AI-based techniques in sperm detection.",
+      "source": "Eur J Nucl Med Mol Imaging",
+      "title": "Preoperative PET/CT phenotype of gastric-type endocervical adenocarcinoma: integrated morphological, metabolic, serological, and explainable machine-learning analysis.",
       "score": 4,
-      "theme": "Male Infertility AI",
-      "why": "This review summarizes recent progress in using AI, including deep learning and microfluidic devices, to help find rare sperm in men with very low or absent sperm counts, noting some early clinical reports of finding sperm in previously sperm-negative patients. It is a review without new original data, so while the topic is clinically important for infertility care, actual evidence of impact is still limited."
+      "theme": "Cervical Cancer Imaging",
+      "why": "A retrospective single-center study used PET/CT imaging features, tumor markers, and explainable tree-based machine learning to characterize gastric-type endocervical adenocarcinoma versus other cervical cancers in 144 patients, with SHAP analysis identifying key distinguishing features like SUVmax and CA19-9. The exploratory design lacks external validation and the sample size for the rare tumor subtype (22 GAS cases) is small, limiting generalizability despite clinically interesting phenotype characterization."
     },
     {
-      "id": "url:eba7979e1d10acaa",
-      "beat": "industry",
-      "source": "FemTech Insider",
-      "title": "Kompass Diagnostics Scales Rapid Finger-Prick Hormone Testing",
-      "score": 4,
-      "theme": "Fertility Diagnostics",
-      "why": "Kompass Diagnostics licensed a rapid finger-prick hormone testing platform from the University of Chicago for use in fertility care, promising results in about 10 minutes instead of standard lab turnaround. This is a diagnostics hardware story with no algorithmic component and no clinical validation data provided, so it is only marginally relevant here."
-    },
-    {
-      "id": "pmid:42527429",
-      "beat": "clinical-ai",
-      "source": "NPJ Digit Med",
-      "title": "Perceptions of simulated artificial intelligence in medical consultations: associations with stress, memory, and perceived credibility.",
+      "id": "pmid:42531325",
+      "beat": "repro-ai",
+      "source": "PLoS One",
+      "title": "The promise of deep urine proteomics for diagnosis of cancer, neurologic, and metabolic diseases.",
       "score": 3,
-      "theme": "AI Perception Study",
-      "why": "Researchers staged mock medical consultations with actors playing either human or AI doctors and measured participants' stress hormones, memory, and trust, finding that AI-styled interactions felt less stressful but were remembered less well. This is a psychology experiment about perception of AI, not an evaluation of an actual AI system in care, so it has limited direct bearing on clinical AI development."
-    },
-    {
-      "id": "pmid:42486995",
-      "beat": "clinical-ai",
-      "source": "NPJ Digit Med",
-      "title": "Large language models for interpretation of health checkup results.",
-      "score": 3,
-      "theme": "LLM Benchmarking",
-      "why": "Researchers tested four large language models on their ability to interpret structured health checkup data from a Korean national database, finding that better prompting techniques raised accuracy from about 69% to 95%, with weaker performance on blood pressure interpretation and some biases by sex and age. This is a benchmark-style study without patient outcomes or clinical deployment, so it offers modest insight mainly for those interested in language model reliability rather than direct clinical impact."
+      "theme": "Urine Biomarker Screening",
+      "why": "This case-control study used deep urine proteomic profiling (Olink Explore 3072 platform) and machine learning to build multiprotein classifiers distinguishing nine diseases, including ovarian, endometrial, and cervical cancer, from healthy controls, reporting AUCs up to 0.98 in a dataset of only 22 cases per disease and 66 controls. The exploratory design, tiny per-group sample size, and lack of external validation mean these accuracy estimates are almost certainly inflated, and the authors themselves flag them as upper bounds pending prospective validation."
     },
     {
       "id": "pmid:42525102",
@@ -677,8 +940,26 @@
       "source": "Rev Saude Publica",
       "title": "Using artificial intelligence to analyze violence against women in São Paulo.",
       "score": 3,
-      "theme": "Violence Surveillance Analytics",
-      "why": "This study applied a structured AI framework to nearly 80,000 reports of violence against women in São Paulo, finding rising trends since 2015 and higher risk of sexual violence among pregnant women and when alcohol was involved. It is a public health surveillance analysis using basic predictive statistics rather than a clinical AI tool, and it has no direct bearing on reproductive medicine practice."
+      "theme": "Violence Against Women",
+      "why": "This study applied time series and predictive modeling to 80,148 reports of violence against women in Sao Paulo, finding rising trends since 2015 and associations such as a 2.47-fold higher risk of sexual violence among pregnant women, then projected continued increases over 24 months. The predictive modeling is largely descriptive time-series forecasting rather than a validated clinical AI tool, and while the pregnancy-related finding is notable, the paper's main contribution is a proposed analytic framework rather than a generalizable model."
+    },
+    {
+      "id": "pmid:42523880",
+      "beat": "repro-ai",
+      "source": "Digit Health",
+      "title": "Evidence integration: The transformative role of artificial intelligence in maternal health.",
+      "score": 3,
+      "theme": "Maternal Health AI Review",
+      "why": "This umbrella review synthesizes 34 existing reviews on AI applications in maternal health risk prediction and intervention, concluding that a persistent translation gap exists around external validation, interpretability, fairness auditing, and prospective impact evaluation. As a review of reviews with no new primary data or model performance figures, it offers a useful landscape summary but little that would change practice or research direction for someone already working in this space."
+    },
+    {
+      "id": "pmid:42522897",
+      "beat": "repro-ai",
+      "source": "Climacteric",
+      "title": "Identification and importance analysis of osteoporosis risk factors in perimenopausal women based on the Transformer-LSTM hybrid model and SMOTE.",
+      "score": 3,
+      "theme": "Osteoporosis Prediction",
+      "why": "A single-center retrospective study used a Transformer-LSTM hybrid model with SMOTE oversampling to identify osteoporosis risk factors in perimenopausal women, reporting 89.5% accuracy and AUC 0.923, modestly better than single-architecture baselines. No external validation was performed and the improvements are incremental, limiting confidence that this generalizes beyond the source cohort."
     },
     {
       "id": "pmid:42520959",
@@ -687,7 +968,7 @@
       "title": "Fusion Gene Detection Enhances Clinical Outcome Prediction of Hepatocellular Carcinoma Through Machine Learning Analyses.",
       "score": 3,
       "theme": "Liver Cancer Prognosis",
-      "why": "Researchers analyzed a panel of 20 gene fusion markers in 200 liver cancer patients and used machine learning to see if combining these markers with standard clinical measures improved prediction of survival and recurrence after surgery, finding modest gains over existing methods. This is a retrospective, single type of cancer study unrelated to reproductive health, with accuracy still only around 72%, so its clinical impact is limited."
+      "why": "A retrospective single-cohort study combined a 20-gene fusion panel with machine learning to predict 3-year survival in hepatocellular carcinoma, reporting 72.4% accuracy versus 49-70% for individual clinical parameters like the Milan criteria or AFP. The comparison is internal (training versus testing split within the same 200-sample dataset) rather than externally validated, and the outcome, while general oncology rather than reproductive, is a real hard endpoint."
     },
     {
       "id": "pmid:42518080",
@@ -695,17 +976,8 @@
       "source": "J Endocrinol Invest",
       "title": "Data-driven endocrine-metabolic phenotypes in young women with polycystic ovary syndrome and associations with cardiometabolic risk markers.",
       "score": 3,
-      "theme": "PCOS Phenotyping",
-      "why": "Researchers used statistical clustering methods on hormone and metabolic data from over 1,000 young women with polycystic ovary syndrome and identified two subgroups, one enriched for thyroid autoimmune markers, that differed somewhat in cardiovascular risk markers. This is an exploratory, single-center, cross-sectional analysis using classical statistics rather than true machine learning, and the authors themselves say external validation is still needed."
-    },
-    {
-      "id": "pmid:42517497",
-      "beat": "repro-ai",
-      "source": "Int J Health Plann Manage",
-      "title": "Machine Learning Analysis of Maternal Mortality Determinants in Nigeria: An Exploratory Study.",
-      "score": 3,
-      "theme": "Maternal Mortality Nigeria",
-      "why": "This study applied machine learning to 64 years of national Nigerian data to see which social and economic factors, like education and rural residence, are most linked to maternal death rates. The analysis is exploratory and based on broad country-level statistics rather than patient-level data, so it can suggest policy priorities but cannot establish what drives individual outcomes."
+      "theme": "PCOS Subtyping",
+      "why": "A cross-sectional study of 1032 young women with PCOS used principal component analysis and Gaussian mixture clustering to identify two endocrine-metabolic subgroups, one thyroid/autoimmune-enriched, with modest differences in lipid-related cardiometabolic markers. This is exploratory phenotyping without external validation or longitudinal follow-up, and the clustering approach is closer to unsupervised statistics than to a predictive AI tool with clinical utility."
     },
     {
       "id": "pmid:42499124",
@@ -713,44 +985,44 @@
       "source": "Andrology",
       "title": "Explainable AI in Male Infertility: A Clinical Roadmap for Shared Decision-Making.",
       "score": 3,
-      "theme": "Explainable AI Roadmap",
-      "why": "This is an opinion piece proposing a framework for making AI tools in male infertility care, such as sperm image analysis, more explainable and safely integrated into clinical practice. It presents no new data or evaluation, just recommendations for future development."
+      "theme": "Explainable AI Infertility",
+      "why": "This is a perspective piece proposing a roadmap for explainable AI in male infertility care, discussing interpretability methods like SHAP, LIME, and saliency maps without presenting new empirical data. It is useful as a framework for thinking about responsible AI deployment but offers no findings that would change current practice."
     },
     {
-      "id": "pmid:42484891",
+      "id": "pmid:42498900",
       "beat": "repro-ai",
-      "source": "Eur J Nucl Med Mol Imaging",
-      "title": "Preoperative PET/CT phenotype of gastric-type endocervical adenocarcinoma: integrated morphological, metabolic, serological, and explainable machine-learning analysis.",
+      "source": "Funct Integr Genomics",
+      "title": "Systems-level genomic analyses reveal shared mechanisms underlying endometriosis and sleep disorders.",
       "score": 3,
-      "theme": "Cervical Cancer Imaging",
-      "why": "Researchers used PET/CT scans and machine learning to characterize a rare, hard-to-diagnose type of cervical cancer, finding it has a distinct imaging pattern and building models to help distinguish it from more common cervical cancer types. This is a retrospective single-center study with a small number of the rare cancer type, so its generalizability is limited."
+      "theme": "placeholder",
+      "why": "This study combined NHANES survey data, bidirectional Mendelian randomization, and multi-omic integration to find that endometriosis is associated with higher odds of sleep disorder (OR 2.64) and identified 37 shared candidate genes, with machine learning used only as a minor prioritization step. The genetic and molecular findings are explicitly hypothesis-generating and lack prospective or experimental validation, and AI is a peripheral rather than central component of the work."
     },
     {
-      "id": "url:92d48063b894ad0a",
+      "id": "pmid:42485817",
+      "beat": "repro-ai",
+      "source": "Pregnancy Hypertens",
+      "title": "Reply to the letter to the editor: \"Machine learning model for predicting preeclampsia-related adverse outcomes\".",
+      "score": 3,
+      "theme": "Preeclampsia Prediction",
+      "why": "This is a reply to a letter to the editor addressing critiques of an earlier machine learning model for preeclampsia-related adverse outcomes, providing additional calibration statistics (Brier scores 0.010 and 0.068) and reiterating prior AUCs of 92% and 87% in German and North American cohorts. It contains no new primary data collection and mainly clarifies methodological points raised by critics, limiting its independent news value despite the reproductive relevance."
+    },
+    {
+      "id": "pmid:42464782",
+      "beat": "repro-ai",
+      "source": "Curr Opin Urol",
+      "title": "AI-based techniques in sperm detection.",
+      "score": 3,
+      "theme": "Sperm Detection AI",
+      "why": "This narrative review summarizes emerging AI-assisted approaches for sperm detection in azoospermia and cryptozoospermia, including deep learning image analysis and AI-integrated microfluidic systems, without presenting new primary data or quantitative performance metrics. It is a useful orientation to the subfield but offers no findings that would immediately change clinical practice."
+    },
+    {
+      "id": "url:eba7979e1d10acaa",
       "beat": "industry",
       "source": "FemTech Insider",
-      "title": "PMOS Linked To Increased Cardiovascular Disease Risk, Study Finds",
+      "title": "Kompass Diagnostics Scales Rapid Finger-Prick Hormone Testing",
       "score": 3,
-      "theme": "Ovarian Syndrome Cardiovascular Risk",
-      "why": "A large U.S. study of over 400,000 women found that a hormonal-metabolic ovarian condition is linked to higher risk of hardened-artery heart disease, independent of standard risk factors. This is a substantial epidemiological finding for women's health but involves no AI or algorithmic component, so it falls outside this digest's core focus despite its scale."
-    },
-    {
-      "id": "url:d7bce247badb6f2e",
-      "beat": "industry",
-      "source": "FemTech Insider",
-      "title": "Hertility’s Annual Report Reveals Reproductive Health Knowledge Gaps",
-      "score": 3,
-      "theme": "Reproductive Knowledge Gaps",
-      "why": "Hertility's fourth annual report, based on over 500,000 patient assessments, found persistent gaps in reproductive health knowledge despite widespread use of wearables and cycle-tracking apps. This is descriptive survey data from a telehealth platform with no AI evaluation or clinical intervention described."
-    },
-    {
-      "id": "url:22b5c520b3a61f1a",
-      "beat": "industry",
-      "source": "MedTech Dive",
-      "title": "The FDA was all in on AI. Will that change?",
-      "score": 3,
-      "theme": "FDA AI Policy",
-      "why": "This short news item notes that leadership turnover at the FDA has created uncertainty about the pace of the agency's AI strategy. It has relevance for anyone tracking AI regulatory clearances but provides no specifics on what might change or when."
+      "theme": "Hormone Testing Device",
+      "why": "Kompass Diagnostics licensed a rapid finger-prick hormone testing platform using silicon biosensors for fertility hormone panels, delivering results in about ten minutes, but the item describes a licensing deal and product panel with no AI or algorithmic component and no clinical performance data. This is a diagnostics hardware story, not a clinical AI advance, so it sits outside this reader's core focus despite the fertility relevance."
     },
     {
       "id": "pmid:42507375",
@@ -758,8 +1030,8 @@
       "source": "JAMA",
       "title": "The iPatient Meets the iDoctor.",
       "score": 2,
-      "theme": "Commentary Piece",
-      "why": "No abstract or content is available for this JAMA piece beyond its title, which suggests a commentary on AI and modern medicine rather than a study."
+      "theme": "AI Commentary",
+      "why": "This JAMA piece appears to be a commentary or essay given its title and the absence of any abstract or data provided, so no methodology or findings can be evaluated. Without empirical content, it offers no actionable evidence for this reader despite JAMA's prominence."
     },
     {
       "id": "pmid:42490104",
@@ -767,26 +1039,8 @@
       "source": "JAMA",
       "title": "How Generative AI Should Transform Clinical Decision Support.",
       "score": 2,
-      "theme": "AI Commentary",
-      "why": "This is an opinion piece in JAMA about how generative AI should be used in clinical decision support, with no abstract or data provided. It offers no new evidence or findings, so it has little value for a reader tracking substantive research progress."
-    },
-    {
-      "id": "pmid:42531325",
-      "beat": "repro-ai",
-      "source": "PLoS One",
-      "title": "The promise of deep urine proteomics for diagnosis of cancer, neurologic, and metabolic diseases.",
-      "score": 2,
-      "theme": "Urine Biomarkers",
-      "why": "This study tested whether protein patterns in urine, measured with a lab platform and analyzed by machine learning, could distinguish various cancers and other diseases from healthy people, using only 22 to 66 samples per group with no external validation. The authors themselves note the design is exploratory and the accuracy numbers are likely inflated, and while ovarian, endometrial, and cervical cancer are included, this is a small, unvalidated biomarker study far from any reproductive AI application relevant to this reader."
-    },
-    {
-      "id": "pmid:42526930",
-      "beat": "repro-ai",
-      "source": "BMJ Open",
-      "title": "Use of heart rate variability in prediction of clinical deterioration in critically ill hospitalised adults: a systematic review protocol.",
-      "score": 2,
-      "theme": "Critical Care Monitoring",
-      "why": "This is a protocol for a future systematic review examining whether heart rate variability can predict deterioration in critically ill hospitalized adults, with no results yet reported. It has no AI component and no reproductive relevance, and as a protocol it offers nothing actionable this week."
+      "theme": "Opinion Commentary",
+      "why": "This is a JAMA opinion piece on how generative AI should be used in clinical decision support, with no abstract or empirical content provided."
     },
     {
       "id": "pmid:42526085",
@@ -795,16 +1049,7 @@
       "title": "Ferroptosis-associated ALOX12 suppresses ovarian cancer progression through MAPK signaling pathway.",
       "score": 2,
       "theme": "Ovarian Cancer Biology",
-      "why": "This lab study used gene expression analysis and machine learning tools to identify a gene, ALOX12, that appears to suppress ovarian cancer growth by promoting a form of cell death called ferroptosis, confirmed through cell and animal experiments. The AI use here is a minor data-mining step in an otherwise standard molecular biology paper, so it offers little for a reader tracking clinical AI or reproductive AI applications."
-    },
-    {
-      "id": "pmid:42522897",
-      "beat": "repro-ai",
-      "source": "Climacteric",
-      "title": "Identification and importance analysis of osteoporosis risk factors in perimenopausal women based on the Transformer-LSTM hybrid model and SMOTE.",
-      "score": 2,
-      "theme": "Osteoporosis Prediction",
-      "why": "Researchers built a combined neural network model to find which physiological and social factors predict osteoporosis in women going through menopause, using data from one hospital and an oversampling method to balance rare cases. The result is a single-center retrospective model with no outside validation, so it says little about how the model would perform elsewhere."
+      "why": "This is a mechanistic study showing that ALOX12 acts as a ferroptosis-related tumor suppressor in ovarian cancer via MAPK signaling, using WGCNA and machine learning only as an exploratory gene-selection step alongside extensive in vitro and in vivo experiments. There is no clinically deployed AI tool, prediction model, or validation cohort here, so despite biological interest this falls outside the scope of clinical AI or reproductive AI application."
     },
     {
       "id": "pmid:42521019",
@@ -813,7 +1058,25 @@
       "title": "Mechanistic advances in nanomedicine, nucleic acid therapies, and AI-driven research on cervical cancer.",
       "score": 2,
       "theme": "Cervical Cancer Review",
-      "why": "This is a review summarizing existing work on drug-delivery systems, nucleic acid therapies, and AI tools for cervical cancer treatment design, without presenting new data. As a review with no original findings, it offers limited actionable information for this reader."
+      "why": "This is a broad narrative review covering nanomedicine, nucleic acid therapeutics, and AI-assisted formulation design for cervical cancer, with no original data or evaluation presented. It offers no findings that would change clinical practice or research direction, functioning instead as a survey of the field."
+    },
+    {
+      "id": "pmid:42508130",
+      "beat": "repro-ai",
+      "source": "Biochem Biophys Res Commun",
+      "title": "A prognostic immune signaling-related lncRNA-circRNA-mRNA network model for cervical cancer using machine learning.",
+      "score": 2,
+      "theme": "Cervical Cancer Biomarkers",
+      "why": "A retrospective bioinformatics study constructed a competing endogenous RNA network and used a LASSO model to predict cervical cancer prognosis, reporting AUC 0.77 in training and 0.89 in testing with only internal bootstrap validation. This is exploratory biomarker discovery without external cohort validation or clinical applicability demonstrated."
+    },
+    {
+      "id": "pmid:42508026",
+      "beat": "repro-ai",
+      "source": "J Ultrasound Med",
+      "title": "Deep Learning for Automated Classification and Dynamic Risk Prediction of Retained Products of Conception on Postpartum Ultrasound.",
+      "score": 2,
+      "theme": "Postpartum Ultrasound AI",
+      "why": "No abstract text is available for this study on deep learning classification of retained products of conception on postpartum ultrasound, so no methodological or performance details can be assessed. The topic is directly reproductive-relevant, but without any substantive content this cannot be scored on its merits."
     },
     {
       "id": "pmid:42504888",
@@ -821,62 +1084,35 @@
       "source": "Anal Methods",
       "title": "An integrated deep learning and Bayesian computational method-based quantification of angiogenesis in the chick embryo model.",
       "score": 2,
-      "theme": "Angiogenesis Imaging",
-      "why": "Researchers combined deep learning and a statistical probability model to measure blood vessel growth in chick embryos, an experimental setup used to study new blood vessel formation relevant to cancer and eye disease. This is a basic laboratory imaging tool with no direct clinical or reproductive health application."
+      "theme": "Angiogenesis Imaging Tool",
+      "why": "This study developed a deep learning and Bayesian hierarchical Gompertz Gaussian process pipeline to quantify angiogenesis in a chick embryo yolk sac membrane assay, validated pharmacologically against VEGF and anti-VEGF treatments. It is a preclinical image-analysis tool for basic vascular biology research, not reproductive or clinical medicine, so its relevance to this reader is limited to methodological interest."
     },
     {
-      "id": "pmid:42498900",
+      "id": "pmid:42477921",
       "beat": "repro-ai",
-      "source": "Funct Integr Genomics",
-      "title": "Systems-level genomic analyses reveal shared mechanisms underlying endometriosis and sleep disorders.",
+      "source": "Zhonghua Fu Chan Ke Za Zhi",
+      "title": "[Radiomics and deep learning in the prediction of spontaneous preterm birth using cervical ultrasound].",
       "score": 2,
-      "theme": "Endometriosis Genomics",
-      "why": "This study combined survey data, genetic analysis, and gene-expression data to look for shared biological links between endometriosis and sleep disorders, finding an association in both directions using genetic and observational methods. It uses genetic statistical techniques rather than AI, and the authors describe the findings as hypothesis-generating pending future validation."
+      "theme": "Preterm Birth Prediction",
+      "why": "No abstract text is provided for this Chinese-language study on radiomics and deep learning for predicting spontaneous preterm birth using cervical ultrasound, so its methods, sample size, and validation approach cannot be assessed. The topic is directly relevant to obstetric risk prediction, but the absence of substantive content prevents meaningful evaluation."
     },
     {
-      "id": "url:1325ea3360fb04d3",
+      "id": "url:92d48063b894ad0a",
       "beat": "industry",
       "source": "FemTech Insider",
-      "title": "Bonafide Survey Highlights Perimenopause Mental Health Toll",
+      "title": "PMOS Linked To Increased Cardiovascular Disease Risk, Study Finds",
       "score": 2,
-      "theme": "Perimenopause Survey",
-      "why": "Bonafide's survey of over 2,000 women found that anxiety, depression, and panic attacks are common and disruptive during perimenopause. This is self-reported survey data with no AI component and no new clinical intervention, so it offers little for this reader beyond general awareness."
+      "theme": "Cardiovascular Risk Ovarian",
+      "why": "This large cohort study of over 413,000 women found polyendocrine metabolic ovarian syndrome associated with higher atherosclerotic cardiovascular disease risk independent of usual risk factors, published in a major journal. However, the study involves no artificial intelligence or algorithmic component, so despite its scale and clinical relevance it falls outside the scope of this AI-focused digest."
     },
     {
-      "id": "url:4628bed30e88a892",
+      "id": "url:d7bce247badb6f2e",
       "beat": "industry",
       "source": "FemTech Insider",
-      "title": "TD Bank Group Donates $1M to Advance Menopause Brain Health Research",
+      "title": "Hertility’s Annual Report Reveals Reproductive Health Knowledge Gaps",
       "score": 2,
-      "theme": "Menopause Research Funding",
-      "why": "TD Bank Group donated $1 million to fund a study on whether menopausal hormone therapy can treat menopause-related migraines and brain fog. This is a funding announcement for a hormone therapy trial with no AI or algorithmic component, so it falls outside this digest's scope despite being a legitimate research effort."
-    },
-    {
-      "id": "url:2e445d7516774a92",
-      "beat": "industry",
-      "source": "FemTech Insider",
-      "title": "Elle, MD Raises C$1.1M to Advance Non-Hormonal Birth Control Ring",
-      "score": 2,
-      "theme": "Contraceptive Funding",
-      "why": "Elle, MD Biotechnologies raised C$1.1 million in pre-seed funding to begin human clinical studies of a copper-based non-hormonal contraceptive ring. This is an early-stage funding round with no data yet and no AI component, so it is only tangentially relevant to this digest."
-    },
-    {
-      "id": "url:14279ed144108a5f",
-      "beat": "industry",
-      "source": "MedCity News",
-      "title": "The Code Gets You Paid — The Variant Gets You Treated",
-      "score": 2,
-      "theme": "AI Billing Gap",
-      "why": "This opinion piece argues that healthcare AI tools are optimized for billing codes rather than the specific genetic details clinicians need to treat patients. It is commentary without new data or a described study, so its value is mainly as a think piece rather than actionable evidence."
-    },
-    {
-      "id": "url:971e5d863ecbf661",
-      "beat": "industry",
-      "source": "MedCity News",
-      "title": "Doctronic Acquires Summer Health to Expand into Pediatric Primary Care",
-      "score": 2,
-      "theme": "Pediatric AI Acquisition",
-      "why": "Doctronic acquired Summer Health to expand its AI-powered primary care platform into pediatrics. This is a brief acquisition announcement with no clinical evidence or product detail, offering little substance for this reader."
+      "theme": "Reproductive Knowledge Gaps",
+      "why": "Hertility released its fourth annual report analyzing over 500,000 patient assessments, describing persistent gaps in reproductive health knowledge and wearable and cycle-tracking use, but this is a company survey report with no algorithmic method or clinical trial and only descriptive statistics. It has some scale of data but no AI component or rigorous evaluation, limiting its value to this reader."
     },
     {
       "id": "url:e4d08c6b1e84b9ee",
@@ -884,44 +1120,26 @@
       "source": "MedCity News",
       "title": "Smart Toilet Sensor Startup Is Flush with $10M Funding",
       "score": 2,
-      "theme": "Smart Toilet Funding",
-      "why": "Throne Science raised $10 million for an AI-powered toilet camera that tracks gut health, hydration, and urinary function, positioned as an early warning tool for colorectal cancer. The claim is aspirational marketing language with no clinical validation data given."
+      "theme": "Toilet Sensor Funding",
+      "why": "Throne Science raised a $10 million Series A for an AI-powered toilet camera monitoring gut health, hydration, and urinary function, positioned as a colorectal cancer screening tool, but no clinical validation data or study is presented. This is an early-stage funding announcement for a novel monitoring device, not evidence of clinical benefit."
     },
     {
-      "id": "url:456c5ce7ea87c88f",
+      "id": "url:22b5c520b3a61f1a",
       "beat": "industry",
-      "source": "MedCity News",
-      "title": "Spotting Alzheimer’s Years Earlier Through AI and Clinically Meaningful Insights",
+      "source": "MedTech Dive",
+      "title": "The FDA was all in on AI. Will that change?",
       "score": 2,
-      "theme": "Alzheimer's Detection",
-      "why": "This piece claims that brief tablet-based speech and interaction tests can detect Alzheimer's patterns earlier than imaging or long-term observation. No study design, sample size, or validation data is provided, making the claim unverifiable as presented."
+      "theme": "FDA AI Policy",
+      "why": "This item reports that leadership turnover at the FDA has introduced uncertainty about the pace of its agency-wide AI regulatory strategy, a policy and governance note with no specific study or product data. It is relevant context for AI regulation broadly but contains no clinical evidence or reproductive angle."
     },
     {
-      "id": "url:51fcb81abcdf3542",
-      "beat": "industry",
-      "source": "MedCity News",
-      "title": "What Happens When Patients Trust AI Over Their Doctor?",
-      "score": 2,
-      "theme": "AI Liability",
-      "why": "This piece raises the question of legal liability when patients act on AI chatbot health advice that turns out to be wrong, quoting a health law attorney who says the issue remains unresolved. It is a discussion of legal uncertainty rather than a study or product development."
-    },
-    {
-      "id": "pmid:42522963",
+      "id": "pmid:42526930",
       "beat": "repro-ai",
-      "source": "Insect Sci",
-      "title": "Silkworm synthetic biology: Toolkit development, chassis engineering, and biomanufacturing applications.",
+      "source": "BMJ Open",
+      "title": "Use of heart rate variability in prediction of clinical deterioration in critically ill hospitalised adults: a systematic review protocol.",
       "score": 1,
-      "theme": "Synthetic Biology",
-      "why": "This is a review of using the silkworm as an engineered biological platform for making silk and proteins, with a passing mention of AI-assisted design as a future direction. It has no clinical or reproductive health content and only a token connection to AI."
-    },
-    {
-      "id": "pmid:42508130",
-      "beat": "repro-ai",
-      "source": "Biochem Biophys Res Commun",
-      "title": "A prognostic immune signaling-related lncRNA-circRNA-mRNA network model for cervical cancer using machine learning.",
-      "score": 1,
-      "theme": "Postpartum Ultrasound",
-      "why": "No abstract text was provided for this deep learning ultrasound classification study of retained pregnancy tissue after childbirth. Without any description of methods or findings, it cannot be meaningfully evaluated."
+      "theme": "Review Protocol",
+      "why": "This is a systematic review protocol, not a completed study, aiming to evaluate heart rate variability as a prognostic tool for deterioration in critically ill non-pregnant adults, with no results yet available. It has no AI or algorithmic component and no reproductive health relevance, making it out of scope for this digest regardless of eventual quality."
     },
     {
       "id": "pmid:42490010",
@@ -930,16 +1148,25 @@
       "title": "Model-Guided Optimization of a Low-Serum Medium for Madin-Darby Canine Kidney Cells Using a Kolmogorov-Arnold Network and Bayesian Optimization.",
       "score": 1,
       "theme": "Cell Culture Optimization",
-      "why": "This is a laboratory engineering study that used a machine learning-guided optimization process to design a low-serum growth medium for canine kidney cells used in vaccine production. It has no clinical or reproductive health relevance and concerns cell culture manufacturing rather than patient care."
+      "why": "This study used a Kolmogorov-Arnold network combined with Bayesian optimization to optimize a low-serum cell culture medium for vaccine-producing kidney cells, an industrial biomanufacturing application with no connection to clinical medicine or reproductive health. The methodology is a legitimate application of interpretable machine learning to bioprocess engineering, but it falls entirely outside the scope of this digest's clinical focus."
     },
     {
-      "id": "pmid:42477921",
-      "beat": "repro-ai",
-      "source": "Zhonghua Fu Chan Ke Za Zhi",
-      "title": "[Radiomics and deep learning in the prediction of spontaneous preterm birth using cervical ultrasound].",
+      "id": "url:1325ea3360fb04d3",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Bonafide Survey Highlights Perimenopause Mental Health Toll",
       "score": 1,
-      "theme": "Preterm Birth Prediction",
-      "why": "No abstract text was provided for this study on predicting spontaneous preterm birth using cervical ultrasound with radiomics and deep learning. Without any details on methods or results, the item cannot be meaningfully assessed."
+      "theme": "Menopause Survey",
+      "why": "Bonafide released survey results from over 2,000 symptomatic women on perimenopause mental health symptoms, a marketing survey with no AI component and no clinical trial design. It is off-topic for this reader's beats and offers no actionable clinical or algorithmic finding."
+    },
+    {
+      "id": "url:4628bed30e88a892",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "TD Bank Group Donates $1M to Advance Menopause Brain Health Research",
+      "score": 1,
+      "theme": "Research Funding",
+      "why": "TD Bank donated $1 million to fund a study on menopausal hormone therapy for migraines and cognitive symptoms at Mount Sinai, a philanthropic funding announcement with no AI component and no results reported yet. It is off-topic for a clinical AI and reproductive AI digest."
     },
     {
       "id": "url:6514d19e4abfe867",
@@ -948,7 +1175,43 @@
       "title": "Menstrual Health Startup DITTO Secures $6M To Expand Research Platform",
       "score": 1,
       "theme": "Supplement Funding",
-      "why": "DITTO raised $6 million in seed funding to expand a menstrual health supplement platform targeting PMS and PMDD symptoms. There is no clinical evidence or AI component described, making this a low-relevance funding announcement for a nutritional supplement."
+      "why": "DITTO raised $6 million in seed funding for a menstrual health supplement platform targeting PMS and PMDD, a funding round for a nutraceutical product with no evidence or AI component described. This is a pure business item outside the scope of clinical AI or reproductive AI research."
+    },
+    {
+      "id": "url:2e445d7516774a92",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Elle, MD Raises C$1.1M to Advance Non-Hormonal Birth Control Ring",
+      "score": 1,
+      "theme": "Contraceptive Funding",
+      "why": "Elle, MD raised C$1.1 million in pre-seed financing to support human clinical studies of a non-hormonal copper vaginal contraceptive ring, an early-stage funding announcement with no trial data and no AI component. This is a contraceptive device business item, not a clinical AI or algorithmic finding."
+    },
+    {
+      "id": "url:14279ed144108a5f",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "The Code Gets You Paid — The Variant Gets You Treated",
+      "score": 1,
+      "theme": "Genomics Commentary",
+      "why": "This is an opinion piece about the gap between billing codes and genomic variant information relevant to precision medicine, with no study, data, or specific AI system described. It is commentary, not evidence, and falls outside the scope of a digest focused on findings that would change clinical practice."
+    },
+    {
+      "id": "url:971e5d863ecbf661",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Doctronic Acquires Summer Health to Expand into Pediatric Primary Care",
+      "score": 1,
+      "theme": "Company Acquisition",
+      "why": "Doctronic acquired Summer Health to expand into pediatric primary care as part of its AI-powered platform, a corporate acquisition announcement with no clinical evidence or performance data provided. This is pure business news outside the scope of clinical AI evaluation or reproductive health."
+    },
+    {
+      "id": "url:456c5ce7ea87c88f",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Spotting Alzheimer’s Years Earlier Through AI and Clinically Meaningful Insights",
+      "score": 1,
+      "theme": "Alzheimer's Detection Hype",
+      "why": "This item is a vague promotional teaser claiming AI can detect Alzheimer's earlier via tablet interaction, with no study design, sample size, or performance metric given. It reads as sponsored content rather than a reportable finding, so it cannot be evaluated for clinical relevance."
     },
     {
       "id": "url:c903294e28a4f5d7",
@@ -956,50 +1219,59 @@
       "source": "MedCity News",
       "title": "How AI Inside Clinical Workflows Is Unlocking Patient Throughput",
       "score": 1,
-      "theme": "AI Workflow Opinion",
-      "why": "This opinion piece asserts that AI tools succeed in clinical settings only when integrated into workflows at the right moment. It contains no data, study, or specific product evaluation, functioning purely as generic commentary."
+      "theme": "Workflow Commentary",
+      "why": "This is an opinion piece about AI integration into clinical workflows and patient throughput, with no specific study, product, or data described. It is commentary with no evidentiary content for this reader's evaluation criteria."
+    },
+    {
+      "id": "url:51fcb81abcdf3542",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "What Happens When Patients Trust AI Over Their Doctor?",
+      "score": 1,
+      "theme": "AI Liability",
+      "why": "This is a commentary piece on legal liability when patients trust AI chatbot advice over their physicians, featuring a lawyer's opinion but no study or data. It raises an important policy question but contains no evaluable clinical or research finding."
+    },
+    {
+      "id": "pmid:42522963",
+      "beat": "repro-ai",
+      "source": "Insect Sci",
+      "title": "Silkworm synthetic biology: Toolkit development, chassis engineering, and biomanufacturing applications.",
+      "score": 0,
+      "theme": "Insect Biotechnology",
+      "why": "This is a review of silkworm synthetic biology and biomanufacturing with a passing mention of AI-assisted design as a future direction; it contains no clinical or reproductive medicine content and no actual AI evaluation."
     },
     {
       "id": "url:9abc3d54f805eeaf",
       "beat": "industry",
       "source": "MedCity News",
       "title": "AI Readiness Starts with Solving Healthcare’s Data Fragmentation Problem",
-      "score": 1,
-      "theme": "Data Fragmentation",
-      "why": "This is a sponsored recap of a webinar discussing how health organizations are addressing fragmented patient data ahead of AI adoption. It contains no original research, product evidence, or specific findings."
+      "score": 0,
+      "theme": "Sponsored Content",
+      "why": "This is a sponsored webinar recap about data fragmentation and AI readiness in healthcare organizations, with no study, product evidence, or specific findings. It is promotional content with no clinical or research substance."
     },
     {
       "id": "url:798a29edc07636dc",
       "beat": "industry",
       "source": "MedCity News",
       "title": "Candid Health Snags $120M for AI RCM Platform",
-      "score": 1,
-      "theme": "Billing Automation Funding",
-      "why": "Candid Health raised $120 million in Series D funding for its AI-based revenue cycle management platform, which automates billing and payment processes. This is a financial and administrative technology story with no clinical AI or patient care component."
+      "score": 0,
+      "theme": "Billing AI Funding",
+      "why": "Candid Health raised $120 million in Series D funding for an AI-based revenue cycle management platform, a pure financing announcement with no clinical content, product evidence, or reproductive relevance. This is entirely a business/finance item with no place in a clinical AI research digest."
     },
     {
       "id": "url:2608c8930307e5c1",
       "beat": "industry",
       "source": "MedCity News",
       "title": "AI Will Reshape the Patient Experience",
-      "score": 1,
+      "score": 0,
       "theme": "AI Speculation",
-      "why": "This opinion piece speculates that AI tools will soon move beyond conversation to taking direct action on health advice. It offers no specific study, product, or evidence, remaining purely speculative commentary."
+      "why": "This is a speculative opinion piece about AI eventually taking action on health advice, with no study, product, or data referenced. It is pure commentary with no substantive content to evaluate."
     },
     {
       "id": "pmid:42486980",
       "beat": "clinical-ai",
       "source": "Nature",
       "title": "AI-redesigned starting points and outcomes enhance protein evolution.",
-      "score": -1,
-      "theme": "",
-      "why": ""
-    },
-    {
-      "id": "pmid:42508026",
-      "beat": "repro-ai",
-      "source": "J Ultrasound Med",
-      "title": "Deep Learning for Automated Classification and Dynamic Risk Prediction of Retained Products of Conception on Postpartum Ultrasound.",
       "score": -1,
       "theme": "",
       "why": ""
@@ -1037,8 +1309,8 @@
     ],
     "feedFailures": [],
     "ranked": true,
-    "droppedBelowCut": 0,
+    "droppedBelowCut": 1,
     "refused": 1,
-    "unscored": 1
+    "unscored": 0
   }
 }

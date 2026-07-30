@@ -93,5 +93,140 @@
     "term": "Follicular Fluid",
     "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
     "firstSeen": "2026-W31"
+  },
+  "retfound": {
+    "term": "RETFound",
+    "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+    "firstSeen": "2026-W31"
+  },
+  "top-5 accuracy": {
+    "term": "Top-5 Accuracy",
+    "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
+    "firstSeen": "2026-W31"
+  },
+  "confidence interval": {
+    "term": "Confidence Interval",
+    "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+    "firstSeen": "2026-W31"
+  },
+  "inherited retinal diseases": {
+    "term": "Inherited Retinal Diseases",
+    "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+    "firstSeen": "2026-W31"
+  },
+  "wav2vec 2.0": {
+    "term": "Wav2vec 2.0",
+    "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
+    "firstSeen": "2026-W31"
+  },
+  "unified huntington's disease rating scale": {
+    "term": "Unified Huntington's Disease Rating Scale",
+    "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+    "firstSeen": "2026-W31"
+  },
+  "cross-sectional replication": {
+    "term": "Cross-Sectional Replication",
+    "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+    "firstSeen": "2026-W31"
+  },
+  "stacking ensemble": {
+    "term": "Stacking Ensemble",
+    "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+    "firstSeen": "2026-W31"
+  },
+  "delong test": {
+    "term": "DeLong Test",
+    "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+    "firstSeen": "2026-W31"
+  },
+  "decision curve analysis": {
+    "term": "Decision Curve Analysis",
+    "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
+    "firstSeen": "2026-W31"
+  },
+  "hpv-primary screening": {
+    "term": "HPV-Primary Screening",
+    "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+    "firstSeen": "2026-W31"
+  },
+  "cytology": {
+    "term": "Cytology",
+    "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+    "firstSeen": "2026-W31"
+  },
+  "liquid-based cytology": {
+    "term": "Liquid-Based Cytology",
+    "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
+    "firstSeen": "2026-W31"
+  },
+  "retrospective database audit": {
+    "term": "Retrospective Database Audit",
+    "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
+    "firstSeen": "2026-W31"
+  },
+  "nomogram": {
+    "term": "Nomogram",
+    "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+    "firstSeen": "2026-W31"
+  },
+  "progression-free survival": {
+    "term": "Progression-free Survival",
+    "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+    "firstSeen": "2026-W31"
+  },
+  "extreme gradient boosting classifier": {
+    "term": "Extreme Gradient Boosting Classifier",
+    "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+    "firstSeen": "2026-W31"
+  },
+  "kaplan-meier analysis": {
+    "term": "Kaplan-Meier Analysis",
+    "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+    "firstSeen": "2026-W31"
+  },
+  "fda": {
+    "term": "FDA",
+    "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
+    "firstSeen": "2026-W31"
+  },
+  "machine learning": {
+    "term": "Machine Learning",
+    "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
+    "firstSeen": "2026-W31"
+  },
+  "clinical high risk for psychosis": {
+    "term": "Clinical High Risk for Psychosis",
+    "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
+    "firstSeen": "2026-W31"
+  },
+  "confabulation": {
+    "term": "Confabulation",
+    "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
+    "firstSeen": "2026-W31"
+  },
+  "auc-roc": {
+    "term": "AUC-ROC",
+    "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+    "firstSeen": "2026-W31"
+  },
+  "random forest": {
+    "term": "Random Forest",
+    "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+    "firstSeen": "2026-W31"
+  },
+  "train-test split": {
+    "term": "Train-Test Split",
+    "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
+    "firstSeen": "2026-W31"
+  },
+  "hspg2": {
+    "term": "HSPG2",
+    "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+    "firstSeen": "2026-W31"
+  },
+  "hdl and ldl": {
+    "term": "HDL and LDL",
+    "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
+    "firstSeen": "2026-W31"
   }
 }
