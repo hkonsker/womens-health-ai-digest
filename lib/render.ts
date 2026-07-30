@@ -21,6 +21,45 @@ const BEAT_COLOR: Record<string, string> = {
   industry: PALO_ALTO,
 };
 
+/**
+ * Words that stay lowercase inside a title unless they open or close it, or
+ * follow a colon or question mark.
+ */
+const TITLE_SMALL = new Set([
+  "a", "an", "the", "and", "or", "but", "nor", "of", "to", "by", "in", "on",
+  "at", "as", "for", "per", "vs", "with", "from", "into", "over", "than",
+  "that", "via", "up", "off",
+]);
+
+/**
+ * Title Case a paper title. PubMed stores titles in sentence case.
+ *
+ * Any hyphen-part that already contains a capital is left alone, so AI, IRD,
+ * MRI and mRNA survive, while the rest of a compound is still capitalised:
+ * "AI-based" becomes "AI-Based", not "Ai-Based" and not "AI-based".
+ */
+export function titleCase(raw: string): string {
+  const words = raw.trim().split(/\s+/);
+  let capNext = true;
+
+  return words
+    .map((word, i) => {
+      const forced = capNext || i === words.length - 1;
+      capNext = /[:;?!]$/.test(word);
+
+      const bare = word.replace(/[^A-Za-z]/g, "").toLowerCase();
+      if (!forced && TITLE_SMALL.has(bare) && !/[A-Z]/.test(word)) return word.toLowerCase();
+
+      return word
+        .split("-")
+        .map((part) =>
+          /[A-Z]/.test(part) ? part : part.replace(/^([a-z])/, (c) => c.toUpperCase()),
+        )
+        .join("-");
+    })
+    .join(" ");
+}
+
 export function esc(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -84,7 +123,7 @@ function pageCard(item: RankedItem): string {
           ${item.theme ? `<span class="theme">${esc(item.theme)}</span>` : ""}
           ${item.score >= 0 ? `<span class="score" title="Editor score out of 10">${item.score}</span>` : `<span class="score unranked" title="Ranking failed for this item">?</span>`}
         </div>
-        <h2><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h2>
+        <h2><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(titleCase(item.title))}</a></h2>
         <p class="meta">${meta}</p>
         ${item.why ? `<p class="why">${esc(item.why)}</p>` : ""}
         ${
@@ -359,15 +398,15 @@ function emailCard(item: RankedItem): string {
     ${item.theme ? `<span style="font-size:12px;color:${COOL_GREY};margin-left:8px;">${esc(item.theme)}</span>` : ""}
     ${item.score >= 0 ? `<span style="float:right;font-size:12px;font-weight:700;color:${POPPY};border:1px solid ${POPPY};border-radius:999px;padding:1px 8px;">${item.score}</span>` : ""}
   </div>
-  <a href="${esc(item.url)}" style="display:block;font-size:16px;font-weight:600;color:#1c1d1f;text-decoration:none;line-height:1.35;margin-bottom:5px;">${esc(item.title)}</a>
+  <a href="${esc(item.url)}" style="display:block;font-size:16px;font-weight:600;color:#1c1d1f;text-decoration:none;line-height:1.35;margin-bottom:5px;">${esc(titleCase(item.title))}</a>
   <div style="font-size:13px;color:${COOL_GREY};">${meta}</div>
   ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${esc(item.why)}</div>` : ""}
   ${
     item.plain && item.plain !== item.why
-      ? `<div style="margin-top:10px;padding-left:11px;border-left:2px solid #f0ded0;">
-    <div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:${COOL_GREY};margin-bottom:3px;">In plain terms</div>
-    <div style="font-size:13px;line-height:1.55;color:${COOL_GREY};">${esc(item.plain)}</div>
-  </div>`
+      ? `<details style="margin-top:11px;">
+    <summary style="cursor:pointer;list-style:none;display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:${CARDINAL};background:#faf6f6;border:1px solid #e6d5d5;border-radius:999px;padding:5px 13px;">Explain this simply</summary>
+    <div style="margin-top:9px;padding-left:11px;border-left:2px solid #f0ded0;font-size:13px;line-height:1.55;color:${COOL_GREY};">${esc(item.plain)}</div>
+  </details>`
       : ""
   }
   ${emailTerms(item.glossary ?? [])}
@@ -434,6 +473,6 @@ export function renderEmail(run: DigestRun, archiveUrl: string | null): string {
 export function emailSubject(run: DigestRun): string {
   const top = run.items[0];
   const n = run.items.length;
-  const lead = top ? `: ${top.title.slice(0, 60)}${top.title.length > 60 ? "..." : ""}` : "";
+  const lead = top ? `: ${titleCase(top.title).slice(0, 60)}${top.title.length > 60 ? "..." : ""}` : "";
   return `Women's Health and AI Weekly (${n} item${n === 1 ? "" : "s"})${lead}`;
 }
