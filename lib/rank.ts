@@ -67,6 +67,14 @@ const EFFORT = process.env.DIGEST_EFFORT?.trim() || "medium";
 /** Candidates per API call. Keeps each response comfortably inside max_tokens. */
 const BATCH_SIZE = 20;
 
+/**
+ * Server-side refusal fallbacks are not available on every model: Sonnet 5
+ * rejects the parameter outright with a 400. Send it only where it is known to
+ * work, and treat this list as a best guess rather than gospel, because the
+ * request below also recovers on its own if the guess is wrong.
+ */
+const SUPPORTS_FALLBACKS = /^claude-(opus-5|fable-5|mythos-5)\b/.test(MODEL);
+
 const SYSTEM = `
 You are the editor of a weekly research digest. You read a batch of candidate
 items and decide which are worth the reader's limited time.
@@ -205,13 +213,10 @@ async function rankBatch(
     batch.map(renderCandidate).join("\n\n"),
   ].join("\n");
 
-  // Beta endpoint: `fallbacks` and the scalar "default" mode live there.
-  // Cast because the SDK typings trail the newer fields.
-  const params = {
+  // Cast because the SDK typings trail the newer beta fields.
+  const base = {
     model: MODEL,
     max_tokens: 16000,
-    betas: ["server-side-fallback-2026-07-01"],
-    fallbacks: "default",
     system: SYSTEM,
     output_config: {
       effort: EFFORT,
@@ -219,8 +224,27 @@ async function rankBatch(
     },
     messages: [{ role: "user" as const, content: prompt }],
   };
+  const withFallbacks = {
+    ...base,
+    betas: ["server-side-fallback-2026-07-01"],
+    fallbacks: "default",
+  };
 
-  const res = await client.beta.messages.create(params as never);
+  let res;
+  try {
+    res = await client.beta.messages.create(
+      (SUPPORTS_FALLBACKS ? withFallbacks : base) as never,
+    );
+  } catch (err) {
+    // Belt and braces: if this model turns out not to accept `fallbacks`,
+    // drop the parameter and carry on rather than failing the whole run.
+    // You cannot test this ahead of time with a throwaway key, because auth is
+    // checked before parameters and a 401 masks the 400 you are looking for.
+    const msg = err instanceof Error ? err.message : String(err);
+    if (!SUPPORTS_FALLBACKS || !/fallbacks/i.test(msg)) throw err;
+    console.warn(`  ! ${MODEL} rejected the fallbacks parameter, retrying without it`);
+    res = await client.beta.messages.create(base as never);
+  }
 
   if (res.stop_reason === "refusal") {
     // A safety classifier declined the whole request. It returns a successful
