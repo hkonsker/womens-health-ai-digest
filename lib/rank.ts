@@ -369,11 +369,16 @@ export function undefinedAbbreviations(item: RankedItem): string[] {
   const defined = new Set(
     item.glossary.flatMap((g) => [
       g.term.toLowerCase(),
-      // "Inherited Retinal Disease (IRD)" should cover a bare IRD.
       ...(g.term.match(/\b[A-Za-z]{2,}\b/g) ?? []).map((w) => w.toLowerCase()),
       ...(g.definition.match(/\b[A-Z]{2,}\b/g) ?? []).map((w) => w.toLowerCase()),
     ]),
   );
+
+  // An abbreviation expanded inline, as in "machine learning (ML)", needs no
+  // glossary entry: the reader already has it. Treat those as covered.
+  for (const m of item.why.matchAll(/\(([A-Z][A-Za-z0-9+-]*)\)/g)) {
+    defined.add(m[1].toLowerCase());
+  }
 
   // Split hyphenated compounds so "AI-assisted" is judged on "AI", and require
   // an all-caps run so mixed-case product names like "Retina4IRD" stay quiet.
@@ -384,6 +389,29 @@ export function undefinedAbbreviations(item: RankedItem): string[] {
   return [...new Set(found)].filter(
     (a) => !ASSUMED_KNOWN.has(a.toUpperCase()) && !defined.has(a.toLowerCase()),
   );
+}
+
+/**
+ * Terms defined but never used in the summary. A chip for a word the reader
+ * will not meet is clutter.
+ *
+ * Terms are named "Full Name (ABBREV)", so a match has to accept the prose
+ * using either half. Checking only the first word reported HPV as unused when
+ * the summary said exactly that.
+ */
+export function unusedTerms(item: RankedItem): string[] {
+  const why = item.why.toLowerCase();
+  return item.glossary
+    .filter((g) => {
+      const full = g.term.replace(/\s*\([^)]*\)\s*/g, " ").trim().toLowerCase();
+      const abbrev = g.term.match(/\(([^)]+)\)/)?.[1]?.toLowerCase();
+      return (
+        !why.includes(full) &&
+        !(abbrev && why.includes(abbrev)) &&
+        !why.includes(full.split(" ")[0])
+      );
+    })
+    .map((g) => g.term);
 }
 
 export interface RankResult {
@@ -471,17 +499,19 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
   }
 
   // A chip for a word the summary never uses is clutter, so flag it too.
-  const unused = [
-    ...new Set(
-      shown.flatMap((i) =>
-        i.glossary
-          .filter((g) => !i.why.toLowerCase().includes(g.term.toLowerCase().split(" ")[0]))
-          .map((g) => g.term),
-      ),
-    ),
-  ];
-  if (unused.length) {
-    console.warn(`  ! term(s) defined but absent from the summary: ${unused.join(", ")}`);
+  // Enforce the "only define what you used" rule rather than trusting it. The
+  // model complies most of the time, and a chip for a word the summary never
+  // uses is clutter, so drop the strays instead of hoping. Report, never drop
+  // silently.
+  const dropped: string[] = [];
+  for (const item of shown) {
+    const strays = new Set(unusedTerms(item));
+    if (!strays.size) continue;
+    dropped.push(...[...strays].map((t) => `${t} (${item.source})`));
+    item.glossary = item.glossary.filter((g) => !strays.has(g.term));
+  }
+  if (dropped.length) {
+    console.warn(`  ! dropped ${dropped.length} term(s) absent from their summary: ${dropped.join(", ")}`);
   }
 
   items.sort((a, b) => b.score - a.score);
