@@ -238,7 +238,7 @@ async function main(): Promise<void> {
   if (NO_EMAIL) {
     console.log("Email skipped (--no-email).");
   } else {
-    const archiveUrl = process.env.DIGEST_SITE_URL ?? null;
+    const archiveUrl = process.env.DIGEST_SITE_URL?.trim() || null;
     const result = await sendDigestEmail(emailSubject(run), renderEmail(run, archiveUrl));
     console.log(result.sent ? `Email sent (id ${result.id}).` : `Email not sent: ${result.reason}`);
   }

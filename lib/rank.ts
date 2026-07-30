@@ -36,13 +36,15 @@ What earns a low score:
   - Funding rounds and partnerships with no product or evidence behind them.
 `.trim();
 
-const MODEL = process.env.DIGEST_MODEL ?? "claude-opus-5";
+// Note the `||`, not `??`. GitHub Actions renders an unset repository
+// variable as an empty string, and `??` only falls back on undefined.
+const MODEL = process.env.DIGEST_MODEL?.trim() || "claude-opus-5";
 
 /**
  * Scoring abstracts is a well-scoped judgment task, so medium effort is the
  * right cost/quality point. Raise to "high" if the summaries feel shallow.
  */
-const EFFORT = process.env.DIGEST_EFFORT ?? "medium";
+const EFFORT = process.env.DIGEST_EFFORT?.trim() || "medium";
 
 /** Candidates per API call. Keeps each response comfortably inside max_tokens. */
 const BATCH_SIZE = 20;

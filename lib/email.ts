@@ -28,7 +28,8 @@ export async function sendDigestEmail(subject: string, html: string): Promise<Se
   if (!process.env.RESEND_API_KEY) return { sent: false, reason: "RESEND_API_KEY is not set" };
   if (recipients.length === 0) return { sent: false, reason: "DIGEST_TO_EMAILS is not set" };
 
-  const from = process.env.DIGEST_FROM_EMAIL ?? "onboarding@resend.dev";
+  // `||` so an unset GitHub secret (which arrives as "") still falls back.
+  const from = process.env.DIGEST_FROM_EMAIL?.trim() || "onboarding@resend.dev";
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { data, error } = await resend.emails.send({ from, to: recipients, subject, html });
