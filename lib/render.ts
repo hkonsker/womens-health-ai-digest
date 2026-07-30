@@ -293,34 +293,34 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
 // ─── Email ────────────────────────────────────────────────────────────────────
 
 /**
- * Email cannot do tappable chips, so new terms get spelled out inline exactly
- * where they appear. Only terms new this week are inlined: once a term is in
- * the glossary, re-explaining it every week is noise. Escaping happens here
- * because the definition is injected into already-escaped prose.
+ * Email has no tappable chips, so terms go in a labelled block under the
+ * summary: one per line, term bolded, blank line between entries.
+ *
+ * An earlier version spliced definitions into the prose in parentheses and
+ * appended the rest as a run of italics. It interrupted sentences mid-thought
+ * and the leftovers ran together into an unreadable blob. Keeping the prose
+ * clean and the definitions separate is both easier to read and easier to skim
+ * past when you already know the term.
  */
-function glossInline(why: string, terms: GlossaryTerm[]): string {
-  const fresh = terms.filter((t) => t.isNew && t.term && t.definition);
-  if (!fresh.length) return esc(why);
+function emailTerms(terms: GlossaryTerm[]): string {
+  if (!terms.length) return "";
+  const rows = terms
+    .map(
+      (t) => `
+    <div style="font-size:13px;line-height:1.55;color:#33363a;margin-bottom:9px;">
+      <strong style="color:#1c1d1f;">${esc(t.term)}</strong>${
+        t.isNew
+          ? ` <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:${POPPY};">new</span>`
+          : ""
+      }<br>${esc(t.definition)}
+    </div>`,
+    )
+    .join("");
 
-  let out = esc(why);
-  const leftover: GlossaryTerm[] = [];
-
-  for (const t of fresh) {
-    const term = esc(t.term);
-    const at = out.toLowerCase().indexOf(term.toLowerCase());
-    if (at === -1) {
-      leftover.push(t);
-      continue;
-    }
-    const end = at + term.length;
-    out = `${out.slice(0, end)} (${esc(t.definition)})${out.slice(end)}`;
-  }
-
-  // A term the model listed but did not literally use still deserves defining.
-  if (leftover.length) {
-    out += ` <em>${leftover.map((t) => `${esc(t.term)}: ${esc(t.definition)}`).join(" ")}</em>`;
-  }
-  return out;
+  return `
+  <div style="margin-top:14px;padding-top:11px;border-top:1px solid #e4e1dd;">
+    <div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:${COOL_GREY};margin-bottom:9px;">Terms</div>${rows}
+  </div>`;
 }
 
 function emailCard(item: RankedItem): string {
@@ -338,7 +338,8 @@ function emailCard(item: RankedItem): string {
   </div>
   <a href="${esc(item.url)}" style="display:block;font-size:16px;font-weight:600;color:#1c1d1f;text-decoration:none;line-height:1.35;margin-bottom:5px;">${esc(item.title)}</a>
   <div style="font-size:13px;color:${COOL_GREY};">${meta}</div>
-  ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${glossInline(item.why, item.glossary ?? [])}</div>` : ""}
+  ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${esc(item.why)}</div>` : ""}
+  ${emailTerms(item.glossary ?? [])}
 </div>`;
 }
 

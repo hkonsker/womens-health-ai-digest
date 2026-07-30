@@ -9,6 +9,9 @@
  *   npm run digest -- --force   re-run a week that already exists
  *   npm run digest -- --dry-run collect and rank, write nothing, send nothing
  *   npm run digest -- --no-email
+ *   npm run digest -- --resend    re-render and re-send the stored digest,
+ *                                 with no collection and no ranking, so email
+ *                                 and page changes cost nothing to preview
  */
 
 import "dotenv/config";
@@ -53,6 +56,7 @@ const args = process.argv.slice(2);
 const FORCE = args.includes("--force");
 const DRY_RUN = args.includes("--dry-run");
 const NO_EMAIL = args.includes("--no-email") || DRY_RUN;
+const RESEND = args.includes("--resend");
 
 function line(char = "-"): void {
   console.log(char.repeat(64));
@@ -95,6 +99,23 @@ async function collectPubMed(
   };
 }
 
+/** Write index.html plus one page per stored week. Returns the page count. */
+async function writeSite(current: DigestRun): Promise<number> {
+  const all = await listDigests();
+  const archive = all.map((d) => ({ weekLabel: d.weekLabel, count: d.items.length }));
+
+  await fs.mkdir(path.join(DOCS_DIR, "weeks"), { recursive: true });
+  await fs.writeFile(path.join(DOCS_DIR, "index.html"), renderPage(current, archive), "utf8");
+  // Regenerate every archive page so their "Past Weeks" lists include this one.
+  for (const d of all) {
+    const page = renderPage(d, archive).replace(/href="weeks\//g, 'href="');
+    await fs.writeFile(path.join(DOCS_DIR, "weeks", `${d.weekLabel}.html`), page, "utf8");
+  }
+  // GitHub Pages runs Jekyll by default, which skips files it does not like.
+  await fs.writeFile(path.join(DOCS_DIR, ".nojekyll"), "", "utf8");
+  return all.length;
+}
+
 async function main(): Promise<void> {
   const now = new Date();
   const weekLabel = isoWeekLabel(now);
@@ -111,6 +132,28 @@ async function main(): Promise<void> {
   console.log();
 
   const existing = await loadDigest(weekLabel);
+
+  // Re-render and re-send what is already stored. No PubMed, no feeds, no
+  // Claude, no cost. This is how you iterate on the email or the page layout.
+  if (RESEND) {
+    if (!existing) {
+      console.log(`No stored digest for ${weekLabel}. Nothing to resend.`);
+      return;
+    }
+    await writeSite(existing);
+    console.log(`Re-rendered the site from the stored ${weekLabel} digest.`);
+    if (NO_EMAIL) {
+      console.log("Email skipped (--no-email).");
+    } else {
+      const result = await sendDigestEmail(
+        emailSubject(existing),
+        renderEmail(existing, process.env.DIGEST_SITE_URL?.trim() || null),
+      );
+      console.log(result.sent ? `Email sent (id ${result.id}).` : `Email not sent: ${result.reason}`);
+    }
+    return;
+  }
+
   if (existing && !FORCE && !DRY_RUN) {
     console.log(`Already collected for ${weekLabel} (${existing.items.length} items).`);
     console.log("Pass --force to re-run and replace it.");
@@ -297,19 +340,8 @@ async function main(): Promise<void> {
   await saveSeen(seen);
 
   // ── 7. Render the site ──────────────────────────────────────────────────
-  const all = await listDigests();
-  const archive = all.map((d) => ({ weekLabel: d.weekLabel, count: d.items.length }));
-
-  await fs.mkdir(path.join(DOCS_DIR, "weeks"), { recursive: true });
-  await fs.writeFile(path.join(DOCS_DIR, "index.html"), renderPage(run, archive), "utf8");
-  // Regenerate every archive page so their "Past Weeks" lists include this one.
-  for (const d of all) {
-    const page = renderPage(d, archive).replace(/href="weeks\//g, 'href="');
-    await fs.writeFile(path.join(DOCS_DIR, "weeks", `${d.weekLabel}.html`), page, "utf8");
-  }
-  // GitHub Pages runs Jekyll by default, which skips files it does not like.
-  await fs.writeFile(path.join(DOCS_DIR, ".nojekyll"), "", "utf8");
-  console.log(`Wrote docs/index.html and ${all.length} archive page(s).`);
+  const pageCount = await writeSite(run);
+  console.log(`Wrote docs/index.html and ${pageCount} archive page(s).`);
 
   // ── 8. Email ────────────────────────────────────────────────────────────
   if (NO_EMAIL) {

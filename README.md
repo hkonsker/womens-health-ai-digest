@@ -74,6 +74,7 @@ npm run digest            # the real thing
 | `npm run digest -- --dry-run` | Everything except writing files and sending mail. |
 | `npm run digest -- --force` | Re-run a week that already has a digest. |
 | `npm run digest -- --no-email` | Write the page, skip the email. |
+| `npm run digest -- --resend` | Re-render the page and re-send the email from the stored digest. No PubMed, no Claude, no cost. Use this to iterate on layout. |
 | `npm run typecheck` | `tsc --noEmit`. |
 
 ## Tuning it
