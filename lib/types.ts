@@ -36,6 +36,20 @@ export interface DigestRun {
   /** Full text of every query used, for the audit trail. */
   queries: Record<string, string>;
   items: RankedItem[];
+  /**
+   * Every candidate that was scored, including the ones that did not make the
+   * cut. Kept so you can actually diagnose the ranker: without the rejects and
+   * their stated reasons, tuning READER_PROFILE is guesswork.
+   */
+  scored: Array<{
+    id: string;
+    beat: BeatId;
+    source: string;
+    title: string;
+    score: number;
+    theme: string;
+    why: string;
+  }>;
   stats: RunStats;
 }
 

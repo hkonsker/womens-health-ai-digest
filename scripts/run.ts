@@ -214,6 +214,15 @@ async function main(): Promise<void> {
       industry: `RSS: ${feeds.candidates.length} item(s) from configured feeds`,
     },
     items,
+    scored: rankedAll.map((i) => ({
+      id: i.id,
+      beat: i.beat,
+      source: i.source,
+      title: i.title,
+      score: i.score,
+      theme: i.theme,
+      why: i.why,
+    })),
     stats: { perBeat, feedFailures: feeds.failures, ranked, droppedBelowCut },
   };
 
@@ -227,6 +236,21 @@ async function main(): Promise<void> {
     console.log();
   });
   if (run.items.length === 0) console.log("  (nothing cleared the bar)\n");
+
+  if (ranked) {
+    console.log("Score distribution by beat (all candidates, not just the kept):");
+    for (const b of perBeat) {
+      const scores = rankedAll.filter((i) => i.beat === b.beat).map((i) => i.score);
+      if (scores.length === 0) continue;
+      const kept = run.items.filter((i) => i.beat === b.beat).length;
+      const max = Math.max(...scores);
+      const mean = scores.reduce((a, x) => a + x, 0) / scores.length;
+      console.log(
+        `  ${b.label.padEnd(28)} n=${String(scores.length).padStart(2)}  max=${max}  mean=${mean.toFixed(1)}  kept=${kept}`,
+      );
+    }
+    console.log();
+  }
 
   if (DRY_RUN) {
     line();
