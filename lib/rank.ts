@@ -114,8 +114,27 @@ weeks. When a term has both a full name and an abbreviation, use the full name
 as the term, so that "intraclass correlation coefficient" and "ICC" do not
 become two separate entries. Write the term in Title Case, capitalising each
 important word, but leave acronyms and cased names exactly as they are
-conventionally written: AUC, sFlt-1/PlGF, mRNA. Return an empty array if the
-technical summary genuinely contains no such term.
+conventionally written: AUC, sFlt-1/PlGF, mRNA.
+
+Two rules that are easy to miss, and both matter more than the rest:
+
+1. Every abbreviation and acronym you use in the technical summary must have a
+   glossary entry, and that entry must spell out what the letters stand for.
+   If you write "17 IRD genotype categories", IRD needs an entry reading
+   something like "Inherited retinal disease, a group of genetic eye conditions
+   that damage the light-sensing layer at the back of the eye." Never leave an
+   abbreviation unexpanded. This is the single most common miss.
+
+2. When a term is a variant of a more familiar one, define the difference, not
+   just the term. The useful part is what makes it different. "Top-5 accuracy"
+   means the answer counts as correct if the right one appears anywhere in the
+   model's five best guesses, which is an easier bar than ordinary accuracy
+   where only the single top guess counts. The same applies to sensitivity
+   against specificity, relative against absolute risk, and precision against
+   recall.
+
+Return an empty array only if the technical summary genuinely contains no such
+term, which will be rare.
 
 Also give a short theme label in Title Case, two or three words, describing the
 topic: for example "Embryo Selection", "Ambient Documentation", "FDA Clearance",
@@ -319,6 +338,45 @@ async function rankBatchBisecting(
   }
 }
 
+/**
+ * Abbreviations common enough that defining them is noise, not help.
+ * Everything else that looks like an acronym should be in the glossary.
+ */
+const ASSUMED_KNOWN = new Set([
+  "AI", "US", "USA", "UK", "EU", "FDA", "NHS", "WHO", "COVID", "DNA", "RNA",
+  "MRI", "CT", "ICU", "ER", "IVF", "PCOS", "BMI", "HIV", "GP", "LLM", "LLMs",
+]);
+
+/**
+ * Flag abbreviations used in a summary but never defined.
+ *
+ * A prompt rule alone is not enough: an undefined acronym reads as ordinary
+ * prose to anyone who already knows it, so the miss is invisible to whoever
+ * writes the instruction. This only catches acronyms. Terms that need a
+ * contrastive definition, like top-5 accuracy against plain accuracy, still
+ * depend on the prompt.
+ */
+export function undefinedAbbreviations(item: RankedItem): string[] {
+  const defined = new Set(
+    item.glossary.flatMap((g) => [
+      g.term.toLowerCase(),
+      // "Inherited Retinal Disease (IRD)" should cover a bare IRD.
+      ...(g.term.match(/\b[A-Za-z]{2,}\b/g) ?? []).map((w) => w.toLowerCase()),
+      ...(g.definition.match(/\b[A-Z]{2,}\b/g) ?? []).map((w) => w.toLowerCase()),
+    ]),
+  );
+
+  // Split hyphenated compounds so "AI-assisted" is judged on "AI", and require
+  // an all-caps run so mixed-case product names like "Retina4IRD" stay quiet.
+  const found = (item.why.match(/\b[A-Za-z][A-Za-z0-9-]*\b/g) ?? [])
+    .flatMap((t) => t.split("-"))
+    .filter((t) => /^[A-Z0-9]{2,}$/.test(t) && /[A-Z]{2,}/.test(t));
+
+  return [...new Set(found)].filter(
+    (a) => !ASSUMED_KNOWN.has(a.toUpperCase()) && !defined.has(a.toLowerCase()),
+  );
+}
+
 export interface RankResult {
   items: RankedItem[];
   ranked: boolean;
@@ -394,6 +452,16 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
       })),
     };
   });
+
+  // Only audit what a reader will actually see.
+  const gaps = items
+    .filter((i) => i.score >= 0 && i.why)
+    .flatMap((i) => undefinedAbbreviations(i));
+  if (gaps.length) {
+    console.warn(
+      `  ! abbreviation(s) used but never defined: ${[...new Set(gaps)].join(", ")}`,
+    );
+  }
 
   items.sort((a, b) => b.score - a.score);
 
