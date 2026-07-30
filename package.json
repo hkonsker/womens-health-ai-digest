@@ -1,0 +1,24 @@
+{
+  "name": "womens-health-ai-digest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly digest of clinical AI, AI in ob/gyn and REI, and femtech industry news.",
+  "scripts": {
+    "digest": "tsx scripts/run.ts",
+    "digest:dry": "tsx scripts/run.ts -- --dry-run",
+    "test:query": "tsx scripts/test-query.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "dotenv": "^17.3.1",
+    "fast-xml-parser": "^5.3.7",
+    "resend": "^6.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  }
+}

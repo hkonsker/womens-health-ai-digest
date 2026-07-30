@@ -1,0 +1,74 @@
+name: Weekly Digest
+
+on:
+  # Sundays at 13:00 UTC, which is 6am Pacific.
+  schedule:
+    - cron: "0 13 * * 0"
+  # Lets you run it by hand from the Actions tab.
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-run this week even if a digest already exists"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Collect and rank, but write nothing and send nothing"
+        type: boolean
+        default: false
+
+# Needed so the job can commit the digest and the rendered pages back.
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_TO_EMAILS: ${{ secrets.DIGEST_TO_EMAILS }}
+          DIGEST_FROM_EMAIL: ${{ secrets.DIGEST_FROM_EMAIL }}
+          DIGEST_SITE_URL: ${{ vars.DIGEST_SITE_URL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          DIGEST_MODEL: ${{ vars.DIGEST_MODEL }}
+          DIGEST_EFFORT: ${{ vars.DIGEST_EFFORT }}
+        run: |
+          FLAGS=""
+          if [ "${{ inputs.force }}" = "true" ]; then FLAGS="$FLAGS --force"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+          npm run digest -- $FLAGS
+
+      - name: Commit digest and pages
+        if: inputs.dry_run != true
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if git diff --staged --quiet; then
+            echo "Nothing changed this run."
+          else
+            git commit -m "Digest for $(date -u +%G-W%V)"
+            # Another run may have pushed while this one was working.
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+          fi
