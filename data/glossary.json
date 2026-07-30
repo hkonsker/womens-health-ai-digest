@@ -44,11 +44,6 @@
     "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
     "firstSeen": "2026-W31"
   },
-  "icc": {
-    "term": "ICC",
-    "definition": "A statistical measure of how closely two sets of ratings, such as a model's and a human's, agree with each other.",
-    "firstSeen": "2026-W31"
-  },
   "decision-tree model": {
     "term": "decision-tree model",
     "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",

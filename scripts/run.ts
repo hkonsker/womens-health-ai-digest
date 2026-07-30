@@ -216,7 +216,10 @@ async function main(): Promise<void> {
       if (!glossary[key]) {
         glossary[key] = { term: g.term, definition: g.definition, firstSeen: weekLabel };
       }
-      // Always show the stored wording, not this week's regeneration.
+      // Always show the stored wording, not this week's regeneration. That
+      // covers the label too, or the same term drifts between "external
+      // validation" and "External validation" from card to card.
+      g.term = glossary[key].term;
       g.definition = glossary[key].definition;
       g.isNew = glossary[key].firstSeen === weekLabel;
     }
