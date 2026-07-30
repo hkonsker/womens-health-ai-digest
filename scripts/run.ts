@@ -186,7 +186,7 @@ async function main(): Promise<void> {
   }
 
   // ── 3. Rank ─────────────────────────────────────────────────────────────
-  const { items: rankedAll, ranked } = await rankCandidates(candidates);
+  const { items: rankedAll, ranked, refused, unscored } = await rankCandidates(candidates);
   console.log();
 
   // ── 4. Cut ──────────────────────────────────────────────────────────────
@@ -223,7 +223,7 @@ async function main(): Promise<void> {
       theme: i.theme,
       why: i.why,
     })),
-    stats: { perBeat, feedFailures: feeds.failures, ranked, droppedBelowCut },
+    stats: { perBeat, feedFailures: feeds.failures, ranked, droppedBelowCut, refused, unscored },
   };
 
   // ── 5. Report ───────────────────────────────────────────────────────────

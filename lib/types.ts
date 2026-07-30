@@ -71,4 +71,8 @@ export interface RunStats {
   ranked: boolean;
   /** Items that cleared MIN_SCORE but were cut by MAX_ITEMS_IN_DIGEST. */
   droppedBelowCut: number;
+  /** Candidates a safety classifier refused to score. */
+  refused: number;
+  /** Candidates left unscored because their batch errored out. */
+  unscored: number;
 }

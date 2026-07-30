@@ -110,6 +110,18 @@ const SCHEMA = {
   additionalProperties: false,
 } as const;
 
+/**
+ * A safety classifier declined the request. Distinct from a transport error
+ * because the response is a successful 200 with empty content, and because the
+ * right recovery is to split the batch rather than retry it unchanged.
+ */
+class RefusalError extends Error {
+  constructor(readonly category: string) {
+    super(`refused by the ${category} classifier`);
+    this.name = "RefusalError";
+  }
+}
+
 interface Verdict {
   id: string;
   score: number;
@@ -172,11 +184,9 @@ async function rankBatch(
   const res = await client.beta.messages.create(params as never);
 
   if (res.stop_reason === "refusal") {
-    // Safety classifiers declined. Rare for this content, but it returns a
-    // successful 200 with empty content, so it has to be checked explicitly.
-    throw new Error(
-      `Ranking refused (category: ${(res as any).stop_details?.category ?? "unknown"})`,
-    );
+    // A safety classifier declined the whole request. It returns a successful
+    // 200 with empty content, so it has to be checked explicitly.
+    throw new RefusalError((res as any).stop_details?.category ?? "unknown");
   }
 
   const text = res.content.find((b): b is { type: "text"; text: string } & typeof b =>
@@ -188,9 +198,55 @@ async function rankBatch(
   return parsed.items ?? [];
 }
 
+/**
+ * Score a batch, and on a classifier refusal split it in half and try each side.
+ *
+ * A refusal applies to the whole request, so a single item that trips a
+ * classifier would otherwise take every other item in its batch down with it.
+ * That is exactly what happened on the first real digest: one AI protein
+ * engineering paper sat in a batch of twenty and the bio classifier killed all
+ * twenty, including every item from an entire beat. Bisecting isolates the
+ * offender in about log2(n) extra calls, and only when a refusal actually
+ * occurs, so the normal path costs nothing.
+ */
+async function rankBatchBisecting(
+  client: Anthropic,
+  batch: Candidate[],
+  refused: Candidate[],
+): Promise<Verdict[]> {
+  try {
+    return await rankBatch(client, batch);
+  } catch (err) {
+    if (!(err instanceof RefusalError)) throw err;
+
+    if (batch.length === 1) {
+      // Isolated. Record it and carry on: one item is not worth failing a run.
+      refused.push(batch[0]);
+      console.warn(
+        `  ! refused by the ${err.category} classifier, skipping: ${batch[0].title.slice(0, 70)}`,
+      );
+      return [];
+    }
+
+    const mid = Math.ceil(batch.length / 2);
+    console.warn(
+      `  ! ${err.category} refusal on ${batch.length} item(s), splitting into ${mid} and ${batch.length - mid}`,
+    );
+    const halves = await Promise.all([
+      rankBatchBisecting(client, batch.slice(0, mid), refused),
+      rankBatchBisecting(client, batch.slice(mid), refused),
+    ]);
+    return halves.flat();
+  }
+}
+
 export interface RankResult {
   items: RankedItem[];
   ranked: boolean;
+  /** Candidates a classifier refused to score, after isolating them. */
+  refused: number;
+  /** Candidates with no verdict for any other reason (a batch errored out). */
+  unscored: number;
 }
 
 /**
@@ -198,7 +254,9 @@ export interface RankResult {
  * Batches are independent, so one failed batch does not lose the others.
  */
 export async function rankCandidates(candidates: Candidate[]): Promise<RankResult> {
-  if (candidates.length === 0) return { items: [], ranked: true };
+  if (candidates.length === 0) return { items: [], ranked: true, refused: 0, unscored: 0 };
+
+  const refused: Candidate[] = [];
 
   if (!process.env.ANTHROPIC_API_KEY) {
     console.warn(
@@ -208,6 +266,8 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
     return {
       items: candidates.map((c) => ({ ...c, score: 0, why: "", theme: "" })),
       ranked: false,
+      refused: 0,
+      unscored: candidates.length,
     };
   }
 
@@ -215,7 +275,9 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
   const batches = chunk(candidates, BATCH_SIZE);
   console.log(`  Ranking ${candidates.length} candidate(s) in ${batches.length} batch(es) with ${MODEL} at ${EFFORT} effort...`);
 
-  const settled = await Promise.allSettled(batches.map((b) => rankBatch(client, b)));
+  const settled = await Promise.allSettled(
+    batches.map((b) => rankBatchBisecting(client, b, refused)),
+  );
 
   const byId = new Map<string, Verdict>();
   let failedBatches = 0;
@@ -250,5 +312,14 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
   });
 
   items.sort((a, b) => b.score - a.score);
-  return { items, ranked: true };
+
+  const refusedIds = new Set(refused.map((c) => c.id));
+  const unscored = items.filter((i) => i.score < 0 && !refusedIds.has(i.id)).length;
+  if (refused.length || unscored) {
+    console.warn(
+      `  ! ${refused.length} refused by a classifier, ${unscored} unscored from failed batch(es).`,
+    );
+  }
+
+  return { items, ranked: true, refused: refused.length, unscored };
 }

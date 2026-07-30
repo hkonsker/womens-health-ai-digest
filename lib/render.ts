@@ -96,6 +96,10 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
       } cut to keep the digest short.</p>`
     : "";
 
+  const lost = run.stats.refused || run.stats.unscored
+    ? `<p class="warn">${run.stats.refused} item(s) were refused by a safety classifier and ${run.stats.unscored} could not be scored. They are missing from this digest, not ranked low.</p>`
+    : "";
+
   const unranked = run.stats.ranked
     ? ""
     : `<p class="warn">Ranking was skipped this run: no API key was available, so these items are unscored and unsummarized.</p>`;
@@ -210,6 +214,7 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
     <h3>Coverage</h3>
     <ul>${coverage}</ul>
     ${dropped}
+    ${lost}
     ${failures}
 
     <p>Query version ${esc(run.queryVersion)} &middot; generated ${esc(fmtDate(run.generatedAt))} &middot; sources: PubMed and public RSS feeds.</p>
@@ -261,6 +266,11 @@ export function renderEmail(run: DigestRun, archiveUrl: string | null): string {
       `${run.stats.droppedBelowCut} item(s) ${
         run.stats.ranked ? "cleared the score floor but were" : "were collected but"
       } cut to keep this short.`,
+    );
+  }
+  if (run.stats.refused || run.stats.unscored) {
+    notes.push(
+      `${run.stats.refused} item(s) refused by a safety classifier, ${run.stats.unscored} unscored. Missing here, not ranked low.`,
     );
   }
   if (run.stats.feedFailures.length) {
