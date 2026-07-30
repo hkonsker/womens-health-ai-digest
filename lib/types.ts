@@ -16,6 +16,14 @@ export interface Candidate {
   body: string | null;
 }
 
+/** A jargon term used in a summary, with a plain-English definition. */
+export interface GlossaryTerm {
+  term: string;
+  definition: string;
+  /** True the first week this term appears anywhere in the digest. */
+  isNew?: boolean;
+}
+
 /** A candidate after Claude has scored it. */
 export interface RankedItem extends Candidate {
   /** 0-10. Higher is more worth your time. */
@@ -24,6 +32,8 @@ export interface RankedItem extends Candidate {
   why: string;
   /** Short label, e.g. "Embryo Selection" or "Regulatory". */
   theme: string;
+  /** Terms in `why` that an educated non-specialist would not know. */
+  glossary: GlossaryTerm[];
 }
 
 /** One week's digest. Written to data/digests/<weekLabel>.json. */
@@ -36,6 +46,8 @@ export interface DigestRun {
   /** Full text of every query used, for the audit trail. */
   queries: Record<string, string>;
   items: RankedItem[];
+  /** Every term defined anywhere in this run, deduped and sorted. */
+  terms: GlossaryTerm[];
   /**
    * Every candidate that was scored, including the ones that did not make the
    * cut. Kept so you can actually diagnose the ranker: without the rejects and

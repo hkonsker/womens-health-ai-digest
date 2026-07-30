@@ -12,12 +12,13 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import type { DigestRun } from "./types.js";
+import type { DigestRun, GlossaryTerm } from "./types.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT, "data");
 const SEEN_PATH = path.join(DATA_DIR, "seen.json");
 const DIGEST_DIR = path.join(DATA_DIR, "digests");
+const GLOSSARY_PATH = path.join(DATA_DIR, "glossary.json");
 
 /** Forget an item after a year so seen.json cannot grow without bound. */
 const SEEN_RETENTION_DAYS = 365;
@@ -50,6 +51,37 @@ export async function saveSeen(seen: SeenLedger): Promise<void> {
     if (!isNaN(t) && t >= cutoff) pruned[id] = iso;
   }
   await writeJson(SEEN_PATH, pruned);
+}
+
+/**
+ * Terms the digest has already explained, keyed by lowercased term.
+ *
+ * The first definition of a term wins and is never regenerated. That keeps
+ * "external validation" meaning the same thing in February as in August, and
+ * it means a term is only ever paid for once.
+ */
+export type GlossaryStore = Record<
+  string,
+  { term: string; definition: string; firstSeen: string }
+>;
+
+export async function loadGlossary(): Promise<GlossaryStore> {
+  return readJson<GlossaryStore>(GLOSSARY_PATH, {});
+}
+
+export async function saveGlossary(g: GlossaryStore): Promise<void> {
+  await writeJson(GLOSSARY_PATH, g);
+}
+
+/** Every known term, A-Z, with the ones first seen this week flagged. */
+export function glossaryToList(g: GlossaryStore, weekLabel?: string): GlossaryTerm[] {
+  return Object.values(g)
+    .map((e) => ({
+      term: e.term,
+      definition: e.definition,
+      isNew: weekLabel ? e.firstSeen === weekLabel : false,
+    }))
+    .sort((a, b) => a.term.toLowerCase().localeCompare(b.term.toLowerCase()));
 }
 
 export async function saveDigest(run: DigestRun): Promise<void> {

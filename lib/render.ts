@@ -5,7 +5,7 @@
  * Palette is the Stanford identity set. No teal anywhere.
  */
 
-import type { DigestRun, RankedItem } from "./types.js";
+import type { DigestRun, GlossaryTerm, RankedItem } from "./types.js";
 import { BEATS } from "./config.js";
 
 const CARDINAL = "#8C1515";
@@ -49,6 +49,26 @@ function byline(item: RankedItem): string {
 
 // ─── Archive page ─────────────────────────────────────────────────────────────
 
+/**
+ * Jargon as tappable chips. Uses <details> so it works with no JavaScript and
+ * on touch, where hover tooltips silently do nothing. An open chip takes a full
+ * row so the definition has somewhere to go.
+ */
+function termChips(terms: GlossaryTerm[]): string {
+  if (!terms.length) return "";
+  return `
+        <div class="terms">${terms
+          .map(
+            (t) => `
+          <details class="term${t.isNew ? " is-new" : ""}">
+            <summary>${esc(t.term)}${t.isNew ? '<span class="new">new</span>' : ""}</summary>
+            <p>${esc(t.definition)}</p>
+          </details>`,
+          )
+          .join("")}
+        </div>`;
+}
+
 function pageCard(item: RankedItem): string {
   const color = BEAT_COLOR[item.beat] ?? COOL_GREY;
   const author = byline(item);
@@ -67,6 +87,7 @@ function pageCard(item: RankedItem): string {
         <h2><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h2>
         <p class="meta">${meta}</p>
         ${item.why ? `<p class="why">${esc(item.why)}</p>` : ""}
+        ${termChips(item.glossary ?? [])}
       </article>`;
 }
 
@@ -179,6 +200,35 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
   .meta { margin: 0; font-size: 13px; color: var(--muted); }
   .why { margin: 10px 0 0; font-size: 15px; color: var(--body); }
 
+  .terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .term { min-width: 0; }
+  .term > summary {
+    list-style: none; cursor: pointer; font-size: 12px; white-space: nowrap;
+    border: 1px dashed var(--line); border-radius: 999px; padding: 2px 10px;
+    color: var(--muted); transition: border-color .15s, color .15s;
+  }
+  .term > summary::-webkit-details-marker { display: none; }
+  .term > summary:hover { border-color: var(--poppy); color: var(--poppy); }
+  .term[open] { flex-basis: 100%; }
+  .term[open] > summary {
+    border-style: solid; border-color: var(--poppy); color: var(--poppy);
+    display: inline-block; margin-bottom: 6px;
+  }
+  .term p {
+    margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: var(--body);
+    border-left: 2px solid var(--line); padding-left: 10px;
+  }
+  .new {
+    font-size: 9px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--poppy); margin-left: 5px; vertical-align: 1px;
+  }
+
+  .glossary { margin-bottom: 16px; }
+  .glossary > summary { cursor: pointer; color: var(--body); }
+  .glossary dl { margin: 10px 0 0; }
+  .glossary dt { font-weight: 650; color: var(--ink); margin-top: 10px; font-size: 13px; }
+  .glossary dd { margin: 2px 0 0; padding-left: 0; }
+
   .empty { color: var(--muted); font-style: italic; padding: 24px 0; }
 
   footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
@@ -211,6 +261,21 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
     <h3>Past Weeks</h3>
     <ul class="archive">${archiveLinks || "<li>None yet</li>"}</ul>
 
+    ${
+      (run.terms ?? []).length
+        ? `<h3>Glossary (${run.terms.length} term${run.terms.length === 1 ? "" : "s"})</h3>
+    <details class="glossary">
+      <summary>Every term the digest has explained so far</summary>
+      <dl>${(run.terms ?? [])
+        .map(
+          (t) =>
+            `<dt>${esc(t.term)}${t.isNew ? '<span class="new">new</span>' : ""}</dt><dd>${esc(t.definition)}</dd>`,
+        )
+        .join("")}</dl>
+    </details>`
+        : ""
+    }
+
     <h3>Coverage</h3>
     <ul>${coverage}</ul>
     ${dropped}
@@ -227,6 +292,37 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
 
 // ─── Email ────────────────────────────────────────────────────────────────────
 
+/**
+ * Email cannot do tappable chips, so new terms get spelled out inline exactly
+ * where they appear. Only terms new this week are inlined: once a term is in
+ * the glossary, re-explaining it every week is noise. Escaping happens here
+ * because the definition is injected into already-escaped prose.
+ */
+function glossInline(why: string, terms: GlossaryTerm[]): string {
+  const fresh = terms.filter((t) => t.isNew && t.term && t.definition);
+  if (!fresh.length) return esc(why);
+
+  let out = esc(why);
+  const leftover: GlossaryTerm[] = [];
+
+  for (const t of fresh) {
+    const term = esc(t.term);
+    const at = out.toLowerCase().indexOf(term.toLowerCase());
+    if (at === -1) {
+      leftover.push(t);
+      continue;
+    }
+    const end = at + term.length;
+    out = `${out.slice(0, end)} (${esc(t.definition)})${out.slice(end)}`;
+  }
+
+  // A term the model listed but did not literally use still deserves defining.
+  if (leftover.length) {
+    out += ` <em>${leftover.map((t) => `${esc(t.term)}: ${esc(t.definition)}`).join(" ")}</em>`;
+  }
+  return out;
+}
+
 function emailCard(item: RankedItem): string {
   const color = BEAT_COLOR[item.beat] ?? COOL_GREY;
   const author = byline(item);
@@ -242,7 +338,7 @@ function emailCard(item: RankedItem): string {
   </div>
   <a href="${esc(item.url)}" style="display:block;font-size:16px;font-weight:600;color:#1c1d1f;text-decoration:none;line-height:1.35;margin-bottom:5px;">${esc(item.title)}</a>
   <div style="font-size:13px;color:${COOL_GREY};">${meta}</div>
-  ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${esc(item.why)}</div>` : ""}
+  ${item.why ? `<div style="font-size:14px;color:#33363a;line-height:1.55;margin-top:9px;">${glossInline(item.why, item.glossary ?? [])}</div>` : ""}
 </div>`;
 }
 

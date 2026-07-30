@@ -41,6 +41,9 @@ import {
   saveDigest,
   loadDigest,
   listDigests,
+  loadGlossary,
+  saveGlossary,
+  glossaryToList,
 } from "../lib/store.js";
 import type { Candidate, DigestRun, RunStats } from "../lib/types.js";
 
@@ -202,6 +205,28 @@ async function main(): Promise<void> {
     console.log();
   }
 
+  // ── Glossary ────────────────────────────────────────────────────────────
+  // The first definition of a term wins and is never regenerated, so a term
+  // means the same thing months from now and is only ever paid for once.
+  const glossary = await loadGlossary();
+  for (const item of items) {
+    for (const g of item.glossary) {
+      const key = g.term.toLowerCase().trim();
+      if (!key || !g.definition) continue;
+      if (!glossary[key]) {
+        glossary[key] = { term: g.term, definition: g.definition, firstSeen: weekLabel };
+      }
+      // Always show the stored wording, not this week's regeneration.
+      g.definition = glossary[key].definition;
+      g.isNew = glossary[key].firstSeen === weekLabel;
+    }
+  }
+  const newThisWeek = items.flatMap((i) => i.glossary).filter((g) => g.isNew).length;
+  console.log(
+    `Glossary: ${Object.keys(glossary).length} term(s) known, ${newThisWeek} new this week.`,
+  );
+  console.log();
+
   const run: DigestRun = {
     weekLabel,
     startDate: startDate.toISOString(),
@@ -214,6 +239,7 @@ async function main(): Promise<void> {
       industry: `RSS: ${feeds.candidates.length} item(s) from configured feeds`,
     },
     items,
+    terms: glossaryToList(glossary, weekLabel),
     scored: rankedAll.map((i) => ({
       id: i.id,
       beat: i.beat,
@@ -260,6 +286,7 @@ async function main(): Promise<void> {
 
   // ── 6. Persist ──────────────────────────────────────────────────────────
   await saveDigest(run);
+  await saveGlossary(glossary);
   const nowIso = new Date().toISOString();
   // Mark every candidate seen, not just the ones that made the cut. An item
   // that scored a 3 this week would score a 3 next week too.

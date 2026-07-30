@@ -16,7 +16,7 @@ There is no database, no server, and nothing to keep awake.
 Sunday 13:00 UTC (6am Pacific)
   → PubMed (2 queries) + RSS (6 feeds)
   → dedup against every item ever seen
-  → Claude scores 0-10 and writes two sentences per item
+  → Claude scores 0-10, writes two plain-language sentences, and defines the jargon
   → keep the top 10 that score 5 or above
   → docs/index.html + email via Resend
   → commit state back to the repo
@@ -90,6 +90,16 @@ Almost everything you would want to change is in [`lib/config.ts`](lib/config.ts
 | `MIN_SCORE` | The floor. Default 5. Raise it if the digest feels padded. |
 | `QUERY_VERSION` | **Bump this whenever you change a query or the feed list.** |
 
+Summaries are written for a smart college-level reader with no background in medicine,
+statistics, or machine learning. Any jargon that survives that rewrite gets defined:
+each item carries a `glossary` of terms, rendered as tappable chips under the summary on
+the page and spelled out in parentheses in the email.
+
+Definitions accumulate in `data/glossary.json`. The first definition of a term wins and
+is never regenerated, so a term means the same thing in February as in August and is only
+ever paid for once. Terms first seen this week are flagged as new, and the page grows an
+A-Z reference section at the bottom.
+
 The other knob that matters is `READER_PROFILE` at the top of
 [`lib/rank.ts`](lib/rank.ts). It tells Claude who you are and what earns a high score.
 Everything the ranker decides flows from those few paragraphs, so edit them before you
@@ -115,11 +125,12 @@ broad beat, high recall plus judgment on the narrow one.
 | GitHub Pages | Free on public repos, needs Pro for private |
 | Resend | Free tier is 3,000 emails a month |
 | PubMed | Free |
-| Anthropic API | Roughly $0.30 to $0.50 a week at default settings |
+| Anthropic API | Roughly $0.15 to $0.30 a week on Sonnet |
 
-The API is the only real cost, around $20 a year. It scales with how many candidates get
-ranked. To cut it: lower `MAX_CANDIDATES_PER_BEAT`, set the `DIGEST_EFFORT` variable to
-`low`, or set `DIGEST_MODEL` to `claude-sonnet-5`.
+The API is the only real cost, on the order of $10 a year. It scales with how many
+candidates get ranked. To cut it further, lower `MAX_CANDIDATES_PER_BEAT` or set the
+`DIGEST_EFFORT` variable to `low`. To spend more for sharper summaries, set the
+`DIGEST_MODEL` variable to `claude-opus-5`.
 
 ## Design notes
 
