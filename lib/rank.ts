@@ -92,6 +92,11 @@ and technical where precision earns its keep: name the study design, the metric,
 and the actual numbers. The first sentence says what was done and found. The
 second says why it matters to this reader, or its main limitation.
 
+Expand every abbreviation the first time you use it in the technical summary,
+in the form "randomized controlled trial (RCT)". You may use the short form
+after that. A reader who meets "RCT" cold cannot look it up in a glossary filed
+under its full name.
+
 "plain": the same two sentences rewritten for a smart college-level reader with
 no background in medicine, statistics, or machine learning. Prefer the plain
 phrase: "a type of AI that reads images" beats "a vision transformer" unless the
@@ -119,11 +124,11 @@ conventionally written: AUC, sFlt-1/PlGF, mRNA.
 Two rules that are easy to miss, and both matter more than the rest:
 
 1. Every abbreviation and acronym you use in the technical summary must have a
-   glossary entry, and that entry must spell out what the letters stand for.
-   If you write "17 IRD genotype categories", IRD needs an entry reading
-   something like "Inherited retinal disease, a group of genetic eye conditions
-   that damage the light-sensing layer at the back of the eye." Never leave an
-   abbreviation unexpanded. This is the single most common miss.
+   glossary entry, and the definition must open with the full name followed by
+   the abbreviation in parentheses, so the two are connected: "Inherited
+   retinal disease (IRD), a group of genetic eye conditions that damage the
+   light-sensing layer at the back of the eye." Never leave an abbreviation
+   unexpanded. This is the single most common miss.
 
 2. When a term is a variant of a more familiar one, define the difference, not
    just the term. The useful part is what makes it different. "Top-5 accuracy"
@@ -132,6 +137,10 @@ Two rules that are easy to miss, and both matter more than the rest:
    where only the single top guess counts. The same applies to sensitivity
    against specificity, relative against absolute risk, and precision against
    recall.
+
+Define only terms that literally appear in your technical summary. Do not
+define a term you read in the abstract but did not use: a chip for a word the
+reader will never encounter is clutter, not teaching.
 
 Return an empty array only if the technical summary genuinely contains no such
 term, which will be rare.
@@ -454,13 +463,25 @@ export async function rankCandidates(candidates: Candidate[]): Promise<RankResul
   });
 
   // Only audit what a reader will actually see.
-  const gaps = items
-    .filter((i) => i.score >= 0 && i.why)
-    .flatMap((i) => undefinedAbbreviations(i));
+  const shown = items.filter((i) => i.score >= 0 && i.why);
+
+  const gaps = [...new Set(shown.flatMap((i) => undefinedAbbreviations(i)))];
   if (gaps.length) {
-    console.warn(
-      `  ! abbreviation(s) used but never defined: ${[...new Set(gaps)].join(", ")}`,
-    );
+    console.warn(`  ! abbreviation(s) used but never defined: ${gaps.join(", ")}`);
+  }
+
+  // A chip for a word the summary never uses is clutter, so flag it too.
+  const unused = [
+    ...new Set(
+      shown.flatMap((i) =>
+        i.glossary
+          .filter((g) => !i.why.toLowerCase().includes(g.term.toLowerCase().split(" ")[0]))
+          .map((g) => g.term),
+      ),
+    ),
+  ];
+  if (unused.length) {
+    console.warn(`  ! term(s) defined but absent from the summary: ${unused.join(", ")}`);
   }
 
   items.sort((a, b) => b.score - a.score);
