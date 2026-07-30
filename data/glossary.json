@@ -228,5 +228,110 @@
     "term": "HDL and LDL",
     "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
     "firstSeen": "2026-W31"
+  },
+  "inherited retinal disease (ird)": {
+    "term": "Inherited Retinal Disease (IRD)",
+    "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+    "firstSeen": "2026-W31"
+  },
+  "clinician decision support system (cdss)": {
+    "term": "Clinician Decision Support System (CDSS)",
+    "definition": "Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.",
+    "firstSeen": "2026-W31"
+  },
+  "randomized controlled trial (rct)": {
+    "term": "Randomized Controlled Trial (RCT)",
+    "definition": "A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.",
+    "firstSeen": "2026-W31"
+  },
+  "deep learning": {
+    "term": "Deep Learning",
+    "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+    "firstSeen": "2026-W31"
+  },
+  "unified huntington's disease rating scale (uhdrs)": {
+    "term": "Unified Huntington's Disease Rating Scale (UHDRS)",
+    "definition": "A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.",
+    "firstSeen": "2026-W31"
+  },
+  "intraclass correlation coefficient (icc)": {
+    "term": "Intraclass Correlation Coefficient (ICC)",
+    "definition": "A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.",
+    "firstSeen": "2026-W31"
+  },
+  "prospective cohort": {
+    "term": "Prospective Cohort",
+    "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+    "firstSeen": "2026-W31"
+  },
+  "large language models (llms)": {
+    "term": "Large Language Models (LLMs)",
+    "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+    "firstSeen": "2026-W31"
+  },
+  "clinical high risk for psychosis (chr-p)": {
+    "term": "Clinical High Risk for Psychosis (CHR-P)",
+    "definition": "A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.",
+    "firstSeen": "2026-W31"
+  },
+  "multiparametric magnetic resonance imaging (mri)": {
+    "term": "Multiparametric Magnetic Resonance Imaging (MRI)",
+    "definition": "An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.",
+    "firstSeen": "2026-W31"
+  },
+  "area under the curve (auc)": {
+    "term": "Area Under the Curve (AUC)",
+    "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+    "firstSeen": "2026-W31"
+  },
+  "human papillomavirus (hpv)": {
+    "term": "Human Papillomavirus (HPV)",
+    "definition": "A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.",
+    "firstSeen": "2026-W31"
+  },
+  "liquid-based cytology (lbc)": {
+    "term": "Liquid-Based Cytology (LBC)",
+    "definition": "A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.",
+    "firstSeen": "2026-W31"
+  },
+  "high-grade squamous intraepithelial lesion (hsil)": {
+    "term": "High-Grade Squamous Intraepithelial Lesion (HSIL)",
+    "definition": "A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.",
+    "firstSeen": "2026-W31"
+  },
+  "shapley additive explanations (shap)": {
+    "term": "Shapley Additive exPlanations (SHAP)",
+    "definition": "A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.",
+    "firstSeen": "2026-W31"
+  },
+  "food and drug administration (fda)": {
+    "term": "Food and Drug Administration (FDA)",
+    "definition": "The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.",
+    "firstSeen": "2026-W31"
+  },
+  "low birth weight (lbw)": {
+    "term": "Low Birth Weight (LBW)",
+    "definition": "A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.",
+    "firstSeen": "2026-W31"
+  },
+  "area under the receiver operating characteristic curve (auc-roc)": {
+    "term": "Area Under the Receiver Operating Characteristic Curve (AUC-ROC)",
+    "definition": "A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+    "firstSeen": "2026-W31"
+  },
+  "large language model (llm)": {
+    "term": "Large Language Model (LLM)",
+    "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+    "firstSeen": "2026-W31"
+  },
+  "cross-sectional study": {
+    "term": "Cross-Sectional Study",
+    "definition": "A study that examines a group of people or responses at a single point in time rather than following them over time.",
+    "firstSeen": "2026-W31"
+  },
+  "blinded evaluation": {
+    "term": "Blinded Evaluation",
+    "definition": "An assessment method where the person judging the results does not know which option came from which source, to avoid bias.",
+    "firstSeen": "2026-W31"
   }
 }
