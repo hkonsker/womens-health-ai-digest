@@ -99,8 +99,8 @@ function termChips(terms: GlossaryTerm[]): string {
         <div class="terms">${terms
           .map(
             (t) => `
-          <details class="term${t.isNew ? " is-new" : ""}">
-            <summary>${esc(t.term)}${t.isNew ? '<span class="new">new</span>' : ""}</summary>
+          <details class="term">
+            <summary>${esc(t.term)}</summary>
             <p>${esc(t.definition)}</p>
           </details>`,
           )
@@ -280,11 +280,6 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
     margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: var(--body);
     border-left: 2px solid var(--line); padding-left: 10px;
   }
-  .new {
-    font-size: 9px; text-transform: uppercase; letter-spacing: .06em;
-    color: var(--poppy); margin-left: 5px; vertical-align: 1px;
-  }
-
   .glossary { margin-bottom: 16px; }
   .glossary > summary { cursor: pointer; color: var(--body); }
   .glossary dl { margin: 10px 0 0; }
@@ -331,7 +326,7 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
       <dl>${(run.terms ?? [])
         .map(
           (t) =>
-            `<dt>${esc(t.term)}${t.isNew ? '<span class="new">new</span>' : ""}</dt><dd>${esc(t.definition)}</dd>`,
+            `<dt>${esc(t.term)}</dt><dd>${esc(t.definition)}</dd>`,
         )
         .join("")}</dl>
     </details>`
@@ -370,11 +365,7 @@ function emailTerms(terms: GlossaryTerm[]): string {
     .map(
       (t) => `
     <div style="font-size:13px;line-height:1.55;color:#33363a;margin-bottom:9px;">
-      <strong style="color:#1c1d1f;">${esc(t.term)}</strong>${
-        t.isNew
-          ? ` <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:${POPPY};">new</span>`
-          : ""
-      }<br>${esc(t.definition)}
+      <strong style="color:#1c1d1f;">${esc(t.term)}</strong><br>${esc(t.definition)}
     </div>`,
     )
     .join("");
