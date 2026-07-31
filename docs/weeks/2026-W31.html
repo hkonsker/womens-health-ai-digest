@@ -130,7 +130,7 @@
 <div class="wrap">
   <header>
     <h1>Women's Health and AI Weekly</h1>
-    <p class="sub">Jul 27 to Aug 2, 2026 &middot; 9 items &middot; 2026-W31</p>
+    <p class="sub">Jul 27 to Aug 2, 2026 &middot; 10 items &middot; 2026-W31</p>
   </header>
 
   
@@ -143,10 +143,10 @@
         </div>
         <h2><a href="https://doi.org/10.1038/s41591-026-04545-w" target="_blank" rel="noopener noreferrer">AI-Based Clinician Decision Support System for Diagnosis of Inherited Retinal Diseases: A Multicenter, Randomized Trial.</a></h2>
         <p class="meta">Nat Med &middot; Jia H et al. &middot; Jul 24, 2026</p>
-        <p class="why">In a multicenter randomized controlled trial (RCT) of 295 patients with suspected inherited retinal disease (IRD), a Vision Transformer-based clinician decision support system (CDSS) called Retina4IRD, trained and externally validated across China, South Korea, and Poland on 1,843 patients, significantly improved top-5 genotype prediction accuracy when used alongside specialists versus specialists alone (88.5% vs 67.3%, P&lt;0.001), and also improved downstream management scores. This is a rare example of an AI diagnostic tool demonstrating benefit in a prospective RCT with a hard clinical endpoint (management decisions) rather than just retrospective accuracy metrics, making it a strong template for how AI-assisted phenotyping-to-genotype pipelines could be validated in other specialties.</p>
+        <p class="why">In a multicenter randomized controlled trial (RCT) of 295 patients with suspected inherited retinal disease (IRD), an AI-based clinician decision support system (CDSS) called Retina4IRD, built on a Vision Transformer pretrained with RETFound and validated across China, South Korea, and Poland, significantly improved genotype prediction accuracy when used to assist specialists compared to specialists alone (top-5 accuracy 88.5% vs 67.3%, P&lt;0.001), and also improved downstream clinical management scores. This is a rare example of a prospectively validated AI tool with external validation across countries and a hard clinical endpoint (management decisions), making it a strong model for how AI-assisted genetic diagnosis could be integrated into real ophthalmology workflows.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Scientists built an AI tool that looks at eye scans and predicts which of 17 possible gene mutations is causing a rare inherited eye disease, and tested it by randomly assigning nearly 300 patients to either get help from this AI or not. When doctors used the AI's suggestions, they correctly narrowed down the genetic cause 88.5% of the time versus 67.3% without it, and patients also received better follow-up care decisions as a result. This is a strong study because it used a randomized trial design and tested the AI on patients from three different countries, showing the tool actually helps in real clinical decision-making, not just in lab tests.</p>
+          <p>Scientists built an AI tool that looks at eye scans to help predict which of 17 genetic conditions is causing a patient's inherited eye disease, and tested it in a randomized trial with 295 patients across multiple countries. When doctors used the AI's suggestions, they correctly identified the right genetic cause far more often (89% of the time within their top 5 guesses, versus 67% without the AI) and made better treatment decisions afterward. This is a well-tested, real-world example of AI meaningfully improving diagnosis and patient care, not just a lab experiment.</p>
         </details>
         
         <div class="terms">
@@ -155,20 +155,20 @@
             <p>A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.</p>
           </details>
           <details class="term is-new">
-            <summary>Vision Transformer<span class="new">new</span></summary>
-            <p>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</p>
-          </details>
-          <details class="term is-new">
             <summary>Clinician Decision Support System (CDSS)<span class="new">new</span></summary>
             <p>Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.</p>
           </details>
           <details class="term is-new">
-            <summary>Randomized Controlled Trial (RCT)<span class="new">new</span></summary>
-            <p>A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.</p>
+            <summary>Vision Transformer<span class="new">new</span></summary>
+            <p>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</p>
           </details>
           <details class="term is-new">
             <summary>External Validation<span class="new">new</span></summary>
             <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Randomized Controlled Trial (RCT)<span class="new">new</span></summary>
+            <p>A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.</p>
           </details>
           <details class="term is-new">
             <summary>Top-5 Accuracy<span class="new">new</span></summary>
@@ -185,24 +185,20 @@
         </div>
         <h2><a href="https://doi.org/10.1016/j.landig.2026.101025" target="_blank" rel="noopener noreferrer">A Deep Learning Model for Speech-Based Prediction of Clinical Scores in People with Huntington's Disease: A Longitudinal Study with Cross-Sectional Replication.</a></h2>
         <p class="meta">Lancet Digit Health &middot; Le Moine Veillon C et al. &middot; Jul 23, 2026</p>
-        <p class="why">Researchers developed NDSNet, a deep learning model combining a pretrained wav2vec 2.0 speech encoder with a recurrent attentive network in a contrastive learning framework, to predict Unified Huntington's Disease Rating Scale (UHDRS) scores from speech across presymptomatic and symptomatic Huntington's disease stages, validated across three prospective cohorts plus an external replication cohort, achieving an intraclass correlation coefficient (ICC) of 0.87 versus 0.847 for clinician ratings. This is a rare example of a longitudinal, externally validated digital biomarker with individual-level sensitivity to disease progression, making it a strong model for how speech-based AI monitoring could be validated in other neurodegenerative and possibly reproductive-adjacent conditions requiring longitudinal tracking.</p>
+        <p class="why">A deep learning model (NDSNet) combining a pretrained wav2vec 2.0 speech encoder with a recurrent attentive network was trained on speech recordings from three prospective longitudinal cohorts of Huntington's disease patients and healthy controls, then externally validated in an independent replication cohort, predicting Unified Huntington's Disease Rating Scale (UHDRS) motor scores with an intraclass correlation coefficient (ICC) of 0.87, comparable to inter-clinician reliability (ICC 0.847). This is a rare example of a speech biomarker for a neurodegenerative disease with genuine external validation and longitudinal tracking of individual change, suggesting real potential as a low-burden, remote progression marker, though it is Huntington-specific and its generalization to other neurodegenerative diseases is untested.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Scientists built an AI system that listens to a person's speech and estimates how advanced their Huntington's disease is, tested across several groups of patients over many years including a separate outside group to check it still worked. The AI's estimates matched almost as well as scores given by human doctors, showing that speech alone can reliably track this brain disease over time without needing invasive tests.</p>
+          <p>Researchers built an AI system that listens to how people with Huntington's disease speak and estimates their clinical disability scores, testing it on recordings from several long-term studies and then checking it again on a completely separate group of patients. The AI's estimates matched actual doctor-assessed scores about as closely as two different doctors would agree with each other, suggesting speech could become an easy, non-invasive way to track this disease over time, though it's only been shown to work for Huntington's so far.</p>
         </details>
         
         <div class="terms">
-          <details class="term is-new">
-            <summary>Deep Learning<span class="new">new</span></summary>
-            <p>A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.</p>
-          </details>
           <details class="term is-new">
             <summary>Wav2vec 2.0<span class="new">new</span></summary>
             <p>A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.</p>
           </details>
           <details class="term is-new">
-            <summary>Contrastive Learning<span class="new">new</span></summary>
-            <p>A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.</p>
+            <summary>Intraclass Correlation Coefficient (ICC)<span class="new">new</span></summary>
+            <p>A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.</p>
           </details>
           <details class="term is-new">
             <summary>Unified Huntington's Disease Rating Scale (UHDRS)<span class="new">new</span></summary>
@@ -213,12 +209,8 @@
             <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
           </details>
           <details class="term is-new">
-            <summary>Intraclass Correlation Coefficient (ICC)<span class="new">new</span></summary>
-            <p>A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Prospective Cohort<span class="new">new</span></summary>
-            <p>A group of participants followed forward in time from the start of a study, rather than looking back at existing records.</p>
+            <summary>Prospective Longitudinal Studies<span class="new">new</span></summary>
+            <p>Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.</p>
           </details>
         </div>
       </article>
@@ -226,15 +218,15 @@
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#4B535A">Clinical AI</span>
-          <span class="theme">AI Psychiatric Screening</span>
+          <span class="theme">AI Psychosis Screening</span>
           <span class="score" title="Editor score out of 10">6</span>
         </div>
         <h2><a href="https://doi.org/10.1038/s41746-026-02928-4" target="_blank" rel="noopener noreferrer">Evaluating Large Language Models for Assessment of Psychosis Risk.</a></h2>
         <p class="meta">NPJ Digit Med &middot; Zhu T et al. &middot; Jul 23, 2026</p>
-        <p class="why">Researchers evaluated 11 open-weight large language models (LLMs; deep learning models trained on large text corpora to process and generate language) on 678 clinical interview transcripts from 373 participants (77.7% at clinical high risk for psychosis, CHR-P), finding the best model (Llama-3.3-70B) achieved 80% accuracy, 93% sensitivity, and 58% specificity for CHR-P classification, with good agreement to researcher-rated symptom scores (intraclass correlation coefficient, ICC, of 0.74-0.75) and low rates of clinically relevant confabulation (3%). This is a multi-site benchmarking study rather than a prospective clinical trial, but it represents an early, reasonably rigorous test of LLMs for a scalable psychiatric screening task with real potential to extend specialist assessment capacity.</p>
+        <p class="why">Researchers evaluated 11 open-weight large language models (LLMs) on 678 partial interview transcripts from 373 participants to assess clinical high risk for psychosis (CHR-P), finding the best model (Llama-3.3-70B) achieved 80% accuracy, 93% sensitivity, and 58% specificity against researcher-rated diagnoses, with symptom severity scores correlating well with human raters (intraclass correlation coefficient (ICC) around 0.74-0.75). The multi-site design and attention to confabulation rates (3%) strengthen the evidence, though the low specificity and reliance on transcript-based assessment limit its readiness for standalone clinical use.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Scientists tested 11 different AI language models on nearly 700 clinical interview transcripts to see if the AI could correctly identify people at high risk for developing psychosis, comparing the AI's judgments to those of trained human researchers. The best-performing AI got it right 80% of the time, agreed well with human experts on symptom severity, and rarely made up false information, suggesting AI could help expand access to this kind of specialized mental health screening, though this was a benchmarking exercise, not a test in real clinical use.</p>
+          <p>Scientists tested 11 different AI language models to see if they could read transcripts of psychiatric interviews and correctly flag people at risk for psychosis, comparing the AI's judgments to those of trained clinicians. The best AI model correctly identified 93% of at-risk individuals but also had many false positives, correctly ruling out only 58% of people who were not at risk, and it rarely made up false information (only 3% of summaries). This suggests AI could help scale up early psychosis screening, but it still needs improvement before it can replace expert judgment.</p>
         </details>
         
         <div class="terms">
@@ -268,87 +260,15 @@
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
-          <span class="theme">Cervical Cancer Imaging</span>
-          <span class="score" title="Editor score out of 10">6</span>
-        </div>
-        <h2><a href="https://doi.org/10.1016/j.acra.2026.07.022" target="_blank" rel="noopener noreferrer">Multi-Modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.</a></h2>
-        <p class="meta">Acad Radiol &middot; Yang H et al. &middot; Jul 29, 2026</p>
-        <p class="why">A stacking ensemble model combining habitat radiomics from multiparametric magnetic resonance imaging (MRI) with clinical variables predicted lymph node metastasis in early-stage cervical cancer, reaching an area under the curve (AUC) of 0.875 in an external validation cohort of 125 patients, versus 0.845-0.882 for the best single base classifier. The multi-cohort design with external validation and decision curve analysis strengthens confidence, but the study remains retrospective and needs prospective surgical outcome testing before it can guide lymph node dissection decisions.</p>
-        <details class="plain">
-          <summary>Explain this simply</summary>
-          <p>Researchers built a multi-step AI model that combines MRI scan patterns with patient data to predict whether early-stage cervical cancer has spread to lymph nodes, and it correctly distinguished patients about 88 percent of the time even in a separate group of patients used to test it. This is a more rigorous kind of testing than most AI cancer studies get, but it still needs to be tried in real treatment decisions before it changes practice.</p>
-        </details>
-        
-        <div class="terms">
-          <details class="term is-new">
-            <summary>Multiparametric Magnetic Resonance Imaging (MRI)<span class="new">new</span></summary>
-            <p>An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Radiomics<span class="new">new</span></summary>
-            <p>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Area Under the Curve (AUC)<span class="new">new</span></summary>
-            <p>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</p>
-          </details>
-          <details class="term is-new">
-            <summary>External Validation<span class="new">new</span></summary>
-            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Decision Curve Analysis<span class="new">new</span></summary>
-            <p>A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Stacking Ensemble<span class="new">new</span></summary>
-            <p>A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.</p>
-          </details>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
-          <span class="theme">Cervical Screening Efficiency</span>
-          <span class="score" title="Editor score out of 10">6</span>
-        </div>
-        <h2><a href="https://doi.org/10.1136/bmjopen-2025-113298" target="_blank" rel="noopener noreferrer">Improving Laboratory Workforce Efficiency Using AI-Assisted Digital Cytology Within an HPV-Based Cervical Screening Programme: A Model-Based Evaluation for the NHS Cervical Screening Programmes.</a></h2>
-        <p class="meta">BMJ Open &middot; Wilson A et al. &middot; Jul 28, 2026</p>
-        <p class="why">A decision-tree model of the National Health Service (NHS) cervical screening cytology workflow estimated that AI-assisted digital cytology would cut per-slide review time from 12.9 to 4.0 minutes, reducing annual staff hours by roughly two-thirds across 479,125 slides. This is a policy-relevant health-economic simulation rather than a clinical trial, so its conclusions depend on the accuracy of the input parameters, but it offers a concrete operational case for AI-assisted screening at national scale.</p>
-        <details class="plain">
-          <summary>Explain this simply</summary>
-          <p>Researchers built a computer simulation of how the UK's cervical cancer screening system processes lab samples, and estimated that adding an AI tool to review cell samples would cut the time each sample takes from about 13 minutes to 4 minutes, saving a huge amount of staff time nationwide. It is not a real-world trial, just a modeling estimate, but it makes a strong practical case for why health systems facing staff shortages might want to adopt this kind of AI.</p>
-        </details>
-        
-        <div class="terms">
-          <details class="term is-new">
-            <summary>Human Papillomavirus (HPV)<span class="new">new</span></summary>
-            <p>A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Decision-Tree Model<span class="new">new</span></summary>
-            <p>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</p>
-          </details>
-          <details class="term is-new">
-            <summary>Cytology<span class="new">new</span></summary>
-            <p>The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.</p>
-          </details>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
           <span class="theme">Cervical Screening AI</span>
           <span class="score" title="Editor score out of 10">6</span>
         </div>
         <h2><a href="https://doi.org/10.1080/17843286.2026.2711062" target="_blank" rel="noopener noreferrer">An Explainable Machine Learning Approach for Cervical Cancer Screening: Decoding Morphological Diagnostic Drivers.</a></h2>
         <p class="meta">Acta Clin Belg &middot; Chang H et al. &middot; Jul 29, 2026</p>
-        <p class="why">An interpretable machine learning (ML) pipeline for liquid-based cytology (LBC) achieved 92.5% sensitivity for detecting high-grade squamous intraepithelial lesions or worse (HSIL+), significantly higher than 84.2% for a double-blind panel of senior cytopathologists on a retrospective set of 5,000 women, with no performance drop across menopausal or infection subgroups and a 63% reduction in median review time. The head-to-head comparison against expert pathologists and subgroup robustness analysis are notable strengths, though the single-network retrospective design still needs prospective, multi-site confirmation before influencing screening workflows.</p>
+        <p class="why">In a retrospective cohort of 5,000 women, this interpretable machine learning (ML) pipeline for liquid-based cytology (LBC) detected high-grade squamous intraepithelial lesions or worse (HSIL+) with 92.5% sensitivity versus 84.2% for a double-blind panel of senior cytopathologists, achieved an area under the curve (AUC) of 0.94, and showed no performance drop across menopausal or infected subgroups while cutting review time by 63%. The head-to-head comparison against expert pathologists and use of Shapley Additive exPlanations (SHAP) for interpretability strengthen the findings, though single-center retrospective design and lack of external validation temper how confidently this generalizes to other populations and lab workflows.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>An AI tool for reading cervical cancer screening slides correctly caught more cases of serious pre-cancerous changes than a panel of experienced pathologists did, 92.5 percent versus 84.2 percent, in a study of 5,000 women, and it worked just as well regardless of a woman's menopause status or infections, while also cutting review time by nearly two thirds. This is a fairly strong test because it directly compared the AI against expert humans, but it was done at only one healthcare network using past data, so it still needs to be confirmed in real-time use across different hospitals.</p>
+          <p>Researchers built an AI system to read cervical cancer screening slides and tested it against a panel of senior expert pathologists on 5,000 patient samples, finding the AI caught more true cases of serious pre-cancer changes, 92.5% of the time compared to 84.2% for the human experts, while also working just as well in older or infected patients and cutting the time needed to review each slide by nearly two thirds. This is a strong single-site study with a fair head-to-head comparison to real doctors, but it still needs to be tested at other hospitals and with other patient populations before we know it works as well everywhere.</p>
         </details>
         
         <div class="terms">
@@ -357,8 +277,12 @@
             <p>A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.</p>
           </details>
           <details class="term is-new">
-            <summary>High-Grade Squamous Intraepithelial Lesion (HSIL)<span class="new">new</span></summary>
-            <p>A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.</p>
+            <summary>High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)<span class="new">new</span></summary>
+            <p>A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Area Under the Curve (AUC)<span class="new">new</span></summary>
+            <p>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</p>
           </details>
           <details class="term is-new">
             <summary>Sensitivity<span class="new">new</span></summary>
@@ -368,9 +292,47 @@
             <summary>Shapley Additive exPlanations (SHAP)<span class="new">new</span></summary>
             <p>A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.</p>
           </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
+          <span class="theme">Preeclampsia Prediction</span>
+          <span class="score" title="Editor score out of 10">6</span>
+        </div>
+        <h2><a href="https://doi.org/10.1016/j.preghy.2026.101501" target="_blank" rel="noopener noreferrer">Reply to the Letter to the Editor: &quot;Machine Learning Model for Predicting Preeclampsia-Related Adverse Outcomes&quot;.</a></h2>
+        <p class="meta">Pregnancy Hypertens &middot; Hackelöer M et al. &middot; Jul 22, 2026</p>
+        <p class="why">This is a reply to a letter to the editor addressing methodological critiques of a previously published gradient-boosted tree model that predicts preeclampsia-related adverse outcomes, reporting external validation area under the curve (AUC) of 92% in a German cohort and 87% in a North American cohort, alongside calibration data (Brier scores 0.010 and 0.068). The exchange usefully clarifies the model's incremental value over the soluble fms-like tyrosine kinase-1 to placental growth factor ratio (sFlt-1/PlGF) and its stable discrimination despite cohort heterogeneity, which matters for anyone evaluating this tool's readiness for clinical use, though a formal head-to-head comparison and clinical utility analysis are still pending.</p>
+        <details class="plain">
+          <summary>Explain this simply</summary>
+          <p>This is a follow-up discussion where the authors of an earlier study respond to criticism of their AI model that predicts serious complications from preeclampsia, showing that the model performed consistently well when tested on patients from two different countries. This matters because it adds confidence that the tool could work reliably in different settings, although the authors still need to directly compare it against an existing blood test and show it actually helps in real clinical decisions.</p>
+        </details>
+        
+        <div class="terms">
           <details class="term is-new">
-            <summary>Area Under the Curve (AUC)<span class="new">new</span></summary>
-            <p>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</p>
+            <summary>Gradient-Boosted Tree Model<span class="new">new</span></summary>
+            <p>A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.</p>
+          </details>
+          <details class="term is-new">
+            <summary>External Validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>AUC<span class="new">new</span></summary>
+            <p>A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Brier Score<span class="new">new</span></summary>
+            <p>A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.</p>
+          </details>
+          <details class="term is-new">
+            <summary>sFlt-1/PlGF<span class="new">new</span></summary>
+            <p>A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Calibration<span class="new">new</span></summary>
+            <p>How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.</p>
           </details>
         </div>
       </article>
@@ -383,10 +345,10 @@
         </div>
         <h2><a href="https://femtechinsider.com/natural-cycles-receives-sixth-fda-clearance-for-ai-powered-fertility-algorithm/" target="_blank" rel="noopener noreferrer">Natural Cycles Receives Sixth FDA Clearance for AI-Powered Fertility Algorithm</a></h2>
         <p class="meta">FemTech Insider &middot; Jul 28, 2026</p>
-        <p class="why">Natural Cycles received its sixth Food and Drug Administration (FDA) clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world fertility data points. This is a genuine regulatory first in the sense of an update to an already-deployed consumer fertility algorithm, though the announcement gives no performance metrics or validation study details for the new version.</p>
+        <p class="why">Natural Cycles received its sixth FDA clearance for an updated version of its AI-powered fertility algorithm, which combines statistical modeling with machine learning trained on tens of millions of real-world data points; this is a real regulatory milestone for a consumer-facing fertility algorithm but the announcement provides no new performance metrics or validation study details for this specific clearance. Regulatory clearance track record matters for reproductive health AI adoption, though the lack of accuracy or effectiveness data for this version limits how much can be concluded.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Natural Cycles, a fertility and birth control app, got government approval for its sixth update to its AI-based system that predicts fertile days using huge amounts of real-world data. This matters because it's a widely used product getting regulatory sign-off, but we don't know from this announcement how much better the new version actually performs.</p>
+          <p>The fertility tracking app Natural Cycles got approval from the US Food and Drug Administration for the sixth time, this time for an updated version of its algorithm that predicts fertile days using machine learning trained on huge amounts of real-world cycle data. This is a meaningful regulatory step for a widely used app, but the announcement does not share any new numbers on how well the updated version actually performs.</p>
         </details>
         
         <div class="terms">
@@ -394,35 +356,111 @@
             <summary>Food and Drug Administration (FDA)<span class="new">new</span></summary>
             <p>The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.</p>
           </details>
+          <details class="term is-new">
+            <summary>Machine Learning<span class="new">new</span></summary>
+            <p>A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.</p>
+          </details>
         </div>
       </article>
 
       <article class="card">
         <div class="card-top">
           <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
-          <span class="theme">Birth Weight Prediction</span>
+          <span class="theme">Cervical Cancer Imaging</span>
           <span class="score" title="Editor score out of 10">5</span>
         </div>
-        <h2><a href="https://doi.org/10.1590/1516-3180.2025.3373.04052026" target="_blank" rel="noopener noreferrer">Predictive Modeling with Machine Learning for Low Birth Weight in the State of São Paulo: A Retrospective Population-Based Study.</a></h2>
-        <p class="meta">Sao Paulo Med J &middot; Almeida AVA et al. &middot; Jul 24, 2026</p>
-        <p class="why">A retrospective population-based study of 2.55 million live births in São Paulo state used logistic regression and random forest models to predict low birth weight from sociodemographic and prenatal care variables, with the balanced logistic regression model achieving an area under the receiver operating characteristic curve (AUC-ROC) of 0.850. The dataset's scale is a strength for generalizability within this population, but the study lacks external validation and offers no new algorithmic or clinical intervention, limiting its actionability beyond confirming known risk factors.</p>
+        <h2><a href="https://doi.org/10.1016/j.acra.2026.07.022" target="_blank" rel="noopener noreferrer">Multi-Modal Stacking Machine Learning Model for Predicting Lymph Node Metastasis in Cervical Cancer.</a></h2>
+        <p class="meta">Acad Radiol &middot; Yang H et al. &middot; Jul 29, 2026</p>
+        <p class="why">This retrospective study with prospective external validation (n=125) built a stacking ensemble model combining tumor and peritumoral radiomic habitats from multiparametric magnetic resonance imaging (MRI) with clinical variables to predict lymph node metastasis (LNM) in early-stage cervical cancer, achieving area under the curve (AUC) values of 0.915, 0.895, and 0.875 across training, internal, and external cohorts, outperforming single classifiers. The multi-cohort design and formal statistical comparison (DeLong test) add credibility, but the model remains imaging-based diagnostics rather than a practice-changing intervention and needs prospective clinical impact testing.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Using records from over 2.5 million births in a Brazilian state, researchers built simple prediction models to flag babies at risk of being born underweight, based on things like the mother's age, education, and prenatal care, and their best model got it right in a reasonably reliable way about 85 percent of the time on a measure combining true and false positives. The huge sample size is impressive, but the study mostly confirms known risk factors like teen pregnancy and limited prenatal care rather than revealing anything new, and the model was not tested on a separate population.</p>
+          <p>Researchers built a computer model that combines MRI scan patterns with patient data to predict whether cervical cancer has spread to lymph nodes before surgery, testing it on separate groups of patients including one from a different hospital, and it worked better than simpler versions of itself, correctly telling apart cases about 87 to 92 percent of the time depending on the group. This is a solid technical improvement but still needs to be tested in real clinical use to see if it actually changes how doctors treat patients.</p>
         </details>
         
         <div class="terms">
           <details class="term is-new">
-            <summary>Low Birth Weight (LBW)<span class="new">new</span></summary>
-            <p>A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.</p>
+            <summary>Lymph Node Metastasis (LNM)<span class="new">new</span></summary>
+            <p>The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.</p>
           </details>
           <details class="term is-new">
-            <summary>Random Forest<span class="new">new</span></summary>
-            <p>A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.</p>
+            <summary>Multiparametric Magnetic Resonance Imaging (MRI)<span class="new">new</span></summary>
+            <p>An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.</p>
           </details>
           <details class="term is-new">
-            <summary>Area Under the Receiver Operating Characteristic Curve (AUC-ROC)<span class="new">new</span></summary>
-            <p>A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.</p>
+            <summary>Area Under the Curve (AUC)<span class="new">new</span></summary>
+            <p>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</p>
+          </details>
+          <details class="term is-new">
+            <summary>External Validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>DeLong Test<span class="new">new</span></summary>
+            <p>A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
+          <span class="theme">Cervical Screening Efficiency</span>
+          <span class="score" title="Editor score out of 10">5</span>
+        </div>
+        <h2><a href="https://doi.org/10.1136/bmjopen-2025-113298" target="_blank" rel="noopener noreferrer">Improving Laboratory Workforce Efficiency Using AI-Assisted Digital Cytology Within an HPV-Based Cervical Screening Programme: A Model-Based Evaluation for the NHS Cervical Screening Programmes.</a></h2>
+        <p class="meta">BMJ Open &middot; Wilson A et al. &middot; Jul 28, 2026</p>
+        <p class="why">This decision-tree modeling study estimated that AI-assisted digital cytology (Genius) would reduce cervical cytology slide review time from 12.9 to 4.0 minutes per slide in the UK National Health Service (NHS) screening program, translating to a modeled 69% productivity gain across roughly 479,000 slides annually. The analysis is a workforce simulation based on published parameters rather than a prospective trial, so real-world throughput and diagnostic accuracy gains remain to be confirmed, but the scale and policy relevance make it worth noting.</p>
+        <details class="plain">
+          <summary>Explain this simply</summary>
+          <p>Researchers used a computer simulation to estimate how much faster cervical cancer screening could go if labs used an AI tool to help review slides instead of doing it all by hand, and they calculated it could cut the time needed per slide from about 13 minutes to 4 minutes, saving a huge amount of staff time nationally. This is just a projection based on existing data, not a real-world test, so the actual time savings and accuracy still need to be proven in practice.</p>
+        </details>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>Decision-Tree Model<span class="new">new</span></summary>
+            <p>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" style="--chip:#8C1515">AI in OB/GYN and REI</span>
+          <span class="theme">Cervical Cancer Imaging</span>
+          <span class="score" title="Editor score out of 10">5</span>
+        </div>
+        <h2><a href="https://doi.org/10.2174/0115734056449836260717192214" target="_blank" rel="noopener noreferrer">Non-Contrast MRI Radiomics Nomogram for Predicting Recurrence and Progression-Free Survival in Cervical Cancer Following Concurrent Chemoradiotherapy.</a></h2>
+        <p class="meta">Curr Med Imaging &middot; Wang W et al. &middot; Jul 23, 2026</p>
+        <p class="why">This two-center retrospective study built an extreme gradient boosting radiomics nomogram from non-contrast magnetic resonance imaging (MRI) to predict recurrence and progression-free survival (PFS) in 145 cervical cancer patients after concurrent chemoradiotherapy, showing significant risk stratification in both the training cohort (n=114, P&lt;0.001) and an external validation cohort (n=31, P=0.012). The use of external validation and a gadolinium-free approach for resource-limited settings strengthens its practical relevance, though the validation cohort is small.</p>
+        <details class="plain">
+          <summary>Explain this simply</summary>
+          <p>Researchers built an AI tool that reads regular MRI scans, without needing an injected contrast dye, to predict which cervical cancer patients are likely to have their cancer come back after treatment, and it worked in both the group used to build it and a separate test group from another hospital. This matters because it could help identify high-risk patients using cheaper, safer scans, though the outside test group was quite small.</p>
+        </details>
+        
+        <div class="terms">
+          <details class="term is-new">
+            <summary>Non-Contrast MRI<span class="new">new</span></summary>
+            <p>A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Radiomics<span class="new">new</span></summary>
+            <p>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Extreme Gradient Boosting<span class="new">new</span></summary>
+            <p>A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Nomogram<span class="new">new</span></summary>
+            <p>A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.</p>
+          </details>
+          <details class="term is-new">
+            <summary>External Validation<span class="new">new</span></summary>
+            <p>Testing a model on data from a different location or population than it was built with, to see if it still works.</p>
+          </details>
+          <details class="term is-new">
+            <summary>Progression-Free Survival (PFS)<span class="new">new</span></summary>
+            <p>The length of time during and after treatment that a patient lives without their disease getting worse.</p>
           </details>
         </div>
       </article>
@@ -435,10 +473,10 @@
         </div>
         <h2><a href="https://doi.org/10.1177/15305627261471706" target="_blank" rel="noopener noreferrer">Performance of Large Language Model-Based Chatbots in Primary Health Care Teleconsultations: A Comparison Between Human and Artificial Intelligence-Generated Responses.</a></h2>
         <p class="meta">Telemed J E Health &middot; Barros GDM et al. &middot; Jul 25, 2026</p>
-        <p class="why">A blinded, cross-sectional comparison of 180 real human versus large language model (LLM)-generated responses to primary care teleconsultation queries across cardiology, endocrinology, and obstetrics/gynecology found artificial intelligence (AI) scored significantly higher on comprehensibility with no significant differences in medical adequacy or risk potential. This is a real head-to-head evaluation with blinded raters rather than a benchmark exercise, though the sample size per specialty and lack of patient outcome data limit how far it generalizes to real-world safety.</p>
+        <p class="why">This blinded cross-sectional study compared 942 real patient histories from human general practitioners against large language model (LLM)-generated responses in Brazilian telehealth teleconsultations, finding AI outperformed humans on comprehensibility with no significant differences in most other quality measures, including in obstetrics/gynecology (OB-GYN) consultations. The blinded design and reasonably large sample strengthen the evidence, though it is an observational comparison rather than a controlled trial of patient outcomes.</p>
         <details class="plain">
           <summary>Explain this simply</summary>
-          <p>Researchers compared answers given by real doctors versus an AI chatbot to patient questions sent through a telehealth program, and found the AI's answers were easier to understand while being just as medically sound and safe. This is a fairly solid comparison because it used blinded judges, but it still only measured written answer quality, not real patient outcomes.</p>
+          <p>Researchers compared how well an AI chatbot versus real doctors answered patient questions in a Brazilian telehealth program, including in women's health, and found the AI was easier to understand while performing about as well on accuracy and safety. This suggests AI could help with routine medical question-answering, though the study only measured response quality, not actual patient health outcomes.</p>
         </details>
         
         <div class="terms">
@@ -451,31 +489,31 @@
             <p>A study that examines a group of people or responses at a single point in time rather than following them over time.</p>
           </details>
           <details class="term is-new">
-            <summary>Blinded Evaluation<span class="new">new</span></summary>
-            <p>An assessment method where the person judging the results does not know which option came from which source, to avoid bias.</p>
+            <summary>Blinded<span class="new">new</span></summary>
+            <p>A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.</p>
           </details>
         </div>
       </article>
 
   <footer>
     <h3>Past Weeks</h3>
-    <ul class="archive"><li><a href="#" class="current">2026-W31</a> <span>9</span></li></ul>
+    <ul class="archive"><li><a href="#" class="current">2026-W31</a> <span>10</span></li></ul>
 
-    <h3>Glossary (67 terms)</h3>
+    <h3>Glossary (76 terms)</h3>
     <details class="glossary">
       <summary>Every term the digest has explained so far</summary>
-      <dl><dt>AMH<span class="new">new</span></dt><dd>A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.</dd><dt>Area Under the Curve (AUC)<span class="new">new</span></dt><dd>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</dd><dt>Area Under the Receiver Operating Characteristic Curve (AUC-ROC)<span class="new">new</span></dt><dd>A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.</dd><dt>AUC<span class="new">new</span></dt><dd>A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.</dd><dt>AUC-ROC<span class="new">new</span></dt><dd>A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.</dd><dt>Blinded Evaluation<span class="new">new</span></dt><dd>An assessment method where the person judging the results does not know which option came from which source, to avoid bias.</dd><dt>Brier Score<span class="new">new</span></dt><dd>A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.</dd><dt>Calibration<span class="new">new</span></dt><dd>How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.</dd><dt>Clinical High Risk for Psychosis<span class="new">new</span></dt><dd>A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.</dd><dt>Clinical High Risk for Psychosis (CHR-P)<span class="new">new</span></dt><dd>A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.</dd><dt>Clinician Decision Support System (CDSS)<span class="new">new</span></dt><dd>Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.</dd><dt>Confabulation<span class="new">new</span></dt><dd>When an AI model generates information that sounds plausible but is not actually supported by the source material.</dd><dt>Confidence Interval<span class="new">new</span></dt><dd>A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.</dd><dt>Contrastive Learning<span class="new">new</span></dt><dd>A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.</dd><dt>Cross-Sectional Replication<span class="new">new</span></dt><dd>Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.</dd><dt>Cross-Sectional Study<span class="new">new</span></dt><dd>A study that examines a group of people or responses at a single point in time rather than following them over time.</dd><dt>Cytology<span class="new">new</span></dt><dd>The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.</dd><dt>Decision Curve Analysis<span class="new">new</span></dt><dd>A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.</dd><dt>Decision-Tree Model<span class="new">new</span></dt><dd>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</dd><dt>Deep Learning<span class="new">new</span></dt><dd>A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.</dd><dt>DeLong Test<span class="new">new</span></dt><dd>A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.</dd><dt>External Validation<span class="new">new</span></dt><dd>Testing a model on data from a different location or population than it was built with, to see if it still works.</dd><dt>Extreme Gradient Boosting Classifier<span class="new">new</span></dt><dd>A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.</dd><dt>FDA<span class="new">new</span></dt><dd>The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.</dd><dt>Follicular Fluid<span class="new">new</span></dt><dd>The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.</dd><dt>Food and Drug Administration (FDA)<span class="new">new</span></dt><dd>The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.</dd><dt>HDL and LDL<span class="new">new</span></dt><dd>High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.</dd><dt>High-Grade Squamous Intraepithelial Lesion (HSIL)<span class="new">new</span></dt><dd>A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.</dd><dt>HPV-Primary Screening<span class="new">new</span></dt><dd>A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.</dd><dt>HSPG2<span class="new">new</span></dt><dd>Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.</dd><dt>Human Papillomavirus (HPV)<span class="new">new</span></dt><dd>A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.</dd><dt>Inherited Retinal Disease (IRD)<span class="new">new</span></dt><dd>A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.</dd><dt>Inherited Retinal Diseases<span class="new">new</span></dt><dd>A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.</dd><dt>Intraclass Correlation Coefficient<span class="new">new</span></dt><dd>A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.</dd><dt>Intraclass Correlation Coefficient (ICC)<span class="new">new</span></dt><dd>A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.</dd><dt>Kaplan-Meier Analysis<span class="new">new</span></dt><dd>A statistical method used to estimate and compare how long different groups of patients survive over time.</dd><dt>Large Language Model (LLM)<span class="new">new</span></dt><dd>A type of AI trained on large amounts of text that can generate humanlike written responses.</dd><dt>Large Language Models<span class="new">new</span></dt><dd>AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.</dd><dt>Large Language Models (LLMs)<span class="new">new</span></dt><dd>AI systems trained on huge amounts of text that can understand and generate human-like language.</dd><dt>Liquid-Based Cytology<span class="new">new</span></dt><dd>A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.</dd><dt>Liquid-Based Cytology (LBC)<span class="new">new</span></dt><dd>A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.</dd><dt>Longitudinal Study<span class="new">new</span></dt><dd>A study that follows the same people over time to see how something changes.</dd><dt>Low Birth Weight (LBW)<span class="new">new</span></dt><dd>A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.</dd><dt>Machine Learning<span class="new">new</span></dt><dd>A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.</dd><dt>Multiparametric Magnetic Resonance Imaging (MRI)<span class="new">new</span></dt><dd>An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.</dd><dt>Nomogram<span class="new">new</span></dt><dd>A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.</dd><dt>Progression-free Survival<span class="new">new</span></dt><dd>The length of time during and after treatment that a patient lives without their disease getting worse.</dd><dt>Prospective Cohort<span class="new">new</span></dt><dd>A group of participants followed forward in time from the start of a study, rather than looking back at existing records.</dd><dt>Radiomics<span class="new">new</span></dt><dd>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</dd><dt>Random Forest<span class="new">new</span></dt><dd>A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.</dd><dt>Randomized Controlled Trial<span class="new">new</span></dt><dd>A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.</dd><dt>Randomized Controlled Trial (RCT)<span class="new">new</span></dt><dd>A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.</dd><dt>RETFound<span class="new">new</span></dt><dd>A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.</dd><dt>Retrospective<span class="new">new</span></dt><dd>A study design that looks back at existing past data rather than collecting new data as events happen.</dd><dt>Retrospective Database Audit<span class="new">new</span></dt><dd>A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.</dd><dt>Sensitivity<span class="new">new</span></dt><dd>The percentage of true positive cases that a test or model correctly identifies.</dd><dt>sFlt-1/PlGF Ratio<span class="new">new</span></dt><dd>A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.</dd><dt>SHAP<span class="new">new</span></dt><dd>A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.</dd><dt>Shapley Additive exPlanations (SHAP)<span class="new">new</span></dt><dd>A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.</dd><dt>Specificity<span class="new">new</span></dt><dd>The percentage of true negative cases that a test or model correctly identifies as negative.</dd><dt>Stacking Ensemble<span class="new">new</span></dt><dd>A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.</dd><dt>Top-5 Accuracy<span class="new">new</span></dt><dd>A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.</dd><dt>Train-Test Split<span class="new">new</span></dt><dd>A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.</dd><dt>Unified Huntington's Disease Rating Scale<span class="new">new</span></dt><dd>A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.</dd><dt>Unified Huntington's Disease Rating Scale (UHDRS)<span class="new">new</span></dt><dd>A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.</dd><dt>Vision Transformer<span class="new">new</span></dt><dd>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</dd><dt>Wav2vec 2.0<span class="new">new</span></dt><dd>A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.</dd></dl>
+      <dl><dt>AMH<span class="new">new</span></dt><dd>A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.</dd><dt>Area Under the Curve (AUC)<span class="new">new</span></dt><dd>A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.</dd><dt>Area Under the Receiver Operating Characteristic Curve (AUC-ROC)<span class="new">new</span></dt><dd>A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.</dd><dt>AUC<span class="new">new</span></dt><dd>A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.</dd><dt>AUC-ROC<span class="new">new</span></dt><dd>A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.</dd><dt>Blinded<span class="new">new</span></dt><dd>A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.</dd><dt>Blinded Evaluation<span class="new">new</span></dt><dd>An assessment method where the person judging the results does not know which option came from which source, to avoid bias.</dd><dt>Brier Score<span class="new">new</span></dt><dd>A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.</dd><dt>Calibration<span class="new">new</span></dt><dd>How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.</dd><dt>Clinical High Risk for Psychosis<span class="new">new</span></dt><dd>A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.</dd><dt>Clinical High Risk for Psychosis (CHR-P)<span class="new">new</span></dt><dd>A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.</dd><dt>Clinician Decision Support System (CDSS)<span class="new">new</span></dt><dd>Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.</dd><dt>Confabulation<span class="new">new</span></dt><dd>When an AI model generates information that sounds plausible but is not actually supported by the source material.</dd><dt>Confidence Interval<span class="new">new</span></dt><dd>A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.</dd><dt>Contrastive Learning<span class="new">new</span></dt><dd>A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.</dd><dt>Cross-Sectional Replication<span class="new">new</span></dt><dd>Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.</dd><dt>Cross-Sectional Study<span class="new">new</span></dt><dd>A study that examines a group of people or responses at a single point in time rather than following them over time.</dd><dt>Cytology<span class="new">new</span></dt><dd>The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.</dd><dt>Decision Curve Analysis<span class="new">new</span></dt><dd>A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.</dd><dt>Decision-Tree Model<span class="new">new</span></dt><dd>A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.</dd><dt>Deep Learning<span class="new">new</span></dt><dd>A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.</dd><dt>DeLong Test<span class="new">new</span></dt><dd>A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.</dd><dt>External Validation<span class="new">new</span></dt><dd>Testing a model on data from a different location or population than it was built with, to see if it still works.</dd><dt>Extreme Gradient Boosting<span class="new">new</span></dt><dd>A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.</dd><dt>Extreme Gradient Boosting Classifier<span class="new">new</span></dt><dd>A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.</dd><dt>FDA<span class="new">new</span></dt><dd>The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.</dd><dt>Follicular Fluid<span class="new">new</span></dt><dd>The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.</dd><dt>Food and Drug Administration (FDA)<span class="new">new</span></dt><dd>The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.</dd><dt>Gradient-Boosted Tree Model<span class="new">new</span></dt><dd>A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.</dd><dt>HDL and LDL<span class="new">new</span></dt><dd>High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.</dd><dt>High-Grade Squamous Intraepithelial Lesion (HSIL)<span class="new">new</span></dt><dd>A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.</dd><dt>High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)<span class="new">new</span></dt><dd>A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.</dd><dt>HPV-Primary Screening<span class="new">new</span></dt><dd>A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.</dd><dt>HSPG2<span class="new">new</span></dt><dd>Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.</dd><dt>Human Papillomavirus (HPV)<span class="new">new</span></dt><dd>A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.</dd><dt>Inherited Retinal Disease (IRD)<span class="new">new</span></dt><dd>A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.</dd><dt>Inherited Retinal Diseases<span class="new">new</span></dt><dd>A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.</dd><dt>Intraclass Correlation Coefficient<span class="new">new</span></dt><dd>A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.</dd><dt>Intraclass Correlation Coefficient (ICC)<span class="new">new</span></dt><dd>A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.</dd><dt>Kaplan-Meier Analysis<span class="new">new</span></dt><dd>A statistical method used to estimate and compare how long different groups of patients survive over time.</dd><dt>Large Language Model (LLM)<span class="new">new</span></dt><dd>A type of AI trained on large amounts of text that can generate humanlike written responses.</dd><dt>Large Language Models<span class="new">new</span></dt><dd>AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.</dd><dt>Large Language Models (LLMs)<span class="new">new</span></dt><dd>AI systems trained on huge amounts of text that can understand and generate human-like language.</dd><dt>Liquid-Based Cytology<span class="new">new</span></dt><dd>A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.</dd><dt>Liquid-Based Cytology (LBC)<span class="new">new</span></dt><dd>A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.</dd><dt>Longitudinal Study<span class="new">new</span></dt><dd>A study that follows the same people over time to see how something changes.</dd><dt>Low Birth Weight (LBW)<span class="new">new</span></dt><dd>A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.</dd><dt>Lymph Node Metastasis (LNM)<span class="new">new</span></dt><dd>The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.</dd><dt>Machine Learning<span class="new">new</span></dt><dd>A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.</dd><dt>Multiparametric Magnetic Resonance Imaging (MRI)<span class="new">new</span></dt><dd>An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.</dd><dt>Nomogram<span class="new">new</span></dt><dd>A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.</dd><dt>Non-Contrast MRI<span class="new">new</span></dt><dd>A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.</dd><dt>Progression-free Survival<span class="new">new</span></dt><dd>The length of time during and after treatment that a patient lives without their disease getting worse.</dd><dt>Progression-Free Survival (PFS)<span class="new">new</span></dt><dd>The length of time during and after treatment that a patient lives without their disease getting worse.</dd><dt>Prospective Cohort<span class="new">new</span></dt><dd>A group of participants followed forward in time from the start of a study, rather than looking back at existing records.</dd><dt>Prospective Longitudinal Studies<span class="new">new</span></dt><dd>Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.</dd><dt>Radiomics<span class="new">new</span></dt><dd>A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.</dd><dt>Random Forest<span class="new">new</span></dt><dd>A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.</dd><dt>Randomized Controlled Trial<span class="new">new</span></dt><dd>A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.</dd><dt>Randomized Controlled Trial (RCT)<span class="new">new</span></dt><dd>A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.</dd><dt>RETFound<span class="new">new</span></dt><dd>A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.</dd><dt>Retrospective<span class="new">new</span></dt><dd>A study design that looks back at existing past data rather than collecting new data as events happen.</dd><dt>Retrospective Database Audit<span class="new">new</span></dt><dd>A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.</dd><dt>Sensitivity<span class="new">new</span></dt><dd>The percentage of true positive cases that a test or model correctly identifies.</dd><dt>sFlt-1/PlGF<span class="new">new</span></dt><dd>A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.</dd><dt>sFlt-1/PlGF Ratio<span class="new">new</span></dt><dd>A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.</dd><dt>SHAP<span class="new">new</span></dt><dd>A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.</dd><dt>Shapley Additive exPlanations (SHAP)<span class="new">new</span></dt><dd>A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.</dd><dt>Specificity<span class="new">new</span></dt><dd>The percentage of true negative cases that a test or model correctly identifies as negative.</dd><dt>Stacking Ensemble<span class="new">new</span></dt><dd>A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.</dd><dt>Top-5 Accuracy<span class="new">new</span></dt><dd>A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.</dd><dt>Train-Test Split<span class="new">new</span></dt><dd>A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.</dd><dt>Unified Huntington's Disease Rating Scale<span class="new">new</span></dt><dd>A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.</dd><dt>Unified Huntington's Disease Rating Scale (UHDRS)<span class="new">new</span></dt><dd>A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.</dd><dt>Vision Transformer<span class="new">new</span></dt><dd>A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.</dd><dt>Wav2vec 2.0<span class="new">new</span></dt><dd>A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.</dd></dl>
     </details>
 
     <h3>Coverage</h3>
     <ul><li><strong>Clinical AI</strong>: 9 of 9 match(es) retrieved; 9 new after dedup.</li>
 <li><strong>AI in OB/GYN and REI</strong>: 30 of 31 match(es) retrieved, 1 dropped as older than the window; 30 new after dedup.</li>
 <li><strong>FEMTECH and Digital Health</strong>: 18 of 18 match(es) retrieved; 18 new after dedup.</li></ul>
-    
+    <p class="warn">2 item(s) cleared the score floor but were cut to keep the digest short.</p>
     <p class="warn">1 item(s) were refused by a safety classifier and 0 could not be scored. They are missing from this digest, not ranked low.</p>
     
 
-    <p>Query version v4 &middot; generated Jul 30, 2026 &middot; sources: PubMed and public RSS feeds.</p>
+    <p>Query version v4 &middot; generated Jul 31, 2026 &middot; sources: PubMed and public RSS feeds.</p>
   </footer>
 </div>
 </body>

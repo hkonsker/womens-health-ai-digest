@@ -333,5 +333,50 @@
     "term": "Blinded Evaluation",
     "definition": "An assessment method where the person judging the results does not know which option came from which source, to avoid bias.",
     "firstSeen": "2026-W31"
+  },
+  "prospective longitudinal studies": {
+    "term": "Prospective Longitudinal Studies",
+    "definition": "Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.",
+    "firstSeen": "2026-W31"
+  },
+  "high-grade squamous intraepithelial lesions or worse (hsil+)": {
+    "term": "High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)",
+    "definition": "A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.",
+    "firstSeen": "2026-W31"
+  },
+  "gradient-boosted tree model": {
+    "term": "Gradient-Boosted Tree Model",
+    "definition": "A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.",
+    "firstSeen": "2026-W31"
+  },
+  "sflt-1/plgf": {
+    "term": "sFlt-1/PlGF",
+    "definition": "A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.",
+    "firstSeen": "2026-W31"
+  },
+  "lymph node metastasis (lnm)": {
+    "term": "Lymph Node Metastasis (LNM)",
+    "definition": "The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.",
+    "firstSeen": "2026-W31"
+  },
+  "non-contrast mri": {
+    "term": "Non-Contrast MRI",
+    "definition": "A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.",
+    "firstSeen": "2026-W31"
+  },
+  "extreme gradient boosting": {
+    "term": "Extreme Gradient Boosting",
+    "definition": "A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.",
+    "firstSeen": "2026-W31"
+  },
+  "progression-free survival (pfs)": {
+    "term": "Progression-Free Survival (PFS)",
+    "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+    "firstSeen": "2026-W31"
+  },
+  "blinded": {
+    "term": "Blinded",
+    "definition": "A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.",
+    "firstSeen": "2026-W31"
   }
 }
