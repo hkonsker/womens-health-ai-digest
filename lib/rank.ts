@@ -354,6 +354,8 @@ async function rankBatchBisecting(
 const ASSUMED_KNOWN = new Set([
   "AI", "US", "USA", "UK", "EU", "FDA", "NHS", "WHO", "COVID", "DNA", "RNA",
   "MRI", "CT", "ICU", "ER", "IVF", "PCOS", "BMI", "HIV", "GP", "LLM", "LLMs",
+  // A medical reader knows these cold; defining them is noise.
+  "OB", "GYN", "REI", "IUD", "STI", "STD", "CDC", "NIH", "ACOG", "EHR",
 ]);
 
 /**
@@ -382,8 +384,8 @@ export function undefinedAbbreviations(item: RankedItem): string[] {
 
   // Split hyphenated compounds so "AI-assisted" is judged on "AI", and require
   // an all-caps run so mixed-case product names like "Retina4IRD" stay quiet.
-  const found = (item.why.match(/\b[A-Za-z][A-Za-z0-9-]*\b/g) ?? [])
-    .flatMap((t) => t.split("-"))
+  const found = (item.why.match(/\b[A-Za-z][A-Za-z0-9/-]*\b/g) ?? [])
+    .flatMap((t) => t.split(/[-/]/))
     .filter((t) => /^[A-Z0-9]{2,}$/.test(t) && /[A-Z]{2,}/.test(t));
 
   return [...new Set(found)].filter(
