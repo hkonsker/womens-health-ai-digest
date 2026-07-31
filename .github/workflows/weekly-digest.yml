@@ -15,6 +15,10 @@ on:
         description: "Collect and rank, but write nothing and send nothing"
         type: boolean
         default: false
+      resend:
+        description: "Re-send the stored digest without re-collecting or re-ranking (free)"
+        type: boolean
+        default: false
 
 # Needed so the job can commit the digest and the rendered pages back.
 permissions:
@@ -56,6 +60,7 @@ jobs:
           FLAGS=""
           if [ "${{ inputs.force }}" = "true" ]; then FLAGS="$FLAGS --force"; fi
           if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+          if [ "${{ inputs.resend }}" = "true" ]; then FLAGS="$FLAGS --resend"; fi
           npm run digest -- $FLAGS
 
       - name: Commit digest and pages
