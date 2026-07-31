@@ -13,7 +13,7 @@ you the digest.
 There is no database, no server, and nothing to keep awake.
 
 ```
-Sunday 13:00 UTC (6am Pacific)
+Sunday 14:00 UTC (7am Pacific in summer, 6am in winter)
   → PubMed (2 queries) + RSS (6 feeds)
   → dedup against every item ever seen
   → Claude scores 0-10, writes the summary at two levels, and defines the jargon
