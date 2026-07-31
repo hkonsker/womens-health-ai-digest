@@ -144,7 +144,7 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
   const coverage = run.stats.perBeat
     .map(
       (b) =>
-        `<li><strong>${esc(b.label)}</strong>: ${b.retrieved} of ${b.totalMatches} match(es) retrieved${
+        `<li><strong>${esc(BEATS[b.beat]?.label ?? b.label)}</strong>: ${b.retrieved} of ${b.totalMatches} match(es) retrieved${
           b.truncated ? `, <span class="warn">capped, ${b.totalMatches - b.retrieved} not seen</span>` : ""
         }${
           b.staleDropped ? `, ${b.staleDropped} dropped as older than the window` : ""
@@ -424,7 +424,7 @@ export function renderEmail(run: DigestRun, archiveUrl: string | null): string {
   if (capped.length) {
     notes.push(
       `Capped before ranking: ${capped
-        .map((b) => `${esc(b.label)} (${b.totalMatches - b.retrieved} not seen)`)
+        .map((b) => `${esc(BEATS[b.beat]?.label ?? b.label)} (${b.totalMatches - b.retrieved} not seen)`)
         .join(", ")}.`,
     );
   }

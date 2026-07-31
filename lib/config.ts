@@ -46,13 +46,13 @@ export const BEATS: Record<BeatId, Beat> = {
   },
   "repro-ai": {
     id: "repro-ai",
-    label: "AI in Ob/Gyn and REI",
+    label: "AI in OB/GYN and REI",
     intent:
       "AI applied to women's reproductive and obstetric health: infertility and IVF, embryo and oocyte selection, obstetric risk prediction, gynecologic imaging and screening.",
   },
   industry: {
     id: "industry",
-    label: "Femtech and Digital Health",
+    label: "FEMTECH and Digital Health",
     intent:
       "Industry movement in women's health and digital health: product launches, funding, partnerships, regulatory clearances, and company news.",
   },
