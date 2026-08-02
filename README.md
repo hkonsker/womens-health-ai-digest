@@ -13,7 +13,7 @@ you the digest.
 There is no database, no server, and nothing to keep awake.
 
 ```
-Sunday 14:00 UTC (7am Pacific in summer, 6am in winter)
+Sunday 14:17 UTC (7am Pacific in summer, 6am in winter), plus a 19:17 catch-up
   → PubMed (2 queries) + RSS (6 feeds)
   → dedup against every item ever seen
   → Claude scores 0-10, writes the summary at two levels, and defines the jargon
@@ -144,6 +144,11 @@ candidates get ranked. To cut it further, lower `MAX_CANDIDATES_PER_BEAT` or set
 **Dedup is global, not per week.** An item is remembered in `data/seen.json` the first
 time it is *considered*, not the first time it is published. A paper never appears in two
 digests, and a low scorer does not get re-ranked every week.
+
+**The schedule is best effort, so there are two of them.** GitHub delays or drops
+scheduled runs under load, worst at the top of the hour, so the digest fires at :17 and
+again five hours later. The second run is a no-op when the first worked, because the job
+exits as soon as it sees the week already has a digest.
 
 **External calls retry.** PubMed requests back off and retry on 429 and 5xx, honoring
 `Retry-After` when NCBI sends it. Feed failures never kill a run; they get reported in the

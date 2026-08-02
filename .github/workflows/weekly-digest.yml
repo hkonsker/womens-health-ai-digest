@@ -1,10 +1,18 @@
 name: Weekly Digest
 
 on:
-  # Sundays at 14:00 UTC. GitHub cron only speaks UTC, so the local time moves
-  # with daylight saving: 7am Pacific in summer, 6am once PST starts.
+  # GitHub cron only speaks UTC, so the local time moves with daylight saving:
+  # 7am Pacific in summer, 6am once PST starts.
+  #
+  # Deliberately at :17 rather than :00. GitHub documents that scheduled runs
+  # are delayed under load and that the top of every hour is the worst
+  # contention, which is exactly where the first Sunday run was dropped.
   schedule:
-    - cron: "0 14 * * 0"
+    - cron: "17 14 * * 0"
+    # Catch-up, five hours later. Costs nothing when the first run worked,
+    # because the job exits early once the week's digest already exists. This
+    # is the safety net for a dropped or badly delayed schedule.
+    - cron: "17 19 * * 0"
   # Lets you run it by hand from the Actions tab.
   workflow_dispatch:
     inputs:
