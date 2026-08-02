@@ -378,5 +378,125 @@
     "term": "Blinded",
     "definition": "A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.",
     "firstSeen": "2026-W31"
+  },
+  "foundation model": {
+    "term": "Foundation Model",
+    "definition": "A large AI model trained on huge amounts of data that can be adapted to many different tasks, rather than being built for just one job.",
+    "firstSeen": "2026-W31"
+  },
+  "whole-slide images": {
+    "term": "Whole-Slide Images",
+    "definition": "Very high resolution digital scans of entire microscope slides used to examine tissue samples.",
+    "firstSeen": "2026-W31"
+  },
+  "balanced accuracy": {
+    "term": "Balanced Accuracy",
+    "definition": "A way of measuring how correct a model is that gives equal weight to its performance on both positive and negative cases, useful when one outcome is much rarer than the other.",
+    "firstSeen": "2026-W31"
+  },
+  "multicenter retrospective evaluation": {
+    "term": "Multicenter Retrospective Evaluation",
+    "definition": "A study that analyzes previously collected data from multiple hospitals or sites, rather than following new patients forward in time.",
+    "firstSeen": "2026-W31"
+  },
+  "class-imbalance correction": {
+    "term": "Class-Imbalance Correction",
+    "definition": "Techniques used when one outcome (like a rare disease) is much less common than another in a dataset, aimed at helping a model learn to detect the rare outcome.",
+    "firstSeen": "2026-W31"
+  },
+  "synthetic minority oversampling technique (smote)": {
+    "term": "Synthetic Minority Oversampling Technique (SMOTE)",
+    "definition": "A method that creates artificial extra examples of a rare outcome in a dataset so a model sees more of them during training.",
+    "firstSeen": "2026-W31"
+  },
+  "area under the receiver operating characteristic curve (roc-auc)": {
+    "term": "Area Under the Receiver Operating Characteristic Curve (ROC-AUC)",
+    "definition": "A number from 0 to 1 that measures how well a model can tell apart two groups, such as patients who will versus won't develop a condition, with 1 being perfect and 0.5 being no better than chance.",
+    "firstSeen": "2026-W31"
+  },
+  "precision-recall area under the curve (pr-auc)": {
+    "term": "Precision-Recall Area Under the Curve (PR-AUC)",
+    "definition": "A performance measure similar to ROC-AUC but more sensitive to how well a model finds rare positive cases specifically.",
+    "firstSeen": "2026-W31"
+  },
+  "temporal external validation": {
+    "term": "Temporal External Validation",
+    "definition": "Testing a model on data collected in a later time period than the data used to build it, to check that the model still works as circumstances or patient populations change over time.",
+    "firstSeen": "2026-W31"
+  },
+  "area under the receiver operating characteristic curve (auc)": {
+    "term": "Area Under the Receiver Operating Characteristic Curve (AUC)",
+    "definition": "A number between 0.5 and 1 that measures how well a model distinguishes between people who will and will not have an outcome, where 1 is perfect and 0.5 is no better than chance.",
+    "firstSeen": "2026-W31"
+  },
+  "gradient-boosted tree": {
+    "term": "Gradient-Boosted Tree",
+    "definition": "A machine learning method that builds a sequence of simple decision rules, each correcting errors of the previous ones, to make accurate predictions.",
+    "firstSeen": "2026-W31"
+  },
+  "transformer-based model": {
+    "term": "Transformer-Based Model",
+    "definition": "A type of AI architecture, originally developed for language processing, that can also be applied to other kinds of structured data to find complex patterns.",
+    "firstSeen": "2026-W31"
+  },
+  "holdout set": {
+    "term": "Holdout Set",
+    "definition": "A portion of data set aside and not used during model training, so it can be used afterward to test how well the model performs on new cases.",
+    "firstSeen": "2026-W31"
+  },
+  "tabnet": {
+    "term": "TabNet",
+    "definition": "A type of deep learning model designed specifically to work with tabular data, like spreadsheets of patient information, while also explaining which factors influenced its predictions.",
+    "firstSeen": "2026-W31"
+  },
+  "physician-in-the-loop (pitl)": {
+    "term": "Physician-In-The-Loop (PITL)",
+    "definition": "Physician-in-the-loop (PITL), a validation approach where doctors actively review and judge an AI system's outputs as part of testing it, rather than the AI being evaluated purely by statistics.",
+    "firstSeen": "2026-W31"
+  },
+  "lime": {
+    "term": "LIME",
+    "definition": "Local Interpretable Model-agnostic Explanations (LIME), a technique that explains an individual AI prediction by approximating the model's behavior with a simpler, interpretable one nearby.",
+    "firstSeen": "2026-W31"
+  },
+  "unsupervised machine learning (k-means clustering)": {
+    "term": "Unsupervised Machine Learning (k-Means Clustering)",
+    "definition": "A computer method that groups data points into clusters based on similarity, without being told the correct answer in advance.",
+    "firstSeen": "2026-W31"
+  },
+  "adjusted hazard ratio (ahr)": {
+    "term": "Adjusted Hazard Ratio (aHR)",
+    "definition": "A measure comparing the risk of an event over time between two groups, adjusted for other factors, where a value above 1 means higher risk.",
+    "firstSeen": "2026-W31"
+  },
+  "preeclampsia": {
+    "term": "Preeclampsia",
+    "definition": "A pregnancy complication involving high blood pressure and organ damage that can be dangerous for both mother and baby.",
+    "firstSeen": "2026-W31"
+  },
+  "prospective cohort study": {
+    "term": "Prospective Cohort Study",
+    "definition": "A study that enrolls participants and follows them forward in time to observe who develops an outcome of interest.",
+    "firstSeen": "2026-W31"
+  },
+  "provider documentation summarization quality instrument (pdsqi-9)": {
+    "term": "Provider Documentation Summarization Quality Instrument (PDSQI-9)",
+    "definition": "A nine-item rating scale used to judge the quality of a clinical documentation summary across dimensions like accuracy, organization, and usefulness.",
+    "firstSeen": "2026-W31"
+  },
+  "mixed-methods": {
+    "term": "Mixed-Methods",
+    "definition": "A research approach that combines numerical data, such as survey scores, with descriptive information, such as interview or open-ended feedback.",
+    "firstSeen": "2026-W31"
+  },
+  "retrospective study with external validation": {
+    "term": "Retrospective Study With External Validation",
+    "definition": "A study that looks back at existing patient records, but importantly tests its findings on a separate group of patients not used to build the model.",
+    "firstSeen": "2026-W31"
+  },
+  "stacking ensemble machine learning model": {
+    "term": "Stacking Ensemble Machine Learning Model",
+    "definition": "An AI approach that combines predictions from several different models into one final, hopefully more accurate, prediction.",
+    "firstSeen": "2026-W31"
   }
 }
