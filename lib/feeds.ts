@@ -14,6 +14,15 @@ import { FEEDS, FEED_RELEVANCE, type FeedSource } from "./config.js";
 import type { Candidate } from "./types.js";
 
 const FETCH_TIMEOUT_MS = 15_000;
+
+/**
+ * Feeds get retried, for the same reason PubMed calls do: a transient network
+ * blip should not silently cost a whole beat for the week. FemTech Insider
+ * threw a bare "fetch failed" on 2026-08-02, was reachable minutes later, and
+ * because it is the only feed that reliably carries this beat, the digest kept
+ * zero industry items that week.
+ */
+const MAX_ATTEMPTS = 3;
 const USER_AGENT =
   "womens-health-ai-digest/1.0 (personal weekly digest; +https://github.com/)";
 
@@ -100,21 +109,49 @@ function parseDate(item: Record<string, unknown>): string | null {
   return isNaN(d.getTime()) ? null : d.toISOString();
 }
 
-async function fetchOne(feed: FeedSource, sinceMs: number): Promise<Candidate[]> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-
-  let xml: string;
-  try {
-    const res = await fetch(feed.url, {
-      signal: controller.signal,
-      headers: { "User-Agent": USER_AGENT, Accept: "application/rss+xml, application/xml, text/xml, */*" },
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-    xml = await res.text();
-  } finally {
-    clearTimeout(timer);
+/** A 403 or 404 will not fix itself, so only retry transport errors and 5xx. */
+function worthRetrying(err: unknown): boolean {
+  if (err instanceof Error && /^HTTP (4\d\d)/.test(err.message)) {
+    return /^HTTP (408|429)/.test(err.message);
   }
+  return true;
+}
+
+async function fetchFeedXml(feed: FeedSource): Promise<string> {
+  let last: unknown;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    try {
+      const res = await fetch(feed.url, {
+        signal: controller.signal,
+        headers: {
+          "User-Agent": USER_AGENT,
+          Accept: "application/rss+xml, application/xml, text/xml, */*",
+        },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      return await res.text();
+    } catch (err) {
+      last = err;
+      if (attempt === MAX_ATTEMPTS || !worthRetrying(err)) break;
+      const backoff = 1000 * 2 ** (attempt - 1) + Math.random() * 400;
+      console.warn(
+        `  ! ${feed.name} failed (${err instanceof Error ? err.message : String(err)}), ` +
+          `retrying in ${Math.round(backoff / 1000)}s`,
+      );
+      await new Promise((r) => setTimeout(r, backoff));
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  throw last instanceof Error ? last : new Error(String(last));
+}
+
+async function fetchOne(feed: FeedSource, sinceMs: number): Promise<Candidate[]> {
+  const xml = await fetchFeedXml(feed);
 
   const parser = new XMLParser({
     ignoreAttributes: false,
