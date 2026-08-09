@@ -3,8 +3,8 @@
 A weekly digest of three beats:
 
 1. **Clinical AI** — substantial clinical AI research, from a fixed allowlist of top journals.
-2. **AI in Ob/Gyn and REI** — AI applied to reproductive and obstetric health.
-3. **Femtech and Digital Health** — industry news, funding, and clearances.
+2. **AI in OB/GYN and REI** — AI applied to reproductive and obstetric health.
+3. **FEMTECH and Digital Health** — industry news, funding, and clearances.
 
 Every Sunday morning a GitHub Action queries PubMed and a set of RSS feeds, has Claude
 score and summarize what it found, writes the result to a styled archive page, and emails
@@ -21,6 +21,36 @@ Sunday 14:17 UTC (7am Pacific in summer, 6am in winter), plus a 19:17 catch-up
   → docs/index.html + email via Resend
   → commit state back to the repo
 ```
+
+## Forking this for yourself
+
+Run this first, before anything else:
+
+```bash
+npm install
+npm run reset
+```
+
+`npm run reset` clears the previous owner's accumulated state. It matters more than it
+looks: `data/seen.json` is a permanent record of every item the digest has ever
+considered, and it is committed to the repo so the weekly schedule has somewhere to
+remember things. A fork inherits it, so without resetting, your first digest silently
+skips everything the original owner already saw and comes back nearly empty. Add
+`--keep-glossary` if you want to inherit the term definitions, which are generic and
+cost real money to regenerate.
+
+Then make it yours. There are exactly four places worth editing:
+
+| What | Where | Why |
+|---|---|---|
+| **Who is reading** | `READER_PROFILE` in [`lib/rank.ts`](lib/rank.ts) | The single highest-leverage knob. Everything the ranker decides flows from these few paragraphs. Edit this before you touch a query. |
+| **What gets collected** | `QUERY_*` and `FEEDS` in [`lib/config.ts`](lib/config.ts) | The beats themselves. Bump `QUERY_VERSION` when you change them. |
+| **Beat names** | `BEATS` in [`lib/config.ts`](lib/config.ts) | The chip labels. |
+| **Colours** | the palette constants in [`lib/render.ts`](lib/render.ts) | Currently the Stanford identity set. |
+
+The three beats here are one person's interests. The machinery underneath, two PubMed
+queries built on opposite principles, an LLM ranking pass, an accumulating glossary, and
+a committed-JSON store instead of a database, is not specific to any subject.
 
 ## Setup
 
