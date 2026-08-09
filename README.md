@@ -60,6 +60,12 @@ The three beats here are one person's interests. The machinery underneath, two P
 queries built on opposite principles, an LLM ranking pass, an accumulating glossary, and
 a committed-JSON store instead of a database, is not specific to any subject.
 
+## Requirements
+
+Node 20 or newer, because the code uses the built-in `fetch`. The workflow runs Node 22.
+Everything else is installed by `npm install`. You do not need a server, a database, or
+anything running on your own machine.
+
 ## Setup
 
 **1. Get your own copy.** Click **Use this template** at the top of the repo, which gives
@@ -78,6 +84,12 @@ it and run `npm install && npm run reset`.
 Under the **Variables** tab (not Secrets), optionally add `DIGEST_SITE_URL` so the email
 links to your archive.
 
+**Keys never go in the repo.** They live in GitHub Secrets, which are encrypted, are not
+readable by anyone who clones the repo, and are not exposed to workflows triggered from
+forks. Locally they go in `.env`, which is gitignored. Note that on a public repo the
+Actions logs are public too, so if you add code of your own, do not print a URL that
+carries a key as a query parameter, which is how the NCBI key would be the one at risk.
+
 `NCBI_API_KEY` reads as optional and is not. NCBI rate-limits by IP at 3 requests per
 second, and GitHub's runners are shared IPs already carrying other people's traffic, so a
 keyless run competes for a budget it does not control and eventually gets a 429. The key
@@ -85,8 +97,8 @@ is free and gives you a private 10 req/s bucket. Runs from your laptop are fine 
 one, which is exactly why this is easy to miss.
 
 **3. Turn on the archive page.** Settings → Pages → Source: *Deploy from a branch*,
-branch `main`, folder `/docs`. GitHub Pages on a private repo needs a paid plan;
-Stanford's GitHub Education Pro covers it. If you skip this step everything still works,
+branch `main`, folder `/docs`. Free on a public repo. On a private repo it needs a paid
+plan, which GitHub Education covers if you have it. Skipping this step breaks nothing;
 the email just has no archive link.
 
 **4. Run it once by hand.** Actions → Weekly Digest → Run workflow. Then read the log.
