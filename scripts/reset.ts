@@ -61,7 +61,7 @@ async function main(): Promise<void> {
     const answer = await rl.question("Type 'reset' to confirm: ");
     rl.close();
     if (answer.trim().toLowerCase() !== "reset") {
-      console.log("Cancelled. Nothing changed.");
+      console.log("Canceled. Nothing changed.");
       return;
     }
   }

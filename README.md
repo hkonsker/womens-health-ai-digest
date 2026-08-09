@@ -1,7 +1,7 @@
 # Women's Health and AI Weekly
 
 A self-hosted weekly research digest. It reads PubMed and a set of RSS feeds, has Claude
-score and summarise what it found at two reading levels, defines the jargon, and emails
+score and summarize what it found at two reading levels, defines the jargon, and emails
 you the result. It runs on a GitHub Actions schedule, so nothing needs to be installed or
 left running.
 
@@ -54,7 +54,7 @@ Then make it yours. There are exactly four places worth editing:
 | **Who is reading** | `READER_PROFILE` in [`lib/rank.ts`](lib/rank.ts) | The single highest-leverage knob. Everything the ranker decides flows from these few paragraphs. Edit this before you touch a query. |
 | **What gets collected** | `QUERY_*` and `FEEDS` in [`lib/config.ts`](lib/config.ts) | The beats themselves. Bump `QUERY_VERSION` when you change them. |
 | **Beat names** | `BEATS` in [`lib/config.ts`](lib/config.ts) | The chip labels. |
-| **Colours** | the palette constants in [`lib/render.ts`](lib/render.ts) | Currently the Stanford identity set. |
+| **Colors** | the palette constants in [`lib/render.ts`](lib/render.ts) | Currently the Stanford identity set. |
 
 The three beats here are one person's interests. The machinery underneath, two PubMed
 queries built on opposite principles, an LLM ranking pass, an accumulating glossary, and
@@ -137,7 +137,7 @@ Almost everything you would want to change is in [`lib/config.ts`](lib/config.ts
 | `MIN_SCORE` | The floor. Default 5. Raise it if the digest feels padded. |
 | `QUERY_VERSION` | **Bump this whenever you change a query or the feed list.** |
 
-Every item is summarised twice from the same facts. `why` is two sentences for someone
+Every item is summarized twice from the same facts. `why` is two sentences for someone
 who works in the field, naming the design, the metric, and the numbers. `plain` is the
 same two sentences with the jargon removed, for a college-level reader with no background.
 
@@ -214,7 +214,7 @@ produced a given week.
 a week this does everything a database would, and there is no free-tier Postgres to keep
 from going to sleep.
 
-## Licence
+## License
 
 MIT. See [LICENSE](LICENSE).
 

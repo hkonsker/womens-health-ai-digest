@@ -35,7 +35,7 @@ const TITLE_SMALL = new Set([
  * Title Case a paper title. PubMed stores titles in sentence case.
  *
  * Any hyphen-part that already contains a capital is left alone, so AI, IRD,
- * MRI and mRNA survive, while the rest of a compound is still capitalised:
+ * MRI and mRNA survive, while the rest of a compound is still capitalized:
  * "AI-based" becomes "AI-Based", not "Ai-Based" and not "AI-based".
  */
 export function titleCase(raw: string): string {
@@ -350,7 +350,7 @@ export function renderPage(run: DigestRun, archive: Array<{ weekLabel: string; c
 // ─── Email ────────────────────────────────────────────────────────────────────
 
 /**
- * Email has no tappable chips, so terms go in a labelled block under the
+ * Email has no tappable chips, so terms go in a labeled block under the
  * summary: one per line, term bolded, blank line between entries.
  *
  * An earlier version spliced definitions into the prose in parentheses and

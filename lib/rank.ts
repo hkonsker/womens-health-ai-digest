@@ -106,7 +106,10 @@ accuracy". Never assume an abbreviation is known. Same facts, no jargon, and no
 loss of the actual finding.
 
 Neither version uses hype, marketing language, or an em-dash. Use a colon,
-comma, or period instead.
+comma, or period instead. Write in American English: summarize, capitalize,
+analyze, modeling, labeled, not the British spellings. Much of the source
+literature is British, so match the digest rather than the abstract you are
+reading from.
 
 For "glossary": list every term in "why", the technical version, that an
 educated reader outside this field could not confidently define. Cover medicine,
@@ -117,7 +120,7 @@ matters, using no jargon of its own. Define the general concept rather than this
 study's specific use of it, because these definitions are reused across future
 weeks. When a term has both a full name and an abbreviation, use the full name
 as the term, so that "intraclass correlation coefficient" and "ICC" do not
-become two separate entries. Write the term in Title Case, capitalising each
+become two separate entries. Write the term in Title Case, capitalizing each
 important word, but leave acronyms and cased names exactly as they are
 conventionally written: AUC, sFlt-1/PlGF, mRNA.
 

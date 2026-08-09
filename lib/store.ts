@@ -79,7 +79,7 @@ const SMALL_WORDS = new Set([
  *
  * Any word that already contains a capital is left exactly alone. That is the
  * load-bearing rule: acronyms (AUC, AMH, SHAP) and cased biomarkers such as
- * sFlt-1/PlGF are meaningful as written, and blindly capitalising them would
+ * sFlt-1/PlGF are meaningful as written, and blindly capitalizing them would
  * produce Sflt-1/Plgf, which is not a real thing.
  */
 export function titleCaseTerm(raw: string): string {
@@ -90,7 +90,7 @@ export function titleCaseTerm(raw: string): string {
       const bare = word.replace(/[^a-z]/g, "");
       const isEdge = i === 0 || i === words.length - 1;
       if (!isEdge && SMALL_WORDS.has(bare)) return word;
-      // Capitalise after a hyphen or slash too: decision-tree -> Decision-Tree
+      // Capitalize after a hyphen or slash too: decision-tree -> Decision-Tree
       return word.replace(/(^|[-/])([a-z])/g, (_, sep, ch) => sep + ch.toUpperCase());
     })
     .join(" ");
