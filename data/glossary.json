@@ -498,5 +498,155 @@
     "term": "Stacking Ensemble Machine Learning Model",
     "definition": "An AI approach that combines predictions from several different models into one final, hopefully more accurate, prediction.",
     "firstSeen": "2026-W31"
+  },
+  "spatial proteomics": {
+    "term": "Spatial Proteomics",
+    "definition": "A technology that maps where different proteins are located within tissue, preserving the spatial arrangement of cells.",
+    "firstSeen": "2026-W32"
+  },
+  "zero-shot annotation": {
+    "term": "Zero-shot Annotation",
+    "definition": "The ability of an AI model to correctly label or classify new data it was never specifically trained on.",
+    "firstSeen": "2026-W32"
+  },
+  "pd-l1": {
+    "term": "PD-L1",
+    "definition": "A protein on cells that can suppress the immune system, and a common target of cancer immunotherapy drugs.",
+    "firstSeen": "2026-W32"
+  },
+  "disease-free survival": {
+    "term": "Disease-free Survival",
+    "definition": "The length of time after treatment that a patient survives without their disease coming back.",
+    "firstSeen": "2026-W32"
+  },
+  "explainable ai (xai)": {
+    "term": "Explainable AI (XAI)",
+    "definition": "Techniques that try to make AI decision-making understandable to humans, such as showing which features led to a diagnosis.",
+    "firstSeen": "2026-W32"
+  },
+  "primary care physicians (pcps)": {
+    "term": "Primary Care Physicians (PCPs)",
+    "definition": "Doctors who provide general, first-contact medical care rather than specialized care.",
+    "firstSeen": "2026-W32"
+  },
+  "automation bias": {
+    "term": "Automation Bias",
+    "definition": "The tendency for people to over-trust an automated system's output, even when it may be wrong.",
+    "firstSeen": "2026-W32"
+  },
+  "anchoring bias": {
+    "term": "Anchoring Bias",
+    "definition": "The tendency for an initial piece of information, like a first guess, to unduly influence a person's final judgment.",
+    "firstSeen": "2026-W32"
+  },
+  "membership inference attacks (mias)": {
+    "term": "Membership Inference Attacks (MIAs)",
+    "definition": "A method attackers use to determine whether a specific person's data was used to train an AI model, which can reveal private information.",
+    "firstSeen": "2026-W32"
+  },
+  "aggregate privacy metrics": {
+    "term": "Aggregate Privacy Metrics",
+    "definition": "Measures of privacy risk calculated across an entire dataset rather than for each individual person.",
+    "firstSeen": "2026-W32"
+  },
+  "doubly debiased machine learning": {
+    "term": "Doubly Debiased Machine Learning",
+    "definition": "An advanced statistical technique that uses machine learning to estimate causal effects while reducing bias from imperfect models, making the results more reliable than simpler methods.",
+    "firstSeen": "2026-W32"
+  },
+  "transportability": {
+    "term": "Transportability",
+    "definition": "The idea of applying a result found in one study population to predict what would happen in a different population, and testing whether that transfer actually works.",
+    "firstSeen": "2026-W32"
+  },
+  "risk difference": {
+    "term": "Risk Difference",
+    "definition": "The absolute difference in the chance of an outcome between two groups, for example the percentage point gap in preterm birth rates between treated and untreated women.",
+    "firstSeen": "2026-W32"
+  },
+  "effect measure modifiers": {
+    "term": "Effect Measure Modifiers",
+    "definition": "Factors that change how strong or weak a treatment's effect is in different subgroups of people.",
+    "firstSeen": "2026-W32"
+  },
+  "injury severity score (iss)": {
+    "term": "Injury Severity Score (ISS)",
+    "definition": "A standard method doctors use to rate how severe a patient's injuries are, based on hospital imaging and exams.",
+    "firstSeen": "2026-W32"
+  },
+  "nested case-control study": {
+    "term": "Nested Case-Control Study",
+    "definition": "A study design where cases of a disease are compared to matched controls drawn from within a larger group being followed over time.",
+    "firstSeen": "2026-W32"
+  },
+  "generalized linear model": {
+    "term": "Generalized Linear Model",
+    "definition": "A statistical model that predicts an outcome based on a combination of input variables, extending ordinary regression to different types of data.",
+    "firstSeen": "2026-W32"
+  },
+  "model-blinded": {
+    "term": "Model-Blinded",
+    "definition": "A study design where the people rating the outputs do not know which AI system produced each answer, reducing bias in judging quality.",
+    "firstSeen": "2026-W32"
+  },
+  "generalized estimating equations": {
+    "term": "Generalized Estimating Equations",
+    "definition": "A statistical technique used to analyze data where the same subjects or scenarios are measured multiple times, accounting for those repeated measurements.",
+    "firstSeen": "2026-W32"
+  },
+  "machine learning (ml)": {
+    "term": "Machine Learning (ML)",
+    "definition": "A branch of AI in which computer models learn patterns from data rather than being explicitly programmed with rules.",
+    "firstSeen": "2026-W32"
+  },
+  "assisted reproductive technology (art)": {
+    "term": "Assisted Reproductive Technology (ART)",
+    "definition": "Medical procedures used to help people conceive, such as in vitro fertilization.",
+    "firstSeen": "2026-W32"
+  },
+  "diagnostic odds ratio": {
+    "term": "Diagnostic Odds Ratio",
+    "definition": "A single number combining sensitivity and specificity that summarizes how well a test distinguishes between people with and without a condition, where higher values mean better discrimination.",
+    "firstSeen": "2026-W32"
+  },
+  "heterogeneity": {
+    "term": "Heterogeneity",
+    "definition": "A statistical measure of how much results vary across different studies being combined, where high heterogeneity means the studies do not agree well with each other.",
+    "firstSeen": "2026-W32"
+  },
+  "preimplantation genetic testing for aneuploidy (pgt-a)": {
+    "term": "Preimplantation Genetic Testing for Aneuploidy (PGT-A)",
+    "definition": "A lab test performed on embryos before transfer that checks whether they have the normal number of chromosomes.",
+    "firstSeen": "2026-W32"
+  },
+  "blastocyst": {
+    "term": "Blastocyst",
+    "definition": "An early-stage embryo, several days after fertilization, that is ready for genetic testing or transfer to the uterus.",
+    "firstSeen": "2026-W32"
+  },
+  "euploid": {
+    "term": "Euploid",
+    "definition": "Having the normal, correct number of chromosomes, generally considered healthier for embryo development.",
+    "firstSeen": "2026-W32"
+  },
+  "aneuploid": {
+    "term": "Aneuploid",
+    "definition": "Having an abnormal number of chromosomes, which often prevents an embryo from developing successfully.",
+    "firstSeen": "2026-W32"
+  },
+  "morphodynamic": {
+    "term": "Morphodynamic",
+    "definition": "Relating to how an embryo's shape and structure change over time, as observed through continuous time-lapse imaging.",
+    "firstSeen": "2026-W32"
+  },
+  "retrieval-augmented generation (rag)": {
+    "term": "Retrieval-Augmented Generation (RAG)",
+    "definition": "A method where an AI language model first looks up relevant documents or data before writing its answer, aiming to make responses more accurate and grounded.",
+    "firstSeen": "2026-W32"
+  },
+  "inter-rater agreement": {
+    "term": "Inter-Rater Agreement",
+    "definition": "A measure of how consistently different judges or reviewers rate the same material, where higher agreement means more reliable scoring.",
+    "firstSeen": "2026-W32"
   }
 }
