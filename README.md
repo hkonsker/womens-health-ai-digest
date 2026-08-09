@@ -1,5 +1,13 @@
 # Women's Health and AI Weekly
 
+A self-hosted weekly research digest. It reads PubMed and a set of RSS feeds, has Claude
+score and summarise what it found at two reading levels, defines the jargon, and emails
+you the result. It runs on a GitHub Actions schedule, so nothing needs to be installed or
+left running.
+
+The beats below are one person's interests and are meant to be replaced. See
+[Forking this for yourself](#forking-this-for-yourself).
+
 A weekly digest of three beats:
 
 1. **Clinical AI** — substantial clinical AI research, from a fixed allowlist of top journals.
@@ -54,13 +62,9 @@ a committed-JSON store instead of a database, is not specific to any subject.
 
 ## Setup
 
-**1. Push this to a GitHub repo.**
-
-```bash
-cd womens-health-ai-digest
-git add -A && git commit -m "Initial commit"
-gh repo create womens-health-ai-digest --private --source=. --push
-```
+**1. Get your own copy.** Click **Use this template** at the top of the repo, which gives
+you a clean copy with its own history rather than a fork tied to the original. Then clone
+it and run `npm install && npm run reset`.
 
 **2. Add the secrets.** Repo → Settings → Secrets and variables → Actions → New repository secret.
 
@@ -197,6 +201,10 @@ produced a given week.
 `data/digests/*.json` is the archive. Both are committed by the Action. At about 30 items
 a week this does everything a database would, and there is no free-tier Postgres to keep
 from going to sleep.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
 
 ## Credit
 
