@@ -648,5 +648,90 @@
     "term": "Inter-Rater Agreement",
     "definition": "A measure of how consistently different judges or reviewers rate the same material, where higher agreement means more reliable scoring.",
     "firstSeen": "2026-W32"
+  },
+  "polysomnogram (psg)": {
+    "term": "Polysomnogram (PSG)",
+    "definition": "An overnight recording of brain waves, breathing, and other body signals used to diagnose sleep disorders.",
+    "firstSeen": "2026-W33"
+  },
+  "isolated rem sleep behavior disorder (irbd)": {
+    "term": "Isolated REM Sleep Behavior Disorder (iRBD)",
+    "definition": "A sleep disorder where people act out dreams during REM sleep, often an early warning sign of Parkinson's disease.",
+    "firstSeen": "2026-W33"
+  },
+  "cohen's kappa": {
+    "term": "Cohen's Kappa",
+    "definition": "A statistic that measures how much two raters or a rater and a model agree, correcting for agreement expected by chance.",
+    "firstSeen": "2026-W33"
+  },
+  "precision": {
+    "term": "Precision",
+    "definition": "Of the cases a model labels positive, the fraction that are actually correct, a measure of how trustworthy a positive call is.",
+    "firstSeen": "2026-W33"
+  },
+  "elastography": {
+    "term": "Elastography",
+    "definition": "An imaging technique that measures the stiffness of tissue, which can indicate physical changes relevant to disease or pregnancy risk.",
+    "firstSeen": "2026-W33"
+  },
+  "internal validation": {
+    "term": "Internal Validation",
+    "definition": "Testing a model's performance on a portion of the same dataset it was built from, as opposed to testing it on entirely separate data.",
+    "firstSeen": "2026-W33"
+  },
+  "dna methylation (dnam)": {
+    "term": "DNA Methylation (DNAm)",
+    "definition": "A chemical modification to DNA that can turn genes on or off without changing the underlying genetic code, and that changes with age.",
+    "firstSeen": "2026-W33"
+  },
+  "epigenetic clock": {
+    "term": "Epigenetic Clock",
+    "definition": "A tool that estimates a person's biological age from patterns of DNA methylation, which can differ from their actual chronological age.",
+    "firstSeen": "2026-W33"
+  },
+  "lasso regression": {
+    "term": "LASSO Regression",
+    "definition": "A statistical method that selects the most important predictor variables from a large set while shrinking less useful ones toward zero.",
+    "firstSeen": "2026-W33"
+  },
+  "leave-one-out cross-validation": {
+    "term": "Leave-One-Out Cross-Validation",
+    "definition": "A way of testing a model's accuracy by repeatedly leaving out one data point, training on the rest, and checking the prediction for the left-out point.",
+    "firstSeen": "2026-W33"
+  },
+  "multidisciplinary tumor board (mdt)": {
+    "term": "Multidisciplinary Tumor Board (MDT)",
+    "definition": "A meeting where doctors from different specialties jointly decide on a cancer patient's treatment plan.",
+    "firstSeen": "2026-W33"
+  },
+  "zero-shot": {
+    "term": "Zero-Shot",
+    "definition": "Asking an AI to perform a task without giving it any worked examples first, relying only on its existing training.",
+    "firstSeen": "2026-W33"
+  },
+  "embedding analysis": {
+    "term": "Embedding Analysis",
+    "definition": "A way of measuring how similar two pieces of text are in meaning by converting them into numerical representations and comparing those numbers.",
+    "firstSeen": "2026-W33"
+  },
+  "diffusion magnetic resonance imaging (mri)": {
+    "term": "Diffusion Magnetic Resonance Imaging (MRI)",
+    "definition": "An imaging technique that detects how water molecules move through tissue, which can reveal information about tissue structure and blood flow.",
+    "firstSeen": "2026-W33"
+  },
+  "intravoxel incoherent motion (ivim)": {
+    "term": "Intravoxel Incoherent Motion (IVIM)",
+    "definition": "A method of analyzing diffusion MRI signals to separately estimate blood flow in small vessels and water movement within tissue.",
+    "firstSeen": "2026-W33"
+  },
+  "multilayer perceptron (mlp)": {
+    "term": "Multilayer Perceptron (MLP)",
+    "definition": "A basic type of artificial neural network made of layers of connected nodes that learns to map inputs to outputs.",
+    "firstSeen": "2026-W33"
+  },
+  "electrohysterography (ehg)": {
+    "term": "Electrohysterography (EHG)",
+    "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
+    "firstSeen": "2026-W33"
   }
 }

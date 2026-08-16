@@ -1,0 +1,1457 @@
+{
+  "weekLabel": "2026-W33",
+  "startDate": "2026-08-10T00:00:00.000Z",
+  "endDate": "2026-08-16T23:59:59.999Z",
+  "generatedAt": "2026-08-16T15:00:52.653Z",
+  "queryVersion": "v4",
+  "queries": {
+    "clinical-ai": "(\nJAMA[jour] OR \"JAMA Netw Open\"[jour] OR \"JAMA Intern Med\"[jour] OR \"JAMA Pediatr\"[jour] OR\n\"JAMA Surg\"[jour] OR \"JAMA Oncol\"[jour] OR \"JAMA Neurol\"[jour] OR \"JAMA Cardiol\"[jour] OR\n\"N Engl J Med\"[jour] OR \"NEJM AI\"[jour] OR Lancet[jour] OR BMJ[jour] OR\n\"Lancet Digit Health\"[jour] OR \"Nat Med\"[jour] OR \"npj Digit Med\"[jour] OR\n\"J Am Med Inform Assoc\"[jour] OR \"Ann Intern Med\"[jour] OR Nature[jour] OR Science[jour]\n)\nAND\n(\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR \"generative AI\"[Title/Abstract] OR\n\"artificial intelligence\"[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR GPT[Title/Abstract] OR\n\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"neural network\"[Title/Abstract]\n)\nAND\n(\nclinical[Title/Abstract] OR patient[Title/Abstract] OR workflow[Title/Abstract] OR\nimplementation[Title/Abstract] OR \"clinical decision support\"[Title/Abstract] OR\ndocumentation[Title/Abstract] OR EHR[Title/Abstract] OR radiology[Title/Abstract] OR\ntriage[Title/Abstract] OR diagnosis[Title/Abstract] OR outcome[Title/Abstract]\n)\nNOT (news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type])",
+    "repro-ai": "(\n\"artificial intelligence\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR\n\"deep learning\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR GPT[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR\n\"neural network\"[Title/Abstract] OR \"computer vision\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR radiomics[Title/Abstract]\n)\nAND\n(\ninfertility[Title/Abstract] OR \"in vitro fertilization\"[Title/Abstract] OR IVF[Title/Abstract] OR\n\"assisted reproduction\"[Title/Abstract] OR \"assisted reproductive\"[Title/Abstract] OR\nembryo[Title/Abstract] OR blastocyst[Title/Abstract] OR oocyte[Title/Abstract] OR\n\"ovarian reserve\"[Title/Abstract] OR endometriosis[Title/Abstract] OR\n\"polycystic ovary\"[Title/Abstract] OR PCOS[Title/Abstract] OR endometrial[Title/Abstract] OR\npregnancy[Title/Abstract] OR pregnant[Title/Abstract] OR obstetric[Title/Abstract] OR\npreeclampsia[Title/Abstract] OR \"pre-eclampsia\"[Title/Abstract] OR \"preterm birth\"[Title/Abstract] OR\nfetal[Title/Abstract] OR \"maternal health\"[Title/Abstract] OR \"maternal mortality\"[Title/Abstract] OR\npostpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR \"cervical cancer\"[Title/Abstract] OR\nmenopause[Title/Abstract] OR contracepti*[Title/Abstract] OR \"women's health\"[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "industry": "RSS: 20 item(s) from configured feeds"
+  },
+  "items": [
+    {
+      "id": "pmid:42601395",
+      "beat": "clinical-ai",
+      "title": "Fully-automated sleep staging for Parkinson's disease and isolated REM sleep behavior disorder.",
+      "source": "NPJ Digit Med",
+      "url": "https://doi.org/10.1038/s41746-026-02946-2",
+      "date": "2026-08-11T00:00:00.000Z",
+      "authors": [
+        "Strøm J",
+        "Skjærbæk C",
+        "Bertelsen NB",
+        "Simonsen ST",
+        "Okkels N",
+        "Bertram D",
+        "Röttgen S",
+        "Kufer K",
+        "Mikkelsen KB",
+        "Otto M",
+        "Jennum PJ",
+        "Borghammer P",
+        "Sommerauer M",
+        "Kidmose P"
+      ],
+      "body": "Isolated REM sleep behavior disorder (iRBD) is a key prodromal marker of Parkinson's disease (PD). Video-polysomnography (vPSG) remains the diagnostic gold standard, but manual sleep staging is particularly time-consuming and challenging in neurodegenerative disease. We adapted U-Sleep, a deep neural network, for automated sleep staging in PD and iRBD. A pretrained model (PUB, 19,236 PSGs), was finetuned on multicenter datasets (PACE, CBC: 112 PD, 138 iRBD, 89 controls) and evaluated on a clinical hold-out (DCSM: 81 PD, 36 iRBD, 87 controls). Predictors of staging agreement were analyzed, and low-agreement recordings were blindly rescored. Confidence-based thresholds were applied to enhance REM detection. The pretrained model achieved &#x3ba;&#x2009;=&#x2009;0.66 in PACE/CBC, improving to &#x3ba;&#x2009;=&#x2009;0.74 after finetuning (p&#x2009;<&#x2009;0.001). In the hold-out, mean &#x3ba; increased from 0.60 to 0.64 (p&#x2009;<&#x2009;0.001). Site-specific finetuning provided minimal benefit. Confidence was a significant predictor of Cohen's &#x3ba; (p&#x2009;<&#x2009;0.001). Recordings with low model agreement also showed low human interrater agreement. Applying a confidence threshold increased REM precision from 85 to 95.6%, preserving sufficient REM sleep in 96% of subjects. This publicly available model achieves human-level agreement enabling scalable, standardized PSG analysis with model-derived confidence as a tool for further refinements.",
+      "score": 7,
+      "why": "A deep neural network (U-Sleep) pretrained on 19,236 polysomnograms (PSGs) was finetuned on multicenter Parkinson's disease and isolated REM sleep behavior disorder (iRBD) cohorts and evaluated on an independent clinical hold-out, improving staging agreement (Cohen's kappa) from 0.60 to 0.64, with a confidence threshold raising REM sleep detection precision from 85% to 95.6%. This is a rare example of a publicly available, externally validated automated sleep staging tool tested specifically in neurodegenerative disease populations where manual scoring is hardest, making it directly useful for scaling PSG-based biomarker research in prodromal Parkinson's disease.",
+      "plain": "Researchers took an AI system that automatically stages sleep from overnight brain recordings, trained it further on data from people with Parkinson's disease and a related sleep disorder, and tested it on a separate group of patients it had never seen. The AI's agreement with human experts improved after this extra training, and a confidence filter made its detection of REM sleep much more accurate, showing this tool could reliably speed up sleep studies in a hard-to-analyze patient group.",
+      "theme": "Automated Sleep Staging",
+      "glossary": [
+        {
+          "term": "Polysomnogram (PSG)",
+          "definition": "An overnight recording of brain waves, breathing, and other body signals used to diagnose sleep disorders.",
+          "isNew": true
+        },
+        {
+          "term": "Isolated REM Sleep Behavior Disorder (iRBD)",
+          "definition": "A sleep disorder where people act out dreams during REM sleep, often an early warning sign of Parkinson's disease.",
+          "isNew": true
+        },
+        {
+          "term": "Cohen's Kappa",
+          "definition": "A statistic that measures how much two raters or a rater and a model agree, correcting for agreement expected by chance.",
+          "isNew": true
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": false
+        },
+        {
+          "term": "Precision",
+          "definition": "Of the cases a model labels positive, the fraction that are actually correct, a measure of how trustworthy a positive call is.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42581620",
+      "beat": "repro-ai",
+      "title": "Artificial Intelligence-Based Multimodal Ultrasound Model for Prediction of Spontaneous Preterm Birth: Development and Validation.",
+      "source": "J Ultrasound Med",
+      "url": "https://doi.org/10.1002/jum.70412",
+      "date": "2026-08-11T00:00:00.000Z",
+      "authors": [
+        "Bai H",
+        "Shen H",
+        "Zhang L",
+        "Zheng Q",
+        "Wu L",
+        "Lin M",
+        "Xie H",
+        "Du L"
+      ],
+      "body": "OBJECTIVES: The primary aim of this study was to develop a multimodal artificial intelligence model for predicting spontaneous preterm birth using cervical 2-dimensional ultrasound and elastography images, as well as ultrasound parameters. METHODS: This prospective cohort study recruited pregnant women undergoing transvaginal ultrasound screening at 20-24&#x2009;weeks of gestation. Participants were divided into spontaneous preterm birth group and full-term group. Three deep learning models were trained on images to compute scores via the best-performing model. Five supervised machine learning classifiers were developed and validated to predict spontaneous preterm birth based on ultrasound parameters and deep learning scores, and feature importance analysis was employed to visualize the importance of each feature in the model. RESULTS: A total of 721 pregnant women (44 with spontaneous preterm birth) were included. In deep learning models based on ultrasound images, DenseNet121 (AUC: 0.92/0.93) model exhibited excellent performance, and corresponding scores were obtained. Elasticity contrast index, hardness ratio, external os stiffness, Ratio, 2-dimension-score, and elastography-score were included to construct the 5 machine learning models. Among the multimodal models, the neural network model showed the best predictive performance in the validation set (AUC&#x2009;=&#x2009;0.85; 95% CI, 0.73-0.96). Feature importance analysis revealed that both elastography-score and 2-dimension-score made significant contributions in a majority of the models. CONCLUSIONS: The multimodal artificial intelligence models using ultrasound parameters and cervical 2-dimensional ultrasound and elastography images demonstrated promising predictive capabilities in internal validation for spontaneous preterm birth in the second trimester. This offers assistance for intervention in patients at high risk of spontaneous preterm birth.",
+      "score": 6,
+      "why": "In a prospective cohort of 721 pregnant women undergoing transvaginal ultrasound at 20-24 weeks, a multimodal deep learning model combining cervical elastography and 2D ultrasound (DenseNet121, area under the curve or AUC 0.92-0.93) fed into machine learning classifiers achieved an AUC of 0.85 for predicting spontaneous preterm birth in an internal validation set. The prospective design and combination of imaging modalities are strengths, but validation was internal only and the outcome was rare (44 of 721 cases), so external replication is needed before clinical use.",
+      "plain": "Doctors used ultrasound images and a measure of cervical stiffness, combined with AI, to try to predict which pregnant women would deliver early, testing this in a group of 721 women followed forward in time. The AI-based model correctly separated high and low risk women fairly well, but it was only tested on a held-out portion of the same original group, so it still needs to be checked in different hospitals and different women before doctors could rely on it.",
+      "theme": "Preterm Birth Prediction",
+      "glossary": [
+        {
+          "term": "Area Under the Curve (AUC)",
+          "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+          "isNew": false
+        },
+        {
+          "term": "Prospective Cohort",
+          "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+          "isNew": false
+        },
+        {
+          "term": "Elastography",
+          "definition": "An imaging technique that measures the stiffness of tissue, which can indicate physical changes relevant to disease or pregnancy risk.",
+          "isNew": true
+        },
+        {
+          "term": "Internal Validation",
+          "definition": "Testing a model's performance on a portion of the same dataset it was built from, as opposed to testing it on entirely separate data.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42573023",
+      "beat": "repro-ai",
+      "title": "Accelerated Biological Age as an Early Pregnancy Risk Factor for Preeclampsia.",
+      "source": "Nurs Res",
+      "url": "https://doi.org/10.1097/NNR.0000000000000937",
+      "date": "2026-08-10T00:00:00.000Z",
+      "authors": [
+        "Anderson CM",
+        "Lesniak J",
+        "Gillespie SL",
+        "Ohm JE",
+        "Joseph JJ",
+        "Helsabeck NP",
+        "Lin S"
+      ],
+      "body": "BACKGROUND: The inability to predict risk in early pregnancy for preeclampsia represents a major limitation in prenatal care. OBJECTIVES: We used machine-learning approaches to identify early pregnancy features that distinguish women who develop preeclampsia from those with normotensive pregnancies, specifically focusing on the influence of maternal biological age. METHODS: Data were analyzed from a prospective cohort of pregnant women living in the upper Midwest (Midwest cohort) and from a cohort using publicly available data from the Prenatal Exposures & Preeclampsia Prevention Project (PEPP3). In both data sets, DNA methylation (DNAm) was quantified from blood samples collected in early pregnancy. Biological aging was estimated using established epigenetic clocks including Hannum, Horvath, and PhenoAge. Maternal data across pregnancy were collected via medical record abstraction. Predictors of preeclampsia were identified using LASSO regression and Random Forest. The potential predictive capacity of the selected features was evaluated by building logistic regression models with leave-one-out cross-validation and reporting performance metrics. RESULTS: In the Midwest cohort, accelerated biological aging per Hannum's epigenetic clock as well as higher chronological age and higher gestational weight gain were identified as important predictors of preeclampsia. Interestingly, only Hannum's epigenetic clock showed predictive power for preeclampsia. In the PEPP3 cohort, accelerated biological aging, as measured by Hannum's epigenetic clock, and chronological age were also identified as significant predictors of preeclampsia. DISCUSSION: Among women who developed preeclampsia, accelerated biological aging during early pregnancy may represent a risk biomarker that can be leveraged in clinical care. These findings identify a promising clinical indicator for preeclampsia risk, addressing a critical gap in screening and early diagnosis.",
+      "score": 6,
+      "why": "In two prospective cohorts, machine learning methods (LASSO regression and random forest) with leave-one-out cross-validation identified accelerated biological aging via the Hannum epigenetic clock, measured from early-pregnancy DNA methylation (DNAm), as a predictor distinguishing women who later developed preeclampsia from those with normotensive pregnancies. Replication of the Hannum clock finding across two independent cohorts strengthens the signal, though the study remains a biomarker discovery effort without external validation in a distinct population or a clinically deployable test.",
+      "plain": "Scientists studied blood samples from early pregnancy in two separate groups of women and found that a measure of biological aging, calculated from chemical marks on DNA, could help predict who would later develop the dangerous pregnancy complication preeclampsia. Because the same finding showed up in two different groups, it is a more credible early-warning signal, but it still needs a larger, independent study before doctors could use it in the clinic.",
+      "theme": "Preeclampsia Risk Biomarker",
+      "glossary": [
+        {
+          "term": "Prospective Cohort",
+          "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+          "isNew": false
+        },
+        {
+          "term": "DNA Methylation (DNAm)",
+          "definition": "A chemical modification to DNA that can turn genes on or off without changing the underlying genetic code, and that changes with age.",
+          "isNew": true
+        },
+        {
+          "term": "Epigenetic Clock",
+          "definition": "A tool that estimates a person's biological age from patterns of DNA methylation, which can differ from their actual chronological age.",
+          "isNew": true
+        },
+        {
+          "term": "LASSO Regression",
+          "definition": "A statistical method that selects the most important predictor variables from a large set while shrinking less useful ones toward zero.",
+          "isNew": true
+        },
+        {
+          "term": "Random Forest",
+          "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+          "isNew": false
+        },
+        {
+          "term": "Leave-One-Out Cross-Validation",
+          "definition": "A way of testing a model's accuracy by repeatedly leaving out one data point, training on the rest, and checking the prediction for the left-out point.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42595794",
+      "beat": "clinical-ai",
+      "title": "Role prompting modulates linguistic style but not clinical decision structure in GPT-5 tumour board simulation.",
+      "source": "NPJ Digit Med",
+      "url": "https://doi.org/10.1038/s41746-026-03069-4",
+      "date": "2026-08-13T00:00:00.000Z",
+      "authors": [
+        "Stifini D",
+        "Della Penna A",
+        "Mihaljevic AL",
+        "Bitzer M",
+        "Eickhoff C",
+        "Capobianco I"
+      ],
+      "body": "Multidisciplinary tumour boards (MDTs) are the standard for gastrointestinal oncological decision-making but remain resource-intensive. Whether specialty-specific role prompting induces genuinely distinct clinical reasoning in large language models (LLMs)-or merely role-appropriate language around an invariant output-has not been systematically tested. We applied five zero-shot prompting frameworks and a majority-vote ensemble to GPT-5 across 100 gastrointestinal oncology cases with MDT-validated decisions: a simulated MDT, multi-expert deliberation, three specialist personas, and a majority-vote ensemble. Concordance with MDT recommendations ranged from 78% to 87%, with no significant inter-framework differences (Cochran's Q&#x2009;=&#x2009;8.46, p&#x2009;=&#x2009;0.133). Specialty-characteristic language was near-universal (97-100%) but uncorrelated with accuracy. Embedding analysis revealed high semantic similarity across personas (cosine similarity 0.805-0.836; &#x3b7;&#xb2;&#x2009;=&#x2009;0.049), contrasting with substantially greater output separation under multi-expert deliberation (&#x3b7;&#xb2;&#x2009;=&#x2009;0.554-0.581). GPT-5 reliably adapts linguistic style to clinical personas but produces limited specialty-specific output diversity, supporting its role as a decision-support adjunct rather than an autonomous specialist simulator.",
+      "score": 5,
+      "why": "In a zero-shot comparison across 100 gastrointestinal oncology cases, GPT-5 (a large language model, or LLM) prompted with different specialist personas matched multidisciplinary tumor board (MDT) recommendations 78-87% of the time with no significant difference between prompting frameworks, and embedding analysis showed personas produced near-identical semantic outputs despite highly distinct language. This suggests role prompting changes an LLM's tone but not its underlying clinical reasoning, an important caution for anyone considering these models as stand-ins for multi-specialist input rather than as a single decision-support adjunct.",
+      "plain": "Scientists tested whether telling an AI chatbot to act like different medical specialists actually changes its medical advice, or just changes how it talks. Across 100 real cancer cases, the AI agreed with an actual team of doctors about 80 percent of the time no matter which specialist personality it was told to adopt, and its underlying recommendations were nearly identical between personas even though the wording sounded different, meaning the AI acts more like one advisor with different speaking styles than like several distinct experts.",
+      "theme": "LLM Tumor Boards",
+      "glossary": [
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        },
+        {
+          "term": "Multidisciplinary Tumor Board (MDT)",
+          "definition": "A meeting where doctors from different specialties jointly decide on a cancer patient's treatment plan.",
+          "isNew": true
+        },
+        {
+          "term": "Zero-Shot",
+          "definition": "Asking an AI to perform a task without giving it any worked examples first, relying only on its existing training.",
+          "isNew": true
+        },
+        {
+          "term": "Embedding Analysis",
+          "definition": "A way of measuring how similar two pieces of text are in meaning by converting them into numerical representations and comparing those numbers.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42576294",
+      "beat": "repro-ai",
+      "title": "Placental Blood-Flow Velocity Quantification From Diffusion MRI.",
+      "source": "Magn Reson Med",
+      "url": "https://doi.org/10.1002/mrm.70551",
+      "date": "2026-08-10T00:00:00.000Z",
+      "authors": [
+        "Yang Z",
+        "Oliveira DC",
+        "Kerkelä L",
+        "Palombo M",
+        "Powell E",
+        "Parker CS",
+        "Cromb D",
+        "Story L",
+        "Counsell SJ",
+        "Payette K",
+        "Hajnal JV",
+        "Hutter J",
+        "Shipley RJ",
+        "Alexander DC",
+        "Slator PJ"
+      ],
+      "body": "PURPOSE: Altered placental capillary blood flow is closely linked to obstetric complications, yet quantifying capillary-scale blood velocity remains challenging with existing imaging methods. This is partially because capillary networks form disordered microvascular beds at the voxel scale, rather than coherent, directional vessels. Here, we combine Monte Carlo (MC) simulations with machine learning to estimate placental capillary blood velocity directly from diffusion MRI (dMRI) data. METHODS: MC simulations incorporating perfusion and diffusion were performed to generate signal dictionaries for supervised machine learning regressors (random forest [RF] and multilayer perceptron [MLP]) to estimate velocity, perfusion fraction and diffusivity. The trained regressors were applied to simulated and in vivo dMRI data, with intravoxel incoherent motion (IVIM)-based estimates as baselines for comparison. RESULTS: Our approach outperformed IVIM-based methods on simulated test data in recovering ground-truth parameters. Among the evaluated models, the MC-based MLP approach produced physiologically reasonable estimates of velocity in in vivo placentas, in agreement with previously reported measures and exhibited greater sensitivity than IVIM-generated methods. CONCLUSION: This study presents an approach to characterize capillary perfusion that alternates conventional IVIM models, particularly in organs such as the placenta, where pseudo-diffusion coefficient can be similar to tissue diffusion coefficient, limiting reliable IVIM parameter separation. Our method could enable detection of capillary blood-flow alterations, which could help identify pathological placental blood-flow conditions and potentially diagnosis relevant diseases, such as preeclampsia and fetal growth restriction. More broadly, the approach may translate to other organs where microscale blood-flow changes are key indicators of underlying pathologies.",
+      "score": 5,
+      "why": "This methods paper combines Monte Carlo simulations of placental capillary blood flow with machine learning regressors (random forest and multilayer perceptron) to estimate capillary blood velocity from diffusion magnetic resonance imaging (MRI), outperforming conventional intravoxel incoherent motion (IVIM) fitting on simulated data and producing physiologically plausible in vivo estimates. This is an early-stage technical advance with potential relevance to preeclampsia and fetal growth restriction, but it lacks clinical outcome validation or a patient cohort linking the measure to disease.",
+      "plain": "Scientists built an AI-assisted method to estimate how fast blood moves through the tiny blood vessels of the placenta using MRI scans, and showed it works better than older methods on simulated data and produces reasonable results in real placentas. This is a promising new measurement tool for detecting placenta problems like preeclampsia, but it has not yet been tested to see if it actually predicts these conditions in patients.",
+      "theme": "Placental Blood Flow Imaging",
+      "glossary": [
+        {
+          "term": "Diffusion Magnetic Resonance Imaging (MRI)",
+          "definition": "An imaging technique that detects how water molecules move through tissue, which can reveal information about tissue structure and blood flow.",
+          "isNew": true
+        },
+        {
+          "term": "Intravoxel Incoherent Motion (IVIM)",
+          "definition": "A method of analyzing diffusion MRI signals to separately estimate blood flow in small vessels and water movement within tissue.",
+          "isNew": true
+        },
+        {
+          "term": "Random Forest",
+          "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+          "isNew": false
+        },
+        {
+          "term": "Multilayer Perceptron (MLP)",
+          "definition": "A basic type of artificial neural network made of layers of connected nodes that learns to map inputs to outputs.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42468288",
+      "beat": "repro-ai",
+      "title": "Automated early preterm detection using hybrid multimodal attention network with gated fusion.",
+      "source": "Comput Biol Med",
+      "url": "https://doi.org/10.1016/j.compbiomed.2026.111858",
+      "date": "2026-08-15T00:00:00.000Z",
+      "authors": [
+        "Bhattacharya D",
+        "Singh P",
+        "Tiwari AK"
+      ],
+      "body": "Preterm birth is a major pregnancy complication associated with increased maternal and neonatal risks, making early detection of labor essential. Electrohysterography (EHG), provides a non-invasive approach for monitoring uterine dynamics. However, global synchronization patterns and propagation dynamics remain insufficiently understood, and many existing methods rely on manual annotation, limiting clinical applicability. This study evaluates synchronization-driven propagation patterns in multi-electrode EHG signals and proposes an automated framework for early preterm detection, beyond the commonly studied one-week prediction window before delivery. The analysis included 452 recordings from pregnancies between 21 and 36 weeks of gestation, covering spontaneous, cesarean, induced, and induced-cesarean cases. Four electrode configurations (S1-S2, S1-S3, S2-S3, and Multichannel) were examined. A hybrid deep learning model integrating multi-head attention and a gated fusion mechanism was used to combine EHG segments with synchronization features. Feature selection was performed using random forest top-k selection, and class imbalance was handled through inverse-frequency weighting. Results showed that non-linear synchronization measures, including non-linear interdependence directionality index and normalized permutation cross mutual information, were statistically significant (p<0.05) and provided strong discrimination. Our results suggest increased synchronization and spatial coordination near term, with relatively stronger activity in the upper right uterine region. In contrast, preterm activity appeared weaker and less organized. The model achieved an accuracy, sensitivity, specificity, F1-score, and an area under the curve (AUC) of 0.98, 0.93, 0.99, 0.94, and 0.99, respectively, indicating robust performance. These findings highlight synchronization as a key marker for early and clinically relevant preterm detection.",
+      "score": 5,
+      "why": "This retrospective single-dataset study trained a hybrid deep learning model with multi-head attention and gated fusion on 452 electrohysterography (EHG) recordings to detect preterm labor earlier than the standard one-week prediction window, reporting an area under the curve (AUC) of 0.99 and sensitivity of 0.93 using synchronization features between uterine electrodes. The near-perfect performance metrics and lack of external validation on an independent cohort raise strong concerns about overfitting, so despite the appealing reproductive relevance this needs replication before it changes clinical practice.",
+      "plain": "Researchers built an AI model that reads electrical signals from the uterus (picked up by skin sensors) to try to predict premature labor earlier than current methods, testing it on data from 452 pregnancies. The model scored almost perfectly, but because it was only tested on the same type of data it was trained on and not checked against a separate, independent group of patients, this near-perfect result is likely too good to be true and needs to be confirmed elsewhere.",
+      "theme": "Preterm Birth Detection",
+      "glossary": [
+        {
+          "term": "Electrohysterography (EHG)",
+          "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
+          "isNew": true
+        },
+        {
+          "term": "Area Under the Curve (AUC)",
+          "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+          "isNew": false
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+          "isNew": false
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": false
+        }
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "Adjusted Hazard Ratio (aHR)",
+      "definition": "A measure comparing the risk of an event over time between two groups, adjusted for other factors, where a value above 1 means higher risk.",
+      "isNew": false
+    },
+    {
+      "term": "Aggregate Privacy Metrics",
+      "definition": "Measures of privacy risk calculated across an entire dataset rather than for each individual person.",
+      "isNew": false
+    },
+    {
+      "term": "AMH",
+      "definition": "A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.",
+      "isNew": false
+    },
+    {
+      "term": "Anchoring Bias",
+      "definition": "The tendency for an initial piece of information, like a first guess, to unduly influence a person's final judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Aneuploid",
+      "definition": "Having an abnormal number of chromosomes, which often prevents an embryo from developing successfully.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Curve (AUC)",
+      "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC-ROC)",
+      "definition": "A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC)",
+      "definition": "A number between 0.5 and 1 that measures how well a model distinguishes between people who will and will not have an outcome, where 1 is perfect and 0.5 is no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (ROC-AUC)",
+      "definition": "A number from 0 to 1 that measures how well a model can tell apart two groups, such as patients who will versus won't develop a condition, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Assisted Reproductive Technology (ART)",
+      "definition": "Medical procedures used to help people conceive, such as in vitro fertilization.",
+      "isNew": false
+    },
+    {
+      "term": "AUC",
+      "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+      "isNew": false
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Automation Bias",
+      "definition": "The tendency for people to over-trust an automated system's output, even when it may be wrong.",
+      "isNew": false
+    },
+    {
+      "term": "Balanced Accuracy",
+      "definition": "A way of measuring how correct a model is that gives equal weight to its performance on both positive and negative cases, useful when one outcome is much rarer than the other.",
+      "isNew": false
+    },
+    {
+      "term": "Blastocyst",
+      "definition": "An early-stage embryo, several days after fertilization, that is ready for genetic testing or transfer to the uterus.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded",
+      "definition": "A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded Evaluation",
+      "definition": "An assessment method where the person judging the results does not know which option came from which source, to avoid bias.",
+      "isNew": false
+    },
+    {
+      "term": "Brier Score",
+      "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
+      "isNew": false
+    },
+    {
+      "term": "Calibration",
+      "definition": "How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.",
+      "isNew": false
+    },
+    {
+      "term": "Class-Imbalance Correction",
+      "definition": "Techniques used when one outcome (like a rare disease) is much less common than another in a dataset, aimed at helping a model learn to detect the rare outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis",
+      "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis (CHR-P)",
+      "definition": "A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinician Decision Support System (CDSS)",
+      "definition": "Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Cohen's Kappa",
+      "definition": "A statistic that measures how much two raters or a rater and a model agree, correcting for agreement expected by chance.",
+      "isNew": true
+    },
+    {
+      "term": "Confabulation",
+      "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
+      "isNew": false
+    },
+    {
+      "term": "Confidence Interval",
+      "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+      "isNew": false
+    },
+    {
+      "term": "Contrastive Learning",
+      "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Replication",
+      "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Study",
+      "definition": "A study that examines a group of people or responses at a single point in time rather than following them over time.",
+      "isNew": false
+    },
+    {
+      "term": "Cytology",
+      "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+      "isNew": false
+    },
+    {
+      "term": "Decision Curve Analysis",
+      "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
+      "isNew": false
+    },
+    {
+      "term": "Decision-Tree Model",
+      "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+      "isNew": false
+    },
+    {
+      "term": "Deep Learning",
+      "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+      "isNew": false
+    },
+    {
+      "term": "DeLong Test",
+      "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+      "isNew": false
+    },
+    {
+      "term": "Diagnostic Odds Ratio",
+      "definition": "A single number combining sensitivity and specificity that summarizes how well a test distinguishes between people with and without a condition, where higher values mean better discrimination.",
+      "isNew": false
+    },
+    {
+      "term": "Diffusion Magnetic Resonance Imaging (MRI)",
+      "definition": "An imaging technique that detects how water molecules move through tissue, which can reveal information about tissue structure and blood flow.",
+      "isNew": true
+    },
+    {
+      "term": "Disease-free Survival",
+      "definition": "The length of time after treatment that a patient survives without their disease coming back.",
+      "isNew": false
+    },
+    {
+      "term": "DNA Methylation (DNAm)",
+      "definition": "A chemical modification to DNA that can turn genes on or off without changing the underlying genetic code, and that changes with age.",
+      "isNew": true
+    },
+    {
+      "term": "Doubly Debiased Machine Learning",
+      "definition": "An advanced statistical technique that uses machine learning to estimate causal effects while reducing bias from imperfect models, making the results more reliable than simpler methods.",
+      "isNew": false
+    },
+    {
+      "term": "Effect Measure Modifiers",
+      "definition": "Factors that change how strong or weak a treatment's effect is in different subgroups of people.",
+      "isNew": false
+    },
+    {
+      "term": "Elastography",
+      "definition": "An imaging technique that measures the stiffness of tissue, which can indicate physical changes relevant to disease or pregnancy risk.",
+      "isNew": true
+    },
+    {
+      "term": "Electrohysterography (EHG)",
+      "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
+      "isNew": true
+    },
+    {
+      "term": "Embedding Analysis",
+      "definition": "A way of measuring how similar two pieces of text are in meaning by converting them into numerical representations and comparing those numbers.",
+      "isNew": true
+    },
+    {
+      "term": "Epigenetic Clock",
+      "definition": "A tool that estimates a person's biological age from patterns of DNA methylation, which can differ from their actual chronological age.",
+      "isNew": true
+    },
+    {
+      "term": "Euploid",
+      "definition": "Having the normal, correct number of chromosomes, generally considered healthier for embryo development.",
+      "isNew": false
+    },
+    {
+      "term": "Explainable AI (XAI)",
+      "definition": "Techniques that try to make AI decision-making understandable to humans, such as showing which features led to a diagnosis.",
+      "isNew": false
+    },
+    {
+      "term": "External Validation",
+      "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting",
+      "definition": "A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting Classifier",
+      "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "FDA",
+      "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
+      "isNew": false
+    },
+    {
+      "term": "Follicular Fluid",
+      "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+      "isNew": false
+    },
+    {
+      "term": "Food and Drug Administration (FDA)",
+      "definition": "The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.",
+      "isNew": false
+    },
+    {
+      "term": "Foundation Model",
+      "definition": "A large AI model trained on huge amounts of data that can be adapted to many different tasks, rather than being built for just one job.",
+      "isNew": false
+    },
+    {
+      "term": "Generalized Estimating Equations",
+      "definition": "A statistical technique used to analyze data where the same subjects or scenarios are measured multiple times, accounting for those repeated measurements.",
+      "isNew": false
+    },
+    {
+      "term": "Generalized Linear Model",
+      "definition": "A statistical model that predicts an outcome based on a combination of input variables, extending ordinary regression to different types of data.",
+      "isNew": false
+    },
+    {
+      "term": "Gradient-Boosted Tree",
+      "definition": "A machine learning method that builds a sequence of simple decision rules, each correcting errors of the previous ones, to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Gradient-Boosted Tree Model",
+      "definition": "A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "HDL and LDL",
+      "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
+      "isNew": false
+    },
+    {
+      "term": "Heterogeneity",
+      "definition": "A statistical measure of how much results vary across different studies being combined, where high heterogeneity means the studies do not agree well with each other.",
+      "isNew": false
+    },
+    {
+      "term": "High-Grade Squamous Intraepithelial Lesion (HSIL)",
+      "definition": "A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)",
+      "definition": "A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "Holdout Set",
+      "definition": "A portion of data set aside and not used during model training, so it can be used afterward to test how well the model performs on new cases.",
+      "isNew": false
+    },
+    {
+      "term": "HPV-Primary Screening",
+      "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+      "isNew": false
+    },
+    {
+      "term": "HSPG2",
+      "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+      "isNew": false
+    },
+    {
+      "term": "Human Papillomavirus (HPV)",
+      "definition": "A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Disease (IRD)",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Diseases",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Injury Severity Score (ISS)",
+      "definition": "A standard method doctors use to rate how severe a patient's injuries are, based on hospital imaging and exams.",
+      "isNew": false
+    },
+    {
+      "term": "Inter-Rater Agreement",
+      "definition": "A measure of how consistently different judges or reviewers rate the same material, where higher agreement means more reliable scoring.",
+      "isNew": false
+    },
+    {
+      "term": "Internal Validation",
+      "definition": "Testing a model's performance on a portion of the same dataset it was built from, as opposed to testing it on entirely separate data.",
+      "isNew": true
+    },
+    {
+      "term": "Intraclass Correlation Coefficient",
+      "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+      "isNew": false
+    },
+    {
+      "term": "Intraclass Correlation Coefficient (ICC)",
+      "definition": "A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.",
+      "isNew": false
+    },
+    {
+      "term": "Intravoxel Incoherent Motion (IVIM)",
+      "definition": "A method of analyzing diffusion MRI signals to separately estimate blood flow in small vessels and water movement within tissue.",
+      "isNew": true
+    },
+    {
+      "term": "Isolated REM Sleep Behavior Disorder (iRBD)",
+      "definition": "A sleep disorder where people act out dreams during REM sleep, often an early warning sign of Parkinson's disease.",
+      "isNew": true
+    },
+    {
+      "term": "Kaplan-Meier Analysis",
+      "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Model (LLM)",
+      "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models",
+      "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models (LLMs)",
+      "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "LASSO Regression",
+      "definition": "A statistical method that selects the most important predictor variables from a large set while shrinking less useful ones toward zero.",
+      "isNew": true
+    },
+    {
+      "term": "Leave-One-Out Cross-Validation",
+      "definition": "A way of testing a model's accuracy by repeatedly leaving out one data point, training on the rest, and checking the prediction for the left-out point.",
+      "isNew": true
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations (LIME), a technique that explains an individual AI prediction by approximating the model's behavior with a simpler, interpretable one nearby.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology",
+      "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology (LBC)",
+      "definition": "A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.",
+      "isNew": false
+    },
+    {
+      "term": "Longitudinal Study",
+      "definition": "A study that follows the same people over time to see how something changes.",
+      "isNew": false
+    },
+    {
+      "term": "Low Birth Weight (LBW)",
+      "definition": "A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.",
+      "isNew": false
+    },
+    {
+      "term": "Lymph Node Metastasis (LNM)",
+      "definition": "The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning",
+      "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning (ML)",
+      "definition": "A branch of AI in which computer models learn patterns from data rather than being explicitly programmed with rules.",
+      "isNew": false
+    },
+    {
+      "term": "Membership Inference Attacks (MIAs)",
+      "definition": "A method attackers use to determine whether a specific person's data was used to train an AI model, which can reveal private information.",
+      "isNew": false
+    },
+    {
+      "term": "Mixed-Methods",
+      "definition": "A research approach that combines numerical data, such as survey scores, with descriptive information, such as interview or open-ended feedback.",
+      "isNew": false
+    },
+    {
+      "term": "Model-Blinded",
+      "definition": "A study design where the people rating the outputs do not know which AI system produced each answer, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Morphodynamic",
+      "definition": "Relating to how an embryo's shape and structure change over time, as observed through continuous time-lapse imaging.",
+      "isNew": false
+    },
+    {
+      "term": "Multicenter Retrospective Evaluation",
+      "definition": "A study that analyzes previously collected data from multiple hospitals or sites, rather than following new patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Multidisciplinary Tumor Board (MDT)",
+      "definition": "A meeting where doctors from different specialties jointly decide on a cancer patient's treatment plan.",
+      "isNew": true
+    },
+    {
+      "term": "Multilayer Perceptron (MLP)",
+      "definition": "A basic type of artificial neural network made of layers of connected nodes that learns to map inputs to outputs.",
+      "isNew": true
+    },
+    {
+      "term": "Multiparametric Magnetic Resonance Imaging (MRI)",
+      "definition": "An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.",
+      "isNew": false
+    },
+    {
+      "term": "Nested Case-Control Study",
+      "definition": "A study design where cases of a disease are compared to matched controls drawn from within a larger group being followed over time.",
+      "isNew": false
+    },
+    {
+      "term": "Nomogram",
+      "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Non-Contrast MRI",
+      "definition": "A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.",
+      "isNew": false
+    },
+    {
+      "term": "PD-L1",
+      "definition": "A protein on cells that can suppress the immune system, and a common target of cancer immunotherapy drugs.",
+      "isNew": false
+    },
+    {
+      "term": "Physician-In-The-Loop (PITL)",
+      "definition": "Physician-in-the-loop (PITL), a validation approach where doctors actively review and judge an AI system's outputs as part of testing it, rather than the AI being evaluated purely by statistics.",
+      "isNew": false
+    },
+    {
+      "term": "Polysomnogram (PSG)",
+      "definition": "An overnight recording of brain waves, breathing, and other body signals used to diagnose sleep disorders.",
+      "isNew": true
+    },
+    {
+      "term": "Precision",
+      "definition": "Of the cases a model labels positive, the fraction that are actually correct, a measure of how trustworthy a positive call is.",
+      "isNew": true
+    },
+    {
+      "term": "Precision-Recall Area Under the Curve (PR-AUC)",
+      "definition": "A performance measure similar to ROC-AUC but more sensitive to how well a model finds rare positive cases specifically.",
+      "isNew": false
+    },
+    {
+      "term": "Preeclampsia",
+      "definition": "A pregnancy complication involving high blood pressure and organ damage that can be dangerous for both mother and baby.",
+      "isNew": false
+    },
+    {
+      "term": "Preimplantation Genetic Testing for Aneuploidy (PGT-A)",
+      "definition": "A lab test performed on embryos before transfer that checks whether they have the normal number of chromosomes.",
+      "isNew": false
+    },
+    {
+      "term": "Primary Care Physicians (PCPs)",
+      "definition": "Doctors who provide general, first-contact medical care rather than specialized care.",
+      "isNew": false
+    },
+    {
+      "term": "Progression-free Survival",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Progression-Free Survival (PFS)",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort",
+      "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort Study",
+      "definition": "A study that enrolls participants and follows them forward in time to observe who develops an outcome of interest.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Longitudinal Studies",
+      "definition": "Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Provider Documentation Summarization Quality Instrument (PDSQI-9)",
+      "definition": "A nine-item rating scale used to judge the quality of a clinical documentation summary across dimensions like accuracy, organization, and usefulness.",
+      "isNew": false
+    },
+    {
+      "term": "Radiomics",
+      "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+      "isNew": false
+    },
+    {
+      "term": "Random Forest",
+      "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Randomized Controlled Trial",
+      "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+      "isNew": false
+    },
+    {
+      "term": "Randomized Controlled Trial (RCT)",
+      "definition": "A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.",
+      "isNew": false
+    },
+    {
+      "term": "RETFound",
+      "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+      "isNew": false
+    },
+    {
+      "term": "Retrieval-Augmented Generation (RAG)",
+      "definition": "A method where an AI language model first looks up relevant documents or data before writing its answer, aiming to make responses more accurate and grounded.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective",
+      "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Database Audit",
+      "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Study With External Validation",
+      "definition": "A study that looks back at existing patient records, but importantly tests its findings on a separate group of patients not used to build the model.",
+      "isNew": false
+    },
+    {
+      "term": "Risk Difference",
+      "definition": "The absolute difference in the chance of an outcome between two groups, for example the percentage point gap in preterm birth rates between treated and untreated women.",
+      "isNew": false
+    },
+    {
+      "term": "Sensitivity",
+      "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF",
+      "definition": "A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF Ratio",
+      "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
+      "isNew": false
+    },
+    {
+      "term": "SHAP",
+      "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+      "isNew": false
+    },
+    {
+      "term": "Shapley Additive exPlanations (SHAP)",
+      "definition": "A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.",
+      "isNew": false
+    },
+    {
+      "term": "Spatial Proteomics",
+      "definition": "A technology that maps where different proteins are located within tissue, preserving the spatial arrangement of cells.",
+      "isNew": false
+    },
+    {
+      "term": "Specificity",
+      "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble",
+      "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble Machine Learning Model",
+      "definition": "An AI approach that combines predictions from several different models into one final, hopefully more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Synthetic Minority Oversampling Technique (SMOTE)",
+      "definition": "A method that creates artificial extra examples of a rare outcome in a dataset so a model sees more of them during training.",
+      "isNew": false
+    },
+    {
+      "term": "TabNet",
+      "definition": "A type of deep learning model designed specifically to work with tabular data, like spreadsheets of patient information, while also explaining which factors influenced its predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Temporal External Validation",
+      "definition": "Testing a model on data collected in a later time period than the data used to build it, to check that the model still works as circumstances or patient populations change over time.",
+      "isNew": false
+    },
+    {
+      "term": "Top-5 Accuracy",
+      "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
+      "isNew": false
+    },
+    {
+      "term": "Train-Test Split",
+      "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
+      "isNew": false
+    },
+    {
+      "term": "Transformer-Based Model",
+      "definition": "A type of AI architecture, originally developed for language processing, that can also be applied to other kinds of structured data to find complex patterns.",
+      "isNew": false
+    },
+    {
+      "term": "Transportability",
+      "definition": "The idea of applying a result found in one study population to predict what would happen in a different population, and testing whether that transfer actually works.",
+      "isNew": false
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale",
+      "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale (UHDRS)",
+      "definition": "A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unsupervised Machine Learning (k-Means Clustering)",
+      "definition": "A computer method that groups data points into clusters based on similarity, without being told the correct answer in advance.",
+      "isNew": false
+    },
+    {
+      "term": "Vision Transformer",
+      "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+      "isNew": false
+    },
+    {
+      "term": "Wav2vec 2.0",
+      "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
+      "isNew": false
+    },
+    {
+      "term": "Whole-Slide Images",
+      "definition": "Very high resolution digital scans of entire microscope slides used to examine tissue samples.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-Shot",
+      "definition": "Asking an AI to perform a task without giving it any worked examples first, relying only on its existing training.",
+      "isNew": true
+    },
+    {
+      "term": "Zero-shot Annotation",
+      "definition": "The ability of an AI model to correctly label or classify new data it was never specifically trained on.",
+      "isNew": false
+    }
+  ],
+  "scored": [
+    {
+      "id": "pmid:42601395",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Fully-automated sleep staging for Parkinson's disease and isolated REM sleep behavior disorder.",
+      "score": 7,
+      "theme": "Automated Sleep Staging",
+      "why": "A deep neural network (U-Sleep) pretrained on 19,236 polysomnograms (PSGs) was finetuned on multicenter Parkinson's disease and isolated REM sleep behavior disorder (iRBD) cohorts and evaluated on an independent clinical hold-out, improving staging agreement (Cohen's kappa) from 0.60 to 0.64, with a confidence threshold raising REM sleep detection precision from 85% to 95.6%. This is a rare example of a publicly available, externally validated automated sleep staging tool tested specifically in neurodegenerative disease populations where manual scoring is hardest, making it directly useful for scaling PSG-based biomarker research in prodromal Parkinson's disease."
+    },
+    {
+      "id": "pmid:42581620",
+      "beat": "repro-ai",
+      "source": "J Ultrasound Med",
+      "title": "Artificial Intelligence-Based Multimodal Ultrasound Model for Prediction of Spontaneous Preterm Birth: Development and Validation.",
+      "score": 6,
+      "theme": "Preterm Birth Prediction",
+      "why": "In a prospective cohort of 721 pregnant women undergoing transvaginal ultrasound at 20-24 weeks, a multimodal deep learning model combining cervical elastography and 2D ultrasound (DenseNet121, area under the curve or AUC 0.92-0.93) fed into machine learning classifiers achieved an AUC of 0.85 for predicting spontaneous preterm birth in an internal validation set. The prospective design and combination of imaging modalities are strengths, but validation was internal only and the outcome was rare (44 of 721 cases), so external replication is needed before clinical use."
+    },
+    {
+      "id": "pmid:42573023",
+      "beat": "repro-ai",
+      "source": "Nurs Res",
+      "title": "Accelerated Biological Age as an Early Pregnancy Risk Factor for Preeclampsia.",
+      "score": 6,
+      "theme": "Preeclampsia Risk Biomarker",
+      "why": "In two prospective cohorts, machine learning methods (LASSO regression and random forest) with leave-one-out cross-validation identified accelerated biological aging via the Hannum epigenetic clock, measured from early-pregnancy DNA methylation (DNAm), as a predictor distinguishing women who later developed preeclampsia from those with normotensive pregnancies. Replication of the Hannum clock finding across two independent cohorts strengthens the signal, though the study remains a biomarker discovery effort without external validation in a distinct population or a clinically deployable test."
+    },
+    {
+      "id": "pmid:42595794",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Role prompting modulates linguistic style but not clinical decision structure in GPT-5 tumour board simulation.",
+      "score": 5,
+      "theme": "LLM Tumor Boards",
+      "why": "In a zero-shot comparison across 100 gastrointestinal oncology cases, GPT-5 (a large language model, or LLM) prompted with different specialist personas matched multidisciplinary tumor board (MDT) recommendations 78-87% of the time with no significant difference between prompting frameworks, and embedding analysis showed personas produced near-identical semantic outputs despite highly distinct language. This suggests role prompting changes an LLM's tone but not its underlying clinical reasoning, an important caution for anyone considering these models as stand-ins for multi-specialist input rather than as a single decision-support adjunct."
+    },
+    {
+      "id": "pmid:42576294",
+      "beat": "repro-ai",
+      "source": "Magn Reson Med",
+      "title": "Placental Blood-Flow Velocity Quantification From Diffusion MRI.",
+      "score": 5,
+      "theme": "Placental Blood Flow Imaging",
+      "why": "This methods paper combines Monte Carlo simulations of placental capillary blood flow with machine learning regressors (random forest and multilayer perceptron) to estimate capillary blood velocity from diffusion magnetic resonance imaging (MRI), outperforming conventional intravoxel incoherent motion (IVIM) fitting on simulated data and producing physiologically plausible in vivo estimates. This is an early-stage technical advance with potential relevance to preeclampsia and fetal growth restriction, but it lacks clinical outcome validation or a patient cohort linking the measure to disease."
+    },
+    {
+      "id": "pmid:42468288",
+      "beat": "repro-ai",
+      "source": "Comput Biol Med",
+      "title": "Automated early preterm detection using hybrid multimodal attention network with gated fusion.",
+      "score": 5,
+      "theme": "Preterm Birth Detection",
+      "why": "This retrospective single-dataset study trained a hybrid deep learning model with multi-head attention and gated fusion on 452 electrohysterography (EHG) recordings to detect preterm labor earlier than the standard one-week prediction window, reporting an area under the curve (AUC) of 0.99 and sensitivity of 0.93 using synchronization features between uterine electrodes. The near-perfect performance metrics and lack of external validation on an independent cohort raise strong concerns about overfitting, so despite the appealing reproductive relevance this needs replication before it changes clinical practice."
+    },
+    {
+      "id": "pmid:42580934",
+      "beat": "clinical-ai",
+      "source": "Lancet Digit Health",
+      "title": "Navigating fairness in artificial intelligence-based prediction models: theoretical constructs and practical applications.",
+      "score": 4,
+      "theme": "AI Fairness Framework",
+      "why": "This Viewpoint reviews 27 definitions of fairness for artificial intelligence (AI)-based clinical prediction models and argues that clinical utility, area under the receiver operating characteristic curve (AUC), calibration, and statistical parity are the most useful group-based metrics, illustrated through two use cases. It is a conceptual synthesis rather than new empirical work, useful for framing fairness audits but offering no new data or validated tool."
+    },
+    {
+      "id": "pmid:42600487",
+      "beat": "repro-ai",
+      "source": "Environ Int",
+      "title": "Integrative computational toxicology and experimental validation unveils ESR1-mediated steroidogenic disruption in triphenyl phosphate-induced female reproductive toxicity.",
+      "score": 4,
+      "theme": "Environmental Reproductive Toxicity",
+      "why": "Using network toxicology, transcriptomics, and machine learning on public datasets, this study prioritized ESR1 (estrogen receptor alpha) as the key gene mediating triphenyl phosphate-induced disruption of steroidogenesis, with an exploratory external evaluation area under the curve (AUC) of 0.94 and confirmatory in vitro knockdown experiments. The machine learning step is a hypothesis-generating prioritization tool within a mechanistic toxicology pipeline, not a clinical prediction model, limiting direct relevance to patient care."
+    },
+    {
+      "id": "pmid:42575188",
+      "beat": "repro-ai",
+      "source": "Prog Neuropsychopharmacol Biol Psychiatry",
+      "title": "Causal associations between hormone replacement therapy and brain structure: Evidence from large-scale Mendelian randomization and double machine learning.",
+      "score": 4,
+      "theme": "HRT and Brain Structure",
+      "why": "Using two-sample Mendelian randomization (MR) and double machine learning (DML) on UK Biobank genome-wide association study (GWAS) data, this study found causal associations between hormone replacement therapy (HRT) timing and use and specific brain structural features across 1,366 imaging phenotypes, with independent DML validation supporting the MR findings for several associations. The large sample and dual-method triangulation strengthen causal claims, but the outcomes are structural brain measures rather than clinical endpoints, and one key finding was excluded due to pleiotropy."
+    },
+    {
+      "id": "pmid:42601460",
+      "beat": "repro-ai",
+      "source": "Nat Methods",
+      "title": "From pixels to patterns: the AI revolution in stem cell-derived models.",
+      "score": 3,
+      "theme": "Stem Cell Imaging AI",
+      "why": "This Perspective surveys how deep learning, convolutional neural networks, and foundation models are being applied to image-based analysis of stem cell-derived embryo models and organoids, covering phenotyping, drug screening, and fate prediction. It is a narrative overview with no new experiments or validation data, so its value is orientation rather than evidence."
+    },
+    {
+      "id": "pmid:42600508",
+      "beat": "repro-ai",
+      "source": "Eur J Cancer",
+      "title": "Neoadjuvant chemotherapy reduces regulatory T-cells in cervical cancer.",
+      "score": 3,
+      "theme": "Tumor Immune Profiling",
+      "why": "In 64 patients from a randomized cervical cancer trial, multiplex immunohistochemistry with a validated machine-learning image analysis platform (ImmuNet) quantified immune cell populations before and after neoadjuvant chemotherapy (NACT), finding reduced regulatory T-cell (Treg) density post-treatment associated with better overall survival. The machine learning tool here serves only as an image quantification aid within an oncology immunology study, with no algorithmic innovation or clinical AI evaluation to speak of."
+    },
+    {
+      "id": "pmid:42594346",
+      "beat": "repro-ai",
+      "source": "J Med Internet Res",
+      "title": "Exploring Perceptions of Leveraging AI to Improve Outcomes in Maternal, Sexual, and Reproductive Health in Sub-Saharan Africa: Exploratory Qualitative Study.",
+      "score": 3,
+      "theme": "AI Perceptions Global Health",
+      "why": "This qualitative study interviewed 59 stakeholders in sub-Saharan Africa about perceptions of AI for maternal, sexual, and reproductive health, using framework analysis to surface themes like trust and equity concerns. It contains no AI system, deployment, or outcome data, offering context on attitudes rather than evidence of clinical impact."
+    },
+    {
+      "id": "pmid:42585780",
+      "beat": "repro-ai",
+      "source": "Maturitas",
+      "title": "Data-driven insights in menopause: A scoping review of sensors and AI.",
+      "score": 3,
+      "theme": "Menopause Sensor Review",
+      "why": "This scoping review of 58 studies maps sensor-based and data-driven approaches to menopause symptom monitoring, finding weak and inconsistent associations for measures like heart rate variability and highlighting a lack of standardized ground truth across studies. As a review with no new data, it mainly documents immaturity in the field rather than providing an actionable finding."
+    },
+    {
+      "id": "pmid:42576664",
+      "beat": "repro-ai",
+      "source": "J Womens Health (Larchmt)",
+      "title": "Bridging the Diagnostic Gap: Reviewing Current Endometriosis Screening Tools and Models.",
+      "score": 3,
+      "theme": "Endometriosis Screening Review",
+      "why": "This scoping review of 18 studies on endometriosis screening tools categorizes questionnaire-based, app-based, machine learning, and subtype-focused models, reporting area under the curve (AUC) values from 0.77 to 0.95 with machine learning models performing best, but notes significant gaps in external validation and cultural adaptation across all tools. As a review it identifies the field's state but adds no new evidence or validated instrument."
+    },
+    {
+      "id": "pmid:42574270",
+      "beat": "repro-ai",
+      "source": "Fetal Pediatr Pathol",
+      "title": "Artificial Intelligence, Machine Learning, and Multi-Omics Biomarker Discovery in Ectopic Pregnancy: A Comprehensive Review.",
+      "score": 3,
+      "theme": "Ectopic Pregnancy Review",
+      "why": "This narrative review synthesizes 52 studies from 1988-2026 on machine learning, multi-omics, and robotic surgery in ectopic pregnancy, citing area under the curve (AUC) values up to 0.929 for methotrexate failure prediction, but explicitly notes that retrospective designs and small samples limit generalizability. As a review with no new data or prospective validation, it mainly catalogs existing fragmented evidence rather than advancing the field."
+    },
+    {
+      "id": "pmid:42571690",
+      "beat": "repro-ai",
+      "source": "Orv Hetil",
+      "title": "[Clinical and preprocedural factors influencing in vitro fertilization outcomes: a machine learning-based analysis].",
+      "score": 3,
+      "theme": "IVF Outcome Predictors",
+      "why": "This narrative review of the University of Szeged's Gametogenesis Research Group and other literature summarizes machine learning-identified predictors of in vitro fertilization (IVF) success, consistently highlighting maternal age and embryo quality as the strongest factors. It presents no new model, dataset, or validation, functioning as a synthesis of already-known predictors rather than a novel contribution."
+    },
+    {
+      "id": "pmid:42469015",
+      "beat": "repro-ai",
+      "source": "Genome Res",
+      "title": "Identification of genomic features that uniquely impact estrogen receptor alpha binding and its effects on gene expression in endometrial cancer.",
+      "score": 3,
+      "theme": "Endometrial Cancer Genomics",
+      "why": "This basic science study applies machine learning to genomic data from estrogen receptor alpha (ER)-positive endometrial and breast cancer cell lines to identify factors predicting ER binding at estrogen response elements (EREs), pinpointing SOX17 as an endometrial-specific regulator and confirming it with a CRISPR knockout screen. The work is mechanistic cell-line research using machine learning as an analytic tool, with no clinical prediction, patient cohort, or translational validation presented."
+    },
+    {
+      "id": "url:d9da46ae9885c8a7",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Oura Seeks Patent To Detect Pregnancy Complications",
+      "score": 3,
+      "theme": "Pregnancy Complication Sensing",
+      "why": "This item reports that a wearable technology company is seeking a patent for a pulse wave velocity sensing system intended to flag early signs of hypertension, preeclampsia, and gestational diabetes, but no clinical data, validation study, or device has been described. A patent filing signals future intent rather than a demonstrated capability, so this is speculative rather than evidence-based news."
+    },
+    {
+      "id": "url:1e842cdc6bf21c48",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "AbCellera’s Menopause Drug Cuts Hot Flashes by 83% in Phase 2 Trial",
+      "score": 3,
+      "theme": "Menopause Drug Trial",
+      "why": "This item reports positive Phase 2 randomized controlled trial (RCT) results for a nonhormonal antibody treatment for menopausal hot flashes, with an 83% reduction in frequency in a 92-patient trial, but the intervention is a monoclonal antibody drug with no artificial intelligence or algorithmic component. Despite being a rigorous clinical trial, it falls outside this digest's AI-focused scope and should be read as background industry news rather than a clinical AI advance."
+    },
+    {
+      "id": "url:169d64ec49939ed6",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "New Startup Launches to Close the Bedside Communication Gap in Hospitals",
+      "score": 3,
+      "theme": "Ambient Documentation Startup",
+      "why": "This announcement describes a new startup launching an ambient artificial intelligence platform that records hospital bedside conversations and generates shared task lists, with a pilot planned at a major academic medical center but no outcome data yet available. It is an early-stage product launch worth noting for context but has no evaluation to assess its clinical impact."
+    },
+    {
+      "id": "url:bd5ac748a44aff03",
+      "beat": "industry",
+      "source": "MedTech Dive",
+      "title": "Abbott, Google to combine glucose data with AI coaching",
+      "score": 3,
+      "theme": "Digital Health Partnership",
+      "why": "This is a partnership announcement pairing Abbott's over-the-counter continuous glucose monitor (Lingo) with Google's health app for AI-driven coaching, but no product details, algorithm description, or clinical evidence are given. It has no reproductive or clinical AI evaluation content and reads as a business development note rather than a study or deployment with outcomes."
+    },
+    {
+      "id": "pmid:42593816",
+      "beat": "clinical-ai",
+      "source": "JAMA",
+      "title": "Enriching Clinical Trials With Machine Learning.",
+      "score": 2,
+      "theme": "Clinical Trial Design",
+      "why": "This JAMA piece on enriching clinical trials with machine learning has no abstract or text provided, so no findings, methods, or evidence can be assessed. Without substantive content this cannot be judged as a meaningful contribution this week."
+    },
+    {
+      "id": "pmid:42584207",
+      "beat": "repro-ai",
+      "source": "J R Soc Med",
+      "title": "Artificial intelligence must not worsen maternal health inequalities.",
+      "score": 2,
+      "theme": "AI Health Equity",
+      "why": "This is a commentary titled 'Artificial intelligence must not worsen maternal health inequalities' with no abstract or text provided, so its argument, evidence, or specific recommendations cannot be assessed. Without content this is scored conservatively as an opinion piece of uncertain substance."
+    },
+    {
+      "id": "pmid:42580549",
+      "beat": "repro-ai",
+      "source": "Environ Pollut",
+      "title": "Antibiotic mixture exposure in meconium affects child neurodevelopment via altering early-life gut microbiome and metabolome.",
+      "score": 2,
+      "theme": "Prenatal Antibiotic Exposure",
+      "why": "This cohort study of 300 mother-infant pairs used interpretable machine learning and mediation analysis to link meconium-measured antibiotic burden to lower Ages and Stages Questionnaire (ASQ) neurodevelopmental scores at 6 months, with Lactobacillus and a metabolite proposed as mediators. The analysis is environmental epidemiology using machine learning as a statistical tool rather than a clinical AI application, and findings are explicitly hypothesis-generating and unreplicated."
+    },
+    {
+      "id": "pmid:42572810",
+      "beat": "repro-ai",
+      "source": "Hemoglobin",
+      "title": "Precision Medicine in Transfusion-Dependent and Non-Transfusion-Dependent β-Thalassemia: Toward Personalized Diagnosis and Therapy.",
+      "score": 2,
+      "theme": "Thalassemia Precision Medicine",
+      "why": "This narrative review covers precision medicine strategies in transfusion-dependent and non-transfusion-dependent beta-thalassemia, mentioning artificial intelligence (AI) only briefly as having 'its strongest role in screening and diagnosis' without describing any specific AI method or evidence. The topic sits outside reproductive medicine and clinical AI evaluation entirely, making it low priority for this digest."
+    },
+    {
+      "id": "pmid:41931971",
+      "beat": "repro-ai",
+      "source": "Talanta",
+      "title": "Emerging frontiers in cervical cancer diagnostics: Recent innovations in biosensors for HPV detection.",
+      "score": 2,
+      "theme": "Cervical Cancer Screening",
+      "why": "This is a narrative review of biosensor technologies for human papillomavirus (HPV) detection in cervical cancer screening, with only a passing mention of artificial intelligence and machine learning rather than any new data or evaluation. It contains no original study, trial, or validated model, so it offers little actionable information for a reader tracking clinical AI advances."
+    },
+    {
+      "id": "url:f08d1b79abfb5a38",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Stork Labs Medical Named to FourthWave’s 2026 Accelerator",
+      "score": 2,
+      "theme": "Delivery Device Startup",
+      "why": "This announcement describes a maternal health startup developing a sensor-guided robotic device for assisted vaginal delivery being accepted into an accelerator program, with no artificial intelligence component or clinical data described. It is an early-stage business development item rather than a validated technology or study."
+    },
+    {
+      "id": "url:80bef7cd68b2681e",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Cotiviti Launches AI Solution to Address Coordination of Benefits Issues",
+      "score": 2,
+      "theme": "Insurance AI Launch",
+      "why": "This is a brief product launch announcement for an artificial intelligence tool addressing insurance coordination-of-benefits issues, with no clinical evidence, validation, or outcome data provided. It is administrative and revenue-cycle technology rather than clinical AI relevant to this reader's focus."
+    },
+    {
+      "id": "url:42d4c0695fae69c2",
+      "beat": "industry",
+      "source": "MedTech Dive",
+      "title": "CHAI creates work group to counter frontier AI model cybersecurity risks",
+      "score": 2,
+      "theme": "AI Governance Initiative",
+      "why": "This brief item reports that a health AI standards organization is forming a working group to develop playbooks addressing cybersecurity risks from frontier artificial intelligence models, but no specific guidance, evaluation, or outcome is yet available. It signals an emerging governance effort worth tracking but contains no substantive findings yet."
+    },
+    {
+      "id": "url:185dbeb53c4ca489",
+      "beat": "industry",
+      "source": "Healthcare Dive",
+      "title": "CHAI creates work group to counter frontier AI model cybersecurity risks",
+      "score": 2,
+      "theme": "AI Governance",
+      "why": "A healthcare AI governance coalition (CHAI, the Coalition for Health AI) announced it is forming a work group to address cybersecurity risks from frontier AI models, but this is an organizational and policy step with no product, clearance, or clinical evidence attached. It has no direct bearing on clinical AI evaluation or reproductive health and is of marginal relevance to a clinician-researcher tracking substantive developments."
+    },
+    {
+      "id": "url:aef4baed75d604e5",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Chelsea FC Women Partners With Fertility Plus to Support Players",
+      "score": 1,
+      "theme": "Fertility Benefits Partnership",
+      "why": "This is a sports sponsorship announcement describing a fertility benefits partnership between a soccer club and a fertility clinic, with no clinical data, product, or algorithmic component described. It has no relevance to clinical AI or evidence generation in reproductive medicine."
+    },
+    {
+      "id": "url:408585d58ec351d8",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Willow Partners With Providence Saint John’s To Expand Postpartum Support",
+      "score": 1,
+      "theme": "Postpartum Partnership",
+      "why": "This announcement describes a maternal health company's hospital partnership program donating postpartum care kits and resources, with no artificial intelligence, clinical trial, or outcome data mentioned. It is purely a business development item outside the scope of clinical evidence or technology evaluation."
+    },
+    {
+      "id": "url:ab303cf96d9305e4",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Next Phase Femtech Launches With €1.6M to Advance Women’s Health",
+      "score": 1,
+      "theme": "Menopause Startup Funding",
+      "why": "This is a funding announcement for a menopause-focused accelerator program that selected three market-ready products, one described as an AI-assisted symptom management app, but no evidence, evaluation, or clinical data is provided. It represents early-stage industry activity without a product or outcome to assess."
+    },
+    {
+      "id": "url:49b1cdc17a3f88c0",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Perimenopause Platform Play Health Shuts Down",
+      "score": 1,
+      "theme": "Startup Shutdown",
+      "why": "This is a company shutdown announcement for a perimenopause tracking and AI-assisted care plan platform, with no clinical data or evaluation ever having been reported. It is a business news item with no research or technology content to assess."
+    },
+    {
+      "id": "url:74a8b7b50380ace6",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Papcup and Peripear Secure £75K Innovate UK Grant",
+      "score": 1,
+      "theme": "Diagnostic Startup Funding",
+      "why": "This is a small non-dilutive grant announcement for two women's health startups developing at-home diagnostic biosensors, with no clinical evidence or algorithmic component described. It represents early seed-stage funding news rather than a validated finding."
+    },
+    {
+      "id": "url:2f5da7b2b5822a0d",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Better Models Won’t Fix Pharma’s AI Problem — Better Terminology Will",
+      "score": 1,
+      "theme": "AI Terminology Opinion",
+      "why": "This is an opinion piece arguing that terminology standardization, not model quality, is the bottleneck for artificial intelligence in pharmaceutical real-world data analysis, with no original data, study, or product described. It offers commentary rather than evidence and falls into the low-value opinion category this digest should generally skip."
+    },
+    {
+      "id": "url:2aa237e98539e340",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Healthcare Keeps Buying AI. But Nobody’s Building the Workforce to Run It.",
+      "score": 1,
+      "theme": "AI Workforce Opinion",
+      "why": "This is an opinion piece about the healthcare workforce's lack of preparation to operate artificial intelligence and digital health infrastructure, containing no data, study, or product evaluation. It is commentary rather than evidence-based reporting."
+    },
+    {
+      "id": "url:7d9de948c598a1b8",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Founders Should Stop Worrying If They’re “AI Enough”",
+      "score": 1,
+      "theme": "Startup Commentary",
+      "why": "This is an opinion piece advising healthcare startup founders not to worry about whether their products are sufficiently artificial intelligence-branded, with no original data, study, or product evaluation included. It is pure commentary with no evidentiary content."
+    },
+    {
+      "id": "url:9003654630bf6af6",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "MedCity Pivot: How Aetna is Adopting Agentic AI",
+      "score": 1,
+      "theme": "Insurer AI Commentary",
+      "why": "This is a podcast episode summary describing a health insurer's adoption of agentic artificial intelligence for internal operations, with no data, study, or specific outcome reported. It is promotional commentary rather than evidence of clinical or research value."
+    },
+    {
+      "id": "url:de5462e4e82cf5c0",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "AI in Drug Development is Not a Data Problem — It’s An Evidence Problem",
+      "score": 1,
+      "theme": "Drug Development Opinion",
+      "why": "This is an opinion piece arguing that artificial intelligence in drug development is limited by evidence and context rather than data volume, with no original data, study, or product described. It is commentary rather than a reportable finding."
+    },
+    {
+      "id": "url:310f1eba498ee08c",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "How to Keep Clinicians Satisfied, the Ascension Way",
+      "score": 1,
+      "theme": "Hospital AI Operations",
+      "why": "This item describes a health system's efforts to expand artificial intelligence use beyond documentation into billing, order entry, and handoffs, but provides no data, trial, or outcome measurement. It is an operational news item rather than an evaluated intervention."
+    },
+    {
+      "id": "url:4b6557672fba36e4",
+      "beat": "industry",
+      "source": "MedCity News",
+      "title": "Compliance Alone Won’t Fix the Home Health Fraud Problem",
+      "score": 1,
+      "theme": "Fraud Prevention Opinion",
+      "why": "This sponsored content piece argues that compliance measures alone cannot address artificial intelligence-driven fraud in home health billing, with no original data or study presented. It is promotional and advisory content rather than evidence-based reporting."
+    }
+  ],
+  "stats": {
+    "perBeat": [
+      {
+        "beat": "clinical-ai",
+        "label": "Clinical AI",
+        "totalMatches": 6,
+        "retrieved": 6,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 4
+      },
+      {
+        "beat": "repro-ai",
+        "label": "AI in OB/GYN and REI",
+        "totalMatches": 20,
+        "retrieved": 20,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 18
+      },
+      {
+        "beat": "industry",
+        "label": "FEMTECH and Digital Health",
+        "totalMatches": 20,
+        "retrieved": 20,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 20
+      }
+    ],
+    "feedFailures": [],
+    "ranked": true,
+    "droppedBelowCut": 0,
+    "refused": 0,
+    "unscored": 0
+  }
+}
