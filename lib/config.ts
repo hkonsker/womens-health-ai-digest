@@ -7,6 +7,10 @@
  * used which definition of the beat.
  */
 
+// v5 (2026-08-16): FEED_RELEVANCE now requires a women's health term. It used
+// to accept a bare AI term as well, which flooded the industry beat with
+// general health-IT trade press. Paired with a separate news-scoring rubric for
+// beat 3 in lib/rank.ts, after the beat returned zero items three weeks running.
 // v4 (2026-07-30): dropped "predictive model" and "prediction model" from the
 // repro AI terms. A multivariable logistic regression is a prediction model and
 // is not AI; those terms were pulling in classical-statistics papers.
@@ -14,7 +18,7 @@
 // imaging and culture technique, not AI, and it was pulling in incubator
 // hardware studies. Real AI embryo work says deep learning or machine learning.
 // v2: dropped STAT News, everything there is paywalled.
-export const QUERY_VERSION = "v4";
+export const QUERY_VERSION = "v5";
 
 /** How many days back PubMed looks. Matches the weekly cadence. */
 export const DAYS_BACK = 8;
@@ -144,42 +148,53 @@ export const FEEDS: FeedSource[] = [
 ];
 
 /**
- * An RSS item is a candidate only if it matches a women's-health term OR an
- * AI term. Deliberately loose: the ranker decides what is actually worth
- * reading, this only keeps the LLM bill down.
+ * An RSS item is a candidate only if it names something in women's health.
+ *
+ * This used to also admit anything matching a bare AI term, which was the wrong
+ * gate for a women's health beat: on 2026-08-16 that branch let in 12 of 20
+ * candidates as general health-IT trade press with no women's health angle
+ * (payer analytics, hospital comms startups, model-security work groups). They
+ * cost money to rank and every one of them correctly scored near zero.
+ *
+ * AI is deliberately not required. An AI angle is a bonus the ranker can weigh,
+ * not an entry condition, so a menopause trial readout or a fertility platform
+ * shutting down still reaches the digest.
  */
 export const FEED_RELEVANCE = new RegExp(
   [
-    // women's health
     "women'?s health",
     "femtech",
     "fertility",
     "infertility",
     "\\bIVF\\b",
     "reproductive",
-    "maternal",
     "matern(al|ity)",
     "pregnan",
+    "perinatal",
+    "prenatal",
     "obstetric",
     "gynecolog",
-    "menopause",
+    "menopaus",
     "contracepti",
+    "birth control",
     "endometriosis",
     "\\bPCOS\\b",
     "postpartum",
     "period tracking",
-    "menstrual",
-    // AI in medicine
-    "artificial intelligence",
-    "\\bAI\\b",
-    "machine learning",
-    "large language model",
-    "\\bLLM\\b",
-    "generative AI",
-    "\\bGPT\\b",
-    "algorithm",
-    "clinical decision support",
-    "ambient (documentation|scribe)",
+    "menstrua",
+    "breastfeed",
+    "lactation",
+    "doula",
+    "midwif",
+    "cervical",
+    "ovarian",
+    "uterine",
+    "endometrial",
+    "breast cancer",
+    "egg freezing",
+    "surrogacy",
+    "pelvic",
+    "hormone therapy",
   ].join("|"),
   "i",
 );

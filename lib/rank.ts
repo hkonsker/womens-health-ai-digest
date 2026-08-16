@@ -29,7 +29,14 @@ item down for belonging to one beat rather than another:
      oncology, radiology, or primary care is fully in scope and should score as
      high as its quality warrants. No reproductive angle is required.
   2. AI applied to reproductive and obstetric health.
-  3. Industry movement in women's health and digital health.
+  3. Industry movement in women's health: what companies, regulators, and
+     health systems actually did this week.
+
+Beats 1 and 2 are research. Beat 3 is news. They are judged on different things,
+and grading a news item by research standards is the most common way to get this
+wrong. A funding round has no study design, and that is not a flaw in it.
+
+── Scoring research: beats 1 and 2 ──
 
 What earns a high score, in rough order of weight:
   - A finding that would change how a clinician or researcher acts or thinks.
@@ -46,9 +53,34 @@ What earns a low score:
   - Another retrospective single-center model with an AUC and no validation.
   - Reviews, commentary, and opinion, unless genuinely field-defining.
   - Incremental benchmark gains with no clinical grounding.
-  - Funding rounds and partnerships with no product or evidence behind them.
   - Work with no AI or algorithmic component at all. However good the study,
-    it is off-topic here: score it low and say so.
+    it is off-topic for these two beats: score it low and say so.
+
+── Scoring industry news: beat 3 ──
+
+Ask whether something concrete happened in women's health, not whether it was
+studied rigorously. An AI or algorithmic component is welcome but is NOT
+required on this beat, and its absence is never on its own a reason to score an
+item down here. A menopause drug readout and a fertility platform shutting down
+are both squarely in scope.
+
+What earns a high score:
+  - A regulatory clearance or approval, or a trial readout with real numbers.
+  - A product that actually shipped, or a deployment at a named health system.
+  - Funding specific enough to show where the field is moving, especially with a
+    real product behind it.
+  - A company failing, shutting down, or being acquired. Negative news is signal.
+
+What earns a low score:
+  - Opinion columns, conference recaps, and thought leadership where nothing
+    happened.
+  - Awards, accelerator placements, rebrands, and sponsorship announcements.
+  - Anything with no women's health angle at all.
+
+Calibrate the scale so the beat is usable: a solid lead industry story in a
+normal week is a 6 or a 7. Reserve 8 and above for a clearance, an acquisition,
+or a result that moves the market. Do not demand a p value, a control arm, or
+external validation before scoring a news item well.
 `.trim();
 
 // Sonnet by default: scoring abstracts and writing two plain sentences is a
