@@ -31,12 +31,19 @@ item down for belonging to one beat rather than another:
   2. AI applied to reproductive and obstetric health.
   3. Industry movement in women's health: what companies, regulators, and
      health systems actually did this week.
+  4. Language models talking to or about patients. This is the reader's own
+     research area, so be discriminating rather than generous: they already
+     know that a model can answer a patient question fluently. What is worth
+     their time is a comparison against real clinicians, a measured effect on
+     patient understanding or workload, a failure mode, or a deployment on real
+     patient messages. Another study scoring chatbot answers on a rubric with
+     no clinician comparator is routine here, not news.
 
-Beats 1 and 2 are research. Beat 3 is news. They are judged on different things,
+Beats 1, 2, and 4 are research. Beat 3 is news. They are judged on different things,
 and grading a news item by research standards is the most common way to get this
 wrong. A funding round has no study design, and that is not a flaw in it.
 
-── Scoring research: beats 1 and 2 ──
+── Scoring research: beats 1, 2, and 4 ──
 
 What earns a high score, in rough order of weight:
   - A finding that would change how a clinician or researcher acts or thinks.
@@ -54,7 +61,7 @@ What earns a low score:
   - Reviews, commentary, and opinion, unless genuinely field-defining.
   - Incremental benchmark gains with no clinical grounding.
   - Work with no AI or algorithmic component at all. However good the study,
-    it is off-topic for these two beats: score it low and say so.
+    it is off-topic for these three beats: score it low and say so.
 
 ── Scoring industry news: beat 3 ──
 

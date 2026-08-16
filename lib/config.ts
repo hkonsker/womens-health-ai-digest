@@ -7,6 +7,10 @@
  * used which definition of the beat.
  */
 
+// v6 (2026-08-16): added beat 4, LLMs and patient communication. Measured
+// against 90 days of PubMed, only 3 of 362 papers on this topic appear in the
+// beat 1 journal allowlist, so the reader's own research area was almost
+// entirely invisible in their own digest.
 // v5 (2026-08-16): FEED_RELEVANCE now requires a women's health term. It used
 // to accept a bare AI term as well, which flooded the industry beat with
 // general health-IT trade press. Paired with a separate news-scoring rubric for
@@ -18,7 +22,7 @@
 // imaging and culture technique, not AI, and it was pulling in incubator
 // hardware studies. Real AI embryo work says deep learning or machine learning.
 // v2: dropped STAT News, everything there is paywalled.
-export const QUERY_VERSION = "v5";
+export const QUERY_VERSION = "v6";
 
 /** How many days back PubMed looks. Matches the weekly cadence. */
 export const DAYS_BACK = 8;
@@ -32,7 +36,7 @@ export const MAX_ITEMS_IN_DIGEST = 10;
 /** Minimum score (0-10) an item needs to appear at all, even if the digest is short. */
 export const MIN_SCORE = 5;
 
-export type BeatId = "clinical-ai" | "repro-ai" | "industry";
+export type BeatId = "clinical-ai" | "repro-ai" | "patient-comm" | "industry";
 
 export interface Beat {
   id: BeatId;
@@ -53,6 +57,12 @@ export const BEATS: Record<BeatId, Beat> = {
     label: "AI in OB/GYN and REI",
     intent:
       "AI applied to women's reproductive and obstetric health: infertility and IVF, embryo and oocyte selection, obstetric risk prediction, gynecologic imaging and screening.",
+  },
+  "patient-comm": {
+    id: "patient-comm",
+    label: "LLMs and Patient Communication",
+    intent:
+      "Language models talking to or about patients: answering patient messages and questions, patient education and readability, empathy and communication quality compared against clinicians, counseling, and symptom checkers.",
   },
   industry: {
     id: "industry",
@@ -117,6 +127,38 @@ preeclampsia[Title/Abstract] OR "pre-eclampsia"[Title/Abstract] OR "preterm birt
 fetal[Title/Abstract] OR "maternal health"[Title/Abstract] OR "maternal mortality"[Title/Abstract] OR
 postpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR "cervical cancer"[Title/Abstract] OR
 menopause[Title/Abstract] OR contracepti*[Title/Abstract] OR "women's health"[Title/Abstract]
+)
+NOT (
+news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR
+"case reports"[Publication Type]
+)`;
+
+// ─── Beat 4: LLMs and patient communication ───────────────────────────────────
+//
+// Strategy: same shape as beat 2, high recall on topic with the ranker doing
+// precision. A journal allowlist is exactly the wrong tool here. Measured over
+// 90 days, the beat 1 allowlist contains 3 of the 362 papers this query finds:
+// the work lives in JMIR, Patient Education and Counseling, Annals of Family
+// Medicine, and specialty journals, not in JAMA and NEJM.
+//
+// Deliberately about the patient-facing side. A model that drafts a note for a
+// clinician is beat 1; a model that answers the patient's portal message, or
+// gets compared to a doctor on empathy, is this beat.
+
+export const QUERY_PATIENT_COMM = `(
+chatbot[Title/Abstract] OR chatbots[Title/Abstract] OR "conversational agent"[Title/Abstract] OR
+"large language model"[Title/Abstract] OR LLM[Title/Abstract] OR ChatGPT[Title/Abstract] OR
+"generative AI"[Title/Abstract] OR "symptom checker"[Title/Abstract]
+)
+AND
+(
+"patient question"[Title/Abstract] OR "patient questions"[Title/Abstract] OR
+"patient communication"[Title/Abstract] OR "patient education"[Title/Abstract] OR
+"patient portal"[Title/Abstract] OR "patient message"[Title/Abstract] OR
+"patient messages"[Title/Abstract] OR "patient-facing"[Title/Abstract] OR
+"patient inquiries"[Title/Abstract] OR empathy[Title/Abstract] OR
+"health literacy"[Title/Abstract] OR "shared decision"[Title/Abstract] OR
+readability[Title/Abstract] OR counseling[Title/Abstract]
 )
 NOT (
 news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR

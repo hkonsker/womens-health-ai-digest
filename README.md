@@ -8,11 +8,12 @@ left running.
 The beats below are one person's interests and are meant to be replaced. See
 [Forking this for yourself](#forking-this-for-yourself).
 
-A weekly digest of three beats:
+A weekly digest of four beats:
 
 1. **Clinical AI** — substantial clinical AI research, from a fixed allowlist of top journals.
 2. **AI in OB/GYN and REI** — AI applied to reproductive and obstetric health.
 3. **FEMTECH and Digital Health** — industry news, funding, and clearances.
+4. **LLMs and Patient Communication** — models answering patient questions, compared against clinicians.
 
 Every Sunday morning a GitHub Action queries PubMed and a set of RSS feeds, has Claude
 score and summarize what it found, writes the result to a styled archive page, and emails
@@ -132,6 +133,7 @@ Almost everything you would want to change is in [`lib/config.ts`](lib/config.ts
 | `QUERY_CLINICAL_AI` | Beat 1. High precision by journal allowlist. Add a journal to widen it. |
 | `QUERY_REPRO_AI` | Beat 2. High recall by topic, no journal filter. The ranker does precision. |
 | `FEEDS` | Beat 3. Add or remove RSS sources. |
+| `QUERY_PATIENT_COMM` | Beat 4. Patient-facing language models. High recall by topic, like beat 2. |
 | `FEED_RELEVANCE` | Cheap keyword gate so you do not pay to rank unrelated healthcare news. |
 | `MAX_ITEMS_IN_DIGEST` | How long the digest gets. Default 10. |
 | `MIN_SCORE` | The floor. Default 5. Raise it if the digest feels padded. |

@@ -22,6 +22,7 @@ import {
   QUERY_VERSION,
   QUERY_CLINICAL_AI,
   QUERY_REPRO_AI,
+  QUERY_PATIENT_COMM,
   DAYS_BACK,
   MAX_CANDIDATES_PER_BEAT,
   MAX_ITEMS_IN_DIGEST,
@@ -169,6 +170,7 @@ async function main(): Promise<void> {
   for (const [beat, query] of [
     ["clinical-ai", QUERY_CLINICAL_AI],
     ["repro-ai", QUERY_REPRO_AI],
+    ["patient-comm", QUERY_PATIENT_COMM],
   ] as Array<[BeatId, string]>) {
     const r = await collectPubMed(beat, query);
     candidates.push(...r.candidates);
@@ -287,6 +289,7 @@ async function main(): Promise<void> {
     queries: {
       "clinical-ai": QUERY_CLINICAL_AI,
       "repro-ai": QUERY_REPRO_AI,
+      "patient-comm": QUERY_PATIENT_COMM,
       industry: `RSS: ${feeds.candidates.length} item(s) from configured feeds`,
     },
     items,

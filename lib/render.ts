@@ -13,11 +13,13 @@ const POPPY = "#E98300";
 const PALO_ALTO = "#175E54";
 const COOL_GREY = "#53565A";
 const SLATE = "#4B535A";
+const STONE = "#7F7776";
 
 /** Beat chip colors, one per beat so they are distinguishable at a glance. */
 const BEAT_COLOR: Record<string, string> = {
   "clinical-ai": SLATE,
   "repro-ai": CARDINAL,
+  "patient-comm": STONE,
   industry: PALO_ALTO,
 };
 

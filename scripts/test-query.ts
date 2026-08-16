@@ -13,6 +13,7 @@ import "dotenv/config";
 import {
   QUERY_CLINICAL_AI,
   QUERY_REPRO_AI,
+  QUERY_PATIENT_COMM,
   DAYS_BACK,
   MAX_CANDIDATES_PER_BEAT,
   BEATS,
@@ -82,6 +83,7 @@ async function showFeeds(): Promise<void> {
 async function main(): Promise<void> {
   if (!only || only === "clinical") await showPubMed(BEATS["clinical-ai"].label, QUERY_CLINICAL_AI);
   if (!only || only === "repro") await showPubMed(BEATS["repro-ai"].label, QUERY_REPRO_AI);
+  if (!only || only === "patient") await showPubMed(BEATS["patient-comm"].label, QUERY_PATIENT_COMM);
   if (!only || only === "industry") await showFeeds();
 }
 
