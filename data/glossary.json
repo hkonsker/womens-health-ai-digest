@@ -733,5 +733,90 @@
     "term": "Electrohysterography (EHG)",
     "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
     "firstSeen": "2026-W33"
+  },
+  "phase 2 trial": {
+    "term": "Phase 2 Trial",
+    "definition": "An early-to-mid stage clinical trial in a moderate number of patients that tests whether a treatment works and is reasonably safe, before larger confirmatory trials.",
+    "firstSeen": "2026-W34"
+  },
+  "primary efficacy endpoint": {
+    "term": "Primary Efficacy Endpoint",
+    "definition": "The main measurable outcome a clinical trial is designed to test in order to determine whether a treatment works.",
+    "firstSeen": "2026-W34"
+  },
+  "parkinson's disease (pd)": {
+    "term": "Parkinson's Disease (PD)",
+    "definition": "A progressive brain disorder that affects movement and is linked to loss of certain nerve cells.",
+    "firstSeen": "2026-W34"
+  },
+  "polysomnography (psg)": {
+    "term": "Polysomnography (PSG)",
+    "definition": "An overnight test that records brain waves, breathing, and other signals to study sleep.",
+    "firstSeen": "2026-W34"
+  },
+  "deep neural network": {
+    "term": "Deep Neural Network",
+    "definition": "A type of computer program loosely modeled on the brain that learns patterns from large amounts of data.",
+    "firstSeen": "2026-W34"
+  },
+  "external hold-out set": {
+    "term": "External Hold-Out Set",
+    "definition": "A separate group of data, not used to train the model, that tests whether it works on new patients.",
+    "firstSeen": "2026-W34"
+  },
+  "p value": {
+    "term": "P Value",
+    "definition": "A statistical measure indicating how likely a result could have occurred by chance alone, with smaller values suggesting a more reliable finding.",
+    "firstSeen": "2026-W34"
+  },
+  "multidisciplinary tumour board (mdt)": {
+    "term": "Multidisciplinary Tumour Board (MDT)",
+    "definition": "A meeting where doctors from different specialties jointly decide on a patient's cancer treatment.",
+    "firstSeen": "2026-W34"
+  },
+  "zero-shot prompting": {
+    "term": "Zero-shot Prompting",
+    "definition": "Giving an AI a task or instruction without first showing it worked examples of that exact task.",
+    "firstSeen": "2026-W34"
+  },
+  "concordance": {
+    "term": "Concordance",
+    "definition": "The degree to which two decisions, such as an AI's and a human panel's, agree with each other.",
+    "firstSeen": "2026-W34"
+  },
+  "state-trait anxiety inventory (stai)": {
+    "term": "State-Trait Anxiety Inventory (STAI)",
+    "definition": "A widely used questionnaire that measures a person's current anxiety level and their general tendency toward anxiety.",
+    "firstSeen": "2026-W34"
+  },
+  "prospective observational study": {
+    "term": "Prospective Observational Study",
+    "definition": "A study that follows participants forward in time and records what happens, without the researchers assigning who gets which treatment.",
+    "firstSeen": "2026-W34"
+  },
+  "retrospective study": {
+    "term": "Retrospective Study",
+    "definition": "A study design that looks back at existing cases or data rather than following new patients forward in time.",
+    "firstSeen": "2026-W34"
+  },
+  "phenotype prediction": {
+    "term": "Phenotype Prediction",
+    "definition": "Predicting the observable characteristics or symptoms a person will have based on their genetic makeup.",
+    "firstSeen": "2026-W34"
+  },
+  "peripherally inserted central catheter (picc)": {
+    "term": "Peripherally Inserted Central Catheter (PICC)",
+    "definition": "A thin, long tube inserted into a vein in the arm and threaded to a larger vein near the heart, used for long-term delivery of medications like chemotherapy.",
+    "firstSeen": "2026-W34"
+  },
+  "fine-tuning (ft)": {
+    "term": "Fine-Tuning (FT)",
+    "definition": "A process of further training an already-built AI model on a smaller, specific set of data to make it better at a particular task.",
+    "firstSeen": "2026-W34"
+  },
+  "finite state machine (fsm)": {
+    "term": "Finite State Machine (FSM)",
+    "definition": "A system design that follows a fixed set of defined steps or states, moving between them based on specific rules, used here to keep a chatbot's conversation on a structured path.",
+    "firstSeen": "2026-W34"
   }
 }
