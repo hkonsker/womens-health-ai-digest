@@ -26,7 +26,7 @@ Sunday 14:17 UTC (7am Pacific in summer, 6am in winter), plus a 19:17 catch-up
   → PubMed (2 queries) + RSS (6 feeds)
   → dedup against every item ever seen
   → Claude scores 0-10, writes the summary at two levels, and defines the jargon
-  → keep the top 10 that score 5 or above
+  → keep the top 15 that score 5 or above
   → docs/index.html + email via Resend
   → commit state back to the repo
 ```
@@ -135,7 +135,7 @@ Almost everything you would want to change is in [`lib/config.ts`](lib/config.ts
 | `FEEDS` | Beat 3. Add or remove RSS sources. |
 | `QUERY_PATIENT_COMM` | Beat 4. Patient-facing language models. High recall by topic, like beat 2. |
 | `FEED_RELEVANCE` | Cheap keyword gate so you do not pay to rank unrelated healthcare news. |
-| `MAX_ITEMS_IN_DIGEST` | How long the digest gets. Default 10. |
+| `MAX_ITEMS_IN_DIGEST` | How long the digest gets. Default 15. |
 | `MIN_SCORE` | The floor. Default 5. Raise it if the digest feels padded. |
 | `QUERY_VERSION` | **Bump this whenever you change a query or the feed list.** |
 

@@ -30,8 +30,14 @@ export const DAYS_BACK = 8;
 /** Per-beat ceiling on candidates pulled before ranking. */
 export const MAX_CANDIDATES_PER_BEAT = 80;
 
-/** How many items survive ranking and appear in the digest. */
-export const MAX_ITEMS_IN_DIGEST = 10;
+/**
+ * How many items survive ranking and appear in the digest.
+ *
+ * Raised from 10 to 15 on 2026-08-16 when beat 4 arrived. With four beats the
+ * cap started binding rather than the score floor: that run had 12 items clear
+ * MIN_SCORE and dropped 2 purely for space.
+ */
+export const MAX_ITEMS_IN_DIGEST = 15;
 
 /** Minimum score (0-10) an item needs to appear at all, even if the digest is short. */
 export const MIN_SCORE = 5;
