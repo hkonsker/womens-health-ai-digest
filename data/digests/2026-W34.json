@@ -1,0 +1,1897 @@
+{
+  "weekLabel": "2026-W34",
+  "startDate": "2026-08-17T00:00:00.000Z",
+  "endDate": "2026-08-23T23:59:59.999Z",
+  "generatedAt": "2026-08-23T14:44:58.558Z",
+  "queryVersion": "v6",
+  "queries": {
+    "clinical-ai": "(\nJAMA[jour] OR \"JAMA Netw Open\"[jour] OR \"JAMA Intern Med\"[jour] OR \"JAMA Pediatr\"[jour] OR\n\"JAMA Surg\"[jour] OR \"JAMA Oncol\"[jour] OR \"JAMA Neurol\"[jour] OR \"JAMA Cardiol\"[jour] OR\n\"N Engl J Med\"[jour] OR \"NEJM AI\"[jour] OR Lancet[jour] OR BMJ[jour] OR\n\"Lancet Digit Health\"[jour] OR \"Nat Med\"[jour] OR \"npj Digit Med\"[jour] OR\n\"J Am Med Inform Assoc\"[jour] OR \"Ann Intern Med\"[jour] OR Nature[jour] OR Science[jour]\n)\nAND\n(\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR \"generative AI\"[Title/Abstract] OR\n\"artificial intelligence\"[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR GPT[Title/Abstract] OR\n\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"neural network\"[Title/Abstract]\n)\nAND\n(\nclinical[Title/Abstract] OR patient[Title/Abstract] OR workflow[Title/Abstract] OR\nimplementation[Title/Abstract] OR \"clinical decision support\"[Title/Abstract] OR\ndocumentation[Title/Abstract] OR EHR[Title/Abstract] OR radiology[Title/Abstract] OR\ntriage[Title/Abstract] OR diagnosis[Title/Abstract] OR outcome[Title/Abstract]\n)\nNOT (news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type])",
+    "repro-ai": "(\n\"artificial intelligence\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR\n\"deep learning\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR GPT[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR\n\"neural network\"[Title/Abstract] OR \"computer vision\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR radiomics[Title/Abstract]\n)\nAND\n(\ninfertility[Title/Abstract] OR \"in vitro fertilization\"[Title/Abstract] OR IVF[Title/Abstract] OR\n\"assisted reproduction\"[Title/Abstract] OR \"assisted reproductive\"[Title/Abstract] OR\nembryo[Title/Abstract] OR blastocyst[Title/Abstract] OR oocyte[Title/Abstract] OR\n\"ovarian reserve\"[Title/Abstract] OR endometriosis[Title/Abstract] OR\n\"polycystic ovary\"[Title/Abstract] OR PCOS[Title/Abstract] OR endometrial[Title/Abstract] OR\npregnancy[Title/Abstract] OR pregnant[Title/Abstract] OR obstetric[Title/Abstract] OR\npreeclampsia[Title/Abstract] OR \"pre-eclampsia\"[Title/Abstract] OR \"preterm birth\"[Title/Abstract] OR\nfetal[Title/Abstract] OR \"maternal health\"[Title/Abstract] OR \"maternal mortality\"[Title/Abstract] OR\npostpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR \"cervical cancer\"[Title/Abstract] OR\nmenopause[Title/Abstract] OR contracepti*[Title/Abstract] OR \"women's health\"[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "patient-comm": "(\nchatbot[Title/Abstract] OR chatbots[Title/Abstract] OR \"conversational agent\"[Title/Abstract] OR\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR ChatGPT[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR \"symptom checker\"[Title/Abstract]\n)\nAND\n(\n\"patient question\"[Title/Abstract] OR \"patient questions\"[Title/Abstract] OR\n\"patient communication\"[Title/Abstract] OR \"patient education\"[Title/Abstract] OR\n\"patient portal\"[Title/Abstract] OR \"patient message\"[Title/Abstract] OR\n\"patient messages\"[Title/Abstract] OR \"patient-facing\"[Title/Abstract] OR\n\"patient inquiries\"[Title/Abstract] OR empathy[Title/Abstract] OR\n\"health literacy\"[Title/Abstract] OR \"shared decision\"[Title/Abstract] OR\nreadability[Title/Abstract] OR counseling[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "industry": "RSS: 7 item(s) from configured feeds"
+  },
+  "items": [
+    {
+      "id": "pmid:42618635",
+      "beat": "clinical-ai",
+      "title": "Large-scale AI-guided liver malignancy diagnosis: multicenter study and a single-arm trial.",
+      "source": "Nat Med",
+      "url": "https://doi.org/10.1038/s41591-026-04589-y",
+      "date": "2026-08-19T00:00:00.000Z",
+      "authors": [
+        "Zhang X",
+        "Li C",
+        "Han X",
+        "Yin X",
+        "Zhang C",
+        "Zhou J",
+        "Cao K",
+        "Liu Q",
+        "Hong Y",
+        "Gao Y",
+        "Cui B",
+        "Zhang Q",
+        "Qiao J",
+        "Sun M",
+        "Liu W",
+        "Gao Y",
+        "Zhong S",
+        "Bai R",
+        "Jiang T",
+        "Humbert O",
+        "Ourselin S",
+        "Zuluaga MA",
+        "Yan K",
+        "Zhang Q",
+        "Hou Y",
+        "Liang T",
+        "Zhang L",
+        "Shi Y"
+      ],
+      "body": "Liver malignancies are frequently evaluated on contrast-enhanced computed tomography (CE-CT), but missed or delayed diagnoses remain a clinically important challenge in high-volume, real-world radiology workflows, highlighting the need for scalable diagnostic safety net approaches. To address this, we developed the Liver DiagnOsis Network (LiON), a CE-CT-based artificial intelligence (AI) system that supports flexible multiphase processing, clinical data integration and workflow-compatible liver malignancy diagnosis. LiON was trained on 6,443 patients and retrospectively validated across 22,251 patients from multicenter and real-world cohorts. LiON achieved high performance for malignancy diagnosis, with an area under the receiver operating characteristic curve (AUC) of 0.975 (95% confidence interval (CI): 0.971-0.979), and maintained robust performance in real-world cohorts and among patients with hepatic steatosis (AUC 0.971, 95% CI: 0.952-0.985) and cirrhosis (AUC 0.924, 95% CI: 0.901-0.946). We then conducted a single-arm trial in 10,333 patients in routine clinical practice, in which LiON functioned as an additional AI reader within the existing clinical workflow. The trial met its primary endpoint, defined as an AUC for malignancy diagnosis with the lower bound of the 95% CI exceeding 0.900, achieving an AUC of 0.952 (95% CI: 0.942-0.961). Secondary outcomes demonstrated that AI-human collaboration identified 51 previously overlooked lesions (15 malignancies) and triggered 37 amended radiology reports, 22 multidisciplinary team escalations and clinical management changes in a subset of patients. These findings suggest that AI, when deployed as a workflow-compatible diagnostic support, may help reduce missed or delayed diagnoses and guide clinical interventions. Nevertheless, further evidence from prospective comparative studies across diverse healthcare systems is warranted to assess effects on clinical outcomes. ClinicalTrials.gov identifier: NCT07153783 .",
+      "score": 8,
+      "why": "This large multicenter study developed LiON, a contrast-enhanced computed tomography (CE-CT) based AI system for liver malignancy diagnosis, validating it retrospectively across 22,251 patients (area under the receiver operating characteristic curve (AUC) 0.975) and then testing it prospectively as an added reader in a single-arm trial of 10,333 patients, where it identified 51 previously overlooked lesions and prompted 22 multidisciplinary escalations. This is a rare example of AI moving from retrospective validation to real clinical workflow deployment with measurable downstream management changes, though it still needs a comparative prospective trial to establish outcome benefit.",
+      "plain": "Researchers built an AI tool called LiON that reads CT scans to help diagnose liver cancer, tested it on over 22,000 patients in multiple hospitals with very high accuracy, and then used it in real clinical practice on more than 10,000 patients, where it caught 51 lesions doctors had missed and led to 22 cases being escalated for expert review. This shows AI actually changing what happens in patient care, not just performing well on paper, though a study comparing it directly against standard care is still needed to prove it improves outcomes.",
+      "theme": "AI Liver Diagnosis",
+      "glossary": [
+        {
+          "term": "Contrast-Enhanced Computed Tomography (CE-CT)",
+          "definition": "A CT scan enhanced with an injected dye that highlights blood vessels and tissue differences to improve diagnosis.",
+          "isNew": true
+        },
+        {
+          "term": "Area Under the Receiver Operating Characteristic Curve (AUC)",
+          "definition": "A number between 0.5 and 1 that measures how well a model distinguishes between people who will and will not have an outcome, where 1 is perfect and 0.5 is no better than chance.",
+          "isNew": false
+        },
+        {
+          "term": "Single-Arm Trial",
+          "definition": "A study where every participant receives the same intervention, with no separate comparison group.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42607666",
+      "beat": "patient-comm",
+      "title": "A bimodal large language model reduces misalignment in patient education: A double-blinded randomized trial.",
+      "source": "Med",
+      "url": "https://doi.org/10.1016/j.medj.2026.101263",
+      "date": "2026-08-17T00:00:00.000Z",
+      "authors": [
+        "Wan P",
+        "Huang Z",
+        "Huang H",
+        "Liang G",
+        "Guo M",
+        "Xu S",
+        "Sun X",
+        "Tang W",
+        "Pei D",
+        "Chen J",
+        "Nie Y",
+        "Deng S",
+        "Zhou Y",
+        "Duan H",
+        "Zhang R",
+        "Xu X",
+        "Hai E",
+        "Cao M",
+        "Long E"
+      ],
+      "body": "BACKGROUND: Effective patient education requires accurate communication aligned with patients' emotional and semantical needs. Text-based large language models (LLMs) lack access to non-verbal cues, which may contribute to misaligned responses. METHODS: We evaluated emotional and semantic misalignment in a text-based LLM using 64,200 utterances from 16,583 patient education cases across six departments and three centers. Dolphin was developed integrating text and audio cues and evaluated through emotion recognition, semantic consistency assessment, branch-level ablations, and a double-blinded randomized trial against a matched text-based LLM comparator (Chinese Clinical Trial Registry: (ChiCTR2500095933). FINDINGS: The text-based LLM showed emotional misalignment in 36.7% of responses and semantic misalignment in 28.3% of cases, with higher misalignment under greater burden. Dolphin outperformed the text-based LLM in emotion recognition accuracy (0.886 vs. 0.713) and semantic consistency (84.9% vs. 82.1%; both adjusted p < 0.001). Ablations supported contribution of audio branches. Dolphin received higher expert ratings than the text-based LLM and human educators (all p < 0.001). In 555 patients, Dolphin was associated with greater patient satisfaction (98.6% vs. 93.8%), suggestion acceptance (76.1% vs. 58.9%; p < 0.001), proactive disclosure (44.6% vs. 26.5%; p < 0.001), and fewer 7-day unplanned recontact (12.9% vs. 22.9%; p = 0.002). No unsafe recommendations or safety events were identified. CONCLUSIONS: Compared with text-based LLM, Dolphin improved emotional-semantic alignment and patient-education outcomes, supporting bimodal alignment as a strategy for reducing misalignment-driven communication failures. FUNDING: National Natural Science Foundation of China, State Key Laboratory Special Fund, and Chinese Academy of Medical Sciences Innovation Fund.",
+      "score": 8,
+      "why": "A double-blinded randomized controlled trial (RCT) tested a bimodal (text and audio) large language model (LLM), Dolphin, against a matched text-only LLM in patient education across 555 patients, finding higher patient satisfaction (98.6% vs 93.8%), greater suggestion acceptance (76.1% vs 58.9%), and fewer 7-day unplanned recontacts (12.9% vs 22.9%, p=0.002). This is a rare randomized trial with real clinical workload and satisfaction endpoints comparing an AI system against both a text-only AI and human educators, making it directly relevant evidence for whether multimodal cues improve patient communication.",
+      "plain": "Scientists built an AI that listens to both the words and tone of voice of patients, then tested it in a randomized trial against a text-only AI chatbot with 555 real patients. The voice-aware AI led to higher patient satisfaction, more patients following its advice, and fewer people needing to come back within a week, which is a real measured benefit rather than just a quality score.",
+      "theme": "Multimodal Patient Education Trial",
+      "glossary": [
+        {
+          "term": "Double-Blinded Randomized Controlled Trial (RCT)",
+          "definition": "A study design where participants are randomly assigned to different treatments and neither participants nor assessors know who got which, reducing bias.",
+          "isNew": true
+        },
+        {
+          "term": "Bimodal Large Language Model (LLM)",
+          "definition": "An AI system that processes more than one type of input, such as both text and audio, rather than just text.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42618632",
+      "beat": "clinical-ai",
+      "title": "Prospective evaluation of a large language model clinical decision support system in the emergency department.",
+      "source": "Nat Med",
+      "url": "https://doi.org/10.1038/s41591-026-04601-5",
+      "date": "2026-08-19T00:00:00.000Z",
+      "authors": [
+        "Leibovitch L",
+        "Ahituv A",
+        "Gorenshtein A",
+        "Aran D",
+        "Sorka M",
+        "Miron K",
+        "Shelly S"
+      ],
+      "body": "Prospective evidence for artificial intelligence (AI)-based clinical decision support in emergency departments remains limited. Here we conducted a DECIDE-AI stage 1 evaluation of SHAKED, a clinical decision support system built on multiple large language models, in a tertiary emergency department. Over 4&#x2009;weeks, 1,138 patients were analyzed across two parallel units-one using SHAKED and one following routine rotations. Clinical adoption of SHAKED declined from 68% to 30%, owing to workload-sensitive disengagement (OR&#x2009;=&#x2009;0.72 per shift hour, 95% CI 0.62 to 0.83). Physicians preferred the use of SHAKED for radiology consultations (OR&#x2009;=&#x2009;2.98, 95% CI 1.58 to 5.63). No adverse events were detected, and expert review rated 99 of 100 sampled outputs as clinically appropriate. Emergency department length of stay did not differ between wings (4.9&#x2009;h in both, P&#x2009;=&#x2009;0.99). Intention-to-treat analysis showed a non-significant trend toward shorter consultation cycle time (-9.4&#x2009;min, P&#x2009;=&#x2009;0.077). These findings suggest that sustained clinician engagement, rather than algorithmic accuracy, may be the key barrier to effective clinical AI use in emergency departments. They inform randomized trial design but do not justify clinical deployment of AI clinical decision support at this stage. ClinicalTrials.gov identifier: NCT06902675 .",
+      "score": 7,
+      "why": "In this DECIDE-AI stage 1 prospective evaluation, an emergency department deployed SHAKED, a large language model (LLM) based clinical decision support system, across 1,138 patients over four weeks, finding declining physician adoption (68% to 30%) tied to workload rather than any measured harm, with no significant change in length of stay. The key finding, that sustained clinician engagement rather than algorithmic accuracy is the bottleneck for AI adoption in acute care, is directly relevant to this reader's interest in how LLMs perform in real clinical use rather than in benchmark settings.",
+      "plain": "Doctors in an emergency department tried out an AI assistant called SHAKED for four weeks, and while the AI's answers were judged safe and accurate almost every time, doctors used it less and less as their shifts got busier, dropping from 68% usage to 30%. The study found that patients did not spend less time in the hospital because of the AI, suggesting that getting doctors to actually keep using AI tools day to day, not whether the AI itself works well, is the real challenge.",
+      "theme": "LLM Clinical Deployment",
+      "glossary": [
+        {
+          "term": "DECIDE-AI Stage 1",
+          "definition": "An early-stage framework for testing AI decision support tools in real clinical settings before larger trials, focused on safety and usability.",
+          "isNew": true
+        },
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        },
+        {
+          "term": "Odds Ratio (OR)",
+          "definition": "A number comparing how much more or less likely an event is in one group versus another, where 1 means no difference.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42615486",
+      "beat": "patient-comm",
+      "title": "Patient-Facing AI System for Symptom Guidance Using Simulated Encounters and Physician Review: Analytical Validation Study.",
+      "source": "JMIR Form Res",
+      "url": "https://doi.org/10.2196/103419",
+      "date": "2026-08-19T00:00:00.000Z",
+      "authors": [
+        "Patwardhan A",
+        "Verma N",
+        "Barman P",
+        "Mao B",
+        "Li N",
+        "Varghese P",
+        "Peri V",
+        "Lehmann LS"
+      ],
+      "body": "BACKGROUND: Rapid advances in large language models (LLMs) have expanded interest in patient-facing health applications that support symptom assessment and care-seeking decisions. Although AI-enabled symptom-guidance tools could improve patient navigation and recognition of clinically serious conditions, inappropriate recommendations may result in missed needed care or unnecessary escalation. Structured predeployment evaluation is therefore needed before prospective clinical use. OBJECTIVE: This formative predeployment study aimed to analytically validate a locked configuration of the Personal Health Assistant (PHA; Verily Health), an LLM-enabled patient-facing symptom-guidance tool, under controlled conditions using simulated patient encounters and expert physician review. METHODS: We conducted a prospective predeployment analytical validation study using synthetic patient data. The analysis set included 772 synthetic cases generated using published telephone-triage protocols and persona-based, LLM-assisted case generation. Each case included a clinical vignette, structured medical history information, and a simulated multiturn patient conversation. All cases were reviewed by a panel of 5 independent physicians without access to PHA outputs in order to provide level-of-care recommendations. Case-level ground truth was derived from aggregated physician ratings using prespecified plurality and tie-handling rules. Urgent undertriage, nonurgent undertriage, and overtriage were evaluated against prespecified performance criteria. Secondary analyses assessed the clinical appropriateness of PHA-generated possible conditions and escalation, self-care, and laboratory-testing recommendations. RESULTS: The final analysis set contained 772 cases, including 2 with unevaluable ground truth that were excluded from primary Endpoint denominators. Urgent undertriage was identified in 28 of 406 cases (6.9%, 95% CI 4.6%-9.8%), nonurgent undertriage in 56 of 305 (18.4%, 95% CI 14.2%-23.2%), and overtriage in 40 of 364 (11.0%, 95% CI 8.0%-14.7%). Overtriage met the prespecified criterion of less than 30%, whereas urgent and nonurgent undertriage did not meet their respective criteria of less than 5% and less than 15%, respectively. Secondary findings were generally supportive of the clinical appropriateness of the additional PHA outputs. CONCLUSIONS: PHA met the prespecified overtriage criterion but did not meet the urgent or nonurgent undertriage criteria. The findings identified undertriage as the principal performance gap requiring further product refinement. Because the study used synthetic cases, simulated conversations, and enriched urgency categories under controlled conditions, the results may not reflect performance in real-world populations or deployment settings. Prospective evaluation with actual users in the intended-use population is needed before broader clinical use.",
+      "score": 7,
+      "why": "A prospective predeployment validation study tested a locked configuration of a large language model (LLM)-enabled patient-facing symptom triage tool against 772 simulated cases with physician panel-derived ground truth, finding overtriage met the prespecified safety threshold (<30%) but urgent undertriage (6.9%) and nonurgent undertriage (18.4%) failed their respective thresholds. This is a real predeployment safety evaluation with quantified failure rates against explicit clinical criteria, directly relevant to assessing whether patient-facing symptom-guidance AI is safe enough for real use.",
+      "plain": "Before releasing an AI symptom-checker tool to patients, researchers tested it on 772 simulated medical cases and compared its recommendations to what a panel of doctors said should happen. The tool was safe enough on over-caution but missed the safety bar for correctly flagging some urgent and less-urgent cases that needed care, showing a real limitation before deployment.",
+      "theme": "Symptom Triage Validation",
+      "glossary": [
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        },
+        {
+          "term": "Undertriage",
+          "definition": "When a screening tool wrongly judges a case as less urgent than it actually is, risking delayed care.",
+          "isNew": true
+        },
+        {
+          "term": "Overtriage",
+          "definition": "When a screening tool wrongly judges a case as more urgent than it actually is, causing unnecessary escalation.",
+          "isNew": true
+        },
+        {
+          "term": "Ground Truth",
+          "definition": "The accepted correct answer used to check whether a test or model got things right.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42618915",
+      "beat": "patient-comm",
+      "title": "User evaluation of AI- and human-generated responses in digital health communication: a paired survey study.",
+      "source": "BMC Health Serv Res",
+      "url": "https://doi.org/10.1186/s12913-026-15305-4",
+      "date": "2026-08-19T00:00:00.000Z",
+      "authors": [
+        "Schulz C",
+        "Adämmer P",
+        "Fechner E",
+        "Kassberg E",
+        "Laux I",
+        "Pollatscheck E",
+        "Porsch K",
+        "Romamti L",
+        "Tymchuk I",
+        "Gräske J"
+      ],
+      "body": "BACKGROUND: Digital health communication is gaining importance as health care systems face increasing demand and structural constraints. Generative artificial intelligence (AI) tools such as ChatGPT are increasingly used for health information seeking; however, direct comparisons between AI-generated and human responses from the user perspective remain limited. METHODS: A quantitative exploratory cross-sectional online survey using a paired-response design was conducted in Germany. The survey instrument was developed based on the study objectives and refined through pretesting. Participants evaluated two responses to the same real-world health query: one written by a physiotherapist and one generated by ChatGPT-4. Outcomes included perceived empathy, comprehensibility, perceived discriminatory content in the responses, and expert-rated clinical quality. Paired comparisons were analyzed using Wilcoxon signed-rank tests, and logistic regression models were applied to explore associations between participant characteristics and preference patterns. RESULTS: The analytical sample comprised 224 participants. Across most items, the AI-generated response was rated more favorably than the human response, particularly with regard to comprehensibility and empathy (all p < .001). The AI-generated response was rated more favorably across both empathy and comprehensibility items, with highly comparable preference distributions between the two domains. Perceptions of discriminatory content were rare and did not differ significantly between responses. Expert evaluations also favored the AI-generated response in terms of clinical accuracy and completeness, although these findings should be interpreted cautiously given the exploratory design. CONCLUSIONS: The findings suggest that participants perceived the AI-generated response as aligning more closely with central user expectations for text-based health information, particularly regarding clarity and supportive language, although these findings should be interpreted cautiously given the substantial differences in length and structure between responses and the exploratory single-case design. At the same time, these perceptions should be considered alongside ongoing concerns regarding the clinical appropriateness, safety, and equity of AI-generated health information, which were not comprehensively assessed in the present study. The present findings therefore primarily provide evidence regarding user-perceived communication quality rather than the clinical validity of AI-generated responses. Accordingly, further research is needed to establish the clinical appropriateness, safety, guideline concordance, and potential role of AI-generated responses in healthcare consultation.",
+      "score": 6,
+      "why": "In a paired survey of 224 participants in Germany, an AI-generated (ChatGPT-4) response to a real health query was rated as more empathetic, comprehensible, and clinically accurate than a matched response written by a human physiotherapist, with all differences significant at p<.001. This is a genuine head-to-head comparison against a real clinician's answer, though it relies on a single query and exploratory cross-sectional design rather than a broader sample of clinical scenarios.",
+      "plain": "Over 200 people compared an AI chatbot's answer to a health question against a real physiotherapist's answer to the same question, and rated the AI's response as clearer and more caring. This is a real test against an actual human clinician, but it's based on just one health question, so it's a small first look rather than a definitive comparison.",
+      "theme": "AI Versus Clinician",
+      "glossary": [
+        {
+          "term": "Cross-Sectional Design",
+          "definition": "A study that looks at a group of people at a single point in time rather than following them over time.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42612039",
+      "beat": "patient-comm",
+      "title": "Generative Artificial Intelligence (AI)-Assisted Self-Diagnosis and the Patient-Physician Relationship: Mixed Methods Study of Calibration, Participation, and Trust.",
+      "source": "J Med Internet Res",
+      "url": "https://doi.org/10.2196/95072",
+      "date": "2026-08-18T00:00:00.000Z",
+      "authors": [
+        "Ding W",
+        "Wang J"
+      ],
+      "body": "BACKGROUND: Patients increasingly use generative AI to interpret symptoms and seek health information, yet limited evidence shows how AI-assisted self-diagnosis is integrated into care-seeking and related to clinical interactions and patient-physician relationships. OBJECTIVE: This study examined how AI-assisted self-diagnosis is incorporated into care-seeking processes and how it relates to patient participation in clinical encounters and trust in physicians. METHODS: An exploratory sequential mixed methods design was used. In the qualitative phase, Chinese adults who had used generative AI to interpret symptoms, appraise possible conditions, or seek health advice within the previous year were purposively recruited through Xiaohongshu, WeChat Moments, and WeChat groups. Semistructured interviews were conducted from August 20, 2025, to January 10, 2026, and analyzed using reflexive thematic analysis. In the quantitative phase, an anonymous web-based survey was conducted in China through Huixiang Data from January 25, 2026, through January 28, 2026. Adults who had used generative AI for health consultation involving symptom interpretation or preliminary self-diagnosis within the previous 6 months were recruited through convenience sampling. Measures included perceived AI-assisted self-diagnosis quality, calibrated illness appraisal, patient participation, diagnosis validation, diagnosis comprehension, trust in physicians, AI use frequency, trust in health information sources, and demographic characteristics. Trust in physicians was assessed using 5 adapted items covering competence, integrity, and benevolence. Descriptive statistics, Pearson correlations, and PROCESS mediation analyses were performed. RESULTS: Qualitative findings (n=48) indicated that AI-assisted self-diagnosis was commonly used in a prediagnostic gray zone for preliminary orientation, informal triage, and interim self-management. Participants described AI as helping them appraise illness severity, prepare for consultations, ask questions, and understand physicians' diagnoses and reasoning. Quantitative findings (n=546) were consistent with these patterns. Perceived AI quality was positively associated with calibrated illness appraisal (=0.57, 95% CI 0.49-0.64), which was positively associated with patient participation (=0.35, 95% CI 0.28-0.43). The indirect association was significant (estimate=0.20, 95% bootstrap CI 0.14-0.26). Perceived AI quality was also associated with diagnosis validation (=0.69, 95% CI 0.61-0.76) and diagnosis comprehension (=0.65, 95% CI 0.58-0.73), which were associated with trust in physicians (=0.15, 95% CI 0.07-0.23 and=0.20, 95% CI 0.12-0.28, respectively). The corresponding indirect associations were 0.10 (95% bootstrap CI 0.04-0.17) through diagnosis validation and 0.13 (95% bootstrap CI 0.07-0.19) through diagnosis comprehension. CONCLUSIONS: Generative AI may function as an informational intermediary across the care-seeking process rather than undermine medical authority. By supporting illness appraisal, consultation preparation, and postconsultation understanding, AI-assisted self-diagnosis may be associated with greater patient participation and trust in physicians.",
+      "score": 6,
+      "why": "A mixed-methods study combining qualitative interviews (n=48) and a quantitative survey (n=546) examined how generative artificial intelligence (AI)-assisted self-diagnosis relates to patient participation and trust in physicians, finding that perceived AI quality was positively associated with calibrated illness appraisal, which in turn predicted patient participation in clinical encounters (indirect effect estimate=0.20). This offers a measured look at real behavioral and relational effects of AI use on the patient-physician relationship, though it relies on self-report and correlational survey data rather than an intervention.",
+      "plain": "Researchers surveyed and interviewed hundreds of people in China who had used AI chatbots to try to figure out what was wrong with them, and found that when people trusted the AI's assessment more, they participated more actively in later doctor visits. This is a real look at how AI use is changing patient behavior with doctors, though it only shows correlations, not proof that the AI caused the change.",
+      "theme": "AI Self-Diagnosis Trust",
+      "glossary": [
+        {
+          "term": "Generative Artificial Intelligence (AI)",
+          "definition": "AI systems that can produce new text, images, or other content rather than just classify existing data.",
+          "isNew": true
+        },
+        {
+          "term": "Mixed Methods Design",
+          "definition": "A research approach that combines numerical survey data with in-depth interviews to get a fuller picture.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42609726",
+      "beat": "patient-comm",
+      "title": "Vocal Cord Dysfunction: Evaluating the Utility of AI Large Language Models for Patient Education.",
+      "source": "World J Otorhinolaryngol Head Neck Surg",
+      "url": "https://doi.org/10.1002/wjo2.70158",
+      "date": "2026-08-17T00:00:00.000Z",
+      "authors": [
+        "Cook K",
+        "Tseng P",
+        "Ahmadian D",
+        "Demirjian N",
+        "Liu V",
+        "Weinstein T",
+        "Yip H"
+      ],
+      "body": "OBJECTIVE: To compare provider preferences for patient education materials generated by OpenEvidence, ChatGPT 5 Extended Thinking, and a laryngologist with fellowship training in response to common patient questions about vocal cord dysfunction (VCD). STUDY DESIGN: Cross-sectional survey study. METHODS: A laryngologist compiled four common patient questions about VCD and authored expert responses. Equivalent responses for patients were generated using OpenEvidence and ChatGPT 5 Extended Thinking with a standardized role prompt, each in a new chat session, and all outputs were limited to four sentences. Responses were de-identified and presented in a REDCap survey. Forty-five healthcare providers ranked responses based on perceived medical accuracy, clarity, and ability to address patient concerns. Preferences were analyzed using chi-square goodness-of-fit and Friedman testing with post hoc pairwise comparisons. RESULTS: Among the 45 respondents, the most represented specialties were otolaryngology (&#x2009;=&#x2009;17) and allergy/immunology (&#x2009;=&#x2009;12), and most were attending physicians (&#x2009;=&#x2009;31). ChatGPT 5 Extended Thinking received the most first choice selections for three of the four questions, whereas OpenEvidence and ChatGPT performed similarly on the definition question. Analyses of full rankings confirmed significant differences among sources for all four questions (all Friedman&#x2009;&#x2264;&#x2009;0.001): responses generated by AI were preferred over the laryngologist response for the definition, diagnosis, and treatment process questions, while ChatGPT was preferred over both comparators for the etiology question. Otolaryngology respondents were more likely than non-otolaryngology respondents to rank the laryngologist response first for the definition question only. CONCLUSION: Responses generated by AI were frequently preferred over a single expert comparator for common VCD questions, with ChatGPT 5 Extended Thinking performing best overall and OpenEvidence showing similar performance on several items. These findings support further evaluation of LLMs as adjunctive tools in laryngology patient education, while highlighting the need for clinician oversight, assessment of individual model performance, and studies of patient outcomes.",
+      "score": 6,
+      "why": "A cross-sectional survey had 45 healthcare providers rank patient-education responses about vocal cord dysfunction (VCD) from a laryngologist versus two chatbots, finding AI-generated answers were preferred over the human expert for three of four questions (Friedman p<=.001). This is a genuine head-to-head comparison against a real clinician, though it uses provider rather than patient raters and only four questions, limiting generalizability.",
+      "plain": "Doctors and other health providers compared answers about a voice disorder written either by a specialist doctor or by AI chatbots, and often preferred the AI's answers. It is a real test against a human expert, but it only involved four questions and provider judges rather than patients.",
+      "theme": "AI Versus Clinician",
+      "glossary": [
+        {
+          "term": "Friedman Test",
+          "definition": "A statistical test used to compare rankings across three or more related groups, such as multiple raters ranking several options.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "url:c800ffdcddf41188",
+      "beat": "industry",
+      "title": "Menopausal Hormone Therapy Linked to 35% Lower Alzheimer’s Risk",
+      "source": "FemTech Insider",
+      "url": "https://femtechinsider.com/menopausal-hormone-therapy-linked-to-35-lower-alzheimers-risk/",
+      "date": "2026-08-17T22:15:00.000Z",
+      "authors": [],
+      "body": "A recent study by Stanford Medicine, funded by the National Institutes of Health, found that women using estrogen-only menopausal hormone therapy (MHT) had 35% lower odds of Alzheimer’s disease and 39% lower odds of any dementia diagnosis. The study examined two databases of 21,462 participants, including an autopsy arm of 258 women who had used estrogen-only MHT compared with 2,701 non-users. Alongside… The post Menopausal Hormone Therapy Linked to 35% Lower Alzheimer’s Risk first appeared on .",
+      "score": 6,
+      "why": "A Stanford Medicine study funded by the National Institutes of Health (NIH) examined two databases totaling 21,462 participants and found estrogen-only menopausal hormone therapy (MHT) associated with 35% lower odds of Alzheimer's disease and 39% lower odds of any dementia diagnosis, including an autopsy-confirmed subgroup of 258 users versus 2,701 non-users. This is a substantive observational finding with real effect sizes and a notable autopsy-validated subgroup, though as an industry-beat item it should be read as an association from observational data rather than a randomized trial establishing causation.",
+      "plain": "A study of over 21,000 women found that those who used a specific type of hormone therapy after menopause had a 35% lower chance of developing Alzheimer's disease and a 39% lower chance of any dementia. This is a real finding with solid numbers, but since it comes from observing existing patient records rather than a controlled experiment, it shows a strong association, not proof that the hormone therapy directly causes lower dementia risk.",
+      "theme": "Hormone Therapy Dementia Risk",
+      "glossary": [
+        {
+          "term": "National Institutes of Health (NIH)",
+          "definition": "The main US federal government agency responsible for funding and conducting medical research.",
+          "isNew": true
+        },
+        {
+          "term": "Menopausal Hormone Therapy (MHT)",
+          "definition": "Treatment using hormones like estrogen to relieve symptoms of menopause.",
+          "isNew": true
+        },
+        {
+          "term": "Odds",
+          "definition": "A way of expressing how likely an event is to happen compared to it not happening, often reported as a ratio between two groups.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42608279",
+      "beat": "patient-comm",
+      "title": "The Invisible Workforce: An Algorithmic Audit of Nursing, Primary Care, and Holistic Gaps in AI-Generated Survivorship Plans.",
+      "source": "Semin Oncol Nurs",
+      "url": "https://doi.org/10.1016/j.soncn.2026.152304",
+      "date": "2026-08-17T00:00:00.000Z",
+      "authors": [
+        "İnan M",
+        "Akar İnan S",
+        "Bumin G",
+        "Aypak C"
+      ],
+      "body": "OBJECTIVES: Advanced ovarian cancer survivorship requires multidisciplinary coordination. As patients use large language models (LLMs) as clinical navigators, essential professional roles may be inconsistently represented. This study evaluates the comprehensiveness, professional attribution, and readability of LLM-generated survivorship plans. METHODS: An algorithmic audit (N = 50) queried ChatGPT-5.1 using a standardized persona: a 58-year-old advanced ovarian cancer survivor. A dual-layer content analysis assessed nine guideline-derived domains, distinguishing explicit professional attribution from implicit functional guidance. A Nursing Function Layer quantified implicit nursing content. Readability was measured via the Flesch-Kincaid Grade Level. RESULTS: Medical Oncology achieved 100% explicit attribution. Conversely, Primary Care was explicitly referenced in 2% (implicit: 14%), Genetic Counseling in 0%, and Nursing in 14% (implicit: 80%), revealing a 66-point attribution gap. Despite low explicit professional attribution, nursing-relevant functional content appeared in 96% of responses (mean = 4.16 functions/response). Responses averaged an 11.57 Flesch-Kincaid Grade Level, substantially exceeding the sixth- to eighth-grade literacy benchmark. CONCLUSIONS: LLMs demonstrate high biomedical content coverage but systematically underrepresent holistic care professionals. The functional presence of nursing content without professional visibility highlights algorithmic bias. Unsupervised LLM use risks fragmented survivorship guidance, necessitating \"nurse-in-the-loop\" validation workflows to correct attribution gaps and calibrate literacy levels. IMPLICATIONS FOR NURSING PRACTICE: AI-generated survivorship plans reflect a purely biomedical focus, systematically omitting primary care integration (2%) and explicit nursing roles (14%). This structural fragmentation necessitates \"nurse-in-the-loop\" workflows, positioning oncology nurses to actively review AI outputs, activate neglected primary care referrals for comorbidity management, and calibrate reading difficulty to safe patient literacy levels.",
+      "score": 5,
+      "why": "An algorithmic audit of 50 ChatGPT-5.1-generated ovarian cancer survivorship plans found systematic underrepresentation of primary care and nursing roles (explicit attribution of 2% and 14% respectively) despite substantial implicit functional content, alongside reading levels above recommended patient literacy benchmarks. This surfaces a concrete failure mode, systematic omission of holistic care roles, relevant to understanding risks of unsupervised patient-facing LLM use, though it examines only one model and no clinician comparator.",
+      "plain": "Researchers asked an AI chatbot fifty times to generate a care plan for an ovarian cancer survivor and found it almost never mentioned nurses or primary care doctors by name, even though it often included the kind of advice those professionals would give. This reveals a specific blind spot in how AI describes a care team, though only one AI model was tested.",
+      "theme": "AI Care Plan Gaps",
+      "glossary": [
+        {
+          "term": "Algorithmic Audit",
+          "definition": "A systematic check of an AI system's outputs to look for patterns of bias or missing content.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "url:5df46782e449ad79",
+      "beat": "industry",
+      "title": "NIH Launches $1.3M Maternal Health Research Challenge",
+      "source": "FemTech Insider",
+      "url": "https://femtechinsider.com/nih-launches-1-3m-maternal-health-research-challenge/",
+      "date": "2026-08-19T21:45:48.000Z",
+      "authors": [],
+      "body": "The NIH has teamed up with crowdsourcing platform HeroX to launch a $1.3 million maternal health research challenge: Connecting the Community for Maternal Health Challenge 2.0: Research Capacity Building in Maternity Care Deserts. Responding to maternal health deserts and nationwide declines in maternity care access, the challenge will support community-based, advocacy, faith-based, and tribal-serving organizations that serve pregnant and postpartum women and… The post NIH Launches $1.3M Maternal Health Research Challenge first appeared on .",
+      "score": 5,
+      "why": "The National Institutes of Health (NIH) launched a $1.3 million crowdsourced research challenge through HeroX targeting maternal health research capacity in maternity care deserts, aimed at community, tribal, and faith-based organizations. This is a concrete, specifically funded federal initiative addressing a real access gap, though it is a challenge structure rather than a completed study or product.",
+      "plain": "The US National Institutes of Health is offering $1.3 million in prize funding for community groups to research ways to improve maternal health care in areas that lack it. This is real money committed to a specific problem, though it's just the start of a competition, not a finished solution.",
+      "theme": "Maternal Health Funding",
+      "glossary": [
+        {
+          "term": "National Institutes of Health (NIH)",
+          "definition": "The main US federal government agency responsible for funding and conducting medical research.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "url:447a8e4645bdb08b",
+      "beat": "industry",
+      "title": "OBstat Expands Nationwide to Address OB/GYN Staffing Gaps",
+      "source": "FemTech Insider",
+      "url": "https://femtechinsider.com/obstat-expands-nationwide-to-address-ob-gyn-staffing-gaps/",
+      "date": "2026-08-19T20:00:00.000Z",
+      "authors": [],
+      "body": "Flexible staffing platform OBstat has expanded nationwide to increase access to short-term and transitional clinician coverage across maternal healthcare. OBstat, a locum tenens staffing company designed specifically for OB/GYN clinicians, launched in 2024 to support women’s health services company Ob Hospitalist Group – which provides maternal health solutions and operates a maternal-fetal telehealth platform. OBstat recruits, vets, and schedules clinicians to fill… The post OBstat Expands Nationwide to Address OB/GYN Staffing Gaps first appeared on .",
+      "score": 5,
+      "why": "OBstat, a locum tenens staffing platform for obstetrics and gynecology (OB/GYN) clinicians affiliated with Ob Hospitalist Group, announced nationwide expansion to fill short-term staffing gaps in maternal healthcare. This is a concrete operational expansion addressing a real workforce shortage, though it involves no new clinical or regulatory milestone.",
+      "plain": "A company that provides temporary doctors to fill staffing gaps in women's health clinics has expanded across the whole country. This is a real business expansion addressing a genuine shortage of OB/GYN doctors, though it isn't a new medical breakthrough.",
+      "theme": "OB/GYN Staffing Expansion",
+      "glossary": []
+    },
+    {
+      "id": "url:f8942bb880457570",
+      "beat": "industry",
+      "title": "Biograph Debuts Women’s Health Program to Advance Lifestage Care",
+      "source": "FemTech Insider",
+      "url": "https://femtechinsider.com/biograph-debuts-womens-lifestage-health-program/",
+      "date": "2026-08-19T13:00:00.000Z",
+      "authors": [],
+      "body": "Preventive health clinic Biograph has launched its Women’s Health Program to offer comprehensive care spanning women’s reproductive and hormonal lifestages. With clinics in New York City and the Bay Area, Biograph uses advanced diagnostics to create personalized, physician-led health care plans with ongoing monitoring. By bringing multiple specialties under one roof, the clinic aims to consolidate months of medical visits and referrals… The post Biograph Debuts Women’s Health Program to Advance Lifestage Care first appeared on .",
+      "score": 5,
+      "why": "Preventive health clinic Biograph launched a Women's Health Program combining advanced diagnostics with physician-led personalized care plans across its New York City and Bay Area locations. This is a real product and service launch consolidating care, though details on the diagnostics or clinical evidence behind them are not specified.",
+      "plain": "A preventive health clinic chain has launched a new program specifically for women's reproductive and hormonal health, combining testing and doctor-led care plans in two US cities. This is a real new service being offered, though no data on its effectiveness is given.",
+      "theme": "Women's Health Program Launch",
+      "glossary": []
+    }
+  ],
+  "terms": [
+    {
+      "term": "Adjusted Hazard Ratio (aHR)",
+      "definition": "A measure comparing the risk of an event over time between two groups, adjusted for other factors, where a value above 1 means higher risk.",
+      "isNew": false
+    },
+    {
+      "term": "Aggregate Privacy Metrics",
+      "definition": "Measures of privacy risk calculated across an entire dataset rather than for each individual person.",
+      "isNew": false
+    },
+    {
+      "term": "Algorithmic Audit",
+      "definition": "A systematic check of an AI system's outputs to look for patterns of bias or missing content.",
+      "isNew": true
+    },
+    {
+      "term": "AMH",
+      "definition": "A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.",
+      "isNew": false
+    },
+    {
+      "term": "Anchoring Bias",
+      "definition": "The tendency for an initial piece of information, like a first guess, to unduly influence a person's final judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Aneuploid",
+      "definition": "Having an abnormal number of chromosomes, which often prevents an embryo from developing successfully.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Curve (AUC)",
+      "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC-ROC)",
+      "definition": "A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC)",
+      "definition": "A number between 0.5 and 1 that measures how well a model distinguishes between people who will and will not have an outcome, where 1 is perfect and 0.5 is no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (ROC-AUC)",
+      "definition": "A number from 0 to 1 that measures how well a model can tell apart two groups, such as patients who will versus won't develop a condition, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Assisted Reproductive Technology (ART)",
+      "definition": "Medical procedures used to help people conceive, such as in vitro fertilization.",
+      "isNew": false
+    },
+    {
+      "term": "AUC",
+      "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+      "isNew": false
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Automation Bias",
+      "definition": "The tendency for people to over-trust an automated system's output, even when it may be wrong.",
+      "isNew": false
+    },
+    {
+      "term": "Balanced Accuracy",
+      "definition": "A way of measuring how correct a model is that gives equal weight to its performance on both positive and negative cases, useful when one outcome is much rarer than the other.",
+      "isNew": false
+    },
+    {
+      "term": "Bimodal Large Language Model (LLM)",
+      "definition": "An AI system that processes more than one type of input, such as both text and audio, rather than just text.",
+      "isNew": true
+    },
+    {
+      "term": "Blastocyst",
+      "definition": "An early-stage embryo, several days after fertilization, that is ready for genetic testing or transfer to the uterus.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded",
+      "definition": "A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded Evaluation",
+      "definition": "An assessment method where the person judging the results does not know which option came from which source, to avoid bias.",
+      "isNew": false
+    },
+    {
+      "term": "Brier Score",
+      "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
+      "isNew": false
+    },
+    {
+      "term": "Calibration",
+      "definition": "How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.",
+      "isNew": false
+    },
+    {
+      "term": "Class-Imbalance Correction",
+      "definition": "Techniques used when one outcome (like a rare disease) is much less common than another in a dataset, aimed at helping a model learn to detect the rare outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis",
+      "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis (CHR-P)",
+      "definition": "A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinician Decision Support System (CDSS)",
+      "definition": "Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Cohen's Kappa",
+      "definition": "A statistic that measures how much two raters or a rater and a model agree, correcting for agreement expected by chance.",
+      "isNew": false
+    },
+    {
+      "term": "Concordance",
+      "definition": "The degree to which two decisions, such as an AI's and a human panel's, agree with each other.",
+      "isNew": true
+    },
+    {
+      "term": "Confabulation",
+      "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
+      "isNew": false
+    },
+    {
+      "term": "Confidence Interval",
+      "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+      "isNew": false
+    },
+    {
+      "term": "Contrast-Enhanced Computed Tomography (CE-CT)",
+      "definition": "A CT scan enhanced with an injected dye that highlights blood vessels and tissue differences to improve diagnosis.",
+      "isNew": true
+    },
+    {
+      "term": "Contrastive Learning",
+      "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Design",
+      "definition": "A study that looks at a group of people at a single point in time rather than following them over time.",
+      "isNew": true
+    },
+    {
+      "term": "Cross-Sectional Replication",
+      "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Study",
+      "definition": "A study that examines a group of people or responses at a single point in time rather than following them over time.",
+      "isNew": false
+    },
+    {
+      "term": "Cytology",
+      "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+      "isNew": false
+    },
+    {
+      "term": "DECIDE-AI Stage 1",
+      "definition": "An early-stage framework for testing AI decision support tools in real clinical settings before larger trials, focused on safety and usability.",
+      "isNew": true
+    },
+    {
+      "term": "Decision Curve Analysis",
+      "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
+      "isNew": false
+    },
+    {
+      "term": "Decision-Tree Model",
+      "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+      "isNew": false
+    },
+    {
+      "term": "Deep Learning",
+      "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+      "isNew": false
+    },
+    {
+      "term": "Deep Neural Network",
+      "definition": "A type of computer program loosely modeled on the brain that learns patterns from large amounts of data.",
+      "isNew": true
+    },
+    {
+      "term": "DeLong Test",
+      "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+      "isNew": false
+    },
+    {
+      "term": "Diagnostic Odds Ratio",
+      "definition": "A single number combining sensitivity and specificity that summarizes how well a test distinguishes between people with and without a condition, where higher values mean better discrimination.",
+      "isNew": false
+    },
+    {
+      "term": "Diffusion Magnetic Resonance Imaging (MRI)",
+      "definition": "An imaging technique that detects how water molecules move through tissue, which can reveal information about tissue structure and blood flow.",
+      "isNew": false
+    },
+    {
+      "term": "Disease-free Survival",
+      "definition": "The length of time after treatment that a patient survives without their disease coming back.",
+      "isNew": false
+    },
+    {
+      "term": "DNA Methylation (DNAm)",
+      "definition": "A chemical modification to DNA that can turn genes on or off without changing the underlying genetic code, and that changes with age.",
+      "isNew": false
+    },
+    {
+      "term": "Double-Blinded Randomized Controlled Trial (RCT)",
+      "definition": "A study design where participants are randomly assigned to different treatments and neither participants nor assessors know who got which, reducing bias.",
+      "isNew": true
+    },
+    {
+      "term": "Doubly Debiased Machine Learning",
+      "definition": "An advanced statistical technique that uses machine learning to estimate causal effects while reducing bias from imperfect models, making the results more reliable than simpler methods.",
+      "isNew": false
+    },
+    {
+      "term": "Effect Measure Modifiers",
+      "definition": "Factors that change how strong or weak a treatment's effect is in different subgroups of people.",
+      "isNew": false
+    },
+    {
+      "term": "Elastography",
+      "definition": "An imaging technique that measures the stiffness of tissue, which can indicate physical changes relevant to disease or pregnancy risk.",
+      "isNew": false
+    },
+    {
+      "term": "Electrohysterography (EHG)",
+      "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
+      "isNew": false
+    },
+    {
+      "term": "Embedding Analysis",
+      "definition": "A way of measuring how similar two pieces of text are in meaning by converting them into numerical representations and comparing those numbers.",
+      "isNew": false
+    },
+    {
+      "term": "Epigenetic Clock",
+      "definition": "A tool that estimates a person's biological age from patterns of DNA methylation, which can differ from their actual chronological age.",
+      "isNew": false
+    },
+    {
+      "term": "Euploid",
+      "definition": "Having the normal, correct number of chromosomes, generally considered healthier for embryo development.",
+      "isNew": false
+    },
+    {
+      "term": "Explainable AI (XAI)",
+      "definition": "Techniques that try to make AI decision-making understandable to humans, such as showing which features led to a diagnosis.",
+      "isNew": false
+    },
+    {
+      "term": "External Hold-Out Set",
+      "definition": "A separate group of data, not used to train the model, that tests whether it works on new patients.",
+      "isNew": true
+    },
+    {
+      "term": "External Validation",
+      "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting",
+      "definition": "A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting Classifier",
+      "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "FDA",
+      "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
+      "isNew": false
+    },
+    {
+      "term": "Fine-Tuning (FT)",
+      "definition": "A process of further training an already-built AI model on a smaller, specific set of data to make it better at a particular task.",
+      "isNew": true
+    },
+    {
+      "term": "Finite State Machine (FSM)",
+      "definition": "A system design that follows a fixed set of defined steps or states, moving between them based on specific rules, used here to keep a chatbot's conversation on a structured path.",
+      "isNew": true
+    },
+    {
+      "term": "Follicular Fluid",
+      "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+      "isNew": false
+    },
+    {
+      "term": "Food and Drug Administration (FDA)",
+      "definition": "The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.",
+      "isNew": false
+    },
+    {
+      "term": "Foundation Model",
+      "definition": "A large AI model trained on huge amounts of data that can be adapted to many different tasks, rather than being built for just one job.",
+      "isNew": false
+    },
+    {
+      "term": "Friedman Test",
+      "definition": "A statistical test used to compare rankings across three or more related groups, such as multiple raters ranking several options.",
+      "isNew": true
+    },
+    {
+      "term": "Generalized Estimating Equations",
+      "definition": "A statistical technique used to analyze data where the same subjects or scenarios are measured multiple times, accounting for those repeated measurements.",
+      "isNew": false
+    },
+    {
+      "term": "Generalized Linear Model",
+      "definition": "A statistical model that predicts an outcome based on a combination of input variables, extending ordinary regression to different types of data.",
+      "isNew": false
+    },
+    {
+      "term": "Generative Artificial Intelligence (AI)",
+      "definition": "AI systems that can produce new text, images, or other content rather than just classify existing data.",
+      "isNew": true
+    },
+    {
+      "term": "Gradient-Boosted Tree",
+      "definition": "A machine learning method that builds a sequence of simple decision rules, each correcting errors of the previous ones, to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Gradient-Boosted Tree Model",
+      "definition": "A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Ground Truth",
+      "definition": "The accepted correct answer used to check whether a test or model got things right.",
+      "isNew": true
+    },
+    {
+      "term": "HDL and LDL",
+      "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
+      "isNew": false
+    },
+    {
+      "term": "Heterogeneity",
+      "definition": "A statistical measure of how much results vary across different studies being combined, where high heterogeneity means the studies do not agree well with each other.",
+      "isNew": false
+    },
+    {
+      "term": "High-Grade Squamous Intraepithelial Lesion (HSIL)",
+      "definition": "A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)",
+      "definition": "A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "Holdout Set",
+      "definition": "A portion of data set aside and not used during model training, so it can be used afterward to test how well the model performs on new cases.",
+      "isNew": false
+    },
+    {
+      "term": "HPV-Primary Screening",
+      "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+      "isNew": false
+    },
+    {
+      "term": "HSPG2",
+      "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+      "isNew": false
+    },
+    {
+      "term": "Human Papillomavirus (HPV)",
+      "definition": "A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Disease (IRD)",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Diseases",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Injury Severity Score (ISS)",
+      "definition": "A standard method doctors use to rate how severe a patient's injuries are, based on hospital imaging and exams.",
+      "isNew": false
+    },
+    {
+      "term": "Inter-Rater Agreement",
+      "definition": "A measure of how consistently different judges or reviewers rate the same material, where higher agreement means more reliable scoring.",
+      "isNew": false
+    },
+    {
+      "term": "Internal Validation",
+      "definition": "Testing a model's performance on a portion of the same dataset it was built from, as opposed to testing it on entirely separate data.",
+      "isNew": false
+    },
+    {
+      "term": "Intraclass Correlation Coefficient",
+      "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+      "isNew": false
+    },
+    {
+      "term": "Intraclass Correlation Coefficient (ICC)",
+      "definition": "A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.",
+      "isNew": false
+    },
+    {
+      "term": "Intravoxel Incoherent Motion (IVIM)",
+      "definition": "A method of analyzing diffusion MRI signals to separately estimate blood flow in small vessels and water movement within tissue.",
+      "isNew": false
+    },
+    {
+      "term": "Isolated REM Sleep Behavior Disorder (iRBD)",
+      "definition": "A sleep disorder where people act out dreams during REM sleep, often an early warning sign of Parkinson's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Kaplan-Meier Analysis",
+      "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Model (LLM)",
+      "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models",
+      "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models (LLMs)",
+      "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "LASSO Regression",
+      "definition": "A statistical method that selects the most important predictor variables from a large set while shrinking less useful ones toward zero.",
+      "isNew": false
+    },
+    {
+      "term": "Leave-One-Out Cross-Validation",
+      "definition": "A way of testing a model's accuracy by repeatedly leaving out one data point, training on the rest, and checking the prediction for the left-out point.",
+      "isNew": false
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations (LIME), a technique that explains an individual AI prediction by approximating the model's behavior with a simpler, interpretable one nearby.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology",
+      "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology (LBC)",
+      "definition": "A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.",
+      "isNew": false
+    },
+    {
+      "term": "Longitudinal Study",
+      "definition": "A study that follows the same people over time to see how something changes.",
+      "isNew": false
+    },
+    {
+      "term": "Low Birth Weight (LBW)",
+      "definition": "A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.",
+      "isNew": false
+    },
+    {
+      "term": "Lymph Node Metastasis (LNM)",
+      "definition": "The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning",
+      "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning (ML)",
+      "definition": "A branch of AI in which computer models learn patterns from data rather than being explicitly programmed with rules.",
+      "isNew": false
+    },
+    {
+      "term": "Membership Inference Attacks (MIAs)",
+      "definition": "A method attackers use to determine whether a specific person's data was used to train an AI model, which can reveal private information.",
+      "isNew": false
+    },
+    {
+      "term": "Menopausal Hormone Therapy (MHT)",
+      "definition": "Treatment using hormones like estrogen to relieve symptoms of menopause.",
+      "isNew": true
+    },
+    {
+      "term": "Mixed Methods Design",
+      "definition": "A research approach that combines numerical survey data with in-depth interviews to get a fuller picture.",
+      "isNew": true
+    },
+    {
+      "term": "Mixed-Methods",
+      "definition": "A research approach that combines numerical data, such as survey scores, with descriptive information, such as interview or open-ended feedback.",
+      "isNew": false
+    },
+    {
+      "term": "Model-Blinded",
+      "definition": "A study design where the people rating the outputs do not know which AI system produced each answer, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Morphodynamic",
+      "definition": "Relating to how an embryo's shape and structure change over time, as observed through continuous time-lapse imaging.",
+      "isNew": false
+    },
+    {
+      "term": "Multicenter Retrospective Evaluation",
+      "definition": "A study that analyzes previously collected data from multiple hospitals or sites, rather than following new patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Multidisciplinary Tumor Board (MDT)",
+      "definition": "A meeting where doctors from different specialties jointly decide on a cancer patient's treatment plan.",
+      "isNew": false
+    },
+    {
+      "term": "Multidisciplinary Tumour Board (MDT)",
+      "definition": "A meeting where doctors from different specialties jointly decide on a patient's cancer treatment.",
+      "isNew": true
+    },
+    {
+      "term": "Multilayer Perceptron (MLP)",
+      "definition": "A basic type of artificial neural network made of layers of connected nodes that learns to map inputs to outputs.",
+      "isNew": false
+    },
+    {
+      "term": "Multiparametric Magnetic Resonance Imaging (MRI)",
+      "definition": "An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.",
+      "isNew": false
+    },
+    {
+      "term": "National Institutes of Health (NIH)",
+      "definition": "The main US federal government agency responsible for funding and conducting medical research.",
+      "isNew": true
+    },
+    {
+      "term": "Nested Case-Control Study",
+      "definition": "A study design where cases of a disease are compared to matched controls drawn from within a larger group being followed over time.",
+      "isNew": false
+    },
+    {
+      "term": "Nomogram",
+      "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Non-Contrast MRI",
+      "definition": "A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.",
+      "isNew": false
+    },
+    {
+      "term": "Odds",
+      "definition": "A way of expressing how likely an event is to happen compared to it not happening, often reported as a ratio between two groups.",
+      "isNew": true
+    },
+    {
+      "term": "Odds Ratio (OR)",
+      "definition": "A number comparing how much more or less likely an event is in one group versus another, where 1 means no difference.",
+      "isNew": true
+    },
+    {
+      "term": "Overtriage",
+      "definition": "When a screening tool wrongly judges a case as more urgent than it actually is, causing unnecessary escalation.",
+      "isNew": true
+    },
+    {
+      "term": "P Value",
+      "definition": "A statistical measure indicating how likely a result could have occurred by chance alone, with smaller values suggesting a more reliable finding.",
+      "isNew": true
+    },
+    {
+      "term": "Parkinson's Disease (PD)",
+      "definition": "A progressive brain disorder that affects movement and is linked to loss of certain nerve cells.",
+      "isNew": true
+    },
+    {
+      "term": "PD-L1",
+      "definition": "A protein on cells that can suppress the immune system, and a common target of cancer immunotherapy drugs.",
+      "isNew": false
+    },
+    {
+      "term": "Peripherally Inserted Central Catheter (PICC)",
+      "definition": "A thin, long tube inserted into a vein in the arm and threaded to a larger vein near the heart, used for long-term delivery of medications like chemotherapy.",
+      "isNew": true
+    },
+    {
+      "term": "Phase 2 Trial",
+      "definition": "An early-to-mid stage clinical trial in a moderate number of patients that tests whether a treatment works and is reasonably safe, before larger confirmatory trials.",
+      "isNew": true
+    },
+    {
+      "term": "Phenotype Prediction",
+      "definition": "Predicting the observable characteristics or symptoms a person will have based on their genetic makeup.",
+      "isNew": true
+    },
+    {
+      "term": "Physician-In-The-Loop (PITL)",
+      "definition": "Physician-in-the-loop (PITL), a validation approach where doctors actively review and judge an AI system's outputs as part of testing it, rather than the AI being evaluated purely by statistics.",
+      "isNew": false
+    },
+    {
+      "term": "Polysomnogram (PSG)",
+      "definition": "An overnight recording of brain waves, breathing, and other body signals used to diagnose sleep disorders.",
+      "isNew": false
+    },
+    {
+      "term": "Polysomnography (PSG)",
+      "definition": "An overnight test that records brain waves, breathing, and other signals to study sleep.",
+      "isNew": true
+    },
+    {
+      "term": "Precision",
+      "definition": "Of the cases a model labels positive, the fraction that are actually correct, a measure of how trustworthy a positive call is.",
+      "isNew": false
+    },
+    {
+      "term": "Precision-Recall Area Under the Curve (PR-AUC)",
+      "definition": "A performance measure similar to ROC-AUC but more sensitive to how well a model finds rare positive cases specifically.",
+      "isNew": false
+    },
+    {
+      "term": "Preeclampsia",
+      "definition": "A pregnancy complication involving high blood pressure and organ damage that can be dangerous for both mother and baby.",
+      "isNew": false
+    },
+    {
+      "term": "Preimplantation Genetic Testing for Aneuploidy (PGT-A)",
+      "definition": "A lab test performed on embryos before transfer that checks whether they have the normal number of chromosomes.",
+      "isNew": false
+    },
+    {
+      "term": "Primary Care Physicians (PCPs)",
+      "definition": "Doctors who provide general, first-contact medical care rather than specialized care.",
+      "isNew": false
+    },
+    {
+      "term": "Primary Efficacy Endpoint",
+      "definition": "The main measurable outcome a clinical trial is designed to test in order to determine whether a treatment works.",
+      "isNew": true
+    },
+    {
+      "term": "Progression-free Survival",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Progression-Free Survival (PFS)",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort",
+      "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort Study",
+      "definition": "A study that enrolls participants and follows them forward in time to observe who develops an outcome of interest.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Longitudinal Studies",
+      "definition": "Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Observational Study",
+      "definition": "A study that follows participants forward in time and records what happens, without the researchers assigning who gets which treatment.",
+      "isNew": true
+    },
+    {
+      "term": "Provider Documentation Summarization Quality Instrument (PDSQI-9)",
+      "definition": "A nine-item rating scale used to judge the quality of a clinical documentation summary across dimensions like accuracy, organization, and usefulness.",
+      "isNew": false
+    },
+    {
+      "term": "Radiomics",
+      "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+      "isNew": false
+    },
+    {
+      "term": "Random Forest",
+      "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Randomized Controlled Trial",
+      "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+      "isNew": false
+    },
+    {
+      "term": "Randomized Controlled Trial (RCT)",
+      "definition": "A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.",
+      "isNew": false
+    },
+    {
+      "term": "RETFound",
+      "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+      "isNew": false
+    },
+    {
+      "term": "Retrieval-Augmented Generation (RAG)",
+      "definition": "A method where an AI language model first looks up relevant documents or data before writing its answer, aiming to make responses more accurate and grounded.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective",
+      "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Database Audit",
+      "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Study",
+      "definition": "A study design that looks back at existing cases or data rather than following new patients forward in time.",
+      "isNew": true
+    },
+    {
+      "term": "Retrospective Study With External Validation",
+      "definition": "A study that looks back at existing patient records, but importantly tests its findings on a separate group of patients not used to build the model.",
+      "isNew": false
+    },
+    {
+      "term": "Risk Difference",
+      "definition": "The absolute difference in the chance of an outcome between two groups, for example the percentage point gap in preterm birth rates between treated and untreated women.",
+      "isNew": false
+    },
+    {
+      "term": "Sensitivity",
+      "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF",
+      "definition": "A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF Ratio",
+      "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
+      "isNew": false
+    },
+    {
+      "term": "SHAP",
+      "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+      "isNew": false
+    },
+    {
+      "term": "Shapley Additive exPlanations (SHAP)",
+      "definition": "A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.",
+      "isNew": false
+    },
+    {
+      "term": "Single-Arm Trial",
+      "definition": "A study where every participant receives the same intervention, with no separate comparison group.",
+      "isNew": true
+    },
+    {
+      "term": "Spatial Proteomics",
+      "definition": "A technology that maps where different proteins are located within tissue, preserving the spatial arrangement of cells.",
+      "isNew": false
+    },
+    {
+      "term": "Specificity",
+      "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble",
+      "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble Machine Learning Model",
+      "definition": "An AI approach that combines predictions from several different models into one final, hopefully more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "State-Trait Anxiety Inventory (STAI)",
+      "definition": "A widely used questionnaire that measures a person's current anxiety level and their general tendency toward anxiety.",
+      "isNew": true
+    },
+    {
+      "term": "Synthetic Minority Oversampling Technique (SMOTE)",
+      "definition": "A method that creates artificial extra examples of a rare outcome in a dataset so a model sees more of them during training.",
+      "isNew": false
+    },
+    {
+      "term": "TabNet",
+      "definition": "A type of deep learning model designed specifically to work with tabular data, like spreadsheets of patient information, while also explaining which factors influenced its predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Temporal External Validation",
+      "definition": "Testing a model on data collected in a later time period than the data used to build it, to check that the model still works as circumstances or patient populations change over time.",
+      "isNew": false
+    },
+    {
+      "term": "Top-5 Accuracy",
+      "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
+      "isNew": false
+    },
+    {
+      "term": "Train-Test Split",
+      "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
+      "isNew": false
+    },
+    {
+      "term": "Transformer-Based Model",
+      "definition": "A type of AI architecture, originally developed for language processing, that can also be applied to other kinds of structured data to find complex patterns.",
+      "isNew": false
+    },
+    {
+      "term": "Transportability",
+      "definition": "The idea of applying a result found in one study population to predict what would happen in a different population, and testing whether that transfer actually works.",
+      "isNew": false
+    },
+    {
+      "term": "Undertriage",
+      "definition": "When a screening tool wrongly judges a case as less urgent than it actually is, risking delayed care.",
+      "isNew": true
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale",
+      "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale (UHDRS)",
+      "definition": "A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unsupervised Machine Learning (k-Means Clustering)",
+      "definition": "A computer method that groups data points into clusters based on similarity, without being told the correct answer in advance.",
+      "isNew": false
+    },
+    {
+      "term": "Vision Transformer",
+      "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+      "isNew": false
+    },
+    {
+      "term": "Wav2vec 2.0",
+      "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
+      "isNew": false
+    },
+    {
+      "term": "Whole-Slide Images",
+      "definition": "Very high resolution digital scans of entire microscope slides used to examine tissue samples.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-Shot",
+      "definition": "Asking an AI to perform a task without giving it any worked examples first, relying only on its existing training.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-shot Annotation",
+      "definition": "The ability of an AI model to correctly label or classify new data it was never specifically trained on.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-shot Prompting",
+      "definition": "Giving an AI a task or instruction without first showing it worked examples of that exact task.",
+      "isNew": true
+    }
+  ],
+  "scored": [
+    {
+      "id": "pmid:42618635",
+      "beat": "clinical-ai",
+      "source": "Nat Med",
+      "title": "Large-scale AI-guided liver malignancy diagnosis: multicenter study and a single-arm trial.",
+      "score": 8,
+      "theme": "AI Liver Diagnosis",
+      "why": "This large multicenter study developed LiON, a contrast-enhanced computed tomography (CE-CT) based AI system for liver malignancy diagnosis, validating it retrospectively across 22,251 patients (area under the receiver operating characteristic curve (AUC) 0.975) and then testing it prospectively as an added reader in a single-arm trial of 10,333 patients, where it identified 51 previously overlooked lesions and prompted 22 multidisciplinary escalations. This is a rare example of AI moving from retrospective validation to real clinical workflow deployment with measurable downstream management changes, though it still needs a comparative prospective trial to establish outcome benefit."
+    },
+    {
+      "id": "pmid:42607666",
+      "beat": "patient-comm",
+      "source": "Med",
+      "title": "A bimodal large language model reduces misalignment in patient education: A double-blinded randomized trial.",
+      "score": 8,
+      "theme": "Multimodal Patient Education Trial",
+      "why": "A double-blinded randomized controlled trial (RCT) tested a bimodal (text and audio) large language model (LLM), Dolphin, against a matched text-only LLM in patient education across 555 patients, finding higher patient satisfaction (98.6% vs 93.8%), greater suggestion acceptance (76.1% vs 58.9%), and fewer 7-day unplanned recontacts (12.9% vs 22.9%, p=0.002). This is a rare randomized trial with real clinical workload and satisfaction endpoints comparing an AI system against both a text-only AI and human educators, making it directly relevant evidence for whether multimodal cues improve patient communication."
+    },
+    {
+      "id": "pmid:42618632",
+      "beat": "clinical-ai",
+      "source": "Nat Med",
+      "title": "Prospective evaluation of a large language model clinical decision support system in the emergency department.",
+      "score": 7,
+      "theme": "LLM Clinical Deployment",
+      "why": "In this DECIDE-AI stage 1 prospective evaluation, an emergency department deployed SHAKED, a large language model (LLM) based clinical decision support system, across 1,138 patients over four weeks, finding declining physician adoption (68% to 30%) tied to workload rather than any measured harm, with no significant change in length of stay. The key finding, that sustained clinician engagement rather than algorithmic accuracy is the bottleneck for AI adoption in acute care, is directly relevant to this reader's interest in how LLMs perform in real clinical use rather than in benchmark settings."
+    },
+    {
+      "id": "pmid:42615486",
+      "beat": "patient-comm",
+      "source": "JMIR Form Res",
+      "title": "Patient-Facing AI System for Symptom Guidance Using Simulated Encounters and Physician Review: Analytical Validation Study.",
+      "score": 7,
+      "theme": "Symptom Triage Validation",
+      "why": "A prospective predeployment validation study tested a locked configuration of a large language model (LLM)-enabled patient-facing symptom triage tool against 772 simulated cases with physician panel-derived ground truth, finding overtriage met the prespecified safety threshold (<30%) but urgent undertriage (6.9%) and nonurgent undertriage (18.4%) failed their respective thresholds. This is a real predeployment safety evaluation with quantified failure rates against explicit clinical criteria, directly relevant to assessing whether patient-facing symptom-guidance AI is safe enough for real use."
+    },
+    {
+      "id": "pmid:42618915",
+      "beat": "patient-comm",
+      "source": "BMC Health Serv Res",
+      "title": "User evaluation of AI- and human-generated responses in digital health communication: a paired survey study.",
+      "score": 6,
+      "theme": "AI Versus Clinician",
+      "why": "In a paired survey of 224 participants in Germany, an AI-generated (ChatGPT-4) response to a real health query was rated as more empathetic, comprehensible, and clinically accurate than a matched response written by a human physiotherapist, with all differences significant at p<.001. This is a genuine head-to-head comparison against a real clinician's answer, though it relies on a single query and exploratory cross-sectional design rather than a broader sample of clinical scenarios."
+    },
+    {
+      "id": "pmid:42612039",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "Generative Artificial Intelligence (AI)-Assisted Self-Diagnosis and the Patient-Physician Relationship: Mixed Methods Study of Calibration, Participation, and Trust.",
+      "score": 6,
+      "theme": "AI Self-Diagnosis Trust",
+      "why": "A mixed-methods study combining qualitative interviews (n=48) and a quantitative survey (n=546) examined how generative artificial intelligence (AI)-assisted self-diagnosis relates to patient participation and trust in physicians, finding that perceived AI quality was positively associated with calibrated illness appraisal, which in turn predicted patient participation in clinical encounters (indirect effect estimate=0.20). This offers a measured look at real behavioral and relational effects of AI use on the patient-physician relationship, though it relies on self-report and correlational survey data rather than an intervention."
+    },
+    {
+      "id": "pmid:42609726",
+      "beat": "patient-comm",
+      "source": "World J Otorhinolaryngol Head Neck Surg",
+      "title": "Vocal Cord Dysfunction: Evaluating the Utility of AI Large Language Models for Patient Education.",
+      "score": 6,
+      "theme": "AI Versus Clinician",
+      "why": "A cross-sectional survey had 45 healthcare providers rank patient-education responses about vocal cord dysfunction (VCD) from a laryngologist versus two chatbots, finding AI-generated answers were preferred over the human expert for three of four questions (Friedman p<=.001). This is a genuine head-to-head comparison against a real clinician, though it uses provider rather than patient raters and only four questions, limiting generalizability."
+    },
+    {
+      "id": "url:c800ffdcddf41188",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Menopausal Hormone Therapy Linked to 35% Lower Alzheimer’s Risk",
+      "score": 6,
+      "theme": "Hormone Therapy Dementia Risk",
+      "why": "A Stanford Medicine study funded by the National Institutes of Health (NIH) examined two databases totaling 21,462 participants and found estrogen-only menopausal hormone therapy (MHT) associated with 35% lower odds of Alzheimer's disease and 39% lower odds of any dementia diagnosis, including an autopsy-confirmed subgroup of 258 users versus 2,701 non-users. This is a substantive observational finding with real effect sizes and a notable autopsy-validated subgroup, though as an industry-beat item it should be read as an association from observational data rather than a randomized trial establishing causation."
+    },
+    {
+      "id": "pmid:42608279",
+      "beat": "patient-comm",
+      "source": "Semin Oncol Nurs",
+      "title": "The Invisible Workforce: An Algorithmic Audit of Nursing, Primary Care, and Holistic Gaps in AI-Generated Survivorship Plans.",
+      "score": 5,
+      "theme": "AI Care Plan Gaps",
+      "why": "An algorithmic audit of 50 ChatGPT-5.1-generated ovarian cancer survivorship plans found systematic underrepresentation of primary care and nursing roles (explicit attribution of 2% and 14% respectively) despite substantial implicit functional content, alongside reading levels above recommended patient literacy benchmarks. This surfaces a concrete failure mode, systematic omission of holistic care roles, relevant to understanding risks of unsupervised patient-facing LLM use, though it examines only one model and no clinician comparator."
+    },
+    {
+      "id": "url:5df46782e449ad79",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "NIH Launches $1.3M Maternal Health Research Challenge",
+      "score": 5,
+      "theme": "Maternal Health Funding",
+      "why": "The National Institutes of Health (NIH) launched a $1.3 million crowdsourced research challenge through HeroX targeting maternal health research capacity in maternity care deserts, aimed at community, tribal, and faith-based organizations. This is a concrete, specifically funded federal initiative addressing a real access gap, though it is a challenge structure rather than a completed study or product."
+    },
+    {
+      "id": "url:447a8e4645bdb08b",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "OBstat Expands Nationwide to Address OB/GYN Staffing Gaps",
+      "score": 5,
+      "theme": "OB/GYN Staffing Expansion",
+      "why": "OBstat, a locum tenens staffing platform for obstetrics and gynecology (OB/GYN) clinicians affiliated with Ob Hospitalist Group, announced nationwide expansion to fill short-term staffing gaps in maternal healthcare. This is a concrete operational expansion addressing a real workforce shortage, though it involves no new clinical or regulatory milestone."
+    },
+    {
+      "id": "url:f8942bb880457570",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Biograph Debuts Women’s Health Program to Advance Lifestage Care",
+      "score": 5,
+      "theme": "Women's Health Program Launch",
+      "why": "Preventive health clinic Biograph launched a Women's Health Program combining advanced diagnostics with physician-led personalized care plans across its New York City and Bay Area locations. This is a real product and service launch consolidating care, though details on the diagnostics or clinical evidence behind them are not specified."
+    },
+    {
+      "id": "url:4068b8dcde16c490",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Bird&Be Partners With Mandell’s Clinical Pharmacy to Expand Fertility Care Access",
+      "score": 4,
+      "theme": "Fertility Partnership",
+      "why": "Fertility supplement brand Bird&Be announced a partnership with Mandell's Clinical Pharmacy, a specialty fertility pharmacy, to expand distribution and referral access nationwide. This is a modest distribution partnership without new clinical, regulatory, or funding developments, so its market significance is limited."
+    },
+    {
+      "id": "pmid:42624944",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "A scoping review on the mental health harms of LLM-based chatbots.",
+      "score": 3,
+      "theme": "Chatbot Mental Harms",
+      "why": "This scoping review synthesizes 119 articles on potential mental health harms of large language model (LLM) based chatbots, categorizing findings into conceptual risks, vignette studies, and observational associations with overreliance or dependency. It is a synthesis without new primary data or clinician comparison, so it flags a landscape rather than delivering an actionable finding for this reader's beat on LLM-patient interaction."
+    },
+    {
+      "id": "pmid:42616679",
+      "beat": "clinical-ai",
+      "source": "J Am Med Inform Assoc",
+      "title": "SMART: structured, meaningful, auditable, responsible, and transparent documentation for clinical AI.",
+      "score": 3,
+      "theme": "AI Documentation Framework",
+      "why": "This paper introduces SMART, a documentation framework for clinical AI models that combines structured clinical vocabularies, lifecycle governance, and a blockchain-backed audit trail, evaluated through an illustrative case study and blockchain gas-usage experiments rather than real clinical deployment. It is an infrastructure proposal for AI governance rather than a study of AI performance or patient outcomes, so its relevance to this reader is limited to model-reporting practices."
+    },
+    {
+      "id": "pmid:42622115",
+      "beat": "patient-comm",
+      "source": "Breastfeed Med",
+      "title": "Accuracy and Safety of Language Model-Generated Breastfeeding Counseling Responses: An Expert-Based Comparative Evaluation of ChatGPT-3.5, ChatGPT-4, and BreastfeedGPT.",
+      "score": 3,
+      "theme": "Chatbot Rubric Comparison",
+      "why": "A comparative evaluation had eight breastfeeding experts rate responses from ChatGPT-3.5, ChatGPT-4, and a customized domain-specific GPT (BreastfeedGPT) on ten frequently asked questions using Likert scales and the mDISCERN reliability instrument, finding the custom model scored highest on accuracy and tone. No human lactation consultant responses were included as a comparator, so this is a rubric-only comparison among chatbots rather than a test against real clinical practice."
+    },
+    {
+      "id": "pmid:42620655",
+      "beat": "patient-comm",
+      "source": "J Vitreoretin Dis",
+      "title": "Ability of Large Language Models to Answer Patients' Questions and Generate Educational Materials for Uncommon Retinal Conditions.",
+      "score": 3,
+      "theme": "Patient Education Readability",
+      "why": "Retina specialists rated accuracy and completeness of three large language models (LLMs) answering 50 frequently asked questions on rare retinal diseases, and found models could lower reading grade level by 4-7 grades after being prompted to revise, without losing accuracy scores. There is no comparison against actual retina specialist answers or patient outcomes, so this remains a rubric-scored capability demonstration rather than evidence of clinical benefit."
+    },
+    {
+      "id": "pmid:42618685",
+      "beat": "patient-comm",
+      "source": "J Robot Surg",
+      "title": "Comparative performance of artificial intelligence chatbots in patient education for robot-assisted radical prostatectomy: quality, transparency and readability.",
+      "score": 3,
+      "theme": "Chatbot Benchmark Comparison",
+      "why": "Four chatbots' patient-education responses about robot-assisted radical prostatectomy were scored on standardized quality instruments (DISCERN, EQIP, GQS, JAMA benchmark) and readability indices, with DeepSeek-V4 scoring highest but all models exceeding recommended reading levels. This is a model-versus-model comparison without any clinician-generated response as a baseline, so it is a routine benchmarking exercise rather than a test of real-world utility."
+    },
+    {
+      "id": "pmid:42607894",
+      "beat": "patient-comm",
+      "source": "Urology",
+      "title": "Evaluation of AI Chatbot Responses to Pediatric Urology Frequently Asked Questions.",
+      "score": 3,
+      "theme": "Chatbot Quality Rubric",
+      "why": "Two board-certified pediatric urologists rated four large language models (LLMs) across seven quality domains for parent-facing frequently asked questions, finding generally high accuracy and safety scores but reading levels exceeding recommended patient-education standards. This is a rubric-based multi-model comparison without a human clinician response as a baseline, making it a routine benchmarking study."
+    },
+    {
+      "id": "pmid:42606695",
+      "beat": "patient-comm",
+      "source": "Eur Spine J",
+      "title": "Are large language models such as ChatGPT, capable of supporting patients and general practitioners after spine surgery?",
+      "score": 3,
+      "theme": "Chatbot Comparison Spine",
+      "why": "Five large language models (LLMs) answered ten frequently asked spine surgery questions tailored to patients versus practitioners, with surgeons and lay raters scoring correctness, completeness, and empathy on Likert scales, finding ChatGPT and Claude scored highest for practitioner questions and Gemini and Copilot for patient-facing empathy and readability. This is a multi-model rubric comparison without a human clinician response as a comparator, so it demonstrates relative model performance rather than clinical utility."
+    },
+    {
+      "id": "url:d92a194426cf2303",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Menstrual Care Startup Sequel Taps WNBA Star Aliyah Boston As Co-Owner",
+      "score": 3,
+      "theme": "Celebrity Endorsement",
+      "why": "Menstrual care startup Sequel, maker of an FDA-approved spiral-design tampon, announced WNBA player Aliyah Boston as a co-owner, alongside noting prior funding of over $8 million. The core news here is a celebrity ownership addition rather than a new product, funding round, or regulatory action, placing it in the lower-value category of endorsement news."
+    },
+    {
+      "id": "url:8ef0a6a194c34352",
+      "beat": "industry",
+      "source": "FemTech Insider",
+      "title": "Midi Health Expands Beyond Menopause Care With New Brand Identity",
+      "score": 3,
+      "theme": "Company Rebrand",
+      "why": "Women's telehealth platform Midi Health announced a new brand identity as it expands its clinical offerings beyond menopause care, referencing a previously reported $100 million funding round. The core news item is a rebrand, which per industry standards carries low signal value even though the company's underlying growth (450,000 patients served) is substantial."
+    },
+    {
+      "id": "pmid:42624705",
+      "beat": "clinical-ai",
+      "source": "Lancet Digit Health",
+      "title": "Building safer clinical agents: the case for residency-level benchmarks in medical artificial intelligence.",
+      "score": 2,
+      "theme": "AI Benchmark Proposal",
+      "why": "This Lancet Digital Health piece argues for residency-level benchmarks to evaluate clinical AI agents, but no abstract or data is provided, so it appears to be an opinion or perspective article rather than an empirical study. Without evidence of a proposed benchmark's implementation or validation, it offers no measurable finding for this reader to act on."
+    },
+    {
+      "id": "pmid:42612661",
+      "beat": "clinical-ai",
+      "source": "Lancet",
+      "title": "Ambient scribes as narrative technologies.",
+      "score": 2,
+      "theme": "placeholder",
+      "why": "This Lancet commentary argues, using medical humanities perspectives, that ambient scribes, AI-powered voice-to-text tools that document clinical encounters, should be understood as narrative technologies with under-recognized risks to patient-centered care. It presents no original data or evaluation, offering conceptual and policy recommendations rather than evidence this reader could weigh against other findings."
+    },
+    {
+      "id": "pmid:42619578",
+      "beat": "patient-comm",
+      "source": "J Neurogastroenterol Motil",
+      "title": "Comparative Analysis of Large Language Model Outputs for Pre-hypnotherapy Support in Irritable Bowel Syndrome - An Experimental Feasibility Study.",
+      "score": 2,
+      "theme": "Preliminary Chatbot Feasibility",
+      "why": "An exploratory feasibility study compared four large language models (LLMs) on readability and DISCERN information-quality scores for irritable bowel syndrome hypnotherapy questions, but used a single rater and explicitly states results cannot be considered definitive. This is a preliminary, likely underpowered comparison with no clinician benchmark and the authors themselves caution against drawing conclusions."
+    },
+    {
+      "id": "pmid:40645773",
+      "beat": "patient-comm",
+      "source": "J Med Ethics",
+      "title": "On the risks of depersonalizing consent and the safe implementation of LLMs in medical decision-making.",
+      "score": 2,
+      "theme": "Ethics Commentary",
+      "why": "This is an ethics commentary responding to a prior proof-of-concept on large language model (LLM)-patient communication, arguing that removing human healthcare professionals from decision-making risks diminished autonomy, trust, and empathy. It contains no new empirical data or study design, functioning as opinion and commentary rather than evidence relevant to clinical practice."
+    },
+    {
+      "id": "pmid:42603822",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "Accelerating AI in clinical care: policy priorities of the 2025 HHS request for information.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42424436",
+      "beat": "clinical-ai",
+      "source": "Science",
+      "title": "Autonomous biomedical research with an artificial intelligence agent.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42633444",
+      "beat": "repro-ai",
+      "source": "Int J Womens Health",
+      "title": "Increased Junctional Zone Stiffness and Serum Small Extracellular Vesicle Proteomic Signatures in Adenomyosis-Associated Infertility: An Exploratory SWE and Proteomic Study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42632752",
+      "beat": "repro-ai",
+      "source": "Int J Epidemiol",
+      "title": "Prenatal fluoride exposure and pregnancy outcomes in two US pregnancy cohorts.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42632339",
+      "beat": "repro-ai",
+      "source": "Pregnancy Hypertens",
+      "title": "Machine learning for precision obstetrics: A comprehensive review of risk prediction models for hypertensive disorders and pregnancy-related syndromes.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42632123",
+      "beat": "repro-ai",
+      "source": "Transl Oncol",
+      "title": "Integrative single-cell sequencing and machine learning analyses identify chronic inflammation and cancer-associated fibroblast subsets as drivers of adverse outcomes in ovarian cancer.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42632070",
+      "beat": "repro-ai",
+      "source": "Hypertens Pregnancy",
+      "title": "Left ventricular hypertrophy as a predictor of adverse maternal and neonatal outcomes in chronic hypertension in pregnancy: a multicenter study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42629530",
+      "beat": "repro-ai",
+      "source": "J Thromb Thrombolysis",
+      "title": "Revisiting clinical scoring tools for the diagnosis of thrombotic thrombocytopenic purpura (TTP).",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42628173",
+      "beat": "repro-ai",
+      "source": "Artif Intell Med",
+      "title": "PregBase: A comprehensive knowledge base for clinically relevant knowledge representation and biomarker prediction in pregnancy.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42628029",
+      "beat": "repro-ai",
+      "source": "JMIR Form Res",
+      "title": "Predicting Cesarean Section Delivery in the United States Using Machine Learning: Population-Based Retrospective Study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42625853",
+      "beat": "repro-ai",
+      "source": "J Public Health Res",
+      "title": "Machine learning approaches to predict maternal anemia and Identifying associated factors among pregnant women in Sub-Saharan Africa.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42623983",
+      "beat": "repro-ai",
+      "source": "Patient Educ Couns",
+      "title": "Patient-safe radiological language: Reducing nocebo harm in orthopedic imaging reports.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42623724",
+      "beat": "repro-ai",
+      "source": "J Reprod Immunol",
+      "title": "Development and validation of cell-free RNA-based predictive models for preeclampsia using placental single-cell transcriptomic data.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42623428",
+      "beat": "repro-ai",
+      "source": "PLoS One",
+      "title": "Uncovering the determinants of high-risk age at childbirth in Bangladesh: A machine learning analysis of the BDHS 2022 data.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42622829",
+      "beat": "repro-ai",
+      "source": "Abdom Radiol (NY)",
+      "title": "Intravoxel incoherent motion imaging with improved image quality by deep learning reconstruction for prediction of lymph-vascular space invasion in patients with cervical cancer.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42618024",
+      "beat": "repro-ai",
+      "source": "Obesity (Silver Spring)",
+      "title": "Multidimensional Analysis of Early Adiposity Rebound Determinants in Children: Two Key \"1000 Days\".",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42617746",
+      "beat": "repro-ai",
+      "source": "Mod Pathol",
+      "title": "Assessing Foundation Models for Computational Pathology in Endometrial Cancer.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42616664",
+      "beat": "repro-ai",
+      "source": "Reproduction",
+      "title": "Phenotypic Analysis of Human and Murine Endometrial Organoids using a Machine Learning Approach.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42615912",
+      "beat": "repro-ai",
+      "source": "Int J Epidemiol",
+      "title": "Cohort Profile Update: the Rotterdam Periconceptional Cohort-biomarkers, lifestyle intervention, and artificial intelligence.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42613314",
+      "beat": "repro-ai",
+      "source": "Diabetes Obes Metab",
+      "title": "Linking Metabolic Subgroups and Adverse Pregnancy Outcomes in GDM: A Complementary Analytic Approach of Logistic Regressions and Machine Learning.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42610878",
+      "beat": "repro-ai",
+      "source": "Diagnostics (Basel)",
+      "title": "RETRACTED: Deeparani, M.; Kalamani, M. Gynecological Healthcare: Unveiling Pelvic Masses Classification Through Evolutionary Gravitational Neocognitron Neural Network Optimized with Nomadic People Optimizer. Diagnostics 2023, 13, 3131.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42608332",
+      "beat": "repro-ai",
+      "source": "Diabetes Obes Metab",
+      "title": "Integrative Proteomics-Metabolomics Profiling of Umbilical Cord Plasma With Machine Learning Reveals Candidate Biomarkers for Gestational Diabetes Mellitus.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:40511846",
+      "beat": "repro-ai",
+      "source": "Biol Reprod",
+      "title": "In vitro processes alter the embryonic disc epigenome and transcriptome in the pre-implantation elongated bovine embryo†.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42633015",
+      "beat": "patient-comm",
+      "source": "Digit Health",
+      "title": "ChatGPT as a source of surgical information: Evaluation of responses to patient questions on hallux rigidus fusion.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42631662",
+      "beat": "patient-comm",
+      "source": "Health Educ Behav",
+      "title": "Countering HPV Vaccine Misinformation: An Integrative Cognitive-Affective Framework for Theory-Driven Digital Health Education Interventions.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42631603",
+      "beat": "patient-comm",
+      "source": "J Vis Exp",
+      "title": "Readability and Quality of Large Language Model Patient Education for Trigeminal Neuralgia: A Cross-Sectional Study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42631512",
+      "beat": "patient-comm",
+      "source": "Ear Nose Throat J",
+      "title": "Barriers to Understanding: Readability of Online Laryngomalacia Resources for Parents.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42629325",
+      "beat": "patient-comm",
+      "source": "Hum Vaccin Immunother",
+      "title": "Age- and sex-related variation in ChatGPT-4o HPV vaccine recommendation style: A fixed-prompt audit.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42628031",
+      "beat": "patient-comm",
+      "source": "JMIR Form Res",
+      "title": "A Human-Governed Clinical Informatics Framework for Safe AI-Assisted Mental Health Counseling: Secondary Framework Development and Requirement Mapping Study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42625791",
+      "beat": "patient-comm",
+      "source": "Digit Health",
+      "title": "Evaluation and comparison of large language model responses to common discharge questions from patients with acute coronary syndrome after percutaneous coronary intervention: An expert-rated comparative study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42624462",
+      "beat": "patient-comm",
+      "source": "J Stomatol Oral Maxillofac Surg",
+      "title": "Comparative Evaluation of Large Language Models in Answering Patient Questions Following Periodontal and Peri-Implant Examination: An Expert-Based Study.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42623485",
+      "beat": "patient-comm",
+      "source": "JMIR Med Educ",
+      "title": "Digital Standardized Patients: Conceptual Framework for Generative AI-Empowered Medical Education.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42622863",
+      "beat": "patient-comm",
+      "source": "Int Urogynecol J",
+      "title": "Improving Pelvic Floor Disorder Education: A Second Pilot of a Retrieval-Augmented AI Chatbot Model.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42622617",
+      "beat": "patient-comm",
+      "source": "JMIR Med Inform",
+      "title": "Discordance Between Textual Reasoning and Visual Interpretation in Large Language Models for Low Back Pain: Cross-Sectional Quantitative Evaluation and Exploratory Multimodal Stress Test.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    }
+  ],
+  "stats": {
+    "perBeat": [
+      {
+        "beat": "clinical-ai",
+        "label": "Clinical AI",
+        "totalMatches": 9,
+        "retrieved": 9,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 8
+      },
+      {
+        "beat": "repro-ai",
+        "label": "AI in OB/GYN and REI",
+        "totalMatches": 23,
+        "retrieved": 23,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 21
+      },
+      {
+        "beat": "patient-comm",
+        "label": "LLMs and Patient Communication",
+        "totalMatches": 24,
+        "retrieved": 24,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 24
+      },
+      {
+        "beat": "industry",
+        "label": "FEMTECH and Digital Health",
+        "totalMatches": 7,
+        "retrieved": 7,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 7
+      }
+    ],
+    "feedFailures": [],
+    "ranked": true,
+    "droppedBelowCut": 0,
+    "refused": 0,
+    "unscored": 34
+  }
+}

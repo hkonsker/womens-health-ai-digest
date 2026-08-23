@@ -818,5 +818,90 @@
     "term": "Finite State Machine (FSM)",
     "definition": "A system design that follows a fixed set of defined steps or states, moving between them based on specific rules, used here to keep a chatbot's conversation on a structured path.",
     "firstSeen": "2026-W34"
+  },
+  "contrast-enhanced computed tomography (ce-ct)": {
+    "term": "Contrast-Enhanced Computed Tomography (CE-CT)",
+    "definition": "A CT scan enhanced with an injected dye that highlights blood vessels and tissue differences to improve diagnosis.",
+    "firstSeen": "2026-W34"
+  },
+  "single-arm trial": {
+    "term": "Single-Arm Trial",
+    "definition": "A study where every participant receives the same intervention, with no separate comparison group.",
+    "firstSeen": "2026-W34"
+  },
+  "double-blinded randomized controlled trial (rct)": {
+    "term": "Double-Blinded Randomized Controlled Trial (RCT)",
+    "definition": "A study design where participants are randomly assigned to different treatments and neither participants nor assessors know who got which, reducing bias.",
+    "firstSeen": "2026-W34"
+  },
+  "bimodal large language model (llm)": {
+    "term": "Bimodal Large Language Model (LLM)",
+    "definition": "An AI system that processes more than one type of input, such as both text and audio, rather than just text.",
+    "firstSeen": "2026-W34"
+  },
+  "decide-ai stage 1": {
+    "term": "DECIDE-AI Stage 1",
+    "definition": "An early-stage framework for testing AI decision support tools in real clinical settings before larger trials, focused on safety and usability.",
+    "firstSeen": "2026-W34"
+  },
+  "odds ratio (or)": {
+    "term": "Odds Ratio (OR)",
+    "definition": "A number comparing how much more or less likely an event is in one group versus another, where 1 means no difference.",
+    "firstSeen": "2026-W34"
+  },
+  "undertriage": {
+    "term": "Undertriage",
+    "definition": "When a screening tool wrongly judges a case as less urgent than it actually is, risking delayed care.",
+    "firstSeen": "2026-W34"
+  },
+  "overtriage": {
+    "term": "Overtriage",
+    "definition": "When a screening tool wrongly judges a case as more urgent than it actually is, causing unnecessary escalation.",
+    "firstSeen": "2026-W34"
+  },
+  "ground truth": {
+    "term": "Ground Truth",
+    "definition": "The accepted correct answer used to check whether a test or model got things right.",
+    "firstSeen": "2026-W34"
+  },
+  "cross-sectional design": {
+    "term": "Cross-Sectional Design",
+    "definition": "A study that looks at a group of people at a single point in time rather than following them over time.",
+    "firstSeen": "2026-W34"
+  },
+  "generative artificial intelligence (ai)": {
+    "term": "Generative Artificial Intelligence (AI)",
+    "definition": "AI systems that can produce new text, images, or other content rather than just classify existing data.",
+    "firstSeen": "2026-W34"
+  },
+  "mixed methods design": {
+    "term": "Mixed Methods Design",
+    "definition": "A research approach that combines numerical survey data with in-depth interviews to get a fuller picture.",
+    "firstSeen": "2026-W34"
+  },
+  "friedman test": {
+    "term": "Friedman Test",
+    "definition": "A statistical test used to compare rankings across three or more related groups, such as multiple raters ranking several options.",
+    "firstSeen": "2026-W34"
+  },
+  "national institutes of health (nih)": {
+    "term": "National Institutes of Health (NIH)",
+    "definition": "The main US federal government agency responsible for funding and conducting medical research.",
+    "firstSeen": "2026-W34"
+  },
+  "menopausal hormone therapy (mht)": {
+    "term": "Menopausal Hormone Therapy (MHT)",
+    "definition": "Treatment using hormones like estrogen to relieve symptoms of menopause.",
+    "firstSeen": "2026-W34"
+  },
+  "odds": {
+    "term": "Odds",
+    "definition": "A way of expressing how likely an event is to happen compared to it not happening, often reported as a ratio between two groups.",
+    "firstSeen": "2026-W34"
+  },
+  "algorithmic audit": {
+    "term": "Algorithmic Audit",
+    "definition": "A systematic check of an AI system's outputs to look for patterns of bias or missing content.",
+    "firstSeen": "2026-W34"
   }
 }
