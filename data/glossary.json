@@ -903,5 +903,195 @@
     "term": "Algorithmic Audit",
     "definition": "A systematic check of an AI system's outputs to look for patterns of bias or missing content.",
     "firstSeen": "2026-W34"
+  },
+  "transthyretin amyloid cardiomyopathy (attr-cm)": {
+    "term": "Transthyretin Amyloid Cardiomyopathy (ATTR-CM)",
+    "definition": "A heart disease caused by an abnormal protein building up in heart tissue, which is treatable if caught early but often missed.",
+    "firstSeen": "2026-W35"
+  },
+  "electrocardiogram (ecg)": {
+    "term": "Electrocardiogram (ECG)",
+    "definition": "A recording of the heart's electrical activity, commonly used to check heart rhythm and structure.",
+    "firstSeen": "2026-W35"
+  },
+  "area under the receiver operating characteristic curve (auroc)": {
+    "term": "Area Under the Receiver Operating Characteristic Curve (AUROC)",
+    "definition": "A score from 0.5 to 1 showing how well a test distinguishes people with a condition from those without it, where higher is better.",
+    "firstSeen": "2026-W35"
+  },
+  "positive predictive value": {
+    "term": "Positive Predictive Value",
+    "definition": "The chance that a positive test result is actually correct, which depends on how common the condition is in the tested group.",
+    "firstSeen": "2026-W35"
+  },
+  "aortic stenosis (as)": {
+    "term": "Aortic Stenosis (AS)",
+    "definition": "A narrowing of the heart's aortic valve that restricts blood flow and can become life threatening if untreated.",
+    "firstSeen": "2026-W35"
+  },
+  "focused cardiac ultrasound (focus)": {
+    "term": "Focused Cardiac Ultrasound (FoCUS)",
+    "definition": "A quick, simplified heart ultrasound exam meant to be done by non-expert operators rather than trained sonographers.",
+    "firstSeen": "2026-W35"
+  },
+  "electroencephalogram (eeg)": {
+    "term": "Electroencephalogram (EEG)",
+    "definition": "A recording of electrical activity in the brain, used to diagnose seizures and other neurological conditions.",
+    "firstSeen": "2026-W35"
+  },
+  "inter-rater reliability (irr)": {
+    "term": "Inter-Rater Reliability (IRR)",
+    "definition": "A measure of how much different human experts agree with each other when judging the same case, used here as a benchmark for the AI.",
+    "firstSeen": "2026-W35"
+  },
+  "random survival forest": {
+    "term": "Random Survival Forest",
+    "definition": "A machine learning method that predicts how long until an event, like death, happens by combining many decision trees built on time-to-event data.",
+    "firstSeen": "2026-W35"
+  },
+  "internal-external cross-validation": {
+    "term": "Internal-External Cross-Validation",
+    "definition": "A testing method where a model is repeatedly trained on some hospital sites and tested on a site left out, to check if it generalizes beyond its original data.",
+    "firstSeen": "2026-W35"
+  },
+  "harrell concordance index": {
+    "term": "Harrell Concordance Index",
+    "definition": "A statistic measuring how well a model correctly ranks which patients will have an event sooner versus later, where 1.0 is perfect and 0.5 is no better than chance.",
+    "firstSeen": "2026-W35"
+  },
+  "transcatheter aortic valve implantation (tavi)": {
+    "term": "Transcatheter Aortic Valve Implantation (TAVI)",
+    "definition": "A minimally invasive procedure to replace a damaged heart valve without open heart surgery.",
+    "firstSeen": "2026-W35"
+  },
+  "artificial intelligence (ai)": {
+    "term": "Artificial Intelligence (AI)",
+    "definition": "Computer systems designed to perform tasks, like recognizing patterns or making predictions, that normally require human judgment.",
+    "firstSeen": "2026-W35"
+  },
+  "society of thoracic surgeons predicted risk of mortality (sts-prom)": {
+    "term": "Society of Thoracic Surgeons Predicted Risk of Mortality (STS-PROM)",
+    "definition": "A standard scoring tool doctors use to estimate a patient's risk of dying from heart surgery, based on clinical factors.",
+    "firstSeen": "2026-W35"
+  },
+  "external testing": {
+    "term": "External Testing",
+    "definition": "Checking a model's performance on data from a different location or population than the one it was built on, to see if results hold up elsewhere.",
+    "firstSeen": "2026-W35"
+  },
+  "cardiotocography (ctg)": {
+    "term": "Cardiotocography (CTG)",
+    "definition": "A monitoring method that records a baby's heart rate and the mother's uterine contractions during pregnancy or labor.",
+    "firstSeen": "2026-W35"
+  },
+  "non-inferiority study": {
+    "term": "Non-Inferiority Study",
+    "definition": "A study designed to show that a new method is not meaningfully worse than an existing method, rather than trying to show it is better.",
+    "firstSeen": "2026-W35"
+  },
+  "light gradient boosting machine (lightgbm)": {
+    "term": "Light Gradient Boosting Machine (LightGBM)",
+    "definition": "A fast machine learning method that builds a sequence of decision trees, each correcting the errors of the previous ones.",
+    "firstSeen": "2026-W35"
+  },
+  "composite outcome": {
+    "term": "Composite Outcome",
+    "definition": "A single combined endpoint made up of several different possible bad outcomes, counted together as one event.",
+    "firstSeen": "2026-W35"
+  },
+  "surgical site infection (ssi)": {
+    "term": "Surgical Site Infection (SSI)",
+    "definition": "An infection that occurs at or near a surgical incision after an operation.",
+    "firstSeen": "2026-W35"
+  },
+  "convolutional neural network": {
+    "term": "Convolutional Neural Network",
+    "definition": "A type of AI model especially good at analyzing images by learning to recognize visual patterns.",
+    "firstSeen": "2026-W35"
+  },
+  "internet-based cognitive behavioral therapy (icbt)": {
+    "term": "Internet-Based Cognitive Behavioral Therapy (iCBT)",
+    "definition": "A structured form of talk therapy delivered online, often through written exchanges with a therapist.",
+    "firstSeen": "2026-W35"
+  },
+  "preregistered": {
+    "term": "Preregistered",
+    "definition": "A study plan that was written down and publicly filed before the research was conducted, to prevent changing methods after seeing results.",
+    "firstSeen": "2026-W35"
+  },
+  "end-of-life care": {
+    "term": "End-Of-Life Care",
+    "definition": "Medical care focused on supporting patients and families near the end of a person's life, often involving difficult conversations about goals of care.",
+    "firstSeen": "2026-W35"
+  },
+  "mixture-of-experts (moe)": {
+    "term": "Mixture-Of-Experts (MoE)",
+    "definition": "A machine learning design where several specialized sub-models each handle a different part of a task, and their outputs are combined.",
+    "firstSeen": "2026-W35"
+  },
+  "u-net": {
+    "term": "U-Net",
+    "definition": "A common neural network design for finding and outlining structures in medical images.",
+    "firstSeen": "2026-W35"
+  },
+  "f1-score": {
+    "term": "F1-score",
+    "definition": "A single number that balances how often a model's positive predictions are correct against how many true positives it catches, useful when categories are imbalanced.",
+    "firstSeen": "2026-W35"
+  },
+  "dice similarity coefficient (dsc)": {
+    "term": "Dice Similarity Coefficient (DSC)",
+    "definition": "A measure of how closely two outlined regions overlap, used to judge how accurately an AI traces a structure compared to a human expert.",
+    "firstSeen": "2026-W35"
+  },
+  "cross-dataset generalization": {
+    "term": "Cross-Dataset Generalization",
+    "definition": "Testing a model on data collected somewhere different from where it was trained, to check whether its performance holds up outside its original source.",
+    "firstSeen": "2026-W35"
+  },
+  "prospective clinical validation": {
+    "term": "Prospective Clinical Validation",
+    "definition": "Testing a tool going forward on new patients before it is used to make decisions, rather than only checking it against data already collected.",
+    "firstSeen": "2026-W35"
+  },
+  "privacy-preserving": {
+    "term": "Privacy-Preserving",
+    "definition": "Designed so that sensitive patient information is not exposed or sent outside a secure system while the AI processes it.",
+    "firstSeen": "2026-W35"
+  },
+  "retrospective validation": {
+    "term": "Retrospective Validation",
+    "definition": "Checking a tool's performance using data that was already collected in the past, rather than testing it on new cases as they happen.",
+    "firstSeen": "2026-W35"
+  },
+  "kappa": {
+    "term": "Kappa",
+    "definition": "A statistic that measures how much two raters or systems agree beyond what would be expected by chance.",
+    "firstSeen": "2026-W35"
+  },
+  "cell-free dna (cfdna)": {
+    "term": "Cell-Free DNA (cfDNA)",
+    "definition": "Small fragments of DNA that are released into surrounding fluid by cells, which can be collected without directly biopsying tissue.",
+    "firstSeen": "2026-W35"
+  },
+  "non-invasive preimplantation genetic testing (nipgt)": {
+    "term": "Non-Invasive Preimplantation Genetic Testing (niPGT)",
+    "definition": "A method of checking an embryo's chromosomes using DNA found in its culture fluid rather than removing cells directly from the embryo.",
+    "firstSeen": "2026-W35"
+  },
+  "ploidy": {
+    "term": "Ploidy",
+    "definition": "The number of chromosome sets a cell has, where an abnormal number can indicate a genetic problem in an embryo.",
+    "firstSeen": "2026-W35"
+  },
+  "hallucination": {
+    "term": "Hallucination",
+    "definition": "When an AI model generates information that sounds plausible but is factually incorrect or made up.",
+    "firstSeen": "2026-W35"
+  },
+  "test-retest stability": {
+    "term": "Test-Retest Stability",
+    "definition": "Whether a system gives the same or similar answer when asked the same question again after some time has passed.",
+    "firstSeen": "2026-W35"
   }
 }
