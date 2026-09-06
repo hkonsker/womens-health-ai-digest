@@ -1093,5 +1093,95 @@
     "term": "Test-Retest Stability",
     "definition": "Whether a system gives the same or similar answer when asked the same question again after some time has passed.",
     "firstSeen": "2026-W35"
+  },
+  "multiple instance learning": {
+    "term": "Multiple Instance Learning",
+    "definition": "A machine learning approach where the model learns from a bag of related images rather than requiring every small piece to be individually labeled.",
+    "firstSeen": "2026-W36"
+  },
+  "hematoxylin and eosin (h&e)": {
+    "term": "Hematoxylin and Eosin (H&E)",
+    "definition": "The standard staining method used to prepare tissue slides so structures and cells are visible under a microscope.",
+    "firstSeen": "2026-W36"
+  },
+  "ce mark": {
+    "term": "CE Mark",
+    "definition": "CE mark, a certification showing a product meets European safety and performance standards, required to sell certain medical devices in Europe.",
+    "firstSeen": "2026-W36"
+  },
+  "label efficiency": {
+    "term": "Label Efficiency",
+    "definition": "How well a model performs when trained with fewer labeled examples, which matters because labeling medical data is costly.",
+    "firstSeen": "2026-W36"
+  },
+  "prospective study": {
+    "term": "Prospective Study",
+    "definition": "A study that follows participants forward in time from a defined starting point, generally considered stronger evidence than looking back at old records.",
+    "firstSeen": "2026-W36"
+  },
+  "double-blind study": {
+    "term": "Double-Blind Study",
+    "definition": "A study design in which neither the participants nor the evaluators know which option came from which source, reducing bias in judgment.",
+    "firstSeen": "2026-W36"
+  },
+  "bonferroni-adjusted": {
+    "term": "Bonferroni-adjusted",
+    "definition": "A statistical correction applied when many comparisons are tested at once, to reduce the chance of falsely finding a difference just by chance.",
+    "firstSeen": "2026-W36"
+  },
+  "multimodal large language model (mllm)": {
+    "term": "Multimodal Large Language Model (MLLM)",
+    "definition": "A version of a large language model that can also process non-text data like images, not just text.",
+    "firstSeen": "2026-W36"
+  },
+  "electronic health record (ehr)": {
+    "term": "Electronic Health Record (EHR)",
+    "definition": "The digital version of a patient's medical chart, containing things like lab results, vital signs, and diagnoses.",
+    "firstSeen": "2026-W36"
+  },
+  "exosomal microrna (exo-mirna)": {
+    "term": "Exosomal microRNA (exo-miRNA)",
+    "definition": "Tiny genetic molecules carried inside small cell-released packets called exosomes, which can be measured in blood and reflect disease activity.",
+    "firstSeen": "2026-W36"
+  },
+  "confidence interval (ci)": {
+    "term": "Confidence Interval (CI)",
+    "definition": "A range of values that likely contains the true effect, giving a sense of how precise an estimate is.",
+    "firstSeen": "2026-W36"
+  },
+  "prevalence ratio": {
+    "term": "Prevalence Ratio",
+    "definition": "A measure comparing how common an outcome is between two groups, where a ratio of 2 means the outcome is twice as common in one group.",
+    "firstSeen": "2026-W36"
+  },
+  "artificial intelligence decision support system (ai-dss)": {
+    "term": "Artificial Intelligence Decision Support System (AI-DSS)",
+    "definition": "A computer tool that uses AI to help a health worker interpret information and make a clinical decision, without making the decision alone.",
+    "firstSeen": "2026-W36"
+  },
+  "visual inspection with acetic acid (via)": {
+    "term": "Visual Inspection With Acetic Acid (VIA)",
+    "definition": "A low-cost cervical cancer screening method where a health worker applies vinegar-like acid to the cervix and looks for color changes that indicate abnormal tissue.",
+    "firstSeen": "2026-W36"
+  },
+  "consolidated framework for implementation research": {
+    "term": "Consolidated Framework for Implementation Research",
+    "definition": "A standardized set of categories researchers use to study what helps or hinders a new program or technology from being successfully adopted in real settings.",
+    "firstSeen": "2026-W36"
+  },
+  "multi-instance learning (mil)": {
+    "term": "Multi-Instance Learning (MIL)",
+    "definition": "A machine learning approach where a model learns from a group of related items together, such as several images from one patient case, rather than one item at a time.",
+    "firstSeen": "2026-W36"
+  },
+  "mean arterial pressure (map)": {
+    "term": "Mean Arterial Pressure (MAP)",
+    "definition": "An average measure of blood pressure during a heartbeat cycle, often used as an indicator of blood flow to organs.",
+    "firstSeen": "2026-W36"
+  },
+  "bivariate meta-analysis": {
+    "term": "Bivariate Meta-Analysis",
+    "definition": "A statistical method for combining sensitivity and specificity results from multiple diagnostic studies while accounting for the tradeoff between them.",
+    "firstSeen": "2026-W36"
   }
 }
