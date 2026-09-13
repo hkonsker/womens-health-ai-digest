@@ -1,0 +1,2367 @@
+{
+  "weekLabel": "2026-W37",
+  "startDate": "2026-09-07T00:00:00.000Z",
+  "endDate": "2026-09-13T23:59:59.999Z",
+  "generatedAt": "2026-09-13T17:27:13.178Z",
+  "queryVersion": "v6",
+  "queries": {
+    "clinical-ai": "(\nJAMA[jour] OR \"JAMA Netw Open\"[jour] OR \"JAMA Intern Med\"[jour] OR \"JAMA Pediatr\"[jour] OR\n\"JAMA Surg\"[jour] OR \"JAMA Oncol\"[jour] OR \"JAMA Neurol\"[jour] OR \"JAMA Cardiol\"[jour] OR\n\"N Engl J Med\"[jour] OR \"NEJM AI\"[jour] OR Lancet[jour] OR BMJ[jour] OR\n\"Lancet Digit Health\"[jour] OR \"Nat Med\"[jour] OR \"npj Digit Med\"[jour] OR\n\"J Am Med Inform Assoc\"[jour] OR \"Ann Intern Med\"[jour] OR Nature[jour] OR Science[jour]\n)\nAND\n(\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR \"generative AI\"[Title/Abstract] OR\n\"artificial intelligence\"[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR GPT[Title/Abstract] OR\n\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR \"neural network\"[Title/Abstract]\n)\nAND\n(\nclinical[Title/Abstract] OR patient[Title/Abstract] OR workflow[Title/Abstract] OR\nimplementation[Title/Abstract] OR \"clinical decision support\"[Title/Abstract] OR\ndocumentation[Title/Abstract] OR EHR[Title/Abstract] OR radiology[Title/Abstract] OR\ntriage[Title/Abstract] OR diagnosis[Title/Abstract] OR outcome[Title/Abstract]\n)\nNOT (news[Publication Type] OR comment[Publication Type] OR editorial[Publication Type])",
+    "repro-ai": "(\n\"artificial intelligence\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR\n\"deep learning\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR GPT[Title/Abstract] OR \"foundation model\"[Title/Abstract] OR\n\"neural network\"[Title/Abstract] OR \"computer vision\"[Title/Abstract] OR\n\"natural language processing\"[Title/Abstract] OR radiomics[Title/Abstract]\n)\nAND\n(\ninfertility[Title/Abstract] OR \"in vitro fertilization\"[Title/Abstract] OR IVF[Title/Abstract] OR\n\"assisted reproduction\"[Title/Abstract] OR \"assisted reproductive\"[Title/Abstract] OR\nembryo[Title/Abstract] OR blastocyst[Title/Abstract] OR oocyte[Title/Abstract] OR\n\"ovarian reserve\"[Title/Abstract] OR endometriosis[Title/Abstract] OR\n\"polycystic ovary\"[Title/Abstract] OR PCOS[Title/Abstract] OR endometrial[Title/Abstract] OR\npregnancy[Title/Abstract] OR pregnant[Title/Abstract] OR obstetric[Title/Abstract] OR\npreeclampsia[Title/Abstract] OR \"pre-eclampsia\"[Title/Abstract] OR \"preterm birth\"[Title/Abstract] OR\nfetal[Title/Abstract] OR \"maternal health\"[Title/Abstract] OR \"maternal mortality\"[Title/Abstract] OR\npostpartum[Title/Abstract] OR gynecolog*[Title/Abstract] OR \"cervical cancer\"[Title/Abstract] OR\nmenopause[Title/Abstract] OR contracepti*[Title/Abstract] OR \"women's health\"[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "patient-comm": "(\nchatbot[Title/Abstract] OR chatbots[Title/Abstract] OR \"conversational agent\"[Title/Abstract] OR\n\"large language model\"[Title/Abstract] OR LLM[Title/Abstract] OR ChatGPT[Title/Abstract] OR\n\"generative AI\"[Title/Abstract] OR \"symptom checker\"[Title/Abstract]\n)\nAND\n(\n\"patient question\"[Title/Abstract] OR \"patient questions\"[Title/Abstract] OR\n\"patient communication\"[Title/Abstract] OR \"patient education\"[Title/Abstract] OR\n\"patient portal\"[Title/Abstract] OR \"patient message\"[Title/Abstract] OR\n\"patient messages\"[Title/Abstract] OR \"patient-facing\"[Title/Abstract] OR\n\"patient inquiries\"[Title/Abstract] OR empathy[Title/Abstract] OR\n\"health literacy\"[Title/Abstract] OR \"shared decision\"[Title/Abstract] OR\nreadability[Title/Abstract] OR counseling[Title/Abstract]\n)\nNOT (\nnews[Publication Type] OR comment[Publication Type] OR editorial[Publication Type] OR\n\"case reports\"[Publication Type]\n)",
+    "industry": "RSS: 1 item(s) from configured feeds"
+  },
+  "items": [
+    {
+      "id": "pmid:42722598",
+      "beat": "clinical-ai",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China.",
+      "source": "Lancet Digit Health",
+      "url": "https://doi.org/10.1016/j.landig.2026.101040",
+      "date": "2026-09-10T00:00:00.000Z",
+      "authors": [
+        "Lei T",
+        "Shang N",
+        "Xie B",
+        "Luo Y",
+        "Zheng H",
+        "Li H",
+        "Zhang C",
+        "Wang N",
+        "Zhou Q",
+        "Xie H"
+      ],
+      "body": "BACKGROUND: The effect of AI-assisted diagnosis on sonographer performance in real-world prenatal settings remains unclear. This study aimed to assess the Prenatal Ultrasound Diagnosis Artificial Intelligence Conduct System (PAICS) in detecting AI-recognisable intracranial malformations and its effect on identifying anomalies beyond its recognition scope in high-risk pregnancies. METHODS: This multicentre, self-crossover, randomised controlled trial was done at five Chinese centres. High risk of fetal malformation singleton pregnancies (11-32 weeks' gestation) were examined by sonographers with 3 to less than 8 years of experience. Participants were randomly assigned 1:1 to two diagnostic sequences: independent real-time diagnosis followed by PAICS-assisted offline review, or PAICS-assisted real-time diagnosis followed by independent offline review, with a 4-week washout period. Allocation was concealed. An expert panel's diagnosis on video review served as the reference standard. Sonographers were masked to fetal anomaly status but were aware of AI assistance during scanning. Outcome assessors and the independent expert panel responsible for the reference standard diagnosis were masked to group assignments. Primary outcomes were sensitivity and specificity in detecting ten specific fetal intracranial malformations, with sensitivity assessed for superiority and specificity against a 5% margin of non-inferiority. The trial is registered with the Chinese Clinical Trial Registry (ChiCTR2200063424). FINDINGS: Between Sept 6, 2022 and Nov 1, 2023, 1584 scans were completed. PAICS-assisted diagnosis improved sensitivity for detecting specific fetal intracranial malformations. In the fetal-based analysis, sensitivity increased by 0&#xb7;087 (95% CI 0&#xb7;029 to 0&#xb7;147; p<0&#xb7;0001), with specificity meeting the non-inferiority criterion (difference 0&#xb7;009, 95% CI -0&#xb7;006 to 0&#xb7;023; p<0&#xb7;0001). In the malformation-targeted analysis, sensitivity improved by 0&#xb7;118 (95% CI 0&#xb7;054 to 0&#xb7;181; p<0&#xb7;0001), and specificity was also non-inferior (difference 0&#xb7;001, 95% CI -0&#xb7;001 to 0&#xb7;002; p<0&#xb7;0001). No adverse events related to the diagnostic procedure or the AI assistance were reported. INTERPRETATION: PAICS improves sonographers' sensitivity for detecting targeted fetal intracranial malformations while preserving their specificity, which supports the integration of AI assistance into fetal anomaly screening in high-risk clinical settings. FUNDING: National Natural Science Foundation of China, Guangdong Provincial Basic and Applied Basic Research Fund Project, Guangzhou Science and Technology Program, and Sun Yat-sen University Fundamental Research Funds for the Junior Faculty Program.",
+      "score": 8,
+      "why": "This multicentre, self-crossover randomised controlled trial (RCT) in China tested an AI system (PAICS) for detecting ten fetal intracranial malformations in 1584 prenatal ultrasound scans, finding a significant sensitivity increase of 8.7 to 11.8 percentage points with specificity meeting non-inferiority criteria. This is a rare prospective, crossover-design clinical trial of AI-assisted fetal anomaly screening with a masked reference standard, giving it real weight for changing prenatal screening practice.",
+      "plain": "Doctors in China tested an AI tool that helps ultrasound technicians spot brain abnormalities in fetuses, comparing the same doctors working with and without the AI's help across nearly 1600 scans. The AI helped them catch more real abnormalities without causing more false alarms, which is a strong, well-designed test that could support wider use of such tools in pregnancy screening.",
+      "theme": "Fetal Anomaly Screening",
+      "glossary": [
+        {
+          "term": "Randomised Controlled Trial (RCT)",
+          "definition": "A study design where participants or conditions are randomly assigned to groups being compared, which helps rule out other explanations for a difference in outcomes.",
+          "isNew": true
+        },
+        {
+          "term": "Self-Crossover",
+          "definition": "A study design where the same participants are tested under both conditions being compared, in different order, so each person acts as their own control.",
+          "isNew": true
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+          "isNew": false
+        },
+        {
+          "term": "Specificity",
+          "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+          "isNew": false
+        },
+        {
+          "term": "Non-Inferiority",
+          "definition": "A type of statistical test showing that a new approach is not meaningfully worse than an existing one, rather than proving it is better.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42722598",
+      "beat": "repro-ai",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China.",
+      "source": "Lancet Digit Health",
+      "url": "https://doi.org/10.1016/j.landig.2026.101040",
+      "date": "2026-09-10T00:00:00.000Z",
+      "authors": [
+        "Lei T",
+        "Shang N",
+        "Xie B",
+        "Luo Y",
+        "Zheng H",
+        "Li H",
+        "Zhang C",
+        "Wang N",
+        "Zhou Q",
+        "Xie H"
+      ],
+      "body": "BACKGROUND: The effect of AI-assisted diagnosis on sonographer performance in real-world prenatal settings remains unclear. This study aimed to assess the Prenatal Ultrasound Diagnosis Artificial Intelligence Conduct System (PAICS) in detecting AI-recognisable intracranial malformations and its effect on identifying anomalies beyond its recognition scope in high-risk pregnancies. METHODS: This multicentre, self-crossover, randomised controlled trial was done at five Chinese centres. High risk of fetal malformation singleton pregnancies (11-32 weeks' gestation) were examined by sonographers with 3 to less than 8 years of experience. Participants were randomly assigned 1:1 to two diagnostic sequences: independent real-time diagnosis followed by PAICS-assisted offline review, or PAICS-assisted real-time diagnosis followed by independent offline review, with a 4-week washout period. Allocation was concealed. An expert panel's diagnosis on video review served as the reference standard. Sonographers were masked to fetal anomaly status but were aware of AI assistance during scanning. Outcome assessors and the independent expert panel responsible for the reference standard diagnosis were masked to group assignments. Primary outcomes were sensitivity and specificity in detecting ten specific fetal intracranial malformations, with sensitivity assessed for superiority and specificity against a 5% margin of non-inferiority. The trial is registered with the Chinese Clinical Trial Registry (ChiCTR2200063424). FINDINGS: Between Sept 6, 2022 and Nov 1, 2023, 1584 scans were completed. PAICS-assisted diagnosis improved sensitivity for detecting specific fetal intracranial malformations. In the fetal-based analysis, sensitivity increased by 0&#xb7;087 (95% CI 0&#xb7;029 to 0&#xb7;147; p<0&#xb7;0001), with specificity meeting the non-inferiority criterion (difference 0&#xb7;009, 95% CI -0&#xb7;006 to 0&#xb7;023; p<0&#xb7;0001). In the malformation-targeted analysis, sensitivity improved by 0&#xb7;118 (95% CI 0&#xb7;054 to 0&#xb7;181; p<0&#xb7;0001), and specificity was also non-inferior (difference 0&#xb7;001, 95% CI -0&#xb7;001 to 0&#xb7;002; p<0&#xb7;0001). No adverse events related to the diagnostic procedure or the AI assistance were reported. INTERPRETATION: PAICS improves sonographers' sensitivity for detecting targeted fetal intracranial malformations while preserving their specificity, which supports the integration of AI assistance into fetal anomaly screening in high-risk clinical settings. FUNDING: National Natural Science Foundation of China, Guangdong Provincial Basic and Applied Basic Research Fund Project, Guangzhou Science and Technology Program, and Sun Yat-sen University Fundamental Research Funds for the Junior Faculty Program.",
+      "score": 8,
+      "why": "This multicentre, self-crossover randomised controlled trial (RCT) in China tested an AI system (PAICS) for detecting ten fetal intracranial malformations in 1584 prenatal ultrasound scans, finding a significant sensitivity increase of 8.7 to 11.8 percentage points with specificity meeting non-inferiority criteria. This is a rare prospective, crossover-design clinical trial of AI-assisted fetal anomaly screening with a masked reference standard, giving it real weight for changing prenatal screening practice.",
+      "plain": "Doctors in China tested an AI tool that helps ultrasound technicians spot brain abnormalities in fetuses, comparing the same doctors working with and without the AI's help across nearly 1600 scans. The AI helped them catch more real abnormalities without causing more false alarms, which is a strong, well-designed test that could support wider use of such tools in pregnancy screening.",
+      "theme": "Fetal Anomaly Screening",
+      "glossary": [
+        {
+          "term": "Randomised Controlled Trial (RCT)",
+          "definition": "A study design where participants or conditions are randomly assigned to groups being compared, which helps rule out other explanations for a difference in outcomes.",
+          "isNew": true
+        },
+        {
+          "term": "Self-Crossover",
+          "definition": "A study design where the same participants are tested under both conditions being compared, in different order, so each person acts as their own control.",
+          "isNew": true
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+          "isNew": false
+        },
+        {
+          "term": "Specificity",
+          "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+          "isNew": false
+        },
+        {
+          "term": "Non-Inferiority",
+          "definition": "A type of statistical test showing that a new approach is not meaningfully worse than an existing one, rather than proving it is better.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42715602",
+      "beat": "patient-comm",
+      "title": "Evaluating Frontline Health Workers' Responses to Patient Inquiries With and Without Large Language Model Support in Nigeria: Observational Study.",
+      "source": "J Med Internet Res",
+      "url": "https://doi.org/10.2196/86578",
+      "date": "2026-09-08T00:00:00.000Z",
+      "authors": [
+        "Moosa M",
+        "Malumi O",
+        "Chinedu S",
+        "Okah W",
+        "Ogboye A",
+        "Abiakam C",
+        "Duys T",
+        "Lagos KJ",
+        "Etuk I",
+        "Mobisson N"
+      ],
+      "body": "BACKGROUND: Frontline health workers (FLWs) in low- and middle-income countries (LMICs) often face barriers that compromise care quality, including limited training, high patient loads, inadequate access to updated clinical guidance, and resource constraints. Working in underserved settings further exacerbates challenges to providing accurate, complete, and empathetic responses. Addressing these gaps requires innovative tools to support FLWs in real time. OBJECTIVE: This study aims to evaluate the effectiveness of ChatGPT-3.5 in enhancing the quality of FLWs' responses to health inquiries in Lagos, Nigeria. METHODS: In this observational study, 36 licensed FLWs (doctors, nurses, community health workers) practicing general or primary care in Lagos, Nigeria, generated responses to 15 patient-generated health questions covering maternal and neonatal health, family planning, and sexually transmitted infections. Each FLW produced responses using their own knowledge and available resources (\"human-only\") and with ChatGPT-3.5 assistance (\"GPT-aided\"). A panel of 4 clinicians evaluated responses using a 5-point Likert scale for accuracy, empathy, contextualization, completeness, safety, and overall preference. In addition, 8 non-clinician health seekers assessed a subset of responses across 3 themes: Caring, Trust, and Ease of Understanding. RESULTS: Across 1080 responses from 36 FLWs, GPT-aided responses significantly outperformed human-only responses on all clinician-rated metrics (P<.001), with the largest gains observed in completeness, empathy, and overall preference, particularly among Community Health Extension Workers (CHEWs). Non-clinician evaluators also favored GPT-aided responses across all themes, with a strong preference for trust. CONCLUSIONS: This study provides empirical evidence that a large language model (ChatGPT-3.5) enhances the completeness, empathy, and perceived trust of responses by frontline health workers in Lagos, Nigeria. These findings underscore the potential of integrating ChatGPT-3.5 to strengthen healthcare delivery in resource-limited settings, highlighting the necessity for capacity building and further investigation into its safe, equitable, and effective implementation.",
+      "score": 7,
+      "why": "This observational study compared frontline health worker responses to patient questions on maternal, neonatal, and sexually transmitted infection topics in Lagos, Nigeria, with and without ChatGPT-3.5 assistance, finding large language model (LLM)-aided responses significantly outperformed human-only responses on clinician-rated accuracy, empathy, completeness, and safety across 1,080 responses from 36 workers. This is a genuine comparison against real health worker performance in a low-resource, high-stakes setting relevant to reproductive and maternal health, meeting this reader's bar for beat four evidence beyond routine chatbot scoring.",
+      "plain": "In Nigeria, health workers answered real patient questions about pregnancy, newborn care, family planning, and sexually transmitted infections both on their own and with help from ChatGPT. When they used the AI, their answers were rated as noticeably more accurate, complete, caring, and safe by both doctors and everyday patients, showing real potential for AI to help overstretched health workers in under-resourced settings.",
+      "theme": "AI-Assisted Frontline Care",
+      "glossary": [
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "pmid:42715525",
+      "beat": "patient-comm",
+      "title": "Effectiveness, Safety, and Workflow Burden of Large Language Model-Based Medical Report Generation: Systematic Review.",
+      "source": "J Med Internet Res",
+      "url": "https://doi.org/10.2196/97007",
+      "date": "2026-09-09T00:00:00.000Z",
+      "authors": [
+        "Huang JL",
+        "Zhu JQ",
+        "Ni XG"
+      ],
+      "body": "BACKGROUND: Systems based on large language models (LLMs), multimodal LLMs, and vision-language foundation models are increasingly being evaluated for medical report generation in imaging and related clinical workflows. Existing reviews have summarized technical architectures, radiology applications, readability, and benchmark performance, but clinical readiness remains uncertain because safety, human oversight, and workflow outcomes are sparsely and inconsistently reported. OBJECTIVE: The aim of this study is to assess the effectiveness (expert acceptance and blinded preference), safety (clinically significant, omission, and commission errors), and workflow burden (reporting time, corrections, edit distance, and editing burden) of LLM-based medical report generation. METHODS: We searched PubMed/MEDLINE, Embase, Web of Science Core Collection, Scopus, and the Cochrane Library for studies published from January 1, 2016, through May 15, 2026. Eligible studies evaluated LLMs, multimodal LLMs, or vision-language foundation models for image-to-report generation, impression generation from findings, report drafting, or structured reporting in imaging workflows. Two reviewers performed screening, extraction, risk-of-bias assessment, and Grading of Recommendations Assessment, Development, and Evaluation-informed narrative certainty assessment. Outcomes were clinically significant error rate, omission error rate, commission error rate, reporting time, edit burden, expert acceptance, and blinded expert preference. Meta-analysis was not performed because no comparable outcome had at least 2 studies with compatible task structure and analyzable data. RESULTS: A total of 101 studies were included. Chest x-ray was the largest modality group (36 studies), followed by computed tomography, magnetic resonance imaging (MRI), ultrasound, endoscopy, pathology, ophthalmic, electrocardiographic, dental, and mixed-modality contexts. No study was judged at low risk of bias; 15 were moderate, 72 high, and 14 serious. Safety and workflow evidence remained heterogeneous and largely nonpoolable. In a chest x-ray study, AI report acceptance was similar to that of radiologist reports (6047/8580, 70.5% vs 6288/8580, 73.3%), but false-negative findings were slightly higher (1584/8580, 18.5% vs 1527/8580, 17.8%). In a clinician-collaboration chest x-ray study, AI reports were equivalent or preferred in 233 of 300 (77.7%) and 170 of 303 (56.1%) cases across 2 datasets; yet, clinically significant errors persisted. In a brain MRI study, AI assistance reduced reading time from 61 to 53 seconds, whereas impression drafting increased editing time and edit distance. CONCLUSIONS: This review shifts the synthesis from plausible report generation to clinically interpretable effectiveness, safety, and workflow effects. Expert acceptance and preference suggested assistive value in selected supervised settings, but these signals were limited by inconsistent reporting of clinically significant errors, omissions, commissions, and failed generations. Workflow effects were mixed, with some studies reporting shorter reading time or drafting support, and others reporting greater editing time or edit distance. The evidence remains too heterogeneous, biased, and sparse on case-level end points to support a pooled meta-analysis or autonomous clinical-readiness claims. Adoption should remain locally validated, clinician-supervised, and accompanied by standardized reporting of acceptance, preference, omissions, commissions, failed generations, reporting time, corrections, and editing burden.",
+      "score": 7,
+      "why": "This systematic review synthesized 101 studies evaluating large language model (LLM)-based and vision-language foundation model medical report generation across imaging modalities, reporting expert acceptance, clinically significant error rates, and workflow burden, with example findings like near-equivalent acceptance to radiologist reports (70.5% vs 73.3%) but slightly higher false-negative rates. The review's strength is its scale and its explicit focus on safety and workflow outcomes rather than accuracy benchmarks alone, though the authors note universally elevated risk of bias and inability to pool most outcomes quantitatively, tempering the strength of its conclusions.",
+      "plain": "This is a large review pulling together 101 studies that tested AI systems writing medical imaging reports, like chest X-ray summaries, and asking whether doctors accepted the AI's reports, how often it made errors, and how much extra work it created. The AI reports were about as often accepted as human radiologist reports but had a slightly higher rate of missed findings, and the review found that most individual studies had significant quality problems, so the overall picture remains uncertain.",
+      "theme": "AI Report Generation Review",
+      "glossary": [
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        },
+        {
+          "term": "Vision-Language Foundation Model",
+          "definition": "A large AI model trained on both images and text so it can describe or reason about visual content in natural language.",
+          "isNew": true
+        },
+        {
+          "term": "Risk of Bias",
+          "definition": "An assessment of how likely a study's design or conduct is to produce a misleading result.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42703807",
+      "beat": "patient-comm",
+      "title": "Comparison of physician-authored and artificial intelligence-generated after-visit summaries: A blinded comparative study.",
+      "source": "J Hosp Med",
+      "url": "https://doi.org/10.1002/jhm.70435",
+      "date": "2026-09-07T00:00:00.000Z",
+      "authors": [
+        "Kviatkovsky M",
+        "Stewart C",
+        "McDonald A",
+        "Xing Y",
+        "Gianella S",
+        "Gelberg A",
+        "Huang B",
+        "Mayasy S",
+        "Djekic K",
+        "Ally M",
+        "Jenkins I",
+        "Smarr B",
+        "Singh K",
+        "El-Kareh R"
+      ],
+      "body": "BACKGROUND: After-visit summaries (AVSs) are essential for a safe hospital discharge, yet are often written above literacy levels, omit key information, and are produced under substantial clinical time pressure. Large language models (LLMs) offer a potential solution, while performance and safety in real clinical workflows remain uncertain. OBJECTIVE: To compare the quality, understandability, actionability, and safety of LLM-generated versus physician-authored after-visit summaries for hospitalized patients. METHODS: We conducted a retrospective, blinded comparison of physician-authored AVSs and LLM-generated AVSs for 50 adults discharged from the University of California San Diego Health hospital medicine service in 2023. The physician-authored hospital course served as source text for generating AVSs using GPT-4 and Gemma 3n 2. Both were prompted to produce sixth-grade level, patient-centered AVSs. Five attending physicians independently evaluated each AVS using the Patient Education Materials Assessment Tool (PEMAT) for understandability and actionability and the AVSrubric, an instrument assessing accuracy, comprehensiveness, clarity, consistency with the medical record, tone and empathy, and potential for harm. RESULTS: LLM-generated AVSs had higher PEMAT scores than physician-authored AVSs (understandability: 85.5% (GPT-4), 87.5% (Gemma), and 66.1% (physician-authored); actionability: 70.9% (GPT-4), 74.1% (Gemma) vs. 56.7% (physician-authored); all p&#x2009;<&#x2009;.001). On the AVSrubric, LLM-generated AVSs received higher ratings than physician-authored AVSs across all domains with GPT-4 demonstrating significantly higher in all five, while Gemma showed significant improvements in clarity, readability, tone, and empathy. CONCLUSIONS: In this blinded evaluation, LLM-generated AVSs were clearer, more comprehensive, and more empathetic than physician-authored AVSs and were associated with lower physician-rated potential for harm. A physician-in-the-loop LLM workflow may improve discharge communication while reducing clinician burden and warrants prospective evaluation.",
+      "score": 7,
+      "why": "Blinded retrospective comparison of physician-authored versus large language model (LLM)-generated after-visit summaries for 50 hospitalized patients, rated by five attending physicians using the Patient Education Materials Assessment Tool (PEMAT) and a dedicated safety rubric, found LLM-generated summaries scored higher on understandability, actionability, and every quality domain, including lower perceived potential for harm. This is a real clinician-comparator study with a concrete, workflow-relevant document type and a harm-related outcome, making it one of the stronger entries this week for this beat despite its retrospective, single-center design.",
+      "plain": "Doctors compared after-visit summaries written by human physicians against ones generated by AI for 50 hospital patients, with other doctors blindly judging both for clarity and safety. The AI-written summaries were rated clearer, more complete, more empathetic, and even safer than the human-written ones, suggesting AI could help with a task doctors often rush through, though this was a retrospective test at one hospital.",
+      "theme": "AI Discharge Summaries",
+      "glossary": [
+        {
+          "term": "Patient Education Materials Assessment Tool (PEMAT)",
+          "definition": "A standardized checklist used to judge how understandable and actionable a piece of patient-facing health material is.",
+          "isNew": true
+        },
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "pmid:42717239",
+      "beat": "clinical-ai",
+      "title": "PREDICT-GBM: A multicenter platform advancing personalized glioblastoma radiotherapy planning.",
+      "source": "NPJ Digit Med",
+      "url": "https://doi.org/10.1038/s41746-026-03194-0",
+      "date": "2026-09-09T00:00:00.000Z",
+      "authors": [
+        "Zimmer L",
+        "Weidner J",
+        "Balcerak M",
+        "Kofler F",
+        "Krupa M",
+        "Ezhov I",
+        "Cepeda S",
+        "Zhang RZ",
+        "Lowengrub JS",
+        "Menze B",
+        "Wiestler B"
+      ],
+      "body": "Glioblastoma recurrence is largely driven by diffuse infiltration beyond radiologically visible margins, yet current radiotherapy guidelines rely on uniform margin expansions that ignore patient-specific biology and anatomy. While computational models promise to map this invisible growth and guide personalized planning, their clinical translation is hindered by a lack of standardized benchmarking and reproducible validation. To bridge this gap, we present PREDICT-GBM, an open-source platform integrating a curated, longitudinal, multi-center dataset of 243 patients with a standardized evaluation pipeline. We benchmark a novel U-Net-based recurrence prediction model against state-of-the-art biophysical and data-driven methods. Under iso-volumetric constraints, both biophysical and deep-learning approaches achieved modest but statistically significant gains in geometric coverage of future recurrence over guideline-based plans. On the combined cohort, our U-Net achieved the highest mean coverage of enhancing recurrence (79.37 &#xb1; 2.08%), surpassing guideline-based plans (paired Wilcoxon signed-rank test, Benjamini-Hochberg adjusted p = 2.9 &#xd7; 10). The biophysical model GliODIL reached 78.91 &#xb1; 2.08% (p = 1.0 &#xd7; 10), validating the platform's ability to compare diverse modeling paradigms. By providing a reproducible ecosystem for model training and validation, PREDICT-GBM addresses a major bottleneck toward personalized, computationally guided radiotherapy. The platform, models, and data are openly available at github.com/BrainLesion/PredictGBM .",
+      "score": 6,
+      "why": "PREDICT-GBM is an open-source, multicenter platform of 243 glioblastoma patients that benchmarks a new U-Net deep learning model against biophysical models for predicting tumor recurrence beyond visible margins, finding modest but statistically significant improvements in recurrence coverage over standard radiotherapy margins. The value here is mainly infrastructural, a reproducible benchmarking ecosystem, rather than a practice-changing clinical result, since gains were small and not yet tied to outcome data.",
+      "plain": "Researchers built a shared, open dataset and testing platform from 243 brain cancer patients to compare different computer models that try to predict where a tumor will grow back after treatment, so doctors can plan radiation more precisely. Their best AI model slightly beat both standard guidelines and older prediction methods at covering future tumor regrowth, but the improvement was small and hasn't yet been shown to help patients live longer or have fewer side effects.",
+      "theme": "Radiotherapy Planning",
+      "glossary": [
+        {
+          "term": "U-Net",
+          "definition": "A common neural network design for finding and outlining structures in medical images.",
+          "isNew": false
+        },
+        {
+          "term": "Biophysical Model",
+          "definition": "A computer model that simulates disease processes, such as tumor growth, based on physical and biological rules rather than learning patterns from data alone.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42730567",
+      "beat": "repro-ai",
+      "title": "Deep learning-based automated cervical length measurement improves spontaneous preterm birth risk stratification in women with a borderline short cervix (20-25 mm) at mid-trimester: A retrospective cohort study.",
+      "source": "Int J Gynaecol Obstet",
+      "url": "https://doi.org/10.1002/ijgo.71332",
+      "date": "2026-09-12T00:00:00.000Z",
+      "authors": [
+        "Yoon JH",
+        "Kim S",
+        "Jung YJ",
+        "Lee JH",
+        "Kwon JY",
+        "Kim YH",
+        "Kwon H"
+      ],
+      "body": "OBJECTIVE: This study evaluates whether deep learning (DL)-based automated cervical length (CL) measurement provides improved risk stratification for spontaneous preterm birth (PTB), compared with conventional CL measurement methods, in women with a borderline short cervix by conventional methods (CL 20-25&#x2009;mm) on mid-trimester ultrasound. METHODS: This retrospective cohort study was conducted in a tertiary referral hospital in South Korea between January 2019 and December 2023. Women with a conventionally measured borderline short cervix were reanalyzed using a previously validated DL-based algorithm (CL-Net) that traces the cervical canal, and were reclassified as DL-Normal (DL-CL >&#x2009;25&#x2009;mm) and DL-Short (DL-CL &#x2264;&#x2009;25&#x2009;mm) groups. The primary outcome was the risk of PTB before 37&#x2009;weeks of gestation. Discrimination of conventional and DL-based CL was compared using receiver operating characteristic (ROC) curves with the DeLong test, and the incremental value of DL-based measurement was assessed by reclassification analyses. RESULTS: Of 171 women, 39 (22.8%) were reclassified into a DL-Short and 132 (77.2%) into a DL-Normal group. PTB before 37&#x2009;weeks occurred in 28.2% of the DL-Short group and 6.1% of the DL-Normal group (P&#x2009;<&#x2009;0.01), and a DL-Short cervix was independently associated with PTB (adjusted odds ratio, 6.37; 95% confidence interval, 2.28-17.84). DL-based CL showed better discrimination than conventional CL (area under the curve, 0.70 vs. 0.59; DeLong P&#x2009;=&#x2009;0.042), with no evidence of poor calibration (Hosmer-Lemeshow, P&#x2009;=&#x2009;0.36). The DL-Short group had a higher PTB rate despite greater progesterone use. For a DL-based CL &#x2264;&#x2009;25&#x2009;mm, sensitivity, specificity, positive predictive value, and negative predictive value for PTB were 57.9%, 81.6%, 28.2%, and 93.9%, respectively. CONCLUSION: Deep learning-based CL assessment, which follows the true anatomical pathway of the cervical canal, provides an objective and reproducible way to refine PTB risk stratification in women with a borderline short cervix. By identifying women at high risk of PTB more precisely than conventional methods, this approach could inform clinical practice, potentially helping to avoid unnecessary interventions in lower-risk women while ensuring appropriate preventive care for at risk patients with a borderline short cervix.",
+      "score": 6,
+      "why": "This retrospective cohort of 171 women with borderline short cervix (20-25 mm) found that a deep learning-based automated cervical length measurement tool improved discrimination of spontaneous preterm birth risk over conventional measurement (area under the curve 0.70 vs 0.59, DeLong p=0.042), with good calibration and a meaningful positive predictive value gain. The single-center, retrospective design and modest sample limit generalizability, but the improved risk stratification in an ambiguous clinical zone is clinically relevant for reproductive medicine.",
+      "plain": "Doctors tested whether an AI tool that automatically measures cervix length could better predict premature birth risk than the usual manual measurement, focusing on 171 women whose cervix length fell in a borderline zone. The AI-based measurement identified high-risk women more accurately than the standard method, though the study was done at only one hospital and with a relatively small group of patients.",
+      "theme": "Preterm Birth Risk",
+      "glossary": [
+        {
+          "term": "Area Under the Curve (AUC)",
+          "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+          "isNew": false
+        },
+        {
+          "term": "DeLong Test",
+          "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+          "isNew": false
+        },
+        {
+          "term": "Positive Predictive Value",
+          "definition": "The chance that a positive test result is actually correct, which depends on how common the condition is in the tested group.",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "pmid:42720764",
+      "beat": "repro-ai",
+      "title": "Abdominal landmark detection and classification of fetal growth conditions on obstetric ultrasound: a gestational age-conditioned multi-task network.",
+      "source": "Abdom Radiol (NY)",
+      "url": "https://doi.org/10.1007/s00261-026-05771-z",
+      "date": "2026-09-10T00:00:00.000Z",
+      "authors": [
+        "Tong T",
+        "Gu H",
+        "Lyu H"
+      ],
+      "body": "OBJECTIVE: This study presents GA-MTNet (Gestational-Age-Conditioned Multi-Task Network), a deep learning framework that integrates gestational age conditioning into a multi-task architecture to simultaneously perform abdominal landmark detection and classify five sonographic patterns linked to fetal growth conditions in prenatal ultrasound. MATERIALS AND METHODS: A retrospective multi-center dataset of 9,046 B-mode ultrasound images from 2,712 pregnant women (18-34 weeks) was collected across three institutions. Data from Centers A and B (6,750 images, 2,278 patients) were used for model development via patient-stratified 5-fold cross-validation, while Center C (1,296 images, 434 patients) served as an external test set. GA-MTNet employs a Swin Transformer V1 backbone with a Gestational Age Embedding Module based on Feature-wise Linear Modulation (FiLM), enabling dynamic adaptation of image features to fetal developmental stage. Three task heads handle: (1) detection of four abdominal landmarks, (2) five-class classification of fetal growth conditions (IUGR, GDM, pre-eclampsia, normal growth, amniotic fluid abnormalities), and (3) biometric regression. Post-deployment adaptability is supported through uncertainty-guided continual learning combining Monte Carlo Dropout, Elastic Weight Consolidation, and Low-Rank Adaptation. Interpretability was assessed via SHAP and Grad-CAM++, scored by two blinded fetal medicine specialists. RESULTS: Internally, GA-MTNet achieved a macro-AUC of 0.863, accuracy of 84.7%, macro-F1 of 0.821, and landmark detection mAP@0.5 of 0.791. Externally, performance remained strong (AUC 0.841, accuracy 82.3%, F1 0.798), with only a 2.2-point AUC drop. Per-class AUC ranged from 0.803 to 0.921. Ablation studies confirmed significant contributions from gestational age conditioning (+&#x2009;3.1 pp, p&#x2009;=&#x2009;0.003), multi-task learning (+&#x2009;1.0 pp, p&#x2009;=&#x2009;0.011), and continual learning (+&#x2009;1.0 pp, p&#x2009;=&#x2009;0.014). Calibration was excellent (ECE&#x2009;=&#x2009;0.047), and clinical relevance scored 3.2/4. CONCLUSIONS: GA-MTNet demonstrates that gestational age conditioning meaningfully improves sonographic pattern recognition and landmark detection across the second and third trimesters, while its continual learning mechanism enables safe, practical post-deployment model refinement.",
+      "score": 6,
+      "why": "This retrospective multi-center study developed GA-MTNet, a gestational age-conditioned multi-task deep learning model for abdominal landmark detection and classification of five fetal growth conditions on obstetric ultrasound, trained on 2712 patients and externally tested on an independent center with only a 2.2-point area under the curve (AUC) drop (0.863 internal vs 0.841 external). The external validation across institutions and detailed ablation analysis strengthen confidence in generalizability, though it remains a retrospective image-classification study without prospective clinical deployment data.",
+      "plain": "Researchers built an AI system that looks at ultrasound images of a fetus's belly and simultaneously identifies key landmarks and flags signs of growth problems like restricted growth, gestational diabetes effects, or preeclampsia-related changes, adjusting its analysis based on how far along the pregnancy is. When tested on ultrasound images from a hospital it had never seen before, the AI's accuracy dropped only slightly, which is a good sign that it might work well in new hospitals too, though it has not yet been tested in real-time clinical use.",
+      "theme": "Fetal Ultrasound AI",
+      "glossary": [
+        {
+          "term": "Deep Learning",
+          "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+          "isNew": false
+        },
+        {
+          "term": "Multi-Task Network",
+          "definition": "A single AI model trained to perform several related tasks at once, such as detecting landmarks and classifying conditions, rather than one task at a time.",
+          "isNew": true
+        },
+        {
+          "term": "Area Under the Curve (AUC)",
+          "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+          "isNew": false
+        },
+        {
+          "term": "External Validation",
+          "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+          "isNew": false
+        },
+        {
+          "term": "Ablation Study",
+          "definition": "An experiment where parts of a model are removed one at a time to see how much each part contributes to overall performance.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42714033",
+      "beat": "patient-comm",
+      "title": "\"Small\" Large Language Models in the Hospital: Evaluation Study on Real-World Data in a Resource-Constrained Setting.",
+      "source": "J Med Internet Res",
+      "url": "https://doi.org/10.2196/86453",
+      "date": "2026-09-09T00:00:00.000Z",
+      "authors": [
+        "Xu HA",
+        "Pythoud R",
+        "Thorball CW",
+        "Carra G",
+        "Kulynych B",
+        "Despraz J",
+        "Galland-Decker C",
+        "Maslias E",
+        "Baudson E",
+        "Brahier T",
+        "Kraege V",
+        "de Sousa Teixeira AC",
+        "Fidalgo C",
+        "Berthaudin F",
+        "Madina A",
+        "Zoergiebel S",
+        "Bastardot F",
+        "Stravodimou A",
+        "Méan M",
+        "Fellay J",
+        "Ryvlin P",
+        "Raisaro JL"
+      ],
+      "body": "BACKGROUND: Large language models (LLMs) are increasingly being deployed in health care, but their use and deployment in many real-world hospital environments pose significant challenges and concerns. In particular, state-of-the-art commercial models store or process data externally, which is often in conflict with ensuring patient data protection. At the same time, using LLMs locally is limited by the lack of available computing infrastructure. Small open-source LLMs that do not require substantial computing resources could offer a practical way to resolve these tensions, but their medical utility in real-world local contexts, especially in non-English languages, has not been sufficiently evaluated. OBJECTIVE: This study aimed to evaluate the feasibility of small, locally deployable open-source LLMs for clinically relevant tasks in a resource-constrained hospital setting and to propose a reproducible framework for institution-specific evaluation before deployment. METHODS: We evaluated 6 open-source LLMs ranging from 8B to 24B parameters (from the Mistral, Phi4, Falcon3, Llama3.1, and Meditron3 families) in a zero-shot setting across 7 tasks covering 4 clinical use cases: information extraction, medical text translation, text generation, and clinical decision support. We used deidentified French clinical data from a Swiss tertiary hospital, including discharge letters, clinical notes, and structured electronic health records. Performance was assessed using task-specific metrics, such as precision, recall, F-score, embedding-based semantic similarity, recall-oriented understudy for gisting evaluation (ROUGE) score, readability indices, and human review by clinicians. RESULTS: Model performance varied substantially between tasks. In the simplest retrieval task (needle-in-the-haystack), several models performed strongly, with Llama3.1 achieving an F-score of 99.81% and Mistral-small achieving 99.71%. In contrast, performance was poor in more complex tasks. For detecting protected health information, the best-performing LLMs achieved only modest overall macro-F-scores (0.33-0.34), substantially below a fine-tuned Robustly Optimized BERT Pretraining Approach (RoBERTa) baseline (0.94). In the task of extracting immune-related adverse events from discharge notes, the highest overall macro-F-score was 0.35 with Phi4. For medical text translation, Phi4 ranked highest in embedding-based evaluation, whereas Meditron3-Phi4 performed the worst, with clinician reviews identifying hallucinations in 55% of its outputs. In the task of summarizing discharge letters, quality was low across all models, with the best penalized ROUGE score reaching only 0.169 with Llama3.1. In the tasks of generating patient-friendly discharge note summaries and clinical decision support, clinician ratings generally ranged from dissatisfied to neutral, and no model achieved consistently satisfactory performance. CONCLUSIONS: Small open-source LLMs appear feasible for simple retrieval-oriented tasks in local hospital deployments but are currently inadequate for more complex applications, such as clinical decision support, deidentification, extraction of adverse events, and medical summarization. These findings highlight the importance of locally grounded evaluation tailored to specific use cases and the need for robust institutional evaluation frameworks to ensure safe and reliable deployment.",
+      "score": 6,
+      "why": "Evaluation of six open-source large language models (LLMs, 8 to 24 billion parameters) run locally on deidentified real French-language hospital data across four clinical tasks, finding strong performance on simple retrieval (F-scores near 99%) but poor performance on protected health information detection and adverse event extraction (macro-F-scores of 0.33 to 0.35), well below a fine-tuned Robustly Optimized BERT Pretraining Approach (RoBERTa) baseline. This is a real-world, deployment-oriented evaluation on live hospital data rather than a synthetic benchmark, which is unusually substantive for this beat even though it centers on clinical tasks rather than direct patient messaging.",
+      "plain": "Researchers tested six smaller, privacy-friendly AI language models that could run inside a hospital's own computers, checking how well they handled real (anonymized) patient records for tasks like finding information and translating notes. The models did great at simple lookups but did poorly at harder jobs like spotting private information or dangerous drug reactions, doing much worse than an older but specially trained system built just for that job.",
+      "theme": "Local Hospital LLMs",
+      "glossary": [
+        {
+          "term": "Large Language Models (LLMs)",
+          "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+          "isNew": false
+        },
+        {
+          "term": "F-score",
+          "definition": "A single number combining how often a system's positive answers are correct and how often it catches all the true positives, used to judge accuracy on detection tasks.",
+          "isNew": true
+        },
+        {
+          "term": "Robustly Optimized BERT Pretraining Approach (RoBERTa)",
+          "definition": "An older type of AI language model, smaller than modern chatbots, that is trained and fine-tuned for a specific narrow task.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42704533",
+      "beat": "patient-comm",
+      "title": "Generative artificial intelligence to augment ethical problem solving in ophthalmology: GPT-5.1 versus a human ethicist.",
+      "source": "Int Ophthalmol",
+      "url": "https://doi.org/10.1007/s10792-026-04230-4",
+      "date": "2026-09-07T00:00:00.000Z",
+      "authors": [
+        "Kelly DC",
+        "Chillikatil I",
+        "Monroe JM",
+        "Khanal R",
+        "Trippiedi A",
+        "Arcalas CJ",
+        "Claxton MR",
+        "Ndukwe T",
+        "Pogrebniak E",
+        "Barnett J",
+        "O'Banion J",
+        "Jones JK",
+        "Neustein RF"
+      ],
+      "body": "PURPOSE: While many large language models (LLMs) have been extensively investigated for their clinical decision-making capabilities, few studies have characterized their abilities to reason through complex, open-ended ethics cases. This study compared GPT-5.1 and expert human ethicist responses to real-world ethical scenarios specific to ophthalmology. METHODS: Ten ethical scenarios from the American Academy of Ophthalmology's Ask the Ethicist website were randomly selected and presented to GPT-5.1 using ChatGPT. AI-generated responses were subsequently compared to those of the expert human ethicist using conventional readability metrics. A panel of 10 physicians independently rated all responses via 6-point and 5-point Likert scales for both outcomes of likelihood-of-use in their own careers and perceived patient impact, respectively. RESULTS: GPT-5.1 versus human ethicist responses differed significantly on Flesch Reading Ease (10.9&#x2009;&#xb1;&#x2009;9.6 vs. 25.4&#x2009;&#xb1;&#x2009;10.9, p&#x2009;=&#x2009;0.002) and Gunning Fog Index (21.3&#x2009;&#xb1;&#x2009;1.9 vs. 19.5&#x2009;&#xb1;&#x2009;2.9, p&#x2009;=&#x2009;0.037). For likelihood-of-use, median ratings were 4.1 [3.8-4.3] for human ethicist versus 5.0 [4.7-5.2] for GPT-5.1 responses (p&#x2009;=&#x2009;0.013). Median ratings for perceived patient impact of human ethicist versus GPT-5.1 responses were 3.6 [3.3-3.7] versus 3.9 [3.8-4.4], p&#x2009;=&#x2009;0.008. Inter-rater reliability was moderate for both outcomes and response sources (ICC [2, 10]: 0.56-0.69). CONCLUSIONS: Compared to human ethicist responses, GPT-5.1 responses demonstrated lower readability; however, GPT-5.1 responses received significantly higher ratings for both outcomes of likelihood-of-use and perceived patient impact, respectively. These results advocate for further explorations of GPT-5.1 and other LLMs as potentially useful tools for evaluating common bioethical challenges in ophthalmology.",
+      "score": 6,
+      "why": "Ten ophthalmology ethics scenarios were answered by both GPT-5.1 and a human expert ethicist, and ten physicians rated both sets of responses on likelihood-of-use and perceived patient impact; GPT-5.1 scored significantly higher on both outcomes despite lower readability (Flesch Reading Ease of 10.9 versus 25.4). This is a genuine head-to-head comparison against a real clinical expert rather than a rubric applied to the model alone, which is the kind of evidence this beat values, though the sample is small and the domain (ethics reasoning) is narrow.",
+      "plain": "Researchers compared an AI chatbot's answers to tricky ethical dilemmas in eye care against answers from a real professional ethicist, and had doctors rate both. The AI's answers were rated more useful and more impactful for patients than the human expert's, even though they were harder to read, though the number of scenarios tested was small.",
+      "theme": "AI Versus Human Ethicist",
+      "glossary": [
+        {
+          "term": "Flesch Reading Ease",
+          "definition": "A score that estimates how easy a piece of text is to read, where higher numbers mean simpler text.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "url:6beb500bac405dc7",
+      "beat": "industry",
+      "title": "Half of U.S. hospitals lack maternity wards as Medicaid cuts loom: report",
+      "source": "Healthcare Dive",
+      "url": "https://www.healthcaredive.com/news/half-of-us-hospitals-lack-maternity-wards-as-medicaid-cuts-loom-report/830015/",
+      "date": "2026-09-10T13:10:35.000Z",
+      "authors": [],
+      "body": "Nearly half of U.S. hospitals are now without obstetric services, according to a new report, and closures could worsen as Medicaid cuts threaten hospital finances.",
+      "score": 6,
+      "why": "A new report finds nearly half of U.S. hospitals now lack obstetric services, with further closures anticipated as Medicaid funding cuts strain hospital finances. This is a concrete, system-level finding about access to maternity care rather than a single company's action, and it signals a structural shift the reader's field should track even without an AI component.",
+      "plain": "A new report says that almost half of hospitals in the United States no longer offer maternity care, and more closures are expected because of cuts to Medicaid funding. This matters because it shows a real, growing gap in where pregnant patients can get care, even though the story does not involve any new technology.",
+      "theme": "Maternity Care Access",
+      "glossary": []
+    },
+    {
+      "id": "pmid:42710003",
+      "beat": "clinical-ai",
+      "title": "Evaluating retrieval-augmented generation versus long-context input for clinical reasoning over electronic health records.",
+      "source": "J Am Med Inform Assoc",
+      "url": "https://doi.org/10.1093/jamia/ocag139",
+      "date": "2026-09-08T00:00:00.000Z",
+      "authors": [
+        "Myers S",
+        "Dligach D",
+        "Miller TA",
+        "Barr S",
+        "Landefeld J",
+        "Gao Y",
+        "Churpek MM",
+        "Mayampurath A",
+        "Afshar M"
+      ],
+      "body": "OBJECTIVE: To evaluate whether retrieval-augmented generation (RAG) can serve as an efficient alternative to long-context prompting for clinical reasoning over electronic health records (EHRs). MATERIALS AND METHODS: We defined 3 EHR-based tasks that are replicable across health systems and vary in reasoning complexity: (1) extracting imaging procedures (modality, date, and anatomic site), (2) generating timelines of therapeutic antibiotic use, and (3) identifying the key diagnoses for a hospitalization. Using real inpatient clinical notes from a US academic health system, we evaluated 3 large language models (GPT-5.4-mini, Mistral Medium 3, DeepSeek V3.1) with varying amounts of provided context, comparing targeted retrieval to using the most recent clinical notes. RESULTS: For Imaging Procedures, RAG strongly outperformed recent-note inputs and exceeded long-context performance (by 0.17-9.83 F1 across all models) using fewer than 8K tokens. Similar benefits were observed for Antibiotic Timelines, where <8K of retrieved tokens matched long-context recent-notes performance (between -3.26 and +3.24 Jaccard). Error analysis revealed that missing information in the clinical notes-often due to inter-hospital transfers-limited performance to some extent. However, performance on the Diagnosis Generation task remains largely static across methods and models. DISCUSSION: RAG demonstrated strong token efficiency across tasks, with the clearest and most consistent gains observed for imaging extraction and antibiotic timeline reconstruction. Diagnosis generation proved the most challenging task, suggesting ceiling effects imposed by documentation variability and evaluation constraints. CONCLUSION: Our results suggest that RAG remains a competitive and efficient approach for clinical tasks over large amounts of EHR, even as newer models become capable of handling increasingly longer amounts of text.",
+      "score": 5,
+      "why": "This J Am Med Inform Assoc (JAMIA) study compared retrieval-augmented generation (RAG) against long-context prompting across three large language models for extracting information from real inpatient electronic health record (EHR) notes, finding RAG matched or exceeded long-context performance using far fewer tokens for imaging and antibiotic timeline tasks, though diagnosis generation remained unsolved. It is a useful applied informatics comparison on real clinical text, but it evaluates extraction accuracy rather than patient-facing communication or clinician workflow impact.",
+      "plain": "Researchers tested whether giving an AI system only the most relevant pieces of a patient's medical record works as well as giving it the entire record, using real hospital notes and three different AI language models. The selective approach worked just as well or better for pulling out imaging details and antibiotic history using much less text, but neither approach reliably identified the main diagnoses for a hospital stay.",
+      "theme": "EHR Information Extraction",
+      "glossary": [
+        {
+          "term": "Retrieval-Augmented Generation (RAG)",
+          "definition": "A method where an AI language model first looks up relevant documents or data before writing its answer, aiming to make responses more accurate and grounded.",
+          "isNew": false
+        },
+        {
+          "term": "Long-Context Input",
+          "definition": "Feeding an AI model very large amounts of text at once, relying on its ability to process extended documents rather than pre-selecting relevant parts.",
+          "isNew": true
+        },
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "pmid:42731181",
+      "beat": "repro-ai",
+      "title": "Progressive increase in ascending aortic diameter across the menopausal transition: A longitudinal study using AI-based automated measurement from chest radiographs.",
+      "source": "Maturitas",
+      "url": "https://doi.org/10.1016/j.maturitas.2026.109117",
+      "date": "2026-09-12T00:00:00.000Z",
+      "authors": [
+        "Jang Y",
+        "Chang Y",
+        "Kang J",
+        "Ryu S"
+      ],
+      "body": "BACKGROUND: Despite the menopausal transition being a critical period of accelerating cardiovascular disease (CVD) risk, structural remodeling of the thoracic ascending aorta during this phase remains poorly characterized. MATERIALS AND METHODS: We analyzed 4427 Korean women who were premenopausal at baseline and underwent posteroanterior chest radiography. Maximum ascending aortic diameter was quantified using validated software based on deep learning. Menopausal stage was classified per STRAW+10 criteria. Linear mixed-effects models were used to examine longitudinal aortic changes across menopausal stages and effect modification among groups classified according to their PREVENT score for 10-year CVD risk. RESULTS: Mean age at baseline was 40.2&#xa0;&#xb1;&#xa0;3.9&#xa0;years. Over a median follow-up of 7.3&#xa0;years, age-adjusted maximum ascending aortic diameter increased across menopausal stages, from 2.901&#xa0;cm in premenopause to 2.991&#xa0;cm in postmenopause, remaining significant after multivariable adjustment. The association differed by PREVENT 10-year CVD risk (P&#xa0;<&#xa0;0.001). Among women in the lower three quartiles (quartiles 1-3, &#x2264;0.8%), a significant increment was observed only in late transition (&#x3b2;&#xa0;=&#xa0;0.035&#xa0;cm; 95% CI 0.009, 0.061), whereas among those in the top quartile (quartile 4, >0.8%), the diameter showed progressive increases across all stages, with the largest increment in postmenopause (&#x3b2;&#xa0;=&#xa0;0.094&#xa0;cm; 95% CI 0.076, 0.112). CONCLUSION: Ascending aortic diameter showed progressive increases across the menopausal transition after adjustment for age and traditional CVD risk factors, with PREVENT-stratified differences. A significant increment even among women in the lower three quartiles during late transition suggests that stage-related differences in ascending aortic diameter may be detectable before menopause onset.",
+      "score": 5,
+      "why": "This longitudinal study of 4427 Korean women used a validated deep learning tool to automatically measure ascending aortic diameter on chest radiographs, finding progressive increases across the menopausal transition that were steeper in women with higher cardiovascular risk scores. The AI here is a measurement tool rather than the focus of validation, but the finding links menopausal staging to structural cardiovascular change with a reasonably large longitudinal sample.",
+      "plain": "Researchers used an AI program that automatically measures the size of the main heart artery on chest X-rays to track nearly 4500 women as they went through menopause, finding that this artery gradually widens during the transition, especially in women already at higher heart disease risk. The AI's role was mainly to make consistent measurements rather than to be the object of the study itself.",
+      "theme": "Menopause Cardiovascular Risk",
+      "glossary": [
+        {
+          "term": "Deep Learning",
+          "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "pmid:42720754",
+      "beat": "repro-ai",
+      "title": "Large language models show high clinical safety but differences in completeness for reproductive counselling in women with inflammatory rheumatic and musculoskeletal diseases: a comparative expert evaluation.",
+      "source": "Rheumatol Int",
+      "url": "https://doi.org/10.1007/s00296-026-06271-5",
+      "date": "2026-09-10T00:00:00.000Z",
+      "authors": [
+        "Vossen D",
+        "Baraliakos X",
+        "Polyzou M"
+      ],
+      "body": "Specialized pregnancy counselling improves maternal and infant outcomes in women with inflammatory rheumatic and musculoskeletal diseases (iRMDs). As such services are not universally available, large language models (LLMs) may increasingly serve as an accessible source of information for patients seeking guidance on family planning, pregnancy, and lactation. This highlights the need to evaluate this software in terms of their adequacy, accuracy and overall reliability. The aim of the analysis is to evaluate the possibility of using LLMs as reliable sources of information regarding female patients suffering from iRMD and going through the period of pregnancy.&#xa0;54 questions were formulated, which concern the impact and general relationship between pregnancy and rheumatic diseases. The questions were given to four LLMs, ChatGPT, DeepSeek, Gemini and Grok, and the corresponding answers were obtained. The responses were rated across three clinical domains on a 5-point Likert scale (ranging from 1&#x2009;=&#x2009;strongly disagree/very poor to 5&#x2009;=&#x2009;strongly agree/excellent) by ten European rheumatology experts and with the help of appropriate statistical indicators calculated, the reliability of the LLMs was assessed.&#xa0;2160 items were evaluated. All models demonstrated high performance in \"Clinical Safety\" (Means&#x2009;>&#x2009;4.10). For \"Clinical Accuracy\", DeepSeek and ChatGPT scored highest (Median 4.40 for both). Significant deviations were observed in \"Completeness and Relevance\", where DeepSeek dominated (Mean 4.24, 95% CI 4.17-4.30) and Gemini showed the lowest performance (Mean 3.46, 95% CI 3.27-3.64). Inter-rater agreement was poor to slight (Fleiss' kappa range: -0.043 to 0.059) and moderate for ICC (range: 0.259 to 0.692).&#xa0;LLMs currently exhibit uniformly strong safety behaviors when providing medical information about family planning, pregnancy and lactation in iRMD. However, significant differences exist regarding completeness and relevance, where DeepSeek and ChatGPT are currently the most reliable and complete models for this domain. Furthermore, the variability in responses and low inter-rater agreement highlight that LLMs require further parameterization, are useful tools for routine care, but cannot replace expert medical judgment.",
+      "score": 5,
+      "why": "This comparative expert evaluation had ten European rheumatology experts rate answers from four large language models (LLMs), including ChatGPT and DeepSeek, on 54 pregnancy-related counselling questions for women with inflammatory rheumatic and musculoskeletal diseases (iRMDs), finding high clinical safety scores but notable variability in completeness and poor inter-rater agreement (Fleiss' kappa as low as -0.043). The multi-model comparison and specialist rating add some value over routine chatbot-answer studies, but the absence of a clinician-answer comparator and the low inter-rater reliability limit how much this changes practice.",
+      "plain": "Researchers had ten rheumatology specialists grade the answers of four AI chatbots to 54 common questions pregnant patients with rheumatic diseases might ask, checking for safety, accuracy, and completeness. All the chatbots gave safe answers, but they varied in how complete their answers were, and the human experts often disagreed with each other about how good the answers were, which makes the ratings less trustworthy.",
+      "theme": "LLM Patient Counseling",
+      "glossary": [
+        {
+          "term": "Large Language Models (LLMs)",
+          "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+          "isNew": false
+        },
+        {
+          "term": "Fleiss' Kappa",
+          "definition": "A statistical measure of how much multiple raters agree with each other beyond what would be expected by chance, where values near zero mean little real agreement.",
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "pmid:42709992",
+      "beat": "repro-ai",
+      "title": "Sentence-Level Provenance for AI Medical Record Summarization in a Click-to-Inspect Interface: Formative Usability Evaluation.",
+      "source": "JMIR Hum Factors",
+      "url": "https://doi.org/10.2196/95644",
+      "date": "2026-09-08T00:00:00.000Z",
+      "authors": [
+        "Parambath A",
+        "Pulpo G",
+        "Hartman V"
+      ],
+      "body": "BACKGROUND: Large language models can generate fluent summaries of longitudinal medical records, but in high-stakes clinical settings, verification burden remains a barrier to trust. Existing provenance mechanisms such as document-level citations and section references often require manual search within long, fragmented notes, limiting their usefulness during time-constrained workflows for clinicians. OBJECTIVE: This study aimed to design and evaluate a sentence-level provenance interface (\"click to inspect\") that enables rapid verification of AI-generated longitudinal medical record summaries at the level of individual statements. METHODS: Between November 2023 and January 2024, we conducted a formative usability study using remotely moderated usability sessions via Zoom to evaluate a web-based sentence-level provenance interface for AI-generated longitudinal medical record summaries. A convenience sample of clinicians was recruited through email outreach to academic and professional networks across the United States. Formative usability testing was conducted with 46 clinician interactions using synthetic longitudinal patient charts. Participants included medical students, residents, and attending physicians across multiple specialties, including internal medicine, dermatology, radiology, plastic surgery, anesthesiology, interventional radiology, obstetrics and gynecology, and family medicine. Usability was assessed using the System Usability Scale and net promoter score, alongside qualitative feedback. RESULTS: Clinicians reported high usability (mean System Usability Scale score 86.25, SD 7.77; 95% CI 83.96-88.54 from 46 participants) and a positive overall experience (net promoter score of 35; 22/46, 47.8% promoters; 18/46, 39.1% passives; and 6/46, 13% detractors). Participants described rapid access to supporting evidence as critical for trust calibration during first-pass chart review. Qualitative feedback identified friction in traditional citation-based interfaces and supported sentence-level inspectability as a low-friction verification mechanism. CONCLUSIONS: Sentence-level provenance transforms AI-generated summaries from static narratives into interactive verification tools. An approach that enables rapid, selective inspection of individual claims during longitudinal chart review may reduce verification burden and support calibrated reliance in high-risk clinical contexts.",
+      "score": 5,
+      "why": "This formative usability study evaluated a sentence-level provenance interface, letting clinicians click to verify individual claims in large language model (LLM)-generated longitudinal medical record summaries, with 46 clinicians reporting high System Usability Scale scores (mean 86.25) and a positive net promoter score. The design targets a real deployment barrier, verification burden, though the study is small, formative, and uses synthetic rather than real patient charts, so it does not yet demonstrate an effect on real-world clinical workflow or patient outcomes.",
+      "plain": "Researchers built a tool that lets doctors click on any sentence in an AI-written patient summary to instantly see the original medical record it came from, making it easier to check if the AI got it right. In an early test with 46 clinicians using fake practice charts, they liked the tool a lot, but it has not yet been tested on real patients or real workloads.",
+      "theme": "AI Summary Verification",
+      "glossary": [
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+          "isNew": false
+        },
+        {
+          "term": "System Usability Scale",
+          "definition": "A standard questionnaire used to measure how easy and pleasant people find a piece of software to use.",
+          "isNew": true
+        },
+        {
+          "term": "Net Promoter Score",
+          "definition": "A survey metric that measures how likely people are to recommend a product to others.",
+          "isNew": true
+        }
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "Ablation Study",
+      "definition": "An experiment where parts of a model are removed one at a time to see how much each part contributes to overall performance.",
+      "isNew": true
+    },
+    {
+      "term": "Adjusted Hazard Ratio (aHR)",
+      "definition": "A measure comparing the risk of an event over time between two groups, adjusted for other factors, where a value above 1 means higher risk.",
+      "isNew": false
+    },
+    {
+      "term": "Aggregate Privacy Metrics",
+      "definition": "Measures of privacy risk calculated across an entire dataset rather than for each individual person.",
+      "isNew": false
+    },
+    {
+      "term": "Algorithmic Audit",
+      "definition": "A systematic check of an AI system's outputs to look for patterns of bias or missing content.",
+      "isNew": false
+    },
+    {
+      "term": "AMH",
+      "definition": "A hormone produced by ovarian follicles that is commonly used to estimate a woman's remaining egg supply.",
+      "isNew": false
+    },
+    {
+      "term": "Anchoring Bias",
+      "definition": "The tendency for an initial piece of information, like a first guess, to unduly influence a person's final judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Aneuploid",
+      "definition": "Having an abnormal number of chromosomes, which often prevents an embryo from developing successfully.",
+      "isNew": false
+    },
+    {
+      "term": "Aortic Stenosis (AS)",
+      "definition": "A narrowing of the heart's aortic valve that restricts blood flow and can become life threatening if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Curve (AUC)",
+      "definition": "A single number from 0.5 to 1 that summarizes how well a test distinguishes between two groups, with 1 meaning perfect separation and 0.5 meaning no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC-ROC)",
+      "definition": "A measure from 0.5 to 1 of how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUC)",
+      "definition": "A number between 0.5 and 1 that measures how well a model distinguishes between people who will and will not have an outcome, where 1 is perfect and 0.5 is no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (AUROC)",
+      "definition": "A score from 0.5 to 1 showing how well a test distinguishes people with a condition from those without it, where higher is better.",
+      "isNew": false
+    },
+    {
+      "term": "Area Under the Receiver Operating Characteristic Curve (ROC-AUC)",
+      "definition": "A number from 0 to 1 that measures how well a model can tell apart two groups, such as patients who will versus won't develop a condition, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Artificial Intelligence (AI)",
+      "definition": "Computer systems designed to perform tasks, like recognizing patterns or making predictions, that normally require human judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Artificial Intelligence Decision Support System (AI-DSS)",
+      "definition": "A computer tool that uses AI to help a health worker interpret information and make a clinical decision, without making the decision alone.",
+      "isNew": false
+    },
+    {
+      "term": "Assisted Reproductive Technology (ART)",
+      "definition": "Medical procedures used to help people conceive, such as in vitro fertilization.",
+      "isNew": false
+    },
+    {
+      "term": "AUC",
+      "definition": "A single number from 0 to 1 summarizing how well a model distinguishes people with and without a condition, where 1 is perfect and 0.5 is no better than guessing.",
+      "isNew": false
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "A number from 0.5 to 1 summarizing how well a model distinguishes between two outcomes across all possible decision thresholds, with 1 being perfect and 0.5 being no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "Automation Bias",
+      "definition": "The tendency for people to over-trust an automated system's output, even when it may be wrong.",
+      "isNew": false
+    },
+    {
+      "term": "Balanced Accuracy",
+      "definition": "A way of measuring how correct a model is that gives equal weight to its performance on both positive and negative cases, useful when one outcome is much rarer than the other.",
+      "isNew": false
+    },
+    {
+      "term": "Bimodal Large Language Model (LLM)",
+      "definition": "An AI system that processes more than one type of input, such as both text and audio, rather than just text.",
+      "isNew": false
+    },
+    {
+      "term": "Biophysical Model",
+      "definition": "A computer model that simulates disease processes, such as tumor growth, based on physical and biological rules rather than learning patterns from data alone.",
+      "isNew": true
+    },
+    {
+      "term": "Bivariate Meta-Analysis",
+      "definition": "A statistical method for combining sensitivity and specificity results from multiple diagnostic studies while accounting for the tradeoff between them.",
+      "isNew": false
+    },
+    {
+      "term": "Blastocyst",
+      "definition": "An early-stage embryo, several days after fertilization, that is ready for genetic testing or transfer to the uterus.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded",
+      "definition": "A study design feature where evaluators do not know which responses came from which source, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Blinded Evaluation",
+      "definition": "An assessment method where the person judging the results does not know which option came from which source, to avoid bias.",
+      "isNew": false
+    },
+    {
+      "term": "Bonferroni-adjusted",
+      "definition": "A statistical correction applied when many comparisons are tested at once, to reduce the chance of falsely finding a difference just by chance.",
+      "isNew": false
+    },
+    {
+      "term": "Brier Score",
+      "definition": "A number measuring how accurate a set of probability predictions were, where lower values mean better accuracy.",
+      "isNew": false
+    },
+    {
+      "term": "Calibration",
+      "definition": "How well a model's predicted probabilities match the real-world frequency of the outcome it is predicting.",
+      "isNew": false
+    },
+    {
+      "term": "Cardiotocography (CTG)",
+      "definition": "A monitoring method that records a baby's heart rate and the mother's uterine contractions during pregnancy or labor.",
+      "isNew": false
+    },
+    {
+      "term": "CE Mark",
+      "definition": "CE mark, a certification showing a product meets European safety and performance standards, required to sell certain medical devices in Europe.",
+      "isNew": false
+    },
+    {
+      "term": "Cell-Free DNA (cfDNA)",
+      "definition": "Small fragments of DNA that are released into surrounding fluid by cells, which can be collected without directly biopsying tissue.",
+      "isNew": false
+    },
+    {
+      "term": "Class-Imbalance Correction",
+      "definition": "Techniques used when one outcome (like a rare disease) is much less common than another in a dataset, aimed at helping a model learn to detect the rare outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis",
+      "definition": "A clinical state identified through specific interview-based criteria that indicates someone has an elevated chance of developing a psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinical High Risk for Psychosis (CHR-P)",
+      "definition": "A recognized early warning state in which a person shows mild or emerging symptoms that increase their chance of later developing a full psychotic disorder.",
+      "isNew": false
+    },
+    {
+      "term": "Clinician Decision Support System (CDSS)",
+      "definition": "Software that gives doctors extra information or suggestions to help them make better medical decisions, without replacing their judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Cohen's Kappa",
+      "definition": "A statistic that measures how much two raters or a rater and a model agree, correcting for agreement expected by chance.",
+      "isNew": false
+    },
+    {
+      "term": "Composite Outcome",
+      "definition": "A single combined endpoint made up of several different possible bad outcomes, counted together as one event.",
+      "isNew": false
+    },
+    {
+      "term": "Concordance",
+      "definition": "The degree to which two decisions, such as an AI's and a human panel's, agree with each other.",
+      "isNew": false
+    },
+    {
+      "term": "Confabulation",
+      "definition": "When an AI model generates information that sounds plausible but is not actually supported by the source material.",
+      "isNew": false
+    },
+    {
+      "term": "Confidence Interval",
+      "definition": "A range of values that likely contains the true result, giving a sense of how precise or uncertain a measurement is.",
+      "isNew": false
+    },
+    {
+      "term": "Confidence Interval (CI)",
+      "definition": "A range of values that likely contains the true effect, giving a sense of how precise an estimate is.",
+      "isNew": false
+    },
+    {
+      "term": "Consolidated Framework for Implementation Research",
+      "definition": "A standardized set of categories researchers use to study what helps or hinders a new program or technology from being successfully adopted in real settings.",
+      "isNew": false
+    },
+    {
+      "term": "Contrast-Enhanced Computed Tomography (CE-CT)",
+      "definition": "A CT scan enhanced with an injected dye that highlights blood vessels and tissue differences to improve diagnosis.",
+      "isNew": false
+    },
+    {
+      "term": "Contrastive Learning",
+      "definition": "A machine learning technique that trains a model by teaching it to recognize which examples are similar or different from each other.",
+      "isNew": false
+    },
+    {
+      "term": "Convolutional Neural Network",
+      "definition": "A type of AI model especially good at analyzing images by learning to recognize visual patterns.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Dataset Generalization",
+      "definition": "Testing a model on data collected somewhere different from where it was trained, to check whether its performance holds up outside its original source.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Design",
+      "definition": "A study that looks at a group of people at a single point in time rather than following them over time.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Replication",
+      "definition": "Repeating an analysis using a separate group of people measured at a single point in time, to see if the original finding holds up.",
+      "isNew": false
+    },
+    {
+      "term": "Cross-Sectional Study",
+      "definition": "A study that examines a group of people or responses at a single point in time rather than following them over time.",
+      "isNew": false
+    },
+    {
+      "term": "Cytology",
+      "definition": "The microscopic examination of cells, in this case from a cervical sample, to look for signs of precancerous or cancerous change.",
+      "isNew": false
+    },
+    {
+      "term": "DECIDE-AI Stage 1",
+      "definition": "An early-stage framework for testing AI decision support tools in real clinical settings before larger trials, focused on safety and usability.",
+      "isNew": false
+    },
+    {
+      "term": "Decision Curve Analysis",
+      "definition": "A method for judging whether using a prediction model to guide treatment decisions provides more benefit than harm across different risk thresholds.",
+      "isNew": false
+    },
+    {
+      "term": "Decision-Tree Model",
+      "definition": "A method that maps out possible steps and outcomes in a process, like a flowchart, to estimate time or cost under different scenarios.",
+      "isNew": false
+    },
+    {
+      "term": "Deep Learning",
+      "definition": "A type of artificial intelligence that learns patterns from large amounts of data using layered mathematical models.",
+      "isNew": false
+    },
+    {
+      "term": "Deep Neural Network",
+      "definition": "A type of computer program loosely modeled on the brain that learns patterns from large amounts of data.",
+      "isNew": false
+    },
+    {
+      "term": "DeLong Test",
+      "definition": "A statistical test used to check whether the difference in accuracy between two prediction models is likely real rather than due to chance.",
+      "isNew": false
+    },
+    {
+      "term": "Diagnostic Odds Ratio",
+      "definition": "A single number combining sensitivity and specificity that summarizes how well a test distinguishes between people with and without a condition, where higher values mean better discrimination.",
+      "isNew": false
+    },
+    {
+      "term": "Dice Similarity Coefficient (DSC)",
+      "definition": "A measure of how closely two outlined regions overlap, used to judge how accurately an AI traces a structure compared to a human expert.",
+      "isNew": false
+    },
+    {
+      "term": "Diffusion Magnetic Resonance Imaging (MRI)",
+      "definition": "An imaging technique that detects how water molecules move through tissue, which can reveal information about tissue structure and blood flow.",
+      "isNew": false
+    },
+    {
+      "term": "Disease-free Survival",
+      "definition": "The length of time after treatment that a patient survives without their disease coming back.",
+      "isNew": false
+    },
+    {
+      "term": "DNA Methylation (DNAm)",
+      "definition": "A chemical modification to DNA that can turn genes on or off without changing the underlying genetic code, and that changes with age.",
+      "isNew": false
+    },
+    {
+      "term": "Double-Blind Study",
+      "definition": "A study design in which neither the participants nor the evaluators know which option came from which source, reducing bias in judgment.",
+      "isNew": false
+    },
+    {
+      "term": "Double-Blinded Randomized Controlled Trial (RCT)",
+      "definition": "A study design where participants are randomly assigned to different treatments and neither participants nor assessors know who got which, reducing bias.",
+      "isNew": false
+    },
+    {
+      "term": "Doubly Debiased Machine Learning",
+      "definition": "An advanced statistical technique that uses machine learning to estimate causal effects while reducing bias from imperfect models, making the results more reliable than simpler methods.",
+      "isNew": false
+    },
+    {
+      "term": "Effect Measure Modifiers",
+      "definition": "Factors that change how strong or weak a treatment's effect is in different subgroups of people.",
+      "isNew": false
+    },
+    {
+      "term": "Elastography",
+      "definition": "An imaging technique that measures the stiffness of tissue, which can indicate physical changes relevant to disease or pregnancy risk.",
+      "isNew": false
+    },
+    {
+      "term": "Electrocardiogram (ECG)",
+      "definition": "A recording of the heart's electrical activity, commonly used to check heart rhythm and structure.",
+      "isNew": false
+    },
+    {
+      "term": "Electroencephalogram (EEG)",
+      "definition": "A recording of electrical activity in the brain, used to diagnose seizures and other neurological conditions.",
+      "isNew": false
+    },
+    {
+      "term": "Electrohysterography (EHG)",
+      "definition": "A method of recording the electrical activity of the uterine muscle using electrodes placed on the abdomen, used to study contractions and labor.",
+      "isNew": false
+    },
+    {
+      "term": "Electronic Health Record (EHR)",
+      "definition": "The digital version of a patient's medical chart, containing things like lab results, vital signs, and diagnoses.",
+      "isNew": false
+    },
+    {
+      "term": "Embedding Analysis",
+      "definition": "A way of measuring how similar two pieces of text are in meaning by converting them into numerical representations and comparing those numbers.",
+      "isNew": false
+    },
+    {
+      "term": "End-Of-Life Care",
+      "definition": "Medical care focused on supporting patients and families near the end of a person's life, often involving difficult conversations about goals of care.",
+      "isNew": false
+    },
+    {
+      "term": "Epigenetic Clock",
+      "definition": "A tool that estimates a person's biological age from patterns of DNA methylation, which can differ from their actual chronological age.",
+      "isNew": false
+    },
+    {
+      "term": "Euploid",
+      "definition": "Having the normal, correct number of chromosomes, generally considered healthier for embryo development.",
+      "isNew": false
+    },
+    {
+      "term": "Exosomal microRNA (exo-miRNA)",
+      "definition": "Tiny genetic molecules carried inside small cell-released packets called exosomes, which can be measured in blood and reflect disease activity.",
+      "isNew": false
+    },
+    {
+      "term": "Explainable AI (XAI)",
+      "definition": "Techniques that try to make AI decision-making understandable to humans, such as showing which features led to a diagnosis.",
+      "isNew": false
+    },
+    {
+      "term": "External Hold-Out Set",
+      "definition": "A separate group of data, not used to train the model, that tests whether it works on new patients.",
+      "isNew": false
+    },
+    {
+      "term": "External Testing",
+      "definition": "Checking a model's performance on data from a different location or population than the one it was built on, to see if results hold up elsewhere.",
+      "isNew": false
+    },
+    {
+      "term": "External Validation",
+      "definition": "Testing a model on data from a different location or population than it was built with, to see if it still works.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting",
+      "definition": "A machine learning method that builds a strong predictive model by combining many weaker prediction rules in sequence.",
+      "isNew": false
+    },
+    {
+      "term": "Extreme Gradient Boosting Classifier",
+      "definition": "A machine learning method, often called XGBoost, that combines many simple decision rules to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "F-score",
+      "definition": "A single number combining how often a system's positive answers are correct and how often it catches all the true positives, used to judge accuracy on detection tasks.",
+      "isNew": true
+    },
+    {
+      "term": "F1-score",
+      "definition": "A single number that balances how often a model's positive predictions are correct against how many true positives it catches, useful when categories are imbalanced.",
+      "isNew": false
+    },
+    {
+      "term": "FDA",
+      "definition": "The US Food and Drug Administration, the government agency that reviews and approves medical products including software as a medical device.",
+      "isNew": false
+    },
+    {
+      "term": "Fine-Tuning (FT)",
+      "definition": "A process of further training an already-built AI model on a smaller, specific set of data to make it better at a particular task.",
+      "isNew": false
+    },
+    {
+      "term": "Finite State Machine (FSM)",
+      "definition": "A system design that follows a fixed set of defined steps or states, moving between them based on specific rules, used here to keep a chatbot's conversation on a structured path.",
+      "isNew": false
+    },
+    {
+      "term": "Fleiss' Kappa",
+      "definition": "A statistical measure of how much multiple raters agree with each other beyond what would be expected by chance, where values near zero mean little real agreement.",
+      "isNew": true
+    },
+    {
+      "term": "Flesch Reading Ease",
+      "definition": "A score that estimates how easy a piece of text is to read, where higher numbers mean simpler text.",
+      "isNew": true
+    },
+    {
+      "term": "Focused Cardiac Ultrasound (FoCUS)",
+      "definition": "A quick, simplified heart ultrasound exam meant to be done by non-expert operators rather than trained sonographers.",
+      "isNew": false
+    },
+    {
+      "term": "Follicular Fluid",
+      "definition": "The fluid surrounding an egg inside its follicle in the ovary, which contains molecules reflecting the egg's environment.",
+      "isNew": false
+    },
+    {
+      "term": "Food and Drug Administration (FDA)",
+      "definition": "The FDA is the US government agency that reviews and approves drugs, devices, and some software for safety and effectiveness before they can be sold.",
+      "isNew": false
+    },
+    {
+      "term": "Foundation Model",
+      "definition": "A large AI model trained on huge amounts of data that can be adapted to many different tasks, rather than being built for just one job.",
+      "isNew": false
+    },
+    {
+      "term": "Friedman Test",
+      "definition": "A statistical test used to compare rankings across three or more related groups, such as multiple raters ranking several options.",
+      "isNew": false
+    },
+    {
+      "term": "Generalized Estimating Equations",
+      "definition": "A statistical technique used to analyze data where the same subjects or scenarios are measured multiple times, accounting for those repeated measurements.",
+      "isNew": false
+    },
+    {
+      "term": "Generalized Linear Model",
+      "definition": "A statistical model that predicts an outcome based on a combination of input variables, extending ordinary regression to different types of data.",
+      "isNew": false
+    },
+    {
+      "term": "Generative Artificial Intelligence (AI)",
+      "definition": "AI systems that can produce new text, images, or other content rather than just classify existing data.",
+      "isNew": false
+    },
+    {
+      "term": "Gradient-Boosted Tree",
+      "definition": "A machine learning method that builds a sequence of simple decision rules, each correcting errors of the previous ones, to make accurate predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Gradient-Boosted Tree Model",
+      "definition": "A machine learning method that combines many simple decision rules built one after another, each correcting errors from the previous ones, to make an overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Ground Truth",
+      "definition": "The accepted correct answer used to check whether a test or model got things right.",
+      "isNew": false
+    },
+    {
+      "term": "Hallucination",
+      "definition": "When an AI model generates information that sounds plausible but is factually incorrect or made up.",
+      "isNew": false
+    },
+    {
+      "term": "Harrell Concordance Index",
+      "definition": "A statistic measuring how well a model correctly ranks which patients will have an event sooner versus later, where 1.0 is perfect and 0.5 is no better than chance.",
+      "isNew": false
+    },
+    {
+      "term": "HDL and LDL",
+      "definition": "High-density and low-density lipoprotein, two types of particles that carry cholesterol in the blood and are often measured in metabolic health assessments.",
+      "isNew": false
+    },
+    {
+      "term": "Hematoxylin and Eosin (H&E)",
+      "definition": "The standard staining method used to prepare tissue slides so structures and cells are visible under a microscope.",
+      "isNew": false
+    },
+    {
+      "term": "Heterogeneity",
+      "definition": "A statistical measure of how much results vary across different studies being combined, where high heterogeneity means the studies do not agree well with each other.",
+      "isNew": false
+    },
+    {
+      "term": "High-Grade Squamous Intraepithelial Lesion (HSIL)",
+      "definition": "A category of moderately to severely abnormal cervical cells that carries meaningful risk of progressing to cervical cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "High-grade Squamous Intraepithelial Lesions or Worse (HSIL+)",
+      "definition": "A category of abnormal cervical cell changes that carry a meaningful risk of progressing to cancer if untreated.",
+      "isNew": false
+    },
+    {
+      "term": "Holdout Set",
+      "definition": "A portion of data set aside and not used during model training, so it can be used afterward to test how well the model performs on new cases.",
+      "isNew": false
+    },
+    {
+      "term": "HPV-Primary Screening",
+      "definition": "A cervical cancer screening strategy where a test for human papillomavirus is done first, and abnormal results are then examined more closely using cytology.",
+      "isNew": false
+    },
+    {
+      "term": "HSPG2",
+      "definition": "Heparan sulfate proteoglycan 2, also called Perlecan, a structural protein found in the extracellular matrix that helps form tissue scaffolding.",
+      "isNew": false
+    },
+    {
+      "term": "Human Papillomavirus (HPV)",
+      "definition": "A common sexually transmitted virus that is the main cause of cervical cancer, and testing for it is now the first step in many cervical screening programs.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Disease (IRD)",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Inherited Retinal Diseases",
+      "definition": "A group of genetic eye conditions that damage the light-sensing layer at the back of the eye, often leading to vision loss.",
+      "isNew": false
+    },
+    {
+      "term": "Injury Severity Score (ISS)",
+      "definition": "A standard method doctors use to rate how severe a patient's injuries are, based on hospital imaging and exams.",
+      "isNew": false
+    },
+    {
+      "term": "Inter-Rater Agreement",
+      "definition": "A measure of how consistently different judges or reviewers rate the same material, where higher agreement means more reliable scoring.",
+      "isNew": false
+    },
+    {
+      "term": "Inter-Rater Reliability (IRR)",
+      "definition": "A measure of how much different human experts agree with each other when judging the same case, used here as a benchmark for the AI.",
+      "isNew": false
+    },
+    {
+      "term": "Internal Validation",
+      "definition": "Testing a model's performance on a portion of the same dataset it was built from, as opposed to testing it on entirely separate data.",
+      "isNew": false
+    },
+    {
+      "term": "Internal-External Cross-Validation",
+      "definition": "A testing method where a model is repeatedly trained on some hospital sites and tested on a site left out, to check if it generalizes beyond its original data.",
+      "isNew": false
+    },
+    {
+      "term": "Internet-Based Cognitive Behavioral Therapy (iCBT)",
+      "definition": "A structured form of talk therapy delivered online, often through written exchanges with a therapist.",
+      "isNew": false
+    },
+    {
+      "term": "Intraclass Correlation Coefficient",
+      "definition": "A statistic that measures how closely two sets of measurements agree with each other, with higher values meaning better agreement.",
+      "isNew": false
+    },
+    {
+      "term": "Intraclass Correlation Coefficient (ICC)",
+      "definition": "A statistic that measures how closely two sets of measurements, such as two raters or a model and a rater, agree with each other.",
+      "isNew": false
+    },
+    {
+      "term": "Intravoxel Incoherent Motion (IVIM)",
+      "definition": "A method of analyzing diffusion MRI signals to separately estimate blood flow in small vessels and water movement within tissue.",
+      "isNew": false
+    },
+    {
+      "term": "Isolated REM Sleep Behavior Disorder (iRBD)",
+      "definition": "A sleep disorder where people act out dreams during REM sleep, often an early warning sign of Parkinson's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Kaplan-Meier Analysis",
+      "definition": "A statistical method used to estimate and compare how long different groups of patients survive over time.",
+      "isNew": false
+    },
+    {
+      "term": "Kappa",
+      "definition": "A statistic that measures how much two raters or systems agree beyond what would be expected by chance.",
+      "isNew": false
+    },
+    {
+      "term": "Label Efficiency",
+      "definition": "How well a model performs when trained with fewer labeled examples, which matters because labeling medical data is costly.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Model (LLM)",
+      "definition": "A type of AI trained on large amounts of text that can generate humanlike written responses.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models",
+      "definition": "AI systems trained on huge amounts of text that can read, summarize, and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "Large Language Models (LLMs)",
+      "definition": "AI systems trained on huge amounts of text that can understand and generate human-like language.",
+      "isNew": false
+    },
+    {
+      "term": "LASSO Regression",
+      "definition": "A statistical method that selects the most important predictor variables from a large set while shrinking less useful ones toward zero.",
+      "isNew": false
+    },
+    {
+      "term": "Leave-One-Out Cross-Validation",
+      "definition": "A way of testing a model's accuracy by repeatedly leaving out one data point, training on the rest, and checking the prediction for the left-out point.",
+      "isNew": false
+    },
+    {
+      "term": "Light Gradient Boosting Machine (LightGBM)",
+      "definition": "A fast machine learning method that builds a sequence of decision trees, each correcting the errors of the previous ones.",
+      "isNew": false
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations (LIME), a technique that explains an individual AI prediction by approximating the model's behavior with a simpler, interpretable one nearby.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology",
+      "definition": "A method of preparing cervical cell samples on slides by suspending them in liquid before examination, which improves sample clarity compared to older smear techniques.",
+      "isNew": false
+    },
+    {
+      "term": "Liquid-Based Cytology (LBC)",
+      "definition": "A method of preparing cervical cell samples in liquid rather than smearing them directly on a slide, which produces clearer samples for microscopic review.",
+      "isNew": false
+    },
+    {
+      "term": "Long-Context Input",
+      "definition": "Feeding an AI model very large amounts of text at once, relying on its ability to process extended documents rather than pre-selecting relevant parts.",
+      "isNew": true
+    },
+    {
+      "term": "Longitudinal Study",
+      "definition": "A study that follows the same people over time to see how something changes.",
+      "isNew": false
+    },
+    {
+      "term": "Low Birth Weight (LBW)",
+      "definition": "A birth weight below 2,500 grams, which is associated with higher risk of illness and death in newborns.",
+      "isNew": false
+    },
+    {
+      "term": "Lymph Node Metastasis (LNM)",
+      "definition": "The spread of cancer cells from the original tumor to nearby lymph nodes, which is important for deciding on treatment intensity.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning",
+      "definition": "A method where computer programs improve their predictions by learning patterns from large amounts of data rather than following fixed rules.",
+      "isNew": false
+    },
+    {
+      "term": "Machine Learning (ML)",
+      "definition": "A branch of AI in which computer models learn patterns from data rather than being explicitly programmed with rules.",
+      "isNew": false
+    },
+    {
+      "term": "Mean Arterial Pressure (MAP)",
+      "definition": "An average measure of blood pressure during a heartbeat cycle, often used as an indicator of blood flow to organs.",
+      "isNew": false
+    },
+    {
+      "term": "Membership Inference Attacks (MIAs)",
+      "definition": "A method attackers use to determine whether a specific person's data was used to train an AI model, which can reveal private information.",
+      "isNew": false
+    },
+    {
+      "term": "Menopausal Hormone Therapy (MHT)",
+      "definition": "Treatment using hormones like estrogen to relieve symptoms of menopause.",
+      "isNew": false
+    },
+    {
+      "term": "Mixed Methods Design",
+      "definition": "A research approach that combines numerical survey data with in-depth interviews to get a fuller picture.",
+      "isNew": false
+    },
+    {
+      "term": "Mixed-Methods",
+      "definition": "A research approach that combines numerical data, such as survey scores, with descriptive information, such as interview or open-ended feedback.",
+      "isNew": false
+    },
+    {
+      "term": "Mixture-Of-Experts (MoE)",
+      "definition": "A machine learning design where several specialized sub-models each handle a different part of a task, and their outputs are combined.",
+      "isNew": false
+    },
+    {
+      "term": "Model-Blinded",
+      "definition": "A study design where the people rating the outputs do not know which AI system produced each answer, reducing bias in judging quality.",
+      "isNew": false
+    },
+    {
+      "term": "Morphodynamic",
+      "definition": "Relating to how an embryo's shape and structure change over time, as observed through continuous time-lapse imaging.",
+      "isNew": false
+    },
+    {
+      "term": "Multi-Instance Learning (MIL)",
+      "definition": "A machine learning approach where a model learns from a group of related items together, such as several images from one patient case, rather than one item at a time.",
+      "isNew": false
+    },
+    {
+      "term": "Multi-Task Network",
+      "definition": "A single AI model trained to perform several related tasks at once, such as detecting landmarks and classifying conditions, rather than one task at a time.",
+      "isNew": true
+    },
+    {
+      "term": "Multicenter Retrospective Evaluation",
+      "definition": "A study that analyzes previously collected data from multiple hospitals or sites, rather than following new patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Multidisciplinary Tumor Board (MDT)",
+      "definition": "A meeting where doctors from different specialties jointly decide on a cancer patient's treatment plan.",
+      "isNew": false
+    },
+    {
+      "term": "Multidisciplinary Tumour Board (MDT)",
+      "definition": "A meeting where doctors from different specialties jointly decide on a patient's cancer treatment.",
+      "isNew": false
+    },
+    {
+      "term": "Multilayer Perceptron (MLP)",
+      "definition": "A basic type of artificial neural network made of layers of connected nodes that learns to map inputs to outputs.",
+      "isNew": false
+    },
+    {
+      "term": "Multimodal Large Language Model (MLLM)",
+      "definition": "A version of a large language model that can also process non-text data like images, not just text.",
+      "isNew": false
+    },
+    {
+      "term": "Multiparametric Magnetic Resonance Imaging (MRI)",
+      "definition": "An MRI scan that captures several different types of image contrast from the same body region to give a fuller picture of tissue characteristics.",
+      "isNew": false
+    },
+    {
+      "term": "Multiple Instance Learning",
+      "definition": "A machine learning approach where the model learns from a bag of related images rather than requiring every small piece to be individually labeled.",
+      "isNew": false
+    },
+    {
+      "term": "National Institutes of Health (NIH)",
+      "definition": "The main US federal government agency responsible for funding and conducting medical research.",
+      "isNew": false
+    },
+    {
+      "term": "Nested Case-Control Study",
+      "definition": "A study design where cases of a disease are compared to matched controls drawn from within a larger group being followed over time.",
+      "isNew": false
+    },
+    {
+      "term": "Net Promoter Score",
+      "definition": "A survey metric that measures how likely people are to recommend a product to others.",
+      "isNew": true
+    },
+    {
+      "term": "Nomogram",
+      "definition": "A visual scoring tool that combines multiple risk factors to estimate an individual patient's probability of an outcome.",
+      "isNew": false
+    },
+    {
+      "term": "Non-Contrast MRI",
+      "definition": "A magnetic resonance imaging scan performed without injecting a contrast dye, making it safer and more accessible for patients with kidney problems or limited resources.",
+      "isNew": false
+    },
+    {
+      "term": "Non-Inferiority",
+      "definition": "A type of statistical test showing that a new approach is not meaningfully worse than an existing one, rather than proving it is better.",
+      "isNew": true
+    },
+    {
+      "term": "Non-Inferiority Study",
+      "definition": "A study designed to show that a new method is not meaningfully worse than an existing method, rather than trying to show it is better.",
+      "isNew": false
+    },
+    {
+      "term": "Non-Invasive Preimplantation Genetic Testing (niPGT)",
+      "definition": "A method of checking an embryo's chromosomes using DNA found in its culture fluid rather than removing cells directly from the embryo.",
+      "isNew": false
+    },
+    {
+      "term": "Odds",
+      "definition": "A way of expressing how likely an event is to happen compared to it not happening, often reported as a ratio between two groups.",
+      "isNew": false
+    },
+    {
+      "term": "Odds Ratio (OR)",
+      "definition": "A number comparing how much more or less likely an event is in one group versus another, where 1 means no difference.",
+      "isNew": false
+    },
+    {
+      "term": "Overtriage",
+      "definition": "When a screening tool wrongly judges a case as more urgent than it actually is, causing unnecessary escalation.",
+      "isNew": false
+    },
+    {
+      "term": "P Value",
+      "definition": "A statistical measure indicating how likely a result could have occurred by chance alone, with smaller values suggesting a more reliable finding.",
+      "isNew": false
+    },
+    {
+      "term": "Parkinson's Disease (PD)",
+      "definition": "A progressive brain disorder that affects movement and is linked to loss of certain nerve cells.",
+      "isNew": false
+    },
+    {
+      "term": "Patient Education Materials Assessment Tool (PEMAT)",
+      "definition": "A standardized checklist used to judge how understandable and actionable a piece of patient-facing health material is.",
+      "isNew": true
+    },
+    {
+      "term": "PD-L1",
+      "definition": "A protein on cells that can suppress the immune system, and a common target of cancer immunotherapy drugs.",
+      "isNew": false
+    },
+    {
+      "term": "Peripherally Inserted Central Catheter (PICC)",
+      "definition": "A thin, long tube inserted into a vein in the arm and threaded to a larger vein near the heart, used for long-term delivery of medications like chemotherapy.",
+      "isNew": false
+    },
+    {
+      "term": "Phase 2 Trial",
+      "definition": "An early-to-mid stage clinical trial in a moderate number of patients that tests whether a treatment works and is reasonably safe, before larger confirmatory trials.",
+      "isNew": false
+    },
+    {
+      "term": "Phenotype Prediction",
+      "definition": "Predicting the observable characteristics or symptoms a person will have based on their genetic makeup.",
+      "isNew": false
+    },
+    {
+      "term": "Physician-In-The-Loop (PITL)",
+      "definition": "Physician-in-the-loop (PITL), a validation approach where doctors actively review and judge an AI system's outputs as part of testing it, rather than the AI being evaluated purely by statistics.",
+      "isNew": false
+    },
+    {
+      "term": "Ploidy",
+      "definition": "The number of chromosome sets a cell has, where an abnormal number can indicate a genetic problem in an embryo.",
+      "isNew": false
+    },
+    {
+      "term": "Polysomnogram (PSG)",
+      "definition": "An overnight recording of brain waves, breathing, and other body signals used to diagnose sleep disorders.",
+      "isNew": false
+    },
+    {
+      "term": "Polysomnography (PSG)",
+      "definition": "An overnight test that records brain waves, breathing, and other signals to study sleep.",
+      "isNew": false
+    },
+    {
+      "term": "Positive Predictive Value",
+      "definition": "The chance that a positive test result is actually correct, which depends on how common the condition is in the tested group.",
+      "isNew": false
+    },
+    {
+      "term": "Precision",
+      "definition": "Of the cases a model labels positive, the fraction that are actually correct, a measure of how trustworthy a positive call is.",
+      "isNew": false
+    },
+    {
+      "term": "Precision-Recall Area Under the Curve (PR-AUC)",
+      "definition": "A performance measure similar to ROC-AUC but more sensitive to how well a model finds rare positive cases specifically.",
+      "isNew": false
+    },
+    {
+      "term": "Preeclampsia",
+      "definition": "A pregnancy complication involving high blood pressure and organ damage that can be dangerous for both mother and baby.",
+      "isNew": false
+    },
+    {
+      "term": "Preimplantation Genetic Testing for Aneuploidy (PGT-A)",
+      "definition": "A lab test performed on embryos before transfer that checks whether they have the normal number of chromosomes.",
+      "isNew": false
+    },
+    {
+      "term": "Preregistered",
+      "definition": "A study plan that was written down and publicly filed before the research was conducted, to prevent changing methods after seeing results.",
+      "isNew": false
+    },
+    {
+      "term": "Prevalence Ratio",
+      "definition": "A measure comparing how common an outcome is between two groups, where a ratio of 2 means the outcome is twice as common in one group.",
+      "isNew": false
+    },
+    {
+      "term": "Primary Care Physicians (PCPs)",
+      "definition": "Doctors who provide general, first-contact medical care rather than specialized care.",
+      "isNew": false
+    },
+    {
+      "term": "Primary Efficacy Endpoint",
+      "definition": "The main measurable outcome a clinical trial is designed to test in order to determine whether a treatment works.",
+      "isNew": false
+    },
+    {
+      "term": "Privacy-Preserving",
+      "definition": "Designed so that sensitive patient information is not exposed or sent outside a secure system while the AI processes it.",
+      "isNew": false
+    },
+    {
+      "term": "Progression-free Survival",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Progression-Free Survival (PFS)",
+      "definition": "The length of time during and after treatment that a patient lives without their disease getting worse.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Clinical Validation",
+      "definition": "Testing a tool going forward on new patients before it is used to make decisions, rather than only checking it against data already collected.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort",
+      "definition": "A group of participants followed forward in time from the start of a study, rather than looking back at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Cohort Study",
+      "definition": "A study that enrolls participants and follows them forward in time to observe who develops an outcome of interest.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Longitudinal Studies",
+      "definition": "Research that follows the same participants forward in time, collecting data at multiple points, rather than looking backward at existing records.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Observational Study",
+      "definition": "A study that follows participants forward in time and records what happens, without the researchers assigning who gets which treatment.",
+      "isNew": false
+    },
+    {
+      "term": "Prospective Study",
+      "definition": "A study that follows participants forward in time from a defined starting point, generally considered stronger evidence than looking back at old records.",
+      "isNew": false
+    },
+    {
+      "term": "Provider Documentation Summarization Quality Instrument (PDSQI-9)",
+      "definition": "A nine-item rating scale used to judge the quality of a clinical documentation summary across dimensions like accuracy, organization, and usefulness.",
+      "isNew": false
+    },
+    {
+      "term": "Radiomics",
+      "definition": "A technique that extracts detailed numerical patterns from medical images beyond what the eye can easily see.",
+      "isNew": false
+    },
+    {
+      "term": "Random Forest",
+      "definition": "A machine learning method that combines many decision trees, each trained on random subsets of data, to make a more stable overall prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Random Survival Forest",
+      "definition": "A machine learning method that predicts how long until an event, like death, happens by combining many decision trees built on time-to-event data.",
+      "isNew": false
+    },
+    {
+      "term": "Randomised Controlled Trial (RCT)",
+      "definition": "A study design where participants or conditions are randomly assigned to groups being compared, which helps rule out other explanations for a difference in outcomes.",
+      "isNew": true
+    },
+    {
+      "term": "Randomized Controlled Trial",
+      "definition": "A study where participants are randomly assigned to different treatments or conditions so the results can be fairly compared.",
+      "isNew": false
+    },
+    {
+      "term": "Randomized Controlled Trial (RCT)",
+      "definition": "A study where participants are randomly assigned to different treatments or interventions, which helps ensure fair comparison and reduces bias.",
+      "isNew": false
+    },
+    {
+      "term": "RETFound",
+      "definition": "A large AI model pretrained on many retinal images that other researchers can adapt for specific eye-disease tasks, similar to starting with a knowledgeable foundation rather than from scratch.",
+      "isNew": false
+    },
+    {
+      "term": "Retrieval-Augmented Generation (RAG)",
+      "definition": "A method where an AI language model first looks up relevant documents or data before writing its answer, aiming to make responses more accurate and grounded.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective",
+      "definition": "A study design that looks back at existing past data rather than collecting new data as events happen.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Database Audit",
+      "definition": "A study that reviews existing, already-collected records after the fact, rather than following patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Study",
+      "definition": "A study design that looks back at existing cases or data rather than following new patients forward in time.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Study With External Validation",
+      "definition": "A study that looks back at existing patient records, but importantly tests its findings on a separate group of patients not used to build the model.",
+      "isNew": false
+    },
+    {
+      "term": "Retrospective Validation",
+      "definition": "Checking a tool's performance using data that was already collected in the past, rather than testing it on new cases as they happen.",
+      "isNew": false
+    },
+    {
+      "term": "Risk Difference",
+      "definition": "The absolute difference in the chance of an outcome between two groups, for example the percentage point gap in preterm birth rates between treated and untreated women.",
+      "isNew": false
+    },
+    {
+      "term": "Risk of Bias",
+      "definition": "An assessment of how likely a study's design or conduct is to produce a misleading result.",
+      "isNew": true
+    },
+    {
+      "term": "Robustly Optimized BERT Pretraining Approach (RoBERTa)",
+      "definition": "An older type of AI language model, smaller than modern chatbots, that is trained and fine-tuned for a specific narrow task.",
+      "isNew": true
+    },
+    {
+      "term": "Self-Crossover",
+      "definition": "A study design where the same participants are tested under both conditions being compared, in different order, so each person acts as their own control.",
+      "isNew": true
+    },
+    {
+      "term": "Sensitivity",
+      "definition": "The percentage of true positive cases that a test or model correctly identifies.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF",
+      "definition": "A ratio of two proteins measured in blood, soluble fms-like tyrosine kinase-1 and placental growth factor, used clinically to help assess risk of preeclampsia.",
+      "isNew": false
+    },
+    {
+      "term": "sFlt-1/PlGF Ratio",
+      "definition": "A blood test measuring two proteins used to help predict preeclampsia risk in pregnancy.",
+      "isNew": false
+    },
+    {
+      "term": "SHAP",
+      "definition": "A method that shows which input features most influenced a machine learning model's decision, making the model's reasoning easier to interpret.",
+      "isNew": false
+    },
+    {
+      "term": "Shapley Additive exPlanations (SHAP)",
+      "definition": "A mathematical technique that assigns credit to each input feature for how much it contributed to a machine learning model's specific prediction, used to make AI decisions more understandable.",
+      "isNew": false
+    },
+    {
+      "term": "Single-Arm Trial",
+      "definition": "A study where every participant receives the same intervention, with no separate comparison group.",
+      "isNew": false
+    },
+    {
+      "term": "Society of Thoracic Surgeons Predicted Risk of Mortality (STS-PROM)",
+      "definition": "A standard scoring tool doctors use to estimate a patient's risk of dying from heart surgery, based on clinical factors.",
+      "isNew": false
+    },
+    {
+      "term": "Spatial Proteomics",
+      "definition": "A technology that maps where different proteins are located within tissue, preserving the spatial arrangement of cells.",
+      "isNew": false
+    },
+    {
+      "term": "Specificity",
+      "definition": "The percentage of true negative cases that a test or model correctly identifies as negative.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble",
+      "definition": "A machine learning approach that combines predictions from several different models into one final, usually more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "Stacking Ensemble Machine Learning Model",
+      "definition": "An AI approach that combines predictions from several different models into one final, hopefully more accurate, prediction.",
+      "isNew": false
+    },
+    {
+      "term": "State-Trait Anxiety Inventory (STAI)",
+      "definition": "A widely used questionnaire that measures a person's current anxiety level and their general tendency toward anxiety.",
+      "isNew": false
+    },
+    {
+      "term": "Surgical Site Infection (SSI)",
+      "definition": "An infection that occurs at or near a surgical incision after an operation.",
+      "isNew": false
+    },
+    {
+      "term": "Synthetic Minority Oversampling Technique (SMOTE)",
+      "definition": "A method that creates artificial extra examples of a rare outcome in a dataset so a model sees more of them during training.",
+      "isNew": false
+    },
+    {
+      "term": "System Usability Scale",
+      "definition": "A standard questionnaire used to measure how easy and pleasant people find a piece of software to use.",
+      "isNew": true
+    },
+    {
+      "term": "TabNet",
+      "definition": "A type of deep learning model designed specifically to work with tabular data, like spreadsheets of patient information, while also explaining which factors influenced its predictions.",
+      "isNew": false
+    },
+    {
+      "term": "Temporal External Validation",
+      "definition": "Testing a model on data collected in a later time period than the data used to build it, to check that the model still works as circumstances or patient populations change over time.",
+      "isNew": false
+    },
+    {
+      "term": "Test-Retest Stability",
+      "definition": "Whether a system gives the same or similar answer when asked the same question again after some time has passed.",
+      "isNew": false
+    },
+    {
+      "term": "Top-5 Accuracy",
+      "definition": "A looser measure of correctness where the model's answer counts as right if the true answer appears anywhere among its five best guesses, rather than requiring the single top guess to be correct.",
+      "isNew": false
+    },
+    {
+      "term": "Train-Test Split",
+      "definition": "A method of evaluating a model by dividing data into one portion used to build the model and a separate portion used only to check its performance.",
+      "isNew": false
+    },
+    {
+      "term": "Transcatheter Aortic Valve Implantation (TAVI)",
+      "definition": "A minimally invasive procedure to replace a damaged heart valve without open heart surgery.",
+      "isNew": false
+    },
+    {
+      "term": "Transformer-Based Model",
+      "definition": "A type of AI architecture, originally developed for language processing, that can also be applied to other kinds of structured data to find complex patterns.",
+      "isNew": false
+    },
+    {
+      "term": "Transportability",
+      "definition": "The idea of applying a result found in one study population to predict what would happen in a different population, and testing whether that transfer actually works.",
+      "isNew": false
+    },
+    {
+      "term": "Transthyretin Amyloid Cardiomyopathy (ATTR-CM)",
+      "definition": "A heart disease caused by an abnormal protein building up in heart tissue, which is treatable if caught early but often missed.",
+      "isNew": false
+    },
+    {
+      "term": "U-Net",
+      "definition": "A common neural network design for finding and outlining structures in medical images.",
+      "isNew": false
+    },
+    {
+      "term": "Undertriage",
+      "definition": "When a screening tool wrongly judges a case as less urgent than it actually is, risking delayed care.",
+      "isNew": false
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale",
+      "definition": "A standardized clinical questionnaire and exam used to measure the severity of motor, cognitive, and behavioral symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unified Huntington's Disease Rating Scale (UHDRS)",
+      "definition": "A standard clinical scoring system used by doctors to measure the severity of symptoms in Huntington's disease.",
+      "isNew": false
+    },
+    {
+      "term": "Unsupervised Machine Learning (k-Means Clustering)",
+      "definition": "A computer method that groups data points into clusters based on similarity, without being told the correct answer in advance.",
+      "isNew": false
+    },
+    {
+      "term": "Vision Transformer",
+      "definition": "A type of AI model designed to analyze images, often by breaking them into patches and learning patterns across the whole image.",
+      "isNew": false
+    },
+    {
+      "term": "Vision-Language Foundation Model",
+      "definition": "A large AI model trained on both images and text so it can describe or reason about visual content in natural language.",
+      "isNew": true
+    },
+    {
+      "term": "Visual Inspection With Acetic Acid (VIA)",
+      "definition": "A low-cost cervical cancer screening method where a health worker applies vinegar-like acid to the cervix and looks for color changes that indicate abnormal tissue.",
+      "isNew": false
+    },
+    {
+      "term": "Wav2vec 2.0",
+      "definition": "A pretrained AI model that learns useful representations of raw audio, often reused as a building block in speech analysis systems.",
+      "isNew": false
+    },
+    {
+      "term": "Whole-Slide Images",
+      "definition": "Very high resolution digital scans of entire microscope slides used to examine tissue samples.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-Shot",
+      "definition": "Asking an AI to perform a task without giving it any worked examples first, relying only on its existing training.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-shot Annotation",
+      "definition": "The ability of an AI model to correctly label or classify new data it was never specifically trained on.",
+      "isNew": false
+    },
+    {
+      "term": "Zero-shot Prompting",
+      "definition": "Giving an AI a task or instruction without first showing it worked examples of that exact task.",
+      "isNew": false
+    }
+  ],
+  "scored": [
+    {
+      "id": "pmid:42722598",
+      "beat": "clinical-ai",
+      "source": "Lancet Digit Health",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China.",
+      "score": 8,
+      "theme": "Fetal Anomaly Screening",
+      "why": "This multicentre, self-crossover randomised controlled trial (RCT) in China tested an AI system (PAICS) for detecting ten fetal intracranial malformations in 1584 prenatal ultrasound scans, finding a significant sensitivity increase of 8.7 to 11.8 percentage points with specificity meeting non-inferiority criteria. This is a rare prospective, crossover-design clinical trial of AI-assisted fetal anomaly screening with a masked reference standard, giving it real weight for changing prenatal screening practice."
+    },
+    {
+      "id": "pmid:42722598",
+      "beat": "repro-ai",
+      "source": "Lancet Digit Health",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China.",
+      "score": 8,
+      "theme": "Fetal Anomaly Screening",
+      "why": "This multicentre, self-crossover randomised controlled trial (RCT) in China tested an AI system (PAICS) for detecting ten fetal intracranial malformations in 1584 prenatal ultrasound scans, finding a significant sensitivity increase of 8.7 to 11.8 percentage points with specificity meeting non-inferiority criteria. This is a rare prospective, crossover-design clinical trial of AI-assisted fetal anomaly screening with a masked reference standard, giving it real weight for changing prenatal screening practice."
+    },
+    {
+      "id": "pmid:42715602",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "Evaluating Frontline Health Workers' Responses to Patient Inquiries With and Without Large Language Model Support in Nigeria: Observational Study.",
+      "score": 7,
+      "theme": "AI-Assisted Frontline Care",
+      "why": "This observational study compared frontline health worker responses to patient questions on maternal, neonatal, and sexually transmitted infection topics in Lagos, Nigeria, with and without ChatGPT-3.5 assistance, finding large language model (LLM)-aided responses significantly outperformed human-only responses on clinician-rated accuracy, empathy, completeness, and safety across 1,080 responses from 36 workers. This is a genuine comparison against real health worker performance in a low-resource, high-stakes setting relevant to reproductive and maternal health, meeting this reader's bar for beat four evidence beyond routine chatbot scoring."
+    },
+    {
+      "id": "pmid:42715525",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "Effectiveness, Safety, and Workflow Burden of Large Language Model-Based Medical Report Generation: Systematic Review.",
+      "score": 7,
+      "theme": "AI Report Generation Review",
+      "why": "This systematic review synthesized 101 studies evaluating large language model (LLM)-based and vision-language foundation model medical report generation across imaging modalities, reporting expert acceptance, clinically significant error rates, and workflow burden, with example findings like near-equivalent acceptance to radiologist reports (70.5% vs 73.3%) but slightly higher false-negative rates. The review's strength is its scale and its explicit focus on safety and workflow outcomes rather than accuracy benchmarks alone, though the authors note universally elevated risk of bias and inability to pool most outcomes quantitatively, tempering the strength of its conclusions."
+    },
+    {
+      "id": "pmid:42703807",
+      "beat": "patient-comm",
+      "source": "J Hosp Med",
+      "title": "Comparison of physician-authored and artificial intelligence-generated after-visit summaries: A blinded comparative study.",
+      "score": 7,
+      "theme": "AI Discharge Summaries",
+      "why": "Blinded retrospective comparison of physician-authored versus large language model (LLM)-generated after-visit summaries for 50 hospitalized patients, rated by five attending physicians using the Patient Education Materials Assessment Tool (PEMAT) and a dedicated safety rubric, found LLM-generated summaries scored higher on understandability, actionability, and every quality domain, including lower perceived potential for harm. This is a real clinician-comparator study with a concrete, workflow-relevant document type and a harm-related outcome, making it one of the stronger entries this week for this beat despite its retrospective, single-center design."
+    },
+    {
+      "id": "pmid:42717239",
+      "beat": "clinical-ai",
+      "source": "NPJ Digit Med",
+      "title": "PREDICT-GBM: A multicenter platform advancing personalized glioblastoma radiotherapy planning.",
+      "score": 6,
+      "theme": "Radiotherapy Planning",
+      "why": "PREDICT-GBM is an open-source, multicenter platform of 243 glioblastoma patients that benchmarks a new U-Net deep learning model against biophysical models for predicting tumor recurrence beyond visible margins, finding modest but statistically significant improvements in recurrence coverage over standard radiotherapy margins. The value here is mainly infrastructural, a reproducible benchmarking ecosystem, rather than a practice-changing clinical result, since gains were small and not yet tied to outcome data."
+    },
+    {
+      "id": "pmid:42730567",
+      "beat": "repro-ai",
+      "source": "Int J Gynaecol Obstet",
+      "title": "Deep learning-based automated cervical length measurement improves spontaneous preterm birth risk stratification in women with a borderline short cervix (20-25 mm) at mid-trimester: A retrospective cohort study.",
+      "score": 6,
+      "theme": "Preterm Birth Risk",
+      "why": "This retrospective cohort of 171 women with borderline short cervix (20-25 mm) found that a deep learning-based automated cervical length measurement tool improved discrimination of spontaneous preterm birth risk over conventional measurement (area under the curve 0.70 vs 0.59, DeLong p=0.042), with good calibration and a meaningful positive predictive value gain. The single-center, retrospective design and modest sample limit generalizability, but the improved risk stratification in an ambiguous clinical zone is clinically relevant for reproductive medicine."
+    },
+    {
+      "id": "pmid:42720764",
+      "beat": "repro-ai",
+      "source": "Abdom Radiol (NY)",
+      "title": "Abdominal landmark detection and classification of fetal growth conditions on obstetric ultrasound: a gestational age-conditioned multi-task network.",
+      "score": 6,
+      "theme": "Fetal Ultrasound AI",
+      "why": "This retrospective multi-center study developed GA-MTNet, a gestational age-conditioned multi-task deep learning model for abdominal landmark detection and classification of five fetal growth conditions on obstetric ultrasound, trained on 2712 patients and externally tested on an independent center with only a 2.2-point area under the curve (AUC) drop (0.863 internal vs 0.841 external). The external validation across institutions and detailed ablation analysis strengthen confidence in generalizability, though it remains a retrospective image-classification study without prospective clinical deployment data."
+    },
+    {
+      "id": "pmid:42714033",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "\"Small\" Large Language Models in the Hospital: Evaluation Study on Real-World Data in a Resource-Constrained Setting.",
+      "score": 6,
+      "theme": "Local Hospital LLMs",
+      "why": "Evaluation of six open-source large language models (LLMs, 8 to 24 billion parameters) run locally on deidentified real French-language hospital data across four clinical tasks, finding strong performance on simple retrieval (F-scores near 99%) but poor performance on protected health information detection and adverse event extraction (macro-F-scores of 0.33 to 0.35), well below a fine-tuned Robustly Optimized BERT Pretraining Approach (RoBERTa) baseline. This is a real-world, deployment-oriented evaluation on live hospital data rather than a synthetic benchmark, which is unusually substantive for this beat even though it centers on clinical tasks rather than direct patient messaging."
+    },
+    {
+      "id": "pmid:42704533",
+      "beat": "patient-comm",
+      "source": "Int Ophthalmol",
+      "title": "Generative artificial intelligence to augment ethical problem solving in ophthalmology: GPT-5.1 versus a human ethicist.",
+      "score": 6,
+      "theme": "AI Versus Human Ethicist",
+      "why": "Ten ophthalmology ethics scenarios were answered by both GPT-5.1 and a human expert ethicist, and ten physicians rated both sets of responses on likelihood-of-use and perceived patient impact; GPT-5.1 scored significantly higher on both outcomes despite lower readability (Flesch Reading Ease of 10.9 versus 25.4). This is a genuine head-to-head comparison against a real clinical expert rather than a rubric applied to the model alone, which is the kind of evidence this beat values, though the sample is small and the domain (ethics reasoning) is narrow."
+    },
+    {
+      "id": "url:6beb500bac405dc7",
+      "beat": "industry",
+      "source": "Healthcare Dive",
+      "title": "Half of U.S. hospitals lack maternity wards as Medicaid cuts loom: report",
+      "score": 6,
+      "theme": "Maternity Care Access",
+      "why": "A new report finds nearly half of U.S. hospitals now lack obstetric services, with further closures anticipated as Medicaid funding cuts strain hospital finances. This is a concrete, system-level finding about access to maternity care rather than a single company's action, and it signals a structural shift the reader's field should track even without an AI component."
+    },
+    {
+      "id": "pmid:42710003",
+      "beat": "clinical-ai",
+      "source": "J Am Med Inform Assoc",
+      "title": "Evaluating retrieval-augmented generation versus long-context input for clinical reasoning over electronic health records.",
+      "score": 5,
+      "theme": "EHR Information Extraction",
+      "why": "This J Am Med Inform Assoc (JAMIA) study compared retrieval-augmented generation (RAG) against long-context prompting across three large language models for extracting information from real inpatient electronic health record (EHR) notes, finding RAG matched or exceeded long-context performance using far fewer tokens for imaging and antibiotic timeline tasks, though diagnosis generation remained unsolved. It is a useful applied informatics comparison on real clinical text, but it evaluates extraction accuracy rather than patient-facing communication or clinician workflow impact."
+    },
+    {
+      "id": "pmid:42731181",
+      "beat": "repro-ai",
+      "source": "Maturitas",
+      "title": "Progressive increase in ascending aortic diameter across the menopausal transition: A longitudinal study using AI-based automated measurement from chest radiographs.",
+      "score": 5,
+      "theme": "Menopause Cardiovascular Risk",
+      "why": "This longitudinal study of 4427 Korean women used a validated deep learning tool to automatically measure ascending aortic diameter on chest radiographs, finding progressive increases across the menopausal transition that were steeper in women with higher cardiovascular risk scores. The AI here is a measurement tool rather than the focus of validation, but the finding links menopausal staging to structural cardiovascular change with a reasonably large longitudinal sample."
+    },
+    {
+      "id": "pmid:42720754",
+      "beat": "repro-ai",
+      "source": "Rheumatol Int",
+      "title": "Large language models show high clinical safety but differences in completeness for reproductive counselling in women with inflammatory rheumatic and musculoskeletal diseases: a comparative expert evaluation.",
+      "score": 5,
+      "theme": "LLM Patient Counseling",
+      "why": "This comparative expert evaluation had ten European rheumatology experts rate answers from four large language models (LLMs), including ChatGPT and DeepSeek, on 54 pregnancy-related counselling questions for women with inflammatory rheumatic and musculoskeletal diseases (iRMDs), finding high clinical safety scores but notable variability in completeness and poor inter-rater agreement (Fleiss' kappa as low as -0.043). The multi-model comparison and specialist rating add some value over routine chatbot-answer studies, but the absence of a clinician-answer comparator and the low inter-rater reliability limit how much this changes practice."
+    },
+    {
+      "id": "pmid:42709992",
+      "beat": "repro-ai",
+      "source": "JMIR Hum Factors",
+      "title": "Sentence-Level Provenance for AI Medical Record Summarization in a Click-to-Inspect Interface: Formative Usability Evaluation.",
+      "score": 5,
+      "theme": "AI Summary Verification",
+      "why": "This formative usability study evaluated a sentence-level provenance interface, letting clinicians click to verify individual claims in large language model (LLM)-generated longitudinal medical record summaries, with 46 clinicians reporting high System Usability Scale scores (mean 86.25) and a positive net promoter score. The design targets a real deployment barrier, verification burden, though the study is small, formative, and uses synthetic rather than real patient charts, so it does not yet demonstrate an effect on real-world clinical workflow or patient outcomes."
+    },
+    {
+      "id": "pmid:42721321",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "Development and Usability Assessment of a Health Education Conversational Agent for Patients With Gastric Cancer: Action Research Study.",
+      "score": 5,
+      "theme": "Cancer Patient Chatbot",
+      "why": "Researchers deployed a retrieval-augmented generation (RAG)-based conversational agent for gastric cancer patient education at a Chinese cancer center, iteratively testing accuracy across three alpha rounds (rising from 67% to 82%) and assessing usability and experience among patients and staff. This is a real deployment with quantified accuracy and stakeholder feedback rather than a benchmark exercise, though it lacks a comparison against human-delivered education or measured patient outcome change, capping its impact for this reader's discriminating standard."
+    },
+    {
+      "id": "pmid:42717098",
+      "beat": "clinical-ai",
+      "source": "Nature",
+      "title": "An operational perturbation proteomics-based virtual cell model.",
+      "score": 4,
+      "theme": "Virtual Cell Model",
+      "why": "This Nature paper describes ProteinTalks, a virtual cell model trained on over 38 million perturbation proteomics measurements from breast cancer cell lines, intended to predict drug efficacy, synergy, and resistance, with some transfer to patient-derived organoids and biopsies. It is an ambitious computational drug-discovery tool but remains preclinical, with no prospective clinical validation or trial data, limiting its immediate relevance to bedside care."
+    },
+    {
+      "id": "pmid:42731844",
+      "beat": "repro-ai",
+      "source": "BMJ Open",
+      "title": "Prospective accuracy study on an artificial intelligence-based ultrasound system for gestational age estimation among pregnant women in Ghana, Kenya and South Africa: protocol.",
+      "score": 4,
+      "theme": "Gestational Age AI Protocol",
+      "why": "This is a study protocol for a multicountry prospective cohort in Ghana, Kenya, and South Africa validating an AI-based handheld ultrasound system for gestational age estimation against crown-rump length, enrolling 969 women across 13 facilities. As a protocol with no results yet, it signals an important upcoming validation for low-resource obstetric AI but currently offers no findings to act on."
+    },
+    {
+      "id": "pmid:42726706",
+      "beat": "repro-ai",
+      "source": "PLoS One",
+      "title": "A pilot study to implement artificial intelligence-enabled, point-of-care obstetric ultrasound for gestational age estimation in Zambia: An evaluation protocol.",
+      "score": 4,
+      "theme": "POCUS Implementation Plan",
+      "why": "This is an evaluation protocol for a pilot program integrating AI-enabled point-of-care ultrasound (POCUS) for gestational age dating into routine antenatal care across six facilities in Zambia, using a mixed-methods implementation science framework. As a protocol, it describes planned feasibility and acceptability assessment rather than reporting actual accuracy or outcome data."
+    },
+    {
+      "id": "pmid:42726636",
+      "beat": "repro-ai",
+      "source": "J Clin Psychiatry",
+      "title": "Using Speech to Develop Multivariable Prediction Models for Major Depressive Disorder and Generalized Anxiety Disorder During Pregnancy.",
+      "score": 4,
+      "theme": "Speech-Based Mental Health",
+      "why": "This small prediction model study used speech features from 146 pregnant women to build machine learning classifiers for major depressive disorder (MDD) and generalized anxiety disorder (GAD), reporting F1-scores of 74-80% for full-interview models but poor performance (42-45%) when restricted to patient-only verified speech segments. The modest sample size, lack of external validation, and no comparison to clinician diagnostic accuracy limit its immediate clinical relevance."
+    },
+    {
+      "id": "pmid:42709836",
+      "beat": "repro-ai",
+      "source": "Reprod Fertil",
+      "title": "Mouse oocyte phenotypes differ in blastocyst response to resveratrol and vitamin B12.",
+      "score": 4,
+      "theme": "Oocyte Selection Research",
+      "why": "This experimental study clustered mouse oocytes by radiomics-derived morphological features and found that blastocyst formation response to resveratrol or vitamin B12 supplementation differed by cluster and maternal age, with overall blastocyst formation rising from 37% to 56% when the best medium was matched to each cluster-age combination. The approach hints at a personalized culture-condition strategy for oocyte selection, but it is a small preclinical mouse study requiring prospective validation before any relevance to human in vitro fertilization (IVF) practice."
+    },
+    {
+      "id": "pmid:42703353",
+      "beat": "patient-comm",
+      "source": "Digit Health",
+      "title": "A two-stage evaluation of large language models for guideline-based Q&A and draft rehabilitation planning in stroke care.",
+      "score": 4,
+      "theme": "Stroke Care Chatbots",
+      "why": "Two-stage evaluation compared four large language models (LLMs) on stroke guideline question-answering, then had the top two, ChatGPT-o3 and DeepSeek, generate individualized rehabilitation plans for 60 deidentified cases rated by three clinicians on correctness, completeness, readability, helpfulness, and safety, with ChatGPT-o3 outperforming DeepSeek in plan generation. This is a single-center, model-versus-model benchmark without a real clinician-authored comparator or patient-facing deployment, so it is useful but not standout evidence for this beat."
+    },
+    {
+      "id": "pmid:42709998",
+      "beat": "clinical-ai",
+      "source": "J Am Med Inform Assoc",
+      "title": "International qualitative case studies of system-level approaches to promote the development, adoption, and implementation of artificial intelligence in healthcare.",
+      "score": 3,
+      "theme": "AI Scaling Strategy",
+      "why": "This qualitative study interviewed 50 stakeholders across four health systems (Catalonia, Norway, Singapore, Queensland) about strategies for scaling AI adoption, identifying themes like digital infrastructure, governance, and post-deployment monitoring. It offers descriptive, cross-case thematic findings rather than measurable outcomes or generalizable evidence about AI performance or impact."
+    },
+    {
+      "id": "pmid:42722973",
+      "beat": "repro-ai",
+      "source": "Reprod Sci",
+      "title": "Machine Learning and Functional Analysis of Placental DNA Methylation Signatures for Early-Onset Preeclampsia.",
+      "score": 3,
+      "theme": "Preeclampsia Biomarker Model",
+      "why": "This retrospective study used machine learning classifiers on placental DNA methylation beta-values from a modest cohort to distinguish early-onset preeclampsia (EOPE) from controls, reporting high cross-validated accuracy (95.45%) and area under the curve (AUC 0.9545) with an independent validation set. The very high accuracy in a small, likely homogeneous dataset without prospective or multi-site external validation raises concern about overfitting and limited generalizability."
+    },
+    {
+      "id": "pmid:42720229",
+      "beat": "repro-ai",
+      "source": "Epidemiology",
+      "title": "Association between high fat, sugar, and sodium diet and adverse pregnancy outcomes, modified by fruit and vegetable intake density.",
+      "score": 3,
+      "theme": "Diet and Pregnancy",
+      "why": "This study used a doubly robust machine learning estimator to test whether fruit and vegetable intake density modifies the association between a high fat, sugar, and sodium diet and adverse pregnancy outcomes in a prospective cohort of 8,259 nulliparous women. The finding was essentially null, with imprecise, wide confidence intervals, so it offers little actionable signal and the machine learning component is a statistical tool rather than a clinical AI application."
+    },
+    {
+      "id": "pmid:42711495",
+      "beat": "repro-ai",
+      "source": "Nat Methods",
+      "title": "Reconstructing signaling histories of single cells via perturbation screens and transfer learning.",
+      "score": 3,
+      "theme": "Developmental Cell Signaling",
+      "why": "This Nature Methods paper describes IRIS, a neural network trained via transfer learning on a perturbation atlas of human pluripotent stem cells, then applied to infer signaling histories in mouse embryo single-cell atlases. It is a sophisticated basic-science methods contribution to developmental biology but has no direct clinical application to human reproductive or obstetric care, limiting its relevance to this reader's clinical AI beats."
+    },
+    {
+      "id": "pmid:42706389",
+      "beat": "repro-ai",
+      "source": "Int J Obes (Lond)",
+      "title": "Causal adiposity and clinical validation of regional fat distribution in PMOS: a multi-modal analysis integrating GBD 2021, Mendelian randomization, and machine learning.",
+      "score": 3,
+      "theme": "PCOS and Adiposity",
+      "why": "This multi-modal study combined Global Burden of Disease (GBD) 2021 data, Mendelian randomization for causal inference, and an XGBoost machine learning model (area under the curve, AUC, of 0.701) to link regional fat distribution with polycystic ovary syndrome, now relabeled polyendocrine metabolic ovarian syndrome (PMOS) in this paper. The causal genetic evidence is informative, but the clinical prediction model has only modest discriminative performance and lacks external validation, limiting its immediate clinical utility."
+    },
+    {
+      "id": "pmid:42727207",
+      "beat": "patient-comm",
+      "source": "Knee",
+      "title": "Comparative quality, accuracy, and readability of large language model responses to patient questions about robotic-assisted total knee arthroplasty.",
+      "score": 3,
+      "theme": "Chatbot Patient Answers",
+      "why": "This study compared four large language models (LLMs), including ChatGPT-o3, ChatGPT-5.2, Gemini 3, and DeepSeek, on quality, accuracy, and readability of answers to patient questions about robotic-assisted total knee arthroplasty, finding acceptable but variable accuracy and readability consistently above recommended patient education levels. Per this reader's standards, comparing chatbot outputs across models on rubric scores without a clinician comparator is a routine study design that adds little new insight."
+    },
+    {
+      "id": "pmid:42721382",
+      "beat": "patient-comm",
+      "source": "JMIR Ment Health",
+      "title": "Tool or Companion? Reframing Conversational AI to Prevent Psychological Harm.",
+      "score": 3,
+      "theme": "AI Companionship Risks",
+      "why": "This is a conceptual and opinion piece arguing that conversational artificial intelligence (AI) should be understood as a tool rather than a companion, discussing mechanisms like simulated empathy and sycophancy that may reinforce maladaptive beliefs in vulnerable users. It presents no new empirical data or clinical comparison, making it commentary rather than an evaluable study relevant to this reader's discriminating standard for beat four."
+    },
+    {
+      "id": "pmid:42715521",
+      "beat": "patient-comm",
+      "source": "Surg Innov",
+      "title": "Large Language Models for Breast Cancer Education: A Comparative Analysis of Quality, Reliability and Readability.",
+      "score": 3,
+      "theme": "Chatbot Comparison",
+      "why": "Cross-sectional comparison of ChatGPT-5.3 and Gemini 3.0 Flash on 40 breast cancer questions, scored by three surgeons using modified DISCERN (mDISCERN) reliability and Global Quality Score (GQS) rubrics plus standard readability indices; Gemini scored higher on both quality and readability, but both models exceeded recommended sixth-grade reading level. This is a rubric-based model-versus-model comparison with no clinician-generated answers as a baseline, which the reader's beat treats as routine rather than novel."
+    },
+    {
+      "id": "pmid:42709552",
+      "beat": "patient-comm",
+      "source": "AIDS Care",
+      "title": "Stigma-sensitive communication in medical students: an AI-supported simulation of a patient living with HIV.",
+      "score": 3,
+      "theme": "Simulated Patient Training",
+      "why": "Mixed-methods study of 260 Turkish medical students who conducted a text-based simulated patient interview with ChatGPT-4o role-playing a person living with HIV, rating student empathy and stigma-sensitive communication with only a weak correlation between self- and educator-assessment (r = 0.136). This uses a large language model (LLM) as a training tool rather than evaluating the LLM's own communication with real patients, so it is tangential to the beat's focus on model-patient interaction quality."
+    },
+    {
+      "id": "pmid:42708345",
+      "beat": "patient-comm",
+      "source": "Am J Health Syst Pharm",
+      "title": "Simultaneous ChatGPT-4o outputs for type 2 diabetes pharmacotherapy: Accuracy, usefulness, and impact variability.",
+      "score": 3,
+      "theme": "Chatbot Consistency",
+      "why": "Five clinical pharmacists used a modified Delphi consensus process to rate accuracy and usefulness of ChatGPT-4o outputs generated simultaneously across three separate sessions for the same diabetes-related prompts, finding some variability in accuracy and usefulness between identical queries. This is a small, single-model consistency check without any comparison to real clinician-authored answers or patient outcomes, making it a modest addition to the literature."
+    },
+    {
+      "id": "pmid:42708281",
+      "beat": "patient-comm",
+      "source": "Surg Innov",
+      "title": "ChatGPT 4.o Responses to Commonly Asked Colon and Rectal Cancer Questions From a Patient Perspective.",
+      "score": 3,
+      "theme": "Chatbot Rubric Scoring",
+      "why": "A five-surgeon panel rated ChatGPT-4o's answers to ten patient questions about colon and rectal cancer surgery on completeness, accuracy, and communication using 5-point Likert scales, with average scores around 13 out of 15. There is no comparator of real clinician-written answers or patient outcome measure, making this a routine rubric-scoring study for this beat."
+    },
+    {
+      "id": "pmid:42709999",
+      "beat": "clinical-ai",
+      "source": "J Am Med Inform Assoc",
+      "title": "Health artificial intelligence is here, but are we measuring what matters?",
+      "score": 2,
+      "theme": "AI Evaluation Framework",
+      "why": "This is a perspective piece arguing that health AI evaluation should shift from technical validity metrics toward outcomes-based, systems-level assessment, contrasting deontological and consequentialist frameworks. It contains no new data or study, making it a commentary rather than evidence that should change practice."
+    },
+    {
+      "id": "pmid:42732413",
+      "beat": "repro-ai",
+      "source": "Int J Womens Health",
+      "title": "Integrative Transcriptomic and Network Pharmacology Analysis Suggests Potential Mechanisms of Propofol in Early-Onset Preeclampsia.",
+      "score": 2,
+      "theme": "Mechanistic Drug Study",
+      "why": "This study used network pharmacology and machine learning feature selection (LASSO, support vector machine, Boruta) on small transcriptomic datasets to propose propofol targets in early-onset preeclampsia, validated with molecular docking and RT-qPCR in a 36-patient cohort. The machine learning component is a minor bioinformatics filtering step within a mechanistic wet-lab study, and it has no bearing on AI-based clinical prediction or care."
+    },
+    {
+      "id": "pmid:42727446",
+      "beat": "repro-ai",
+      "source": "Bioorg Chem",
+      "title": "Efficacy of icariin in polycystic ovary syndrome: Cathepsin S as a key target revealed by computational and experimental evidence.",
+      "score": 2,
+      "theme": "PCOS Mechanism Study",
+      "why": "This study combined network pharmacology, an optimized machine learning framework across 113 algorithm combinations, and mouse experiments to propose Cathepsin S as a target for icariin's effect on polycystic ovary syndrome (PCOS). The machine learning use is a target-selection step within a broader mechanistic pharmacology study, with no clinical prediction, patient data, or diagnostic application relevant to reproductive AI."
+    },
+    {
+      "id": "pmid:42721094",
+      "beat": "repro-ai",
+      "source": "JMIR Form Res",
+      "title": "Self-Reported Knowledge, Attitudes, Perceptions, and Readiness Regarding AI Among Obstetrics and Gynecology Trainees: Cross-Sectional Study.",
+      "score": 2,
+      "theme": "Trainee AI Attitudes",
+      "why": "This cross-sectional survey of 218 obstetrics and gynecology (O&G) trainees in Jordan assessed self-reported knowledge, attitudes, and readiness regarding AI, finding moderate readiness and little formal AI training. It is a workforce attitudes survey with no AI performance data or patient impact, offering limited actionable insight for a clinical AI researcher."
+    },
+    {
+      "id": "pmid:42720906",
+      "beat": "repro-ai",
+      "source": "J Assist Reprod Genet",
+      "title": "Artificial intelligence in reproductive medicine and education: current evidence, challenges, and future directions.",
+      "score": 2,
+      "theme": "AI Education Review",
+      "why": "This is a narrative review of the past decade of literature on AI in reproductive medicine education, covering large language models (LLMs), ultrasound training, and assessment tools, concluding AI should be a supervised educational adjunct rather than an autonomous substitute. As a review without new data, it summarizes existing concerns like hallucination risk but offers no new evidence to act on."
+    },
+    {
+      "id": "pmid:42720613",
+      "beat": "repro-ai",
+      "source": "Technol Health Care",
+      "title": "The triple burden of malnutrition and the role of machine learning: A systematic review.",
+      "score": 2,
+      "theme": "Malnutrition Prediction Review",
+      "why": "This systematic review summarizes machine learning applications for predicting malnutrition across life stages, noting decision trees, random forests, and neural networks perform well but that research on pregnant women and adolescents remains limited. It is a broad review without new data or a specific reproductive AI application, and its relevance to reproductive endocrinology and infertility or obstetric AI is only tangential."
+    },
+    {
+      "id": "pmid:42719549",
+      "beat": "repro-ai",
+      "source": "Reprod Med Biol",
+      "title": "Reassessing Semen Analysis: Clinical Insights Beyond Sperm Count and Motility.",
+      "score": 2,
+      "theme": "Male Infertility Review",
+      "why": "This is a narrative review summarizing conventional semen analysis alongside emerging biofunctional, omics, and artificial intelligence (AI)-assisted approaches to male infertility evaluation, without presenting new data or a systematic evidence synthesis. It is useful background reading but contains no findings that would change clinical practice or research priorities this week."
+    },
+    {
+      "id": "pmid:42719475",
+      "beat": "repro-ai",
+      "source": "Digit Health",
+      "title": "Digital health nursing in male infertility: Leadership, workforce, and policy pathways for equitable care.",
+      "score": 2,
+      "theme": "Digital Health Nursing",
+      "why": "This narrative review synthesizes literature from 2018 to 2025 on digital health tools, including artificial intelligence (AI), for male infertility care and proposes a leadership model for nurse-mediated implementation, but it contains no primary data or outcome evaluation. It is a policy and framework piece rather than an evidence-generating study."
+    },
+    {
+      "id": "pmid:42710154",
+      "beat": "repro-ai",
+      "source": "Cancer Treat Res Commun",
+      "title": "Integrative transcriptomic identification of potential common biomarkers between non-obstructive azoospermia and papillary thyroid cancer via multi-algorithmic machine learning and network biology approaches.",
+      "score": 2,
+      "theme": "Biomarker Discovery",
+      "why": "This study used five machine learning algorithms on public transcriptomic datasets to identify shared biomarkers between non-obstructive azoospermia and papillary thyroid cancer, reporting area under the curve (AUC) values up to 0.95 in a purely retrospective, bioinformatic setting without prospective or external clinical validation. The work is exploratory molecular biology rather than a clinically actionable AI application."
+    },
+    {
+      "id": "pmid:42707623",
+      "beat": "repro-ai",
+      "source": "Food Sci Nutr",
+      "title": "Integrative Transcriptomic Analysis and Functional Validation Implicate GPT2 in Glycolytic Regulation in Polycystic Ovary Syndrome.",
+      "score": 2,
+      "theme": "PCOS Molecular Mechanism",
+      "why": "This study combined transcriptomic data mining, several machine learning algorithms for feature selection, and laboratory experiments in granulosa cells to implicate GPT2 in glycolytic dysfunction in polycystic ovary syndrome (PCOS). The machine learning component is used only for variable prioritization within a molecular biology study, and the work does not offer a clinically actionable diagnostic or predictive tool."
+    },
+    {
+      "id": "pmid:42704686",
+      "beat": "repro-ai",
+      "source": "Reproduction",
+      "title": "Wearable Sensors Offer Opportunities for Phenotyping Perinatal Mood Disorders: a Narrative Review.",
+      "score": 2,
+      "theme": "Wearables in Perinatal Health",
+      "why": "This is a narrative review proposing that wearable sensor data, combined with machine learning, could enable continuous phenotyping of perinatal mood disorders beyond periodic clinical assessments. No new data, cohort, or model performance is presented, making this a conceptual piece rather than evidence of a working approach."
+    },
+    {
+      "id": "pmid:42721473",
+      "beat": "patient-comm",
+      "source": "JMIR Res Protoc",
+      "title": "Exploring Bias in Medical Applications of Large Language Models: Protocol for a Systematic Review.",
+      "score": 2,
+      "theme": "LLM Bias Review Protocol",
+      "why": "This is a protocol for a systematic review evaluating how bias is detected, measured, and mitigated in medical applications of large language models (LLMs), including a plan to validate a large language model-assisted screening workflow against manual review. No results are yet available, as screening of the updated dataset is described as ongoing."
+    },
+    {
+      "id": "pmid:42715456",
+      "beat": "patient-comm",
+      "source": "Rev Assoc Med Bras (1992)",
+      "title": "The importance of response generation protocols in chatbot-based patient education studies.",
+      "score": 2,
+      "theme": "Methodology Commentary",
+      "why": "This item has no abstract text available, only a title suggesting a commentary on methodology standards for chatbot patient-education studies. Without content to assess, it cannot be judged for evidentiary value and is likely opinion rather than new data."
+    },
+    {
+      "id": "pmid:42711523",
+      "beat": "patient-comm",
+      "source": "Spine Deform",
+      "title": "Research priorities in Spine Deformity: a machine learning-based topic analysis of the journal's first decade (2013-2026).",
+      "score": 2,
+      "theme": "Literature Trend Mapping",
+      "why": "Applies BERTopic, a transformer-based topic-modeling method, to cluster 1851 abstracts from a scoliosis surgery journal and identify trending research themes over a decade, including a minor emerging cluster on LLM-based patient education. This is bibliometric analysis of a field's literature, not a study of an AI system's clinical performance or patient interaction, so it falls outside what this beat is meant to track."
+    },
+    {
+      "id": "pmid:42710025",
+      "beat": "patient-comm",
+      "source": "J Med Internet Res",
+      "title": "Closing the Solidarity Gap Requires Closing the Accountability Gap for Patient-Facing AI.",
+      "score": 2,
+      "theme": "AI Governance Opinion",
+      "why": "This is an opinion commentary arguing that closing the accountability gap in patient-facing artificial intelligence (AI) requires shared governance among clinicians, developers, and payers, with no new data or study design presented. It restates a policy position already familiar to readers in this space rather than offering new evidence."
+    },
+    {
+      "id": "pmid:42715632",
+      "beat": "repro-ai",
+      "source": "Ecotoxicol Environ Saf",
+      "title": "Occurrence of triethylamine in water bodies of a chemical industrial park and its toxicological mechanisms on zebrafish embryo-larvae.",
+      "score": 1,
+      "theme": "Environmental Toxicology",
+      "why": "This is an environmental toxicology study assessing triethylamine (TEA) contamination and its thyroid-disrupting effects in zebrafish embryos, with no artificial intelligence (AI) or algorithmic component and no relevance to clinical reproductive medicine or AI beats. It is well outside the scope of this digest."
+    },
+    {
+      "id": "pmid:42720408",
+      "beat": "patient-comm",
+      "source": "J Am Acad Orthop Surg Glob Res Rev",
+      "title": "Letter to the Editor: ChatGPT Can and Common Patient Questions Compared With OrthoInfo Regarding Rotator Cuff Tears: Comment.",
+      "score": 1,
+      "theme": "Editorial Comment",
+      "why": "This item is a letter to the editor commenting on a prior study of ChatGPT versus OrthoInfo patient materials for rotator cuff tears, but no abstract or substantive text is available for evaluation. Without content, it cannot be assessed as contributing new evidence to this reader's beats."
+    },
+    {
+      "id": "pmid:42721315",
+      "beat": "patient-comm",
+      "source": "JMIR AI",
+      "title": "Enhancing Patients' Informed Consent Through AI: Systematic Review.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    },
+    {
+      "id": "pmid:42720598",
+      "beat": "patient-comm",
+      "source": "J Oncol Pharm Pract",
+      "title": "AI adoption among French oncology pharmacists: A national survey.",
+      "score": -1,
+      "theme": "",
+      "why": ""
+    }
+  ],
+  "stats": {
+    "perBeat": [
+      {
+        "beat": "clinical-ai",
+        "label": "Clinical AI",
+        "totalMatches": 8,
+        "retrieved": 8,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 6
+      },
+      {
+        "beat": "repro-ai",
+        "label": "AI in OB/GYN and REI",
+        "totalMatches": 29,
+        "retrieved": 28,
+        "truncated": false,
+        "staleDropped": 1,
+        "newAfterDedup": 25
+      },
+      {
+        "beat": "patient-comm",
+        "label": "LLMs and Patient Communication",
+        "totalMatches": 22,
+        "retrieved": 22,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 20
+      },
+      {
+        "beat": "industry",
+        "label": "FEMTECH and Digital Health",
+        "totalMatches": 1,
+        "retrieved": 1,
+        "truncated": false,
+        "staleDropped": 0,
+        "newAfterDedup": 1
+      }
+    ],
+    "feedFailures": [],
+    "ranked": true,
+    "droppedBelowCut": 1,
+    "refused": 0,
+    "unscored": 2
+  }
+}

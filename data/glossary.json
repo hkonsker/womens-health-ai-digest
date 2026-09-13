@@ -1183,5 +1183,85 @@
     "term": "Bivariate Meta-Analysis",
     "definition": "A statistical method for combining sensitivity and specificity results from multiple diagnostic studies while accounting for the tradeoff between them.",
     "firstSeen": "2026-W36"
+  },
+  "randomised controlled trial (rct)": {
+    "term": "Randomised Controlled Trial (RCT)",
+    "definition": "A study design where participants or conditions are randomly assigned to groups being compared, which helps rule out other explanations for a difference in outcomes.",
+    "firstSeen": "2026-W37"
+  },
+  "self-crossover": {
+    "term": "Self-Crossover",
+    "definition": "A study design where the same participants are tested under both conditions being compared, in different order, so each person acts as their own control.",
+    "firstSeen": "2026-W37"
+  },
+  "non-inferiority": {
+    "term": "Non-Inferiority",
+    "definition": "A type of statistical test showing that a new approach is not meaningfully worse than an existing one, rather than proving it is better.",
+    "firstSeen": "2026-W37"
+  },
+  "vision-language foundation model": {
+    "term": "Vision-Language Foundation Model",
+    "definition": "A large AI model trained on both images and text so it can describe or reason about visual content in natural language.",
+    "firstSeen": "2026-W37"
+  },
+  "risk of bias": {
+    "term": "Risk of Bias",
+    "definition": "An assessment of how likely a study's design or conduct is to produce a misleading result.",
+    "firstSeen": "2026-W37"
+  },
+  "patient education materials assessment tool (pemat)": {
+    "term": "Patient Education Materials Assessment Tool (PEMAT)",
+    "definition": "A standardized checklist used to judge how understandable and actionable a piece of patient-facing health material is.",
+    "firstSeen": "2026-W37"
+  },
+  "biophysical model": {
+    "term": "Biophysical Model",
+    "definition": "A computer model that simulates disease processes, such as tumor growth, based on physical and biological rules rather than learning patterns from data alone.",
+    "firstSeen": "2026-W37"
+  },
+  "multi-task network": {
+    "term": "Multi-Task Network",
+    "definition": "A single AI model trained to perform several related tasks at once, such as detecting landmarks and classifying conditions, rather than one task at a time.",
+    "firstSeen": "2026-W37"
+  },
+  "ablation study": {
+    "term": "Ablation Study",
+    "definition": "An experiment where parts of a model are removed one at a time to see how much each part contributes to overall performance.",
+    "firstSeen": "2026-W37"
+  },
+  "f-score": {
+    "term": "F-score",
+    "definition": "A single number combining how often a system's positive answers are correct and how often it catches all the true positives, used to judge accuracy on detection tasks.",
+    "firstSeen": "2026-W37"
+  },
+  "robustly optimized bert pretraining approach (roberta)": {
+    "term": "Robustly Optimized BERT Pretraining Approach (RoBERTa)",
+    "definition": "An older type of AI language model, smaller than modern chatbots, that is trained and fine-tuned for a specific narrow task.",
+    "firstSeen": "2026-W37"
+  },
+  "flesch reading ease": {
+    "term": "Flesch Reading Ease",
+    "definition": "A score that estimates how easy a piece of text is to read, where higher numbers mean simpler text.",
+    "firstSeen": "2026-W37"
+  },
+  "long-context input": {
+    "term": "Long-Context Input",
+    "definition": "Feeding an AI model very large amounts of text at once, relying on its ability to process extended documents rather than pre-selecting relevant parts.",
+    "firstSeen": "2026-W37"
+  },
+  "fleiss' kappa": {
+    "term": "Fleiss' Kappa",
+    "definition": "A statistical measure of how much multiple raters agree with each other beyond what would be expected by chance, where values near zero mean little real agreement.",
+    "firstSeen": "2026-W37"
+  },
+  "system usability scale": {
+    "term": "System Usability Scale",
+    "definition": "A standard questionnaire used to measure how easy and pleasant people find a piece of software to use.",
+    "firstSeen": "2026-W37"
+  },
+  "net promoter score": {
+    "term": "Net Promoter Score",
+    "definition": "A survey metric that measures how likely people are to recommend a product to others.",
+    "firstSeen": "2026-W37"
   }
 }
