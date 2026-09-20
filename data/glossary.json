@@ -1263,5 +1263,115 @@
     "term": "Net Promoter Score",
     "definition": "A survey metric that measures how likely people are to recommend a product to others.",
     "firstSeen": "2026-W37"
+  },
+  "vision-language model": {
+    "term": "Vision-Language Model",
+    "definition": "An AI system that learns to connect images with written text, such as matching a scan to its radiology report.",
+    "firstSeen": "2026-W38"
+  },
+  "contrast-enhanced computed tomography (ct)": {
+    "term": "Contrast-Enhanced Computed Tomography (CT)",
+    "definition": "An imaging scan where a special dye is used to make organs and blood vessels show up more clearly.",
+    "firstSeen": "2026-W38"
+  },
+  "retrieval-augmented": {
+    "term": "Retrieval-Augmented",
+    "definition": "A method where an AI system looks up relevant documents or facts before generating its answer, rather than relying only on what it memorized during training.",
+    "firstSeen": "2026-W38"
+  },
+  "triage": {
+    "term": "Triage",
+    "definition": "A process of sorting cases or conversations by urgency or quality so the most concerning ones get closer attention.",
+    "firstSeen": "2026-W38"
+  },
+  "multi-agent artificial intelligence (ai) system": {
+    "term": "Multi-Agent Artificial Intelligence (AI) System",
+    "definition": "A setup where many AI programs, each handling a different task, work together like departments in an organization.",
+    "firstSeen": "2026-W38"
+  },
+  "adverse events": {
+    "term": "Adverse Events",
+    "definition": "Unwanted or harmful effects experienced by patients during a medical treatment or trial.",
+    "firstSeen": "2026-W38"
+  },
+  "self-supervised framework": {
+    "term": "Self-Supervised Framework",
+    "definition": "A way of training AI where the system creates its own training signal from data, rather than needing humans to label examples.",
+    "firstSeen": "2026-W38"
+  },
+  "fluoroscopy": {
+    "term": "Fluoroscopy",
+    "definition": "A type of continuous X-ray imaging used to guide procedures in real time.",
+    "firstSeen": "2026-W38"
+  },
+  "registration": {
+    "term": "Registration",
+    "definition": "The process of aligning two different images or scans, such as a live X-ray and an earlier 3D scan, so they match up correctly.",
+    "firstSeen": "2026-W38"
+  },
+  "biological aging clock": {
+    "term": "Biological Aging Clock",
+    "definition": "An AI model that estimates how old a person's body or organ appears based on biological data, which can differ from their actual age in years.",
+    "firstSeen": "2026-W38"
+  },
+  "proteomic": {
+    "term": "Proteomic",
+    "definition": "Relating to the large-scale study of proteins in the body, often used to find patterns linked to disease.",
+    "firstSeen": "2026-W38"
+  },
+  "longitudinal": {
+    "term": "Longitudinal",
+    "definition": "Describes a study that follows the same people over time, rather than looking at them at just one moment.",
+    "firstSeen": "2026-W38"
+  },
+  "alzheimer's disease (ad)": {
+    "term": "Alzheimer's Disease (AD)",
+    "definition": "A progressive brain disease that causes memory loss and cognitive decline, most common in older adults.",
+    "firstSeen": "2026-W38"
+  },
+  "medical information mart for intensive care iv (mimic-iv)": {
+    "term": "Medical Information Mart for Intensive Care IV (MIMIC-IV)",
+    "definition": "A widely used public database of de-identified intensive care patient records used to train and test medical AI models.",
+    "firstSeen": "2026-W38"
+  },
+  "crown-rump length (crl)": {
+    "term": "Crown-Rump Length (CRL)",
+    "definition": "A standard ultrasound measurement of an embryo or fetus from head to bottom, used to estimate how far along a pregnancy is.",
+    "firstSeen": "2026-W38"
+  },
+  "mean absolute error (mae)": {
+    "term": "Mean Absolute Error (MAE)",
+    "definition": "The average size of the mistakes a method makes, regardless of whether it overestimates or underestimates.",
+    "firstSeen": "2026-W38"
+  },
+  "bayesian inference": {
+    "term": "Bayesian Inference",
+    "definition": "A statistical approach that updates estimates of what is likely true by combining prior knowledge with new data, along with a measure of uncertainty.",
+    "firstSeen": "2026-W38"
+  },
+  "hierarchical measurement error model": {
+    "term": "Hierarchical Measurement Error Model",
+    "definition": "A statistical model that accounts for the fact that even the reference method used for comparison has its own imprecision, giving a more accurate picture of true performance.",
+    "firstSeen": "2026-W38"
+  },
+  "multidisciplinary team (mdt)": {
+    "term": "Multidisciplinary Team (MDT)",
+    "definition": "A group of doctors from different specialties who meet together to decide on the best treatment plan for a complex patient case.",
+    "firstSeen": "2026-W38"
+  },
+  "fleiss kappa": {
+    "term": "Fleiss Kappa",
+    "definition": "A statistic that measures how much multiple raters or repeated trials agree with each other, beyond what would be expected by chance.",
+    "firstSeen": "2026-W38"
+  },
+  "large reasoning model (lrm)": {
+    "term": "Large Reasoning Model (LRM)",
+    "definition": "An AI model designed to perform more deliberate step-by-step reasoning, sometimes used here to help judge the quality of other AI's outputs.",
+    "firstSeen": "2026-W38"
+  },
+  "flesch-kincaid grade level": {
+    "term": "Flesch-Kincaid Grade Level",
+    "definition": "A readability score that estimates the US school grade level a person would need to easily understand a piece of text.",
+    "firstSeen": "2026-W38"
   }
 }
