@@ -1373,5 +1373,135 @@
     "term": "Flesch-Kincaid Grade Level",
     "definition": "A readability score that estimates the US school grade level a person would need to easily understand a piece of text.",
     "firstSeen": "2026-W38"
+  },
+  "imitation learning": {
+    "term": "Imitation Learning",
+    "definition": "A machine learning approach where a model learns to reproduce the decisions of human experts rather than being told the single correct answer.",
+    "firstSeen": "2026-W39"
+  },
+  "equivalence study": {
+    "term": "Equivalence Study",
+    "definition": "A study designed to show that two things perform similarly to each other, rather than trying to prove one is better than the other.",
+    "firstSeen": "2026-W39"
+  },
+  "diagnostic decision support system (ddss)": {
+    "term": "Diagnostic Decision Support System (DDSS)",
+    "definition": "Software intended to help clinicians choose diagnoses or next steps by analyzing patient data.",
+    "firstSeen": "2026-W39"
+  },
+  "nnu-net": {
+    "term": "nnU-Net",
+    "definition": "A widely used deep learning model architecture designed to automatically outline structures in medical images.",
+    "firstSeen": "2026-W39"
+  },
+  "brachytherapy": {
+    "term": "Brachytherapy",
+    "definition": "A cancer treatment that places a radioactive source directly inside or next to the tumor.",
+    "firstSeen": "2026-W39"
+  },
+  "supervised fine-tuning (sft)": {
+    "term": "Supervised Fine-Tuning (SFT)",
+    "definition": "A method of training an AI model by showing it many examples of correct input-output pairs.",
+    "firstSeen": "2026-W39"
+  },
+  "direct preference optimization (dpo)": {
+    "term": "Direct Preference Optimization (DPO)",
+    "definition": "A training method that adjusts an AI model based on which of two responses humans preferred.",
+    "firstSeen": "2026-W39"
+  },
+  "group relative policy optimization (grpo)": {
+    "term": "Group Relative Policy Optimization (GRPO)",
+    "definition": "A reinforcement learning method that trains an AI model by comparing groups of its own responses against each other to improve reward-based performance.",
+    "firstSeen": "2026-W39"
+  },
+  "in-context learning (icl)": {
+    "term": "In-Context Learning (ICL)",
+    "definition": "A way of guiding an AI model's behavior by giving it examples within the prompt itself, without changing its underlying training.",
+    "firstSeen": "2026-W39"
+  },
+  "mixed-effects logistic regression": {
+    "term": "Mixed-Effects Logistic Regression",
+    "definition": "A statistical method for studying yes/no outcomes that accounts for the fact that data come from repeated or grouped sources, such as multiple AI models tested.",
+    "firstSeen": "2026-W39"
+  },
+  "major depressive disorder (mdd)": {
+    "term": "Major Depressive Disorder (MDD)",
+    "definition": "A clinical diagnosis for persistent depression that affects mood, energy, and daily functioning.",
+    "firstSeen": "2026-W39"
+  },
+  "anorexia nervosa (an)": {
+    "term": "Anorexia Nervosa (AN)",
+    "definition": "An eating disorder marked by restriction of food intake and intense fear of weight gain.",
+    "firstSeen": "2026-W39"
+  },
+  "series a round": {
+    "term": "Series A Round",
+    "definition": "An early stage of startup funding where a company raises money from investors, usually after showing initial traction, in exchange for equity.",
+    "firstSeen": "2026-W39"
+  },
+  "ambient digital scribe (ads)": {
+    "term": "Ambient Digital Scribe (ADS)",
+    "definition": "An AI system that listens to a patient visit and automatically writes a clinical note from the conversation.",
+    "firstSeen": "2026-W39"
+  },
+  "likert scale": {
+    "term": "Likert Scale",
+    "definition": "A rating scale, often 1 to 7, used to measure opinions or agreement rather than a hard fact.",
+    "firstSeen": "2026-W39"
+  },
+  "human epidermal growth factor receptor 2 (her2)": {
+    "term": "Human Epidermal Growth Factor Receptor 2 (HER2)",
+    "definition": "A protein that some cancer cells overproduce, which can be targeted by specific drugs.",
+    "firstSeen": "2026-W39"
+  },
+  "objective response rate": {
+    "term": "Objective Response Rate",
+    "definition": "The percentage of patients whose tumors measurably shrank after treatment.",
+    "firstSeen": "2026-W39"
+  },
+  "whole-slide image analysis": {
+    "term": "Whole-Slide Image Analysis",
+    "definition": "Computer analysis of digital images of entire tissue slides, often used to measure biomarkers automatically.",
+    "firstSeen": "2026-W39"
+  },
+  "physiologically based pharmacokinetic (pbpk) model": {
+    "term": "Physiologically Based Pharmacokinetic (PBPK) Model",
+    "definition": "A computer model that simulates how a drug moves through the body using real biological structures and processes, rather than simple statistical curves.",
+    "firstSeen": "2026-W39"
+  },
+  "international ovarian tumor analysis (iota) simple rules": {
+    "term": "International Ovarian Tumor Analysis (IOTA) Simple Rules",
+    "definition": "A standardized set of ultrasound features used by doctors to judge whether an ovarian mass is likely benign or malignant.",
+    "firstSeen": "2026-W39"
+  },
+  "unsupervised clustering": {
+    "term": "Unsupervised Clustering",
+    "definition": "A machine learning method that groups similar data points together without being told in advance what the groups should be.",
+    "firstSeen": "2026-W39"
+  },
+  "macro-f1": {
+    "term": "Macro-F1",
+    "definition": "A score that averages how well a model correctly identifies each category, treating rare and common categories equally.",
+    "firstSeen": "2026-W39"
+  },
+  "fine-tuned": {
+    "term": "Fine-Tuned",
+    "definition": "Taking an already-trained AI model and further training it on a specific, narrower task or dataset.",
+    "firstSeen": "2026-W39"
+  },
+  "brief hospital course (bhc)": {
+    "term": "Brief Hospital Course (BHC)",
+    "definition": "A summary section of a hospital discharge note describing what happened to the patient during their stay.",
+    "firstSeen": "2026-W39"
+  },
+  "natural language processing (nlp)": {
+    "term": "Natural Language Processing (NLP)",
+    "definition": "A field of AI focused on understanding and generating human language.",
+    "firstSeen": "2026-W39"
+  },
+  "transformer": {
+    "term": "Transformer",
+    "definition": "A type of deep learning architecture originally built for language tasks that can also process sequences of medical data over time.",
+    "firstSeen": "2026-W39"
   }
 }
