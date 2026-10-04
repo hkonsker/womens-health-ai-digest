@@ -1503,5 +1503,100 @@
     "term": "Transformer",
     "definition": "A type of deep learning architecture originally built for language tasks that can also process sequences of medical data over time.",
     "firstSeen": "2026-W39"
+  },
+  "odds ratio": {
+    "term": "Odds Ratio",
+    "definition": "A number comparing the odds of an event happening in one group versus another, where 1 means no difference and lower than 1 means the event is less likely in the first group.",
+    "firstSeen": "2026-W40"
+  },
+  "time-to-event prediction": {
+    "term": "Time-To-Event Prediction",
+    "definition": "A statistical approach that estimates when something will happen, like a delivery, rather than just whether it will happen.",
+    "firstSeen": "2026-W40"
+  },
+  "external transferability": {
+    "term": "External Transferability",
+    "definition": "How well a model trained on one dataset performs when applied to a different, independent dataset it never saw during development.",
+    "firstSeen": "2026-W40"
+  },
+  "convolutional neural network (cnn)": {
+    "term": "Convolutional Neural Network (CNN)",
+    "definition": "A type of AI model especially good at analyzing images by learning visual patterns layer by layer.",
+    "firstSeen": "2026-W40"
+  },
+  "nuchal translucency (nt)": {
+    "term": "Nuchal Translucency (NT)",
+    "definition": "A measurement of fluid at the back of a fetus's neck in early pregnancy used to estimate risk of chromosomal conditions.",
+    "firstSeen": "2026-W40"
+  },
+  "social determinants of health (sdoh)": {
+    "term": "Social Determinants of Health (SDoH)",
+    "definition": "Non-medical factors like income, housing, and neighborhood conditions that affect a person's health.",
+    "firstSeen": "2026-W40"
+  },
+  "xgboost": {
+    "term": "XGBoost",
+    "definition": "A popular machine learning method that builds predictions by combining many simple decision rules.",
+    "firstSeen": "2026-W40"
+  },
+  "generalized equalized odds (geo)": {
+    "term": "Generalized Equalized Odds (GEO)",
+    "definition": "A statistical measure of fairness that checks whether a model makes errors at similar rates for different demographic groups.",
+    "firstSeen": "2026-W40"
+  },
+  "area under the precision-recall curve (auprc)": {
+    "term": "Area Under the Precision-Recall Curve (AUPRC)",
+    "definition": "A performance measure similar to AUROC but more sensitive to how well a model performs on rare outcomes.",
+    "firstSeen": "2026-W40"
+  },
+  "expected calibration error (ece)": {
+    "term": "Expected Calibration Error (ECE)",
+    "definition": "A measure of how far a model's predicted probabilities are from the actual observed outcome rates.",
+    "firstSeen": "2026-W40"
+  },
+  "intensity-modulated radiation therapy (imrt)": {
+    "term": "Intensity-Modulated Radiation Therapy (IMRT)",
+    "definition": "A radiation treatment technique that shapes and varies the radiation beam intensity to target a tumor while sparing nearby healthy tissue.",
+    "firstSeen": "2026-W40"
+  },
+  "monte carlo dose computation": {
+    "term": "Monte Carlo Dose Computation",
+    "definition": "A simulation method that calculates how radiation deposits energy in tissue by modeling many random particle interactions, used for accurate dose estimates.",
+    "firstSeen": "2026-W40"
+  },
+  "gamma passing rate": {
+    "term": "Gamma Passing Rate",
+    "definition": "A standard metric in radiation therapy quality checks that measures how closely a delivered radiation dose matches the planned dose, with higher rates meaning better agreement.",
+    "firstSeen": "2026-W40"
+  },
+  "rank concordance": {
+    "term": "Rank Concordance",
+    "definition": "A measure of how much two different ranking systems agree on the order of the same items.",
+    "firstSeen": "2026-W40"
+  },
+  "clinical target volume (ctv)": {
+    "term": "Clinical Target Volume (CTV)",
+    "definition": "The region of tissue that radiation oncologists define as needing treatment, used to plan where radiation is delivered.",
+    "firstSeen": "2026-W40"
+  },
+  "model-agnostic meta-learning (maml)": {
+    "term": "Model-Agnostic Meta-Learning (MAML)",
+    "definition": "A machine learning training strategy that teaches a model to adapt quickly to new, related tasks or datasets with limited data.",
+    "firstSeen": "2026-W40"
+  },
+  "fetal heart rate (fhr)": {
+    "term": "Fetal Heart Rate (FHR)",
+    "definition": "The number of times per minute a fetus's heart beats, monitored during labor to assess well-being.",
+    "firstSeen": "2026-W40"
+  },
+  "gradient-weighted class activation mapping (grad-cam)": {
+    "term": "Gradient-weighted Class Activation Mapping (Grad-CAM)",
+    "definition": "A visualization method that highlights which parts of an image or signal most influenced a deep learning model's decision.",
+    "firstSeen": "2026-W40"
+  },
+  "retrieval-augmented generation": {
+    "term": "Retrieval-Augmented Generation",
+    "definition": "A method where an AI language model looks up relevant documents before generating an answer, to ground responses in verified information.",
+    "firstSeen": "2026-W40"
   }
 }
